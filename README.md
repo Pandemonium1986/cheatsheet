@@ -39,4 +39,4 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## Authors
 
--   **Michael Maffait** - _Customize_ - [Pandemonium1986](https://github.com/Pandemonium1986)
+-   **Michael Maffait** - _Initial work_ - [Pandemonium1986](https://github.com/Pandemonium1986)
