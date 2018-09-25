@@ -15,68 +15,100 @@ Dl + Clic + Install
 
 Todo
 
-### Cheat Sheet
+### Knowledge Base
 
-Alternatively you can set the ATOM_HOME environment variable to point wherever you want (you can write a .sh or .cmd script to temporarily set it and launch it from that)   
+#### ATOM_HOME
 
-Proxy and Firewall Settings
+Alternatively you can set the _ATOM_HOME_ environment variable to point wherever you want (you can write a .sh or .cmd script to temporarily set it and launch it from that)  
+
+#### Proxy and firewall settings
 
 ```shell
 apm config set strict-ssl false
 apm config set https-proxy YOUR_PROXY_ADDRESS
 ```
 
-Command Palette `Ctrl+Shift+P`  
-Settings view `Ctrl+,`  
-Opening a file `Ctrl+O`  
-Save file `Ctrl+S`  
-Open directory `Ctrl+Shift+A`  
-Open a file in a project `Ctrl+T or Ctrl+P`  
-Open a file in a project recently `Ctrl+B`  
-Navigate withe symbol `Ctrl+R`  
-Bookmarks line : `Alt+Ctrl+F2`  
-Next Bookmarks : `F2`  
-Previous Bookmarks : `Shift+F2`  
-Open Bookmarks : `Ctrl+F2`  
-`Ctrl+Shift+End` - Select to bottom of file  
-`Ctrl+K Ctrl+U` - Upper case the current word  
-`Ctrl+K Ctrl+L` - Lower case the current word  
-`Ctrl+Shift+K` - Delete current line  
+#### Apm Install package
 
-Panes :
-`Ctrl+K Up/Down/Left/Right` : Split Pane.
-`Ctrl+K Ctrl+Up/Down/Left/Right` : Move Pane
-`Ctrl+K Ctrl+W` : Close Pane
+```shell
+apm install <package_name> # to install the latest version.
+apm install <package_name>@<package_version>  # to install a specific version.
+```
 
-Grammar :
-`Ctrl+Shift+L` - Select grammar
+### Cheat Sheet
 
-`Ctrl+Click` - Add a new cursor at the clicked location  
-`Alt+Ctrl+Up/Down` - Add another cursor above/below the current cursor  
-`Ctrl+D` - Select the next word in the document that is the same as the currently selected word  
-`Alt+F3` - Select all words in the document that are the same as the currently selected word
+#### Atom Basics
 
-`Ctrl+M` - Jump to the bracket matching the one adjacent to the cursor. It jumps to the nearest enclosing bracket when there's no adjacent bracket.
-`Alt+Ctrl+,` - Select all the text inside the current brackets
-`Alt+Ctrl+.` - Close the current XML/HTML tag
+| Actions                           | Shortcuts          |
+| --------------------------------- | ------------------ |
+| Command Palette                   | `Ctrl+Shift+P`     |
+| Settings view                     | `Ctrl+,`           |
+| Opening a file                    | `Ctrl+O`           |
+| Save file                         | `Ctrl+S`           |
+| Open directory                    | `Ctrl+Shift+A`     |
+| Open a file in a project          | `Ctrl+T or Ctrl+P` |
+| Open a file in a project recently | `Ctrl+B`           |
 
-`Ctrl+F` - Search within a buffer
-`Ctrl+Shift+F` - Search the entire project
+#### Moving in Atom
 
-`Ctrl+Shift+P ==> Snippets: Availabla` - Show Snippets
+| Actions                                         | Shortcuts     |
+| ----------------------------------------------- | ------------- |
+| Navigate with symbol                            | `Ctrl+R`      |
+| Bookmarks line                                  | `Alt+Ctrl+F2` |
+| Next Bookmarks                                  | `F2`          |
+| Previous Bookmarks                              | `Shift+F2`    |
+| Open Bookmarks                                  | `Ctrl+F2`     |
+| Move to the beginning of word                   | `Ctrl+Left`   |
+| Move to the end of word                         | `Ctrl+Right`  |
+| Move to the first character of the current line | `Home`        |
+| Move to the end of the line                     | `End`         |
+| Move to the top of the file                     | `Ctrl+Home`   |
+| Move to the bottom of the file                  | `Ctrl+End`    |
+| Move directly                                   | `Ctrl+G`      |
 
-Apm Install package
+#### Editing and Deleting Text
 
--   `apm install <package_name>` to install the latest version.
--   `apm install <package_name>@<package_version>` to install a specific version.
+| Actions                                                                              | Shortcuts          |
+| ------------------------------------------------------------------------------------ | ------------------ |
+| Upper case the current word                                                          | `Ctrl+K Ctrl+U`    |
+| Lower case the current word                                                          | `Ctrl+K Ctrl+L`    |
+| Delete current line                                                                  | `Ctrl+Shift+K`     |
+| Delete to beginning of word                                                          | `Ctrl+Backspace`   |
+| Delete to end of word                                                                | `Ctrl+Delete`      |
+| Add a new cursor at the clicked location                                             | `Ctrl+Click`       |
+| Add another cursor above/below the current cursor                                    | `Alt+Ctrl+Up/Down` |
+| Select the next word in the document that is the same as the currently selected word | `Ctrl+D`           |
+| Select all words in the document that are the same as the currently selected word    | `Alt+F3`           |
+| Jump to the bracket matching the one adjacent to the cursor.                         | `Ctrl+M`           |
+| Select all the text inside the current brackets                                      | `Alt+Ctrl+,`       |
+| Close the current XML/HTML tag                                                       | `Alt+Ctrl+.`       |
 
-Move to the beginning of word `Ctrl+Left`  
-Move to the end of word `Ctrl+Right`  
-Move to the first character of the current line `Home`  
-Move to the end of the line `End`  
-Move to the top of the file `Ctrl+Home`  
-Move to the bottom of the file `Ctrl+End`
-Move directly `Ctrl+G`  
+#### Find and Replace
+
+| Actions                   | Shortcuts      |
+| ------------------------- | -------------- |
+| Search within a buffer    | `Ctrl+F`       |
+| Search the entire project | `Ctrl+Shift+F` |
+
+#### Panes
+
+| Actions    | Shortcuts                        |
+| ---------- | -------------------------------- |
+| Split Pane | `Ctrl+K Up/Down/Left/Right`      |
+| Move Pane  | `Ctrl+K Ctrl+Up/Down/Left/Right` |
+| Close Pane | `Ctrl+K Ctrl+W`                  |
+
+#### Grammar
+
+| Actions        | Shortcuts      |
+| -------------- | -------------- |
+| Select grammar | `Ctrl+Shift+L` |
+
+#### Snippets
+
+| Actions       | Shortcuts      |
+| ------------- | -------------- |
+| Show Snippets | `Ctrl+Shift+P` |
 
 ### Source
 
