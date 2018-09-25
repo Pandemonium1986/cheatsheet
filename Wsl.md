@@ -17,9 +17,8 @@ Installer Debian GNU/Linux depuis le Microsoft Store.
 Installer les awesomes font sur Windows 10.  
 Installer les dotfiles Pandemonium1986.  
 Utiliser l'outil colortool de windows pour modifier la couleur du WSL.  
-```
-start cmd /k "D:\Downloads\Colortool\colortool.exe -b Argonaut.itermcolors && echo Argonaut.itermcolors"
-```
+
+    start cmd /k "D:\Downloads\Colortool\colortool.exe -b Argonaut.itermcolors && echo Argonaut.itermcolors"
 
 Configurer la console WSL comme ceci :  
 
