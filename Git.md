@@ -1,10 +1,11 @@
 # Git : Installation et Configuration
 
 ### Version des outils
-Os / Tool | Version
-:---: | :---:
-Windows 10 Professionnel | 1709
-Git For Windows | 2.16.2.windows.1
+
+|         Os / Tool        |      Version     |
+| :----------------------: | :--------------: |
+| Windows 10 Professionnel |       1709       |
+|      Git For Windows     | 2.16.2.windows.1 |
 
 ### Procédure d'installation
 
@@ -43,12 +44,12 @@ Dans la fenêtre _Configuring extra options_ laissez par défault et cliquez sur
 ![Configuring extra options](/img/git-010.png)  
 
 ### Procédure de configuration
+
 La procédure de confiuguration de _Git for Windows_ sur _Windows 10_ se déroule de la façon suivante :  
 
 Commencez par éxécuter les deux commandes suivantes :
+
 ```java
 git config --global user.email "prenom.nom@gmail.com"
 git config --global user.name "GitHub account name"
 ```
-
-Editez ensuite le fichier ~/.gitconfig avec le fichier [gitconfig](./gitconfig)
