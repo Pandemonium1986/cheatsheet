@@ -1,23 +1,47 @@
-Debian 9 : Installation et Configuration
-======
+# Debian 9 : Installation et Configuration
 
 ### Version des outils
-Os / Tool | Version
-:---: | :---:
-Debian | 9.4.0
+
+| Os / Tool | Version |
+| :-------: | :-----: |
+|   Debian  |  9.5.0  |
 
 ### Procédure d'installation
+
 Classique de l'install d'une vm.
 
 ### Procédure de post-installation
-Installer les packages
+
+#### Packages
+
 ```sh
-apt update && apt upgrade
-apt install vim sudo net-tools mlocate dnsutils ansible nmap build-essential module-assistant dkms zsh git fonts-powerline powerline
+sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt install build-essential cowsay curl dkms dnsutils fonts-powerline git gitk htop libfortune-perl man mlocate module-assistant net-tools nmap powerline sudo tmux tree unzip vim zsh
 ```
-Configurer le réseaux
+
+#### Packages in Debian backports
+
+```sh
+sudo su -c 'echo "deb http://ftp.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/backports.list'
+sudo apt -t stretch-backports install git ansible tmux
+```
+
+#### Tools
+
+```sh
+cd
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo npm install -g hads
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+```
+
+####Configurer le réseaux
+
 ```sh
 vim /etc/network/interfaces
+
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
