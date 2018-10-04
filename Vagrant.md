@@ -44,6 +44,47 @@ Usage: vagrant [options] <command> [<args>]
   [...]
 ```
 
+### Cheat Sheet
+
+#### Vagrant Basics
+
+| Commands | Description                                                                                                                                  |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| box      | This is the command used to manage (add, remove, etc.) boxes.                                                                                |
+| init     | This initializes the current directory to be a Vagrant environment by creating an initial Vagrantfile if one does not already exist.         |
+| up       | This command creates and configures guest machines according to your Vagrantfile.                                                            |
+| halt     | This command shuts down the running machine Vagrant is managing.                                                                             |
+| destroy  | This command stops the running machine Vagrant is managing and destroys all resources that were created during the machine creation process. |
+| suspend  | This suspends the guest machine Vagrant is managing, rather than fully shutting it down or destroying it.                                    |
+| resume   | This resumes a Vagrant managed machine that was previously suspended, perhaps with the suspend command.                                      |
+| reload   | The equivalent of running a halt followed by an up.                                                                                          |
+| status   | This will tell you the state of the machines Vagrant is managing.                                                                            |
+| snapshot | This is the command used to manage snapshots with the guest machine.                                                                         |
+
+#### Vagrant Essential
+
+| Commands      | Description                                                                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ssh           | This will SSH into a running Vagrant machine and give you access to a shell.                                                                          |
+| port          | The port command displays the full list of guest ports mapped to the host machine ports.                                                              |
+| provision     | Runs any configured provisioners against the running Vagrant managed machine.                                                                         |
+| package       | This packages a currently running VirtualBox or Hyper-V environment into a re-usable box.                                                             |
+| global-status | This command will tell you the state of all active Vagrant environments on the system for the currently logged in user.                               |
+| validate      | This command validates your Vagrantfile.                                                                                                              |
+| ssh-config    | This will output valid configuration for an SSH config file to SSH into the running Vagrant machine from ssh directly (instead of using vagrant ssh). |
+| version       | This command tells you the version of Vagrant you have installed as well as the latest version of Vagrant that is currently available.                |
+
+#### Vagrant Advanced
+
+| Commands   | Description                                                                                                                     |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| connect    | The connect command complements the share command by enabling access to shared environments.                                    |
+| login      | The login command is used to authenticate with the HashiCorp's Vagrant Cloud server.                                            |
+| plugin     | This is the command used to manage plugins.                                                                                     |
+| powershell | This will open a PowerShell prompt on the host into a running Vagrant guest machine.                                            |
+| rdp        | This will start an RDP client for a remote desktop session with the guest.                                                      |
+| share      | The share command initializes a Vagrant Share session, allowing you to share your Vagrant environment with anyone in the world. |
+
 ### Tutoriels Vagrant
 
 #### Vagrant : Getting Started
@@ -201,7 +242,9 @@ vagrant destroy
 ```
 
 ##### Rebuild
+
 Simply :
+
 ```sh
 vagrant up
 ```
