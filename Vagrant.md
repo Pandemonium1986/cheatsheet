@@ -249,6 +249,10 @@ Simply :
 vagrant up
 ```
 
+### Vagrant Base Box Creation
+```sh
+vagrant package --base pandama-vanilla --output debvanilla.box
+```
 ### Source
 
 [Vagrant Getting Started](https://www.vagrantup.com/intro/getting-started)
