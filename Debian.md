@@ -12,6 +12,19 @@ Classique de l'install d'une vm.
 
 ### Procédure de post-installation
 
+#### Install VirtualBox Guest Additions
+
+```sh
+apt install build-essential module-assistant dkms
+m-a prepare
+reboot
+# Insert Guest Additions CD image.
+mount /dev/cdrom /mnt
+cd /mnt
+./VBoxLinuxAdditions.run
+reboot
+```
+
 #### Packages
 
 ```sh
