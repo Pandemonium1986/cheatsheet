@@ -137,7 +137,7 @@ vagrant box add hashicorp/precise64
 
 Using a Box :  
 
-```java
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise64"
 end
@@ -184,7 +184,7 @@ Vagrantfile
 
 Vagrant has built-in support for automated provisioning. Using this feature, Vagrant will automatically install software when you vagrant up so that the guest machine can be repeatably created and ready-to-use.
 
-```java
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise64"
   config.vm.provision :shell, path: "bootstrap.sh"
@@ -200,7 +200,7 @@ vagrant provision
 
 ##### Networking Port Forwarding
 
-```java
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise64"
   config.vm.provision :shell, path: "bootstrap.sh"
