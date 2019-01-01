@@ -253,6 +253,33 @@ vagrant up
 ```sh
 vagrant package --base pandama-vanilla --output debvanilla.box
 ```
+
+### Vagrant Provisioners
+Provisioners can also be named :
+```ruby
+Vagrant.configure("2") do |config|
+  # ... other configuration
+
+  config.vm.provision "bootstrap", type: "shell" do |s|
+    s.inline = "echo hello"
+  end
+end
+```
+
+Running Provisioners :   
+Provisioners are run in three cases: the initial vagrant up, vagrant provision, and vagrant reload --provision.
+
+The --provision-with flag can be used if you only want to run a specific provisioner if you have multiple provisioners specified.  The arguments to --provision-with can be the provisioner type (such as "shell") or the provisioner name (such as "bootstrap" from above).
+
+Run Once, Always or Never :
+```ruby
+Vagrant.configure("2") do |config|
+  config.vm.provision "bootstrap", type: "shell", run: "never" do |s|
+    s.inline = "echo hello"
+  end
+end
+```
+
 ### Source
 
 [Vagrant Getting Started](https://www.vagrantup.com/intro/getting-started)
