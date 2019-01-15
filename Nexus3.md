@@ -10,6 +10,10 @@
 |          Nexus3          | 3.15.0+ |
 |          Nexus2          |  X.X.X  |
 
+### Note en vrac
+
+Améliration de Repository Health Check (RHC) depuis la 3.3.  
+
 ### Procédure d'installation
 
 La procédure d'installation de _Nexus3_ sur _Debian 9.5.0_ se déroule de la façon suivante :
@@ -99,15 +103,45 @@ La procédure d'installation de _Nexus3_ sur _Debian 9.5.0_ se déroule de la fa
 
 Note artifactory est "Unlimited number of users"
 
-### Note en vrac
+### Download
+
 Denière version de nexus 3 : 3.15.0-01 (2019-01-15)
 Disponible sous trois formes :
-* Archives (Unix/Windows/OSX).
-* Docker Image.
-* Cloud Templates.
+
+-   Archives (Unix/Windows/OSX).
+-   Docker Image.
+-   Cloud Templates.
+
+### Upgradé de 2.x vers 3.y
+
+On ne peut upgrader que d'une version 2.14.1 + vers une 3.1 +.  
+On ne peut upgrader que d'une OSS vers une OSS ou d'une PRO vers une PRO.  
+On ne peut upgrader que sur une version vanilla de la 3.y (fresh install).
+
+Version recommandé pour l'upgrade 2.14.5+
+
+### System Requirements
+
+Avoir java 8 et un utilisateur dédié.
+Augmenter la limit du nombre de fichier ouvrable par l'utilisateur nexus "nexus - nofile 65536".  
+L'image docker est configuré comme il faut mais si besoin on peut la démarrer avec le flags : "--ulimit nofile=65536:65536"  
+Les paramètres de la JVM sont dépendants de la RAM disponible sans toutefois dépasser les 4GB Max.
+Laisser les params de la JVM par défaut à min 1200MB et max &lt;4GB.
+
+| Physical Memory | Example Maximum Memory Configuration                        |
+| --------------- | ----------------------------------------------------------- |
+| 4GB             | -Xms1200M<br>-Xmx1200M<br>-XX:MaxDirectMemorySize=2G        |
+| 8GB             | -Xms2703M<br><br>-Xmx2703M<br>-XX:MaxDirectMemorySize=2703M |
+| 12GB            | -Xms4G<br>-Xmx4G<br>-XX:MaxDirectMemorySize=4014M           |
+| 16GB            | -Xms4G<br>-Xmx4G<br>-XX:MaxDirectMemorySize=6717M           |
+| 32GB            | -Xms4G<br><br>-Xmx4G<br>-XX:MaxDirectMemorySize=17530M      |
+| 64GB            | -Xms4G<br>-Xmx4G<br>-XX:MaxDirectMemorySize=39158M          |
+
+Pas de NFS pour les blobstore. Si il n'y a pas le choix il faut du NFS v4 car NFS v3 est connu pour des problèmes de compatibilités.
 
 ### Source
-[Dockersonatyper/Nexus3](https://hub.docker.com/r/sonatype/nexus3)  
+
+[Docker Sonatype/Nexus3](https://hub.docker.com/r/sonatype/nexus3)  
 [Sonatype Global](https://fr.sonatype.com/)  
 [Nexus3 OSS Global](https://fr.sonatype.com/nexus-repository-oss)  
 [Nexus3 Dowloads](https://fr.sonatype.com/download-oss-sonatype)  
