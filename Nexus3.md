@@ -13,6 +13,7 @@
 ### Note en vrac
 
 Améliration de Repository Health Check (RHC) depuis la 3.3.  
+Fonctionnalité d'analyse des licences.  
 
 ### Procédure d'installation
 
@@ -138,6 +139,37 @@ Laisser les params de la JVM par défaut à min 1200MB et max &lt;4GB.
 | 64GB            | -Xms4G<br>-Xmx4G<br>-XX:MaxDirectMemorySize=39158M          |
 
 Pas de NFS pour les blobstore. Si il n'y a pas le choix il faut du NFS v4 car NFS v3 est connu pour des problèmes de compatibilités.
+
+### Repository Manager Pro Features
+
+_Atlassian Crowd Support_  
+Il s'agit d'un système de sso vendu par Atlassian. La version pro supporte nativement cette fonctionnalité.  
+_Staging and Build Promotion_  
+Permet d'automatiser directement au sein de Nexus3 la promotion d'artifact entre les phases de builds pour passer d'un repository de 'staging' à un repository de 'production'.  
+_Tagging_  
+Permet de "taguer" un ensemble d'artifact pour les associers les uns autres.  
+Fonctionne de pair avec la fonctionnalité de staging de Nexus3.  
+_User Token Support_  
+Permet d'utiliser des token en lieu et place des mots de passes.  
+_High Availability_  
+Permet de clusteriser Nexus3.
+_Repository Health Check_  
+Fonctionnalité de check des artifacts pour notamment l'intégrer dans un pipeline DevSecOps.  
+Permet de détecter automatiquement les risques de sécurité des projets opensource.  
+Fonctionne "à la manière" d'un xray.  
+_Customer Success_  
+Coaching spécifique dédié au souscripteur.
+_Enterprise Support_  
+Support.
+
+### Repository Manager Concepts
+
+_Components_  
+Le temre employé par Sonatype pour désigner un "artifact, package, bundle, archive".  
+_Assets_  
+Eléments constituant un composants. Par exemples un jar et son pom.xml forme un artifiact maven.  
+_Components in Repositories_  
+Le repository est l'endroit qui rend accéssible les composants.
 
 ### Source
 
