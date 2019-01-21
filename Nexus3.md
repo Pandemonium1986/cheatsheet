@@ -181,6 +181,15 @@ Eléments constituant un composants. Par exemples un jar et son pom.xml forme un
 _Components in Repositories_  
 Le repository est l'endroit qui rend accéssible les composants.
 
+### Directories
+Après l'installation deux répertoires apparaissent :
+* nexus-3.XX.X-XX
+  Contient l'application Nexus Repository Manager.
+* sonatype-work
+  Contient l'ensemble des repositories, components et autres.
+Attention il ne faut pas modifier les fichiers de configuration situé dans nexus-3.XX.X-XX, mais dans sonatype-work/nexus3/etc/. Néanmoins certain fichier de conf ne sont disponible que dans nexus-3.XX.X-XX comme nexus.vmoptions.  
+Le dossier sonatype-work/nexus3/blobs est le plus important, c'est lui qui contient les repositories.
+
 ### Source
 
 [Docker Sonatype/Nexus3](https://hub.docker.com/r/sonatype/nexus3)  
