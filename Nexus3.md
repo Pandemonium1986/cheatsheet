@@ -17,7 +17,17 @@ Fonctionnalité d'analyse des licences.
 
 ### Procédure d'installation
 
-La procédure d'installation de _Nexus3_ sur _Debian 9.5.0_ se déroule de la façon suivante :
+_Nexus 3_ est une webapps java totalement autonome. Il existe deux méthodes "d'installation" de nexus :
+
+-   Via l'archive de distribution classique.  
+    Il suffit de dézipper le contenu de l'archive (/opt/nexus) et d'exécuter bin/nexus start.
+    L'application est démarré lorsque le message de log de la console "Started Sonatype Nexus".
+-   Via l'image docker.  
+    Exécuter la commande suivante :
+    ```sh
+    mkdir /some/dir/nexus-data && chown -R 200 /some/dir/nexus-data
+    docker run -d -p 8081:8081 --name nexus -v /some/dir/nexus-data:/nexus-data sonatype/nexus3
+		```
 
 ### Comparatif Nexus Artifactory ProGet
 
@@ -179,3 +189,5 @@ Le repository est l'endroit qui rend accéssible les composants.
 [Nexus3 Dowloads](https://fr.sonatype.com/download-oss-sonatype)  
 [Nexus3 Communauté](https://exchange.sonatype.com/list)
 [Nexus Comparatif](https://fr.sonatype.com/nexus-repository-oss-vs.-pro-features)
+[Nexus3 Run as a Service](https://help.sonatype.com/repomanager3/installation/run-as-a-service)
+[Nexus3 Run Behind a Reverse Proxy](https://help.sonatype.com/repomanager3/installation/run-behind-a-reverse-proxy)
