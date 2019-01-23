@@ -250,12 +250,38 @@ vagrant up
 ```
 
 ### Vagrant Base Box Creation
+
 ```sh
 vagrant package --base pandama-vanilla --output debvanilla.box
 ```
 
+Update Base Box :  
+Connect to base box as root.
+
+```sh
+apt update && apt upgrade && apt dist-upgrade
+```
+
+Mount last VirtualBox tools cd.
+
+```sh
+mount /dev/cdrom /mnt
+sh /mnt/VBoxLinuxAdditions.run
+umount /mnt
+```
+
+Eject the disc tray.  
+Then update it :
+
+```sh
+vagrant box outdated --global
+vagrant box update --box pandemonium/debvanilla
+```
+
 ### Vagrant Provisioners
+
 Provisioners can also be named :
+
 ```ruby
 Vagrant.configure("2") do |config|
   # ... other configuration
@@ -266,12 +292,13 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-Running Provisioners :   
+Running Provisioners :  
 Provisioners are run in three cases: the initial vagrant up, vagrant provision, and vagrant reload --provision.
 
 The --provision-with flag can be used if you only want to run a specific provisioner if you have multiple provisioners specified.  The arguments to --provision-with can be the provisioner type (such as "shell") or the provisioner name (such as "bootstrap" from above).
 
 Run Once, Always or Never :
+
 ```ruby
 Vagrant.configure("2") do |config|
   config.vm.provision "bootstrap", type: "shell", run: "never" do |s|
