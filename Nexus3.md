@@ -138,6 +138,78 @@ On ne peut upgrader que sur une version vanilla de la 3.y (fresh install).
 
 Version recommandé pour l'upgrade 2.14.5+
 
+### Why Upgrade to Nexus Repository Manager 3 ?
+
+-   Nouveau format de repository.
+-   Interface utilisateur améliorée
+-   Recherche de composants performante
+-   Navigation dans le référentiel universel
+-   Métadonnées améliorées
+
+### Upgrade Process and Expectations
+
+#### What Is Upgraded
+
+Component storage format from files to blobs :  
+On passe du systeme de fichier à plat de Nexus 2 au blob de Nexus 3.  
+C'est le plus gros changement.  
+
+Les metadata associées aux components passe de multiple fichier à la base OrientDB.  
+
+Les urls de déploiement et d'accès sont maintenant différentes.  
+
+#### What Is Not Upgraded
+
+Parmis les plus impactant :
+
+-   virtual repositories
+-   Java VM settings, including custom system properties or variables
+-   operating system nexus service scripts
+-   operating system optimization, such as increasing allowable open file handles
+-   environment variables affecting values used to control the repository manager
+-   third-party or custom-developed plugins
+
+#### Repository Format Support
+
+-   npm
+-   NuGet
+-   Site/Raw
+-   Maven2
+-   RubyGems
+
+#### Data Transfer Methods
+
+-   HTTP Downloading
+    Nécéssaire si le Nexus 2 et 3 sont sur deux machines différentes.
+-   File System Copying
+    Possible ssi le Nexus 2 et 3 sont configurés pour accéder au même espace de stockage.  
+    C'est la méthode alernative
+-   File System Hard Linking
+    Possible ssi le Nexus 2 et 3 sont configurés pour accéder au même espace de stockage.  
+    C'est la méthode la plus rapide.
+
+#### Upgrade Details for Specific Elements
+
+-   Repository IDs
+    Attention les repository id n'existe plus dans Nexus 3.  
+    Ils sont néanmoins "case sensitive" pendant le process de migration.
+-   Repository Groups
+    S'assurer que dans un groupe l'ensemble des repositories soient éligibles.  
+    Au rique de ne pas upgrader le groupe entier...  
+-   HTTP(S) Proxy Configuration
+    Ils sont a configurer manuellement dans chaque environment.
+
+#### Security Compatibility
+
+-   Version 2 Roles
+    Les roles sont upgradé du Nexus 2 vers le Nexus 3. Ils sont préfixé de nx2-.
+-   Version 2 Repository Targets and Target Privileges
+    Les Repository targets de Nexus 2 deviennent des Content Selector dans Nexus 3.
+
+#### Upgrade Procedure
+
+Lire la [doc officiel](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures) dans son intégralité.
+
 ### System Requirements
 
 Avoir java 8 et un utilisateur dédié.
@@ -220,3 +292,4 @@ La configuration du produit se situe dans trois répertoires distinct :
 [Nexus Comparatif](https://fr.sonatype.com/nexus-repository-oss-vs.-pro-features)
 [Nexus3 Run as a Service](https://help.sonatype.com/repomanager3/installation/run-as-a-service)
 [Nexus3 Run Behind a Reverse Proxy](https://help.sonatype.com/repomanager3/installation/run-behind-a-reverse-proxy)
+[Nexus3 Upgrade Procedures](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures)
