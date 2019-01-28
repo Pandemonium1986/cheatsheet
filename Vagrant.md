@@ -137,7 +137,7 @@ vagrant box add hashicorp/precise64
 
 Using a Box :  
 
-```java
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise64"
 end
@@ -184,7 +184,7 @@ Vagrantfile
 
 Vagrant has built-in support for automated provisioning. Using this feature, Vagrant will automatically install software when you vagrant up so that the guest machine can be repeatably created and ready-to-use.
 
-```java
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise64"
   config.vm.provision :shell, path: "bootstrap.sh"
@@ -200,7 +200,7 @@ vagrant provision
 
 ##### Networking Port Forwarding
 
-```java
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise64"
   config.vm.provision :shell, path: "bootstrap.sh"
@@ -250,9 +250,63 @@ vagrant up
 ```
 
 ### Vagrant Base Box Creation
+
 ```sh
 vagrant package --base pandama-vanilla --output debvanilla.box
 ```
+
+Update Base Box :  
+Connect to base box as root.
+
+```sh
+apt update && apt upgrade && apt dist-upgrade
+```
+
+Mount last VirtualBox tools cd.
+
+```sh
+mount /dev/cdrom /mnt
+sh /mnt/VBoxLinuxAdditions.run
+umount /mnt
+```
+
+Eject the disc tray.  
+Then update it :
+
+```sh
+vagrant box outdated --global
+vagrant box update --box pandemonium/debvanilla
+```
+
+### Vagrant Provisioners
+
+Provisioners can also be named :
+
+```ruby
+Vagrant.configure("2") do |config|
+  # ... other configuration
+
+  config.vm.provision "bootstrap", type: "shell" do |s|
+    s.inline = "echo hello"
+  end
+end
+```
+
+Running Provisioners :  
+Provisioners are run in three cases: the initial vagrant up, vagrant provision, and vagrant reload --provision.
+
+The --provision-with flag can be used if you only want to run a specific provisioner if you have multiple provisioners specified.  The arguments to --provision-with can be the provisioner type (such as "shell") or the provisioner name (such as "bootstrap" from above).
+
+Run Once, Always or Never :
+
+```ruby
+Vagrant.configure("2") do |config|
+  config.vm.provision "bootstrap", type: "shell", run: "never" do |s|
+    s.inline = "echo hello"
+  end
+end
+```
+
 ### Source
 
 [Vagrant Getting Started](https://www.vagrantup.com/intro/getting-started)
