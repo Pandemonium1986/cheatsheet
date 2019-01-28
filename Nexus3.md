@@ -27,7 +27,14 @@ _Nexus 3_ est une webapps java totalement autonome. Il existe deux méthodes "d'
     ```sh
     mkdir /some/dir/nexus-data && chown -R 200 /some/dir/nexus-data
     docker run -d -p 8081:8081 --name nexus -v /some/dir/nexus-data:/nexus-data sonatype/nexus3
-		```
+    ```
+
+### Procédure de post-installation
+
+-   Step 1: Change the Administrative Password and Email Address
+-   Step 2: Configure the SMTP Settings
+-   Step 3: Configure Default HTTP and HTTPS Proxy Settings
+-   Step 4: Setup a Backup procedure for your server
 
 ### Comparatif Nexus Artifactory ProGet
 
@@ -182,13 +189,26 @@ _Components in Repositories_
 Le repository est l'endroit qui rend accéssible les composants.
 
 ### Directories
+
 Après l'installation deux répertoires apparaissent :
-* nexus-3.XX.X-XX
-  Contient l'application Nexus Repository Manager.
-* sonatype-work
-  Contient l'ensemble des repositories, components et autres.
-Attention il ne faut pas modifier les fichiers de configuration situé dans nexus-3.XX.X-XX, mais dans sonatype-work/nexus3/etc/. Néanmoins certain fichier de conf ne sont disponible que dans nexus-3.XX.X-XX comme nexus.vmoptions.  
-Le dossier sonatype-work/nexus3/blobs est le plus important, c'est lui qui contient les repositories.
+
+-   nexus-3.XX.X-XX
+    Contient l'application Nexus Repository Manager.
+-   sonatype-work
+    Contient l'ensemble des repositories, components et autres.
+    Le dossier sonatype-work/nexus3/blobs est le plus important, c'est lui qui contient les repositories.
+
+### Configuring the Runtime Environment
+
+La configuration du produit se situe dans trois répertoires distinct :
+
+-   $data-dir/etc
+    Contient le fichier _nexus.properties_ qui possède quelques variables de configuration notamment l'ip et le port.
+-   $install-dir/bin
+    Contient le fichier _nexus.vmoptions_ qui possède quelques variables de configuration notamment la localisation du data directories.
+-   $install-dir/etc
+    Contient les configuration des middlexare utilisé par Nexus3.
+    Pour savoir "où" modifier "quoi" autant se rendre sur la [documentation officiel](https://help.sonatype.com/repomanager3/installation/configuring-the-runtime-environment).
 
 ### Source
 
