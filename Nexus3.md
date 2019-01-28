@@ -1,42 +1,18 @@
-# Nexus3 : Installation et Configuration
+# Nexus 3 : Installation et Configuration
 
-### Version des outils
+## Version des outils
 
-|         Os / Tool        | Version |
-| :----------------------: | :-----: |
-| Windows 10 Professionnel |   1803  |
-|  Wsl - Debian GNU/Linux  |  9.6.0  |
-|          Ansible         |   2.6+  |
-|          Nexus3          | 3.15.0+ |
-|          Nexus2          |  X.X.X  |
+| Os / Tool |  Version  |
+| :-------: | :-------: |
+|  Nexus 3  |  3.15.0+  |
+|  Nexus 2  | 2.14.5-02 |
 
-### Note en vrac
+## Note en vrac
 
-Améliration de Repository Health Check (RHC) depuis la 3.3.  
+Amélioration de Repository Health Check (RHC) depuis la 3.3.  
 Fonctionnalité d'analyse des licences.  
 
-### Procédure d'installation
-
-_Nexus 3_ est une webapps java totalement autonome. Il existe deux méthodes "d'installation" de nexus :
-
--   Via l'archive de distribution classique.  
-    Il suffit de dézipper le contenu de l'archive (/opt/nexus) et d'exécuter bin/nexus start.
-    L'application est démarré lorsque le message de log de la console "Started Sonatype Nexus".
--   Via l'image docker.  
-    Exécuter la commande suivante :
-    ```sh
-    mkdir /some/dir/nexus-data && chown -R 200 /some/dir/nexus-data
-    docker run -d -p 8081:8081 --name nexus -v /some/dir/nexus-data:/nexus-data sonatype/nexus3
-    ```
-
-### Procédure de post-installation
-
--   Step 1: Change the Administrative Password and Email Address
--   Step 2: Configure the SMTP Settings
--   Step 3: Configure Default HTTP and HTTPS Proxy Settings
--   Step 4: Setup a Backup procedure for your server
-
-### Comparatif Nexus Artifactory ProGet
+## Comparatif Artifactory Nexus ProGet
 
 |              | Artifactory | Nexus 3 | ProGet |
 | ------------ | :---------: | :-----: | :----: |
@@ -73,7 +49,7 @@ _Nexus 3_ est une webapps java totalement autonome. Il existe deux méthodes "d'
 | VSIX         |             |         |    X   |
 | Upack        |             |         |    X   |
 
-### De Nexus 2 à Nexus 3
+## De Nexus 2 à Nexus 3
 
 | Fonctionnalités                       | 2.x OSS | 2.x Pro |     3.x OSS    |     3.x Pro    |
 | ------------------------------------- | :-----: | :-----: | :------------: | :------------: |
@@ -110,7 +86,7 @@ _Nexus 3_ est une webapps java totalement autonome. Il existe deux méthodes "d'
 | Aide de la communauté                 |    X    |    X    |        X       |        X       |
 | Support pour entreprises              |         |    X    |                |        X       |
 
-### Tarifications
+## Tarifications
 
 |              |   Artifactory  |            Nexus 3            |
 | ------------ | :------------: | :---------------------------: |
@@ -121,102 +97,23 @@ _Nexus 3_ est une webapps java totalement autonome. Il existe deux méthodes "d'
 
 Note artifactory est "Unlimited number of users"
 
+## Sonatype Nexus 3 documentation
+
 ### Download
 
-Denière version de nexus 3 : 3.15.0-01 (2019-01-15)
+Dernière version de nexus 3 : 3.15.0-01 (2019-01-15)
 Disponible sous trois formes :
 
 -   Archives (Unix/Windows/OSX).
 -   Docker Image.
 -   Cloud Templates.
 
-### Upgradé de 2.x vers 3.y
-
-On ne peut upgrader que d'une version 2.14.1 + vers une 3.1 +.  
-On ne peut upgrader que d'une OSS vers une OSS ou d'une PRO vers une PRO.  
-On ne peut upgrader que sur une version vanilla de la 3.y (fresh install).
-
-Version recommandé pour l'upgrade 2.14.5+
-
-### Why Upgrade to Nexus Repository Manager 3 ?
-
--   Nouveau format de repository.
--   Interface utilisateur améliorée
--   Recherche de composants performante
--   Navigation dans le référentiel universel
--   Métadonnées améliorées
-
-### Upgrade Process and Expectations
-
-#### What Is Upgraded
-
-Component storage format from files to blobs :  
-On passe du systeme de fichier à plat de Nexus 2 au blob de Nexus 3.  
-C'est le plus gros changement.  
-
-Les metadata associées aux components passe de multiple fichier à la base OrientDB.  
-
-Les urls de déploiement et d'accès sont maintenant différentes.  
-
-#### What Is Not Upgraded
-
-Parmis les plus impactant :
-
--   virtual repositories
--   Java VM settings, including custom system properties or variables
--   operating system nexus service scripts
--   operating system optimization, such as increasing allowable open file handles
--   environment variables affecting values used to control the repository manager
--   third-party or custom-developed plugins
-
-#### Repository Format Support
-
--   npm
--   NuGet
--   Site/Raw
--   Maven2
--   RubyGems
-
-#### Data Transfer Methods
-
--   HTTP Downloading
-    Nécéssaire si le Nexus 2 et 3 sont sur deux machines différentes.
--   File System Copying
-    Possible ssi le Nexus 2 et 3 sont configurés pour accéder au même espace de stockage.  
-    C'est la méthode alernative
--   File System Hard Linking
-    Possible ssi le Nexus 2 et 3 sont configurés pour accéder au même espace de stockage.  
-    C'est la méthode la plus rapide.
-
-#### Upgrade Details for Specific Elements
-
--   Repository IDs
-    Attention les repository id n'existe plus dans Nexus 3.  
-    Ils sont néanmoins "case sensitive" pendant le process de migration.
--   Repository Groups
-    S'assurer que dans un groupe l'ensemble des repositories soient éligibles.  
-    Au rique de ne pas upgrader le groupe entier...  
--   HTTP(S) Proxy Configuration
-    Ils sont a configurer manuellement dans chaque environment.
-
-#### Security Compatibility
-
--   Version 2 Roles
-    Les roles sont upgradé du Nexus 2 vers le Nexus 3. Ils sont préfixé de nx2-.
--   Version 2 Repository Targets and Target Privileges
-    Les Repository targets de Nexus 2 deviennent des Content Selector dans Nexus 3.
-
-#### Upgrade Procedure
-
-Lire la [doc officiel](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures) dans son intégralité.
-
 ### System Requirements
 
-Avoir java 8 et un utilisateur dédié.
-Augmenter la limit du nombre de fichier ouvrable par l'utilisateur nexus "nexus - nofile 65536".  
-L'image docker est configuré comme il faut mais si besoin on peut la démarrer avec le flags : "--ulimit nofile=65536:65536"  
-Les paramètres de la JVM sont dépendants de la RAM disponible sans toutefois dépasser les 4GB Max.
-Laisser les params de la JVM par défaut à min 1200MB et max &lt;4GB.
+-   Avoir java 8 et un utilisateur dédié.
+-   Augmenter la limit du nombre de fichier ouvrable par l'utilisateur nexus "nexus - nofile 65536". L'image docker est configuré comme il faut mais si besoin on peut la démarrer avec le flags : "--ulimit nofile=65536:65536"  
+-   Les paramètres de la JVM sont dépendants de la RAM disponible sans toutefois dépasser les 4GB Max.  
+-   Laisser les params de la JVM par défaut à min 1200MB et max &lt;4GB.
 
 | Physical Memory | Example Maximum Memory Configuration                        |
 | --------------- | ----------------------------------------------------------- |
@@ -229,38 +126,80 @@ Laisser les params de la JVM par défaut à min 1200MB et max &lt;4GB.
 
 Pas de NFS pour les blobstore. Si il n'y a pas le choix il faut du NFS v4 car NFS v3 est connu pour des problèmes de compatibilités.
 
+### Upgrade Compatibility - Repository Manager 2 to 3
+
+On ne peut qu’upgrader que d'une version 2.14.1 + vers une 3.1 +.  
+On ne peut qu’upgrader que d'une OSS vers une OSS ou d'une PRO vers une PRO.  
+On ne peut upgrader que sur une version vanilla de la 3.y (fresh install).  
+Version recommandée pour l'upgrade 2.14.5+  
+
+Matrice de migration :
+
+| Version 2 | Version 3 | Minimum Lifecycle Firewall compatible IQ Server |
+| --------- | --------- | ----------------------------------------------- |
+| 2.14.8    | 3.12.1    | 1.46.0                                          |
+| 2.14.6    | 3.8.0     | 1.42.0                                          |
+| 2.14.5    | 3.7.1     | 1.33.0                                          |
+| 2.14.4    | 3.4.0     | Not Supported                                   |
+| 2.14.3    | 3.2.1     | Not Supported                                   |
+| 2.14.2    | 3.2       | Not Supported                                   |
+| 2.14.1    | 3.1       | Not Supported                                   |
+
 ### Repository Manager Pro Features
 
 _Atlassian Crowd Support_  
 Il s'agit d'un système de sso vendu par Atlassian. La version pro supporte nativement cette fonctionnalité.  
+
 _Staging and Build Promotion_  
-Permet d'automatiser directement au sein de Nexus3 la promotion d'artifact entre les phases de builds pour passer d'un repository de 'staging' à un repository de 'production'.  
+Permet d'automatiser directement au sein de Nexus 3 la promotion de component entre les phases de builds pour passer d'un repository de 'staging' à un repository de 'production'.  
+
 _Tagging_  
-Permet de "taguer" un ensemble d'artifact pour les associers les uns autres.  
-Fonctionne de pair avec la fonctionnalité de staging de Nexus3.  
+Permet de "taguer" un ensemble de component pour les associer  les uns autres.  
+Fonctionne de pair avec la fonctionnalité de staging de Nexus 3.  
+
 _User Token Support_  
 Permet d'utiliser des token en lieu et place des mots de passes.  
+
 _High Availability_  
-Permet de clusteriser Nexus3.
+Permet de clusteriser Nexus 3.
+
 _Repository Health Check_  
-Fonctionnalité de check des artifacts pour notamment l'intégrer dans un pipeline DevSecOps.  
+Fonctionnalité de check des components pour notamment l'intégrer dans un pipeline DevSecOps.  
 Permet de détecter automatiquement les risques de sécurité des projets opensource.  
 Fonctionne "à la manière" d'un xray.  
+
 _Customer Success_  
 Coaching spécifique dédié au souscripteur.
+
 _Enterprise Support_  
 Support.
 
 ### Repository Manager Concepts
 
 _Components_  
-Le temre employé par Sonatype pour désigner un "artifact, package, bundle, archive".  
-_Assets_  
-Eléments constituant un composants. Par exemples un jar et son pom.xml forme un artifiact maven.  
-_Components in Repositories_  
-Le repository est l'endroit qui rend accéssible les composants.
+Le terme employé par Sonatype pour désigner un "artifact, package, bundle, archive".  
 
-### Directories
+_Assets_  
+Eléments constituant un composant. Par exemples un jar et son pom.xml forme un artifiact maven.  
+
+_Components in Repositories_  
+Le repository est l'endroit qui rend accessible les composants.
+
+### Installation
+
+_Nexus 3_ est une webapps java totalement autonome. Il existe deux méthodes "d'installation" de nexus :
+
+-   Via l'archive de distribution classique.  
+    Il suffit de dézipper le contenu de l'archive (/opt/nexus) et d'exécuter bin/nexus start.
+    L'application est démarrée lorsque le message de log de la console "Started Sonatype Nexus".
+-   Via l'image docker.  
+    Exécuter la commande suivante :
+    ```sh
+    mkdir /some/dir/nexus-data && chown -R 200 /some/dir/nexus-data
+    docker run -d -p 8081:8081 --name nexus -v /some/dir/nexus-data:/nexus-data sonatype/nexus3
+    ```
+
+#### Directories
 
 Après l'installation deux répertoires apparaissent :
 
@@ -270,7 +209,7 @@ Après l'installation deux répertoires apparaissent :
     Contient l'ensemble des repositories, components et autres.
     Le dossier sonatype-work/nexus3/blobs est le plus important, c'est lui qui contient les repositories.
 
-### Configuring the Runtime Environment
+#### Configuring the Runtime Environment
 
 La configuration du produit se situe dans trois répertoires distinct :
 
@@ -279,17 +218,98 @@ La configuration du produit se situe dans trois répertoires distinct :
 -   $install-dir/bin
     Contient le fichier _nexus.vmoptions_ qui possède quelques variables de configuration notamment la localisation du data directories.
 -   $install-dir/etc
-    Contient les configuration des middlexare utilisé par Nexus3.
-    Pour savoir "où" modifier "quoi" autant se rendre sur la [documentation officiel](https://help.sonatype.com/repomanager3/installation/configuring-the-runtime-environment).
+    Contient les configuration des middlexare utilisé par Nexus 3.
+    Pour savoir "où" modifier "quoi" autant se rendre sur la [documentation officielle](https://help.sonatype.com/repomanager3/installation/configuring-the-runtime-environment).
+
+#### Post Install Checklist
+
+-   Etape 1: Changer le mot de passe administrateur et l'adresse email.
+-   Etape 2: Faire la configuration SMTP.
+-   Etape 3: Configurer les proxy HTTP et HTTPS.
+-   Etape 4: Créer une procédure de backup.
+
+### Upgrading
+
+#### Why Upgrade to Nexus Repository Manager 3 ?
+
+-   Nouveau format de repository.
+-   Interface utilisateur améliorée
+-   Recherche de composants performante
+-   Navigation dans le référentiel universel
+-   Métadonnées améliorées
+
+### Upgrade Process and Expectations
+
+_What Is Upgraded_
+
+-   Stockage des compoent des fichiers aux blobs :
+    On passe du système de fichier à plat de Nexus 2 au blob de Nexus 3.  
+    **C'est le plus gros changement.**
+-   Les metadata associées aux components passe de multiple fichier à la base OrientDB.  
+-   Les urls de déploiement et d'accès sont maintenant différentes.  
+
+_What Is Not Upgraded_
+Parmis les plus impactant :
+
+-   virtual repositories
+-   Java VM settings, including custom system properties or variables
+-   operating system nexus service scripts
+-   operating system optimization, such as increasing allowable open file handles
+-   environment variables affecting values used to control the repository manager
+-   third-party or custom-developed plugins
+
+_Repository Format Support_
+
+-   npm
+-   NuGet
+-   Site/Raw
+-   Maven2
+-   RubyGems
+
+#### Data Transfer Methods
+
+-   HTTP Downloading
+    Nécessaire si le Nexus 2 et 3 sont sur deux machines différentes.
+-   File System Copying
+    Possible si et seulement si le Nexus 2 et 3 sont configurés pour accéder au même espace de stockage.  
+    C'est la méthode alternative
+-   File System Hard Linking
+    Possible si et seulement si le Nexus 2 et 3 sont configurés pour accéder au même espace de stockage.  
+    C'est la méthode la plus rapide.
+
+#### Upgrade Details for Specific Elements
+
+-   Repository IDs
+    Attention les repository id n'existe plus dans Nexus 3.  
+    Ils sont néanmoins "case sensitive" pendant le process de migration.
+-   Repository Groups
+    S'assurer que dans un groupe l'ensemble des repositories soient éligibles.  
+    Au risque de ne pas upgrader le groupe entier...  
+-   HTTP(S) Proxy Configuration
+    Ils sont à configurer manuellement dans chaque environment.
+
+#### Security Compatibility
+
+-   Version 2 Roles
+    Les roles sont upgradé du Nexus 2 vers le Nexus 3. Ils sont préfixés de nx2-.
+-   Version 2 Repository Targets and Target Privileges
+    Les Repository targets de Nexus 2 deviennent des Content Selector dans Nexus 3.
+
+#### Upgrade Procedure
+
+Lire la [documentation officielle](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures) dans son intégralité.
 
 ### Source
 
-[Docker Sonatype/Nexus3](https://hub.docker.com/r/sonatype/nexus3)  
 [Sonatype Global](https://fr.sonatype.com/)  
-[Nexus3 OSS Global](https://fr.sonatype.com/nexus-repository-oss)  
-[Nexus3 Dowloads](https://fr.sonatype.com/download-oss-sonatype)  
-[Nexus3 Communauté](https://exchange.sonatype.com/list)
-[Nexus Comparatif](https://fr.sonatype.com/nexus-repository-oss-vs.-pro-features)
-[Nexus3 Run as a Service](https://help.sonatype.com/repomanager3/installation/run-as-a-service)
-[Nexus3 Run Behind a Reverse Proxy](https://help.sonatype.com/repomanager3/installation/run-behind-a-reverse-proxy)
-[Nexus3 Upgrade Procedures](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures)
+[Nexus 3 Dowloads](https://fr.sonatype.com/download-oss-sonatype)  
+[Docker Sonatype/Nexus 3](https://hub.docker.com/r/sonatype/nexus3)  
+
+[Nexus 3 OSS Global](https://fr.sonatype.com/nexus-repository-oss)  
+[Nexus 3 Communauté](https://exchange.sonatype.com/list)  
+[Nexus Comparatif](https://fr.sonatype.com/nexus-repository-oss-vs.-pro-features)  
+
+[Nexus 3 Release Notes 2019](https://help.sonatype.com/repomanager3/release-notes/2019-release-notes)  
+[Nexus 3 Run as a Service](https://help.sonatype.com/repomanager3/installation/run-as-a-service)  
+[Nexus 3 Run Behind a Reverse Proxy](https://help.sonatype.com/repomanager3/installation/run-behind-a-reverse-proxy)  
+[Nexus 3 Upgrade Procedures](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures)  
