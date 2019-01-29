@@ -12,6 +12,14 @@
 Amélioration de Repository Health Check (RHC) depuis la 3.3.  
 Fonctionnalité d'analyse des licences.  
 
+Les éléments à configurer rapidement :  
+* Repository/Blobstore.
+* Repository/Repositories.
+* Repository/Cleanup Policies. (New in 3.14.0)
+* System/Capabilities
+* System/Tasks
+* Backup and Restore
+
 ## Comparatif Artifactory Nexus ProGet
 
 |              | Artifactory | Nexus 3 | ProGet |
@@ -297,8 +305,26 @@ _Repository Format Support_
 
 #### Upgrade Procedure
 
-Lire la [documentation officielle](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures) dans son intégralité.
+Lire la [documentation officielle](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures).
 
+## Configuration/Navigation
+### User Interface
+En se connectant on arrive sur l'interface de base.  
+![Welcome](/img/nxs3-001.png)  
+En tant qu'utilisateur anonyme on peut accéder à l'interface de recherche rapide et avancé et naviguer dans les repositories.  
+En tant qu'admin on peut manager via le bouton engrenage.  
+En tant qu'utilisateur identifié possédant les droits suffisants, on peut uploader depuis l'interface un component.
+
+### Administration Menu
+L'interface d'administration est découpée en 5 sous menu.  
+![administration](/img/nxs3-002.png)  
+* Repository, gère les repositories, blob stores, cleanup policies et Content Selector.
+* IQ Server, gère la connexion au IQ Server.
+* Security, gère tous ce qui est relatif à la sécurité (Authentication, Authorization, Privileges... ).
+* Support, fonctionnalité de monitoring du serveur.
+* System, la configuration générale de l'outil.
+
+Dans l'interface Repository la notion de **Blob stores** et **Content selectors** est importante.  
 ### Source
 
 [Sonatype Global](https://fr.sonatype.com/)  
@@ -313,3 +339,6 @@ Lire la [documentation officielle](https://help.sonatype.com/repomanager3/upgrad
 [Nexus 3 Run as a Service](https://help.sonatype.com/repomanager3/installation/run-as-a-service)  
 [Nexus 3 Run Behind a Reverse Proxy](https://help.sonatype.com/repomanager3/installation/run-behind-a-reverse-proxy)  
 [Nexus 3 Upgrade Procedures](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures)  
+
+[Nexus 3 Quick Start Maven/Npm](https://guides.sonatype.com/repo3/quick-start-guides/proxying-maven-and-npm/)
+[Nexus 3 Storage Guide](https://help.sonatype.com/repomanager3/configuration/storage-guide)
