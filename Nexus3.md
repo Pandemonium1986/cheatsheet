@@ -7,19 +7,73 @@
 |  Nexus 3  |  3.15.0+  |
 |  Nexus 2  | 2.14.5-02 |
 
+## Todo
+
+-   Apt plugin
+-   Docker repositories
+-   Content Selector
+-   Cleanup Policies
+-   Capabilities
+-   Tasks
+
 ## Note en vrac
 
 Amélioration de Repository Health Check (RHC) depuis la 3.3.  
 Fonctionnalité d'analyse des licences.  
 
-Les éléments à configurer rapidement :  
+Concernant les scripts de configuration :  
+Système très curieux mêlant rest api et groovy script.  
+On upload un script groovy qu'on éxécute ensuite via rest api (curl).  
+Techno encore jeune la javadoc montre qu'on peut "créer" mais pas deleter.  
+Il possible de faire un playbook d'installation/configuration mais cela semble très couteux.  
+Pas mal pour avoir un démarrage rapide mais néanmoins certain option manque (exemple sur les repo maven les valeurs "Max component Age" et "Max medata age" )  
+La rest api ne semble pas faire mieux.
 
--   Repository/Blobstore.
--   Repository/Repositories.
--   Repository/Cleanup Policies. (New in 3.14.0)
--   System/Capabilities
--   System/Tasks
--   Backup and Restore
+## Procédure d'installation docker
+
+###### Etape 1: Deployer le Nexus 3 depuis l'image officielle
+
+```sh
+mkdir /some/dir/nexus-data && chown -R 200 /some/dir/nexus-data
+docker run -d -p 8081:8081 --name nexus -v /some/dir/nexus-data:/nexus-data sonatype/nexus3
+```
+
+###### Etape 2: Supprimer les repositories par défaut
+
+![](/img/nxs3-003.png)  
+
+![](/img/nxs3-004.png)  
+
+###### Etape 3: Executer les groovy scripts pour peupler le Nexus 3.
+
+```sh
+cd $nexusgit-dir/provisioning
+./provision.sh all
+```
+
+###### Etape 4: Configurer le non automatisable
+
+![](/img/nxs3-005.png)  
+
+![](/img/nxs3-006.png)  
+
+Note : L'activation du RPC entraine automatiquement la création de tasks
+![](/img/nxs3-007.png)  
+
+###### Etape 5: Modifier la conf de nexus
+
+```sh
+cd $data-dir/etc
+echo "nexus.assetdownloads.enabled=true" >> nexus.properties
+sudo docker service update nexus_nexus
+```
+
+###### Etape 6: Faire les recommandations de la doc
+
+-   Changer le mot de passe administrateur et l'adresse email.
+-   Faire la configuration SMTP.
+-   Configurer les proxy HTTP et HTTPS.
+-   Créer une procédure de backup.
 
 ## Comparatif Artifactory Nexus ProGet
 
@@ -110,7 +164,7 @@ Note artifactory est "Unlimited number of users"
 
 ### Download
 
-Dernière version de nexus 3 : 3.15.0-01 (2019-01-15)
+Dernière version de Nexus 3 : 3.15.0-01 (2019-01-15)
 Disponible sous trois formes :
 
 -   Archives (Unix/Windows/OSX).
