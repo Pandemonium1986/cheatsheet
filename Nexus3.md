@@ -362,6 +362,60 @@ _Repository Format Support_
 
 Lire la [documentation officielle](https://help.sonatype.com/repomanager3/upgrading/upgrade-procedures).
 
+###### Etape 0 : Indisponibilité du nexus.
+Pendant la phase de migration le Nexus 2 reste disponible.  
+Une étape de "synchronisation" permet de récupérer les éventuelles "push" sur le nexus pendant la migration jusqu'à une certaine étape.  
+A la fin le Nexus 2 doit être désactivé au profit du Nexus 3, il est préférable dès lors d’effectuer l’opération en HNO et s’assurer que Jenkins n’effectue aucun deploy pendant la migration.  
+
+_Designing Your Upgrade Plan_  
+- [ ] Identification of a maintenance window for version 2, allowing the upgrade to proceed without interruption.
+- [x] Selection of an installation scenario that best supports your upgrade plan.
+- [x] Selection of an upgrade method.
+- [x] Getting access to a system storage , as well as location for content to be transferred to.
+- [ ] Identification of configurations that may result in failure, and prevent upgrade of certain components.
+- [x] Review of security settings , and associated differences between version 2 and version 3.
+- [x] Considerations for optimization.
+
+
+###### Etape 1 : S'assurer que le nexus 2 est en 2.14.11-01
+Le nexus 2 doit être dans la plus haute version disponible au moment de l'update.  
+Ceci permet de s’affranchir d’éventuelle problème d’incompatibilité de migration entre les versions et corrige d’éventuelle bug concernant la procédure d’update automatique.
+
+###### Etape 2 : Optimisation pre-migration
+- [ ] Nexus 2 : Désactiver les "System feeds".
+- [ ] Nexus 2 : Supprimer les Snapshots.
+- [ ] Nexus 2 : Désactiver les "Scheduled task for releases".
+
+###### Etape 3 : Activer les "Upgrade Capability" de Nexus 2 et Nexus 3.
+Dans Nexus 2 / 3 en tant qu'admin
+![](/img/nxs3-008.png)  
+
+![](/img/nxs3-009.png)  
+
+![](/img/nxs3-010.png)  
+
+###### Etape 4 : Créer les blobstore cible.
+Si ce n'est pas déjà fait (à l'instanciation du Nexus 3). Il faut créer les blobstores via le sript de provionning.
+
+![](/img/nxs3-011.png)  
+
+###### Etape 5 : Lancer la procédure de migration.
+Dans Nexus 3 en tant qu'admin.  
+Dans _Administation_ --> _System_ --> _Upgrade_.  
+
+###### Etape X :
+La migration est terminée, passons aux post migration tasks :
+
+- [ ] Nexus 3 : Checker les repositories group.
+- [ ] Nexus 3 : Checker les RHC.
+- [ ] Nexus 3 : Checker les settings (Imap, Proxy).
+- [ ] Nexus 3 : Nettoyer les roles et la security.
+- [ ] Nexus 3 : Configurer le mot de passe admin.
+- [ ] Nexus 3 : Créer les taches de clean des blobstores maven et de backup.
+- [ ] Nexus 3 : Retirer la capabilities upgrade.
+- [ ] Nexus 2 : Stopper le service.
+- [ ] Client : Modifier toutes les urls des .m2/settings.xml et .npmrc
+
 ## Configuration/Navigation
 
 ### User Interface
