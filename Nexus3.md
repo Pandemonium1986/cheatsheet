@@ -368,13 +368,13 @@ Une étape de "synchronisation" permet de récupérer les éventuelles "push" su
 A la fin le Nexus 2 doit être désactivé au profit du Nexus 3, il est préférable dès lors d’effectuer l’opération en HNO et s’assurer que Jenkins n’effectue aucun deploy pendant la migration.  
 
 _Designing Your Upgrade Plan_  
-- [ ] Identification of a maintenance window for version 2, allowing the upgrade to proceed without interruption.
-- [x] Selection of an installation scenario that best supports your upgrade plan.
-- [x] Selection of an upgrade method.
-- [x] Getting access to a system storage , as well as location for content to be transferred to.
-- [ ] Identification of configurations that may result in failure, and prevent upgrade of certain components.
-- [x] Review of security settings , and associated differences between version 2 and version 3.
-- [x] Considerations for optimization.
+- [ ] Identification of a maintenance window for version 2, allowing the upgrade to proceed without interruption.  
+- [x] Selection of an installation scenario that best supports your upgrade plan.  
+- [x] Selection of an upgrade method.  
+- [x] Getting access to a system storage , as well as location for content to be transferred to.  
+- [ ] Identification of configurations that may result in failure, and prevent upgrade of certain components.  
+- [x] Review of security settings , and associated differences between version 2 and version 3.  
+- [x] Considerations for optimization.  
 
 
 ###### Etape 1 : S'assurer que le nexus 2 est en 2.14.11-01
@@ -410,6 +410,7 @@ La migration est terminée, passons aux post migration tasks :
 - [ ] Nexus 3 : Checker les RHC.
 - [ ] Nexus 3 : Checker les settings (Imap, Proxy).
 - [ ] Nexus 3 : Nettoyer les roles et la security.
+- [ ] Nexus 3 : Vérifier les roles des utilisateurs admin et anonymous.
 - [ ] Nexus 3 : Configurer le mot de passe admin.
 - [ ] Nexus 3 : Créer les taches de clean des blobstores maven et de backup.
 - [ ] Nexus 3 : Retirer la capabilities upgrade.
