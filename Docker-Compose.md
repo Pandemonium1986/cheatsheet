@@ -40,6 +40,12 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 
+#### En vrac :
+https://docs.docker.com/compose/completion/
+https://docs.docker.com/compose/compose-file/
+https://docs.docker.com/compose/env-file/
+https://docs.docker.com/release-notes/docker-compose/
+
 
 ### Source
 
