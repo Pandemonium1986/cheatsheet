@@ -116,9 +116,10 @@ apm install <package_name>@<package_version>  # to install a specific version.
 
 #### Plugins
 
-| Actions    | Shortcuts |
-| ---------- | --------- |
-| Sort Lines | `F5`      |
+| Actions    | Shortcuts    |
+| ---------- | ------------ |
+| Beautify   | `Ctrl+Alt+B` |
+| Sort Lines | `F5`         |
 
 ### Source
 
