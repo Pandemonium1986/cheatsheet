@@ -88,6 +88,14 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B05498B7
 sudo sh -c 'echo "deb http://repo.steampowered.com/steam/ precise steam" > /etc/apt/sources.list.d/steam.list'
 ```
 
+#### Keepassxc
+
+```sh
+sudo add-apt-repository ppa:phoerious/keepassxc
+sudo apt-get update
+sudo apt install keepassxc
+```
+
 ### Knowledge Base
 
 ### Cheat Sheet
