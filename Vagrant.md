@@ -262,7 +262,7 @@ Connect to base box as root.
 apt update && apt upgrade && apt dist-upgrade
 ```
 
-Mount last VirtualBox tools cd.
+Mount last virtualbox guest additions cd.
 
 ```sh
 mount /dev/cdrom /mnt
@@ -277,6 +277,73 @@ Then update it :
 vagrant box outdated --global
 vagrant box update --box pandemonium/debvanilla
 ```
+
+#### Base Box : Centos
+
+Download latest CentOS release. Create a virtualbox machine :
+
+-   Name : ctsvanilla
+-   Memory : 1024
+-   Cpu : 2
+-   Système de pointage : Souris PS/2
+-   Ordre d'amorçage : Optique, Disque Dur
+-   Acceleration : VT-x/AMD-V, Pagination Imbriquée, PAE/NX, Paravirtualisation KVM
+-   Mémoire vidéo : 16 Mo
+-   Contrôleur graphique : VBoxVGA
+-   Son : Désactivé
+-   Usb : Désactivé
+
+**As root user**  
+
+```sh
+# Install yum priorities and epel repo
+yum install yum-plugin-priorities
+yum --enablerepo=extras install epel-release
+
+# Password-less sudo
+visudo # vagrant ALL=(ALL) NOPASSWD: ALL
+
+# SSHH Tweaks
+vi /etc/ssh/sshd_config #UseDNS no
+
+# Install packages for virtualbox guest additions
+yum upgrade
+yum groupinstall "Development Tools"
+yum install kernel-devel
+yum install dkms wget
+
+# Mount last virtualbox guest additions cd.
+mount /dev/cdrom /mnt
+sh /mnt/VBoxLinuxAdditions.run
+
+# Umount and dont forget to remove tray then poweroff
+umount /mnt
+poweroff
+
+# Reconnect and purge history
+cat /dev/null > .bash_history && history -c
+
+# Poweroff via vbox
+```
+
+**As vagrant user**  
+
+```sh
+# To correctly generate .ssh folder
+ssh-keygen
+
+# Grab the ssh insecure key
+wget https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub -O ~/.ssh/authorized_keys
+
+# Edit permissions
+chmod 600 ~/.ssh/authorized_keys && rm ~/.ssh/id_rsa*
+
+# Purge history
+cat /dev/null > .bash_history && history -c
+
+# Poweroff via vbox
+```
+
 
 ### Vagrant Provisioners
 
