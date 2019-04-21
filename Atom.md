@@ -16,7 +16,7 @@ Dl + Clic + Install
 Installation des packages supplémentaires :
 
 ```shell
-apm install atom-beautify busy-signal compare-files file-icons highlight-selected intentions language-ansible language-docker language-groovy linter linter-js-yaml linter-ui-default linter-vagrant-validate minimap minimap-highlight-selected minimap-linter minimap-split-diff sort-lines split-diff
+apm install atom-beautify busy-signal compare-files file-icons highlight-selected intentions language-ansible language-docker language-groovy linter linter-ansible-linting linter-ansible-syntax linter-js-yaml linter-ui-default linter-vagrant-validate minimap minimap-highlight-selected minimap-linter minimap-split-diff sort-lines split-diff
 ```
 
 ### Knowledge Base
@@ -113,6 +113,13 @@ apm install <package_name>@<package_version>  # to install a specific version.
 | Actions       | Shortcuts      |
 | ------------- | -------------- |
 | Show Snippets | `Ctrl+Shift+P` |
+
+#### Plugins
+
+| Actions    | Shortcuts    |
+| ---------- | ------------ |
+| Beautify   | `Ctrl+Alt+B` |
+| Sort Lines | `F5`         |
 
 ### Source
 
