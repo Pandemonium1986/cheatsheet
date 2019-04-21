@@ -409,6 +409,73 @@ cat /dev/null > .bash_history && history -c
 #Poweroff via vbox
 ```
 
+#### Base Box : Mint
+
+Download latest Linux Mint release. Create a virtualbox machine :
+
+-   Name : mntvanilla
+-   Memory : 2048
+-   Cpu : 2
+-   Système de pointage : Souris PS/2
+-   Ordre d'amorçage : Optique, Disque Dur
+-   Acceleration : VT-x/AMD-V, Pagination Imbriquée, PAE/NX, Paravirtualisation KVM
+-   Mémoire vidéo : 64 Mo
+-   Contrôleur graphique : VBoxVGA
+-   Accélération : 3D
+-   Son : Désactivé
+-   Usb : Désactivé
+
+**As root user**  
+
+```sh
+# Update alternative to have vim instead of nano
+update-alternatives --config editor
+
+# Password-less sudo
+visudo # vagrant ALL=(ALL) NOPASSWD:ALL at the enf of file
+
+# SSH Tweaks
+vi /etc/ssh/sshd_config #UseDNS no
+
+# Install packages for virtualbox guest additions
+apt update && apt upgrade
+apt install linux-headers-$(uname -r) build-essential dkms openssh-server
+
+# Reboot
+reboot
+
+# Mount last virtualbox guest additions cd.
+mount /dev/cdrom /mnt
+sh /mnt/VBoxLinuxAdditions.run
+
+# Umount and dont forget to remove tray then poweroff
+umount /mnt
+poweroff
+
+# Reconnect and purge history
+cat /dev/null > .bash_history && history -c
+
+# Poweroff via vbox
+```
+
+**As vagrant user**  
+
+```sh
+# To correctly generate .ssh folder
+ssh-keygen
+
+# Grab the ssh insecure key
+wget https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub -O ~/.ssh/authorized_keys
+
+# Edit permissions
+chmod 600 ~/.ssh/authorized_keys && rm ~/.ssh/id_rsa*
+
+# Purge history
+cat /dev/null > .bash_history && history -c
+
+#Poweroff via vbox
+```
+
 ### Vagrant Provisioners
 
 Provisioners can also be named :
