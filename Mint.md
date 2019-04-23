@@ -103,7 +103,7 @@ sudo apt install keepassxc
 ### Source
 
 [Battery drains](https://askubuntu.com/questions/974573/battery-drains-down-even-after-shut-down)  
-[Cinnamon Settings]\(<https://github.com/linuxmint/Cinnamon/wiki/Backing-up-and-restoring-your-cinnamon-settings-(dconf>)  
+[Cinnamon Settings](<https://github.com/linuxmint/Cinnamon/wiki/Backing-up-and-restoring-your-cinnamon-settings-(dconf>)  
 [Cinnamon Spices](https://cinnamon-spices.linuxmint.com/)  
 [Linux Mint](https://www.linuxmint.com/)  
 [UFW](https://help.ubuntu.com/community/UFW)  
