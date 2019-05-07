@@ -2,10 +2,10 @@
 
 ### Version des outils
 
-| Os / Tool |  Version |
-| :-------: | :------: |
-|   CentOs  | 7.4.1708 |
-| Docker Ce |  18.09.0 |
+| Os / Tool | Version |
+| :-------: | :-----: |
+|   Debian  |   9.9   |
+| Docker Ce | 18.09.0 |
 
 ### Note en vrac
 
@@ -27,11 +27,10 @@ The features of Compose that make it effective are:
     Only recreate containers that have changed
     Variables and moving a composition between environments
 
-
 Compose has traditionally been focused on development and testing workflows
 
-
 #### Install Docker Compose
+
 ```sh
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
@@ -41,11 +40,11 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 
 #### En vrac :
-https://docs.docker.com/compose/completion/
-https://docs.docker.com/compose/compose-file/
-https://docs.docker.com/compose/env-file/
-https://docs.docker.com/release-notes/docker-compose/
 
+<https://docs.docker.com/compose/completion/>  
+<https://docs.docker.com/compose/compose-file/>  
+<https://docs.docker.com/compose/env-file/>  
+<https://docs.docker.com/release-notes/docker-compose/>  
 
 ### Source
 
