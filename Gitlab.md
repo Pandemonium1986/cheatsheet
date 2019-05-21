@@ -15,6 +15,19 @@ N/A
 
 Leur idée réduire le temps passé à manager les outils et leurs interconnexions en ce concentrant sur la valeur clef : Le code source et les feature business.  
 
+A propos de leur site web :  
+Certaine fonctionnalités sont mise en avant via une page dédié comme :  
+[Source Code Management](https://about.gitlab.com/product/source-code-management/)  
+D'autres sont des rappels à la documentation :  
+[Wiki](https://docs.gitlab.com/ee/user/project/wiki/)  
+Les "missing feature" peuvent apparaître comme des épics dans gitlab :
+[Design Management](https://gitlab.com/groups/gitlab-org/-/epics/370)
+
+Tests :
+
+-   Runners
+-   Auto DevOps
+
 ## Avant propos
 
 > GitLab is a single application that provides everything you need to Manage, Plan, Create, Verify, Package, Release, Configure, Monitor, and Secure your applications.
@@ -164,6 +177,9 @@ _Logging, Cluster Monitoring, Tracing_
 **The DevOps lifecycle cross the arguments**  
 ![Devops Lifecycle](/img/gitlab-002.png)
 
+**DevOps Tools Landscape**  
+![DevOps Tools Landscape](/img/gitlab-003.png)
+
 ## Procédure d'installation docker
 
 **Quick start**  
@@ -174,7 +190,18 @@ _Logging, Cluster Monitoring, Tracing_
 
 ## Source
 
-[Gitlab About](https://about.gitlab.com/)  
-[Gitlab DevOps Lifeycle](https://about.gitlab.com/stages-devops-lifecycle/)  
-[Gitlab All features](https://about.gitlab.com/features/)
-[Concurrent Devops](https://about.gitlab.com/concurrent-devops/)
+[A beginner's guide to continuous integration](https://about.gitlab.com/2018/01/22/a-beginners-guide-to-continuous-integration/)  
+[About](https://about.gitlab.com/)  
+[Agile Planning](https://about.gitlab.com/solutions/agile-delivery/)  
+[All features](https://about.gitlab.com/features/)  
+[Auto DevOps](https://about.gitlab.com/product/auto-devops/)  
+[Concurrent Devops](https://about.gitlab.com/concurrent-devops/)  
+[Continuous Integration & Delivery](https://about.gitlab.com/product/continuous-integration/)  
+[DevOps Lifeycle](https://about.gitlab.com/stages-devops-lifecycle/)  
+[DevOps Tools Landscape](https://about.gitlab.com/devops-tools/)  
+[DevSecOps](https://about.gitlab.com/solutions/dev-sec-ops/)  
+[Handbook](https://about.gitlab.com/handbook/)  
+[Resources](https://about.gitlab.com/resources/)  
+[Source Code Management](https://about.gitlab.com/product/source-code-management/)  
+[Status Page](https://status.gitlab.com/)  
+[Value Stream Management](https://about.gitlab.com/solutions/value-stream-management/)  
