@@ -205,3 +205,5 @@ _Logging, Cluster Monitoring, Tracing_
 [Source Code Management](https://about.gitlab.com/product/source-code-management/)  
 [Status Page](https://status.gitlab.com/)  
 [Value Stream Management](https://about.gitlab.com/solutions/value-stream-management/)  
+
+[Youtube - Reseller Enablement - GitLab101](https://www.youtube.com/watch?v=6IvHb0sV9Bc&feature=youtu.be&mkt_tok=eyJpIjoiWXpaaE56TmtPRGhtWldFMSIsInQiOiI3UU5oREZud1JzNFVSc2VqMzBTaEQraEpoV3VodVRcLzU4aEJxS1hRQVp2T3lHWUk2ek5GbUpvYWJIK1FZckdxU3d0RHc0NlJYVEhyVVZZUVo3WHJaWVBiSG5SdFM5K0dwSVpsR0xiWXFiV25kNTZ0VmtiVmFDUTZUeHRFMDlkNmMifQ%3D%3D)
