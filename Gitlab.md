@@ -200,6 +200,7 @@ _Logging, Cluster Monitoring, Tracing_
 [DevOps Lifeycle](https://about.gitlab.com/stages-devops-lifecycle/)  
 [DevOps Tools Landscape](https://about.gitlab.com/devops-tools/)  
 [DevSecOps](https://about.gitlab.com/solutions/dev-sec-ops/)  
+[Feature Comparison](https://about.gitlab.com/pricing/self-managed/feature-comparison/)  
 [Handbook](https://about.gitlab.com/handbook/)  
 [Resources](https://about.gitlab.com/resources/)  
 [Source Code Management](https://about.gitlab.com/product/source-code-management/)  
