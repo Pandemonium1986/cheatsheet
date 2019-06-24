@@ -195,6 +195,7 @@ _Logging, Cluster Monitoring, Tracing_
 [Agile Planning](https://about.gitlab.com/solutions/agile-delivery/)  
 [All features](https://about.gitlab.com/features/)  
 [Auto DevOps](https://about.gitlab.com/product/auto-devops/)  
+[Ce Or Ee](https://about.gitlab.com/install/ce-or-ee/)
 [Concurrent Devops](https://about.gitlab.com/concurrent-devops/)  
 [Continuous Integration & Delivery](https://about.gitlab.com/product/continuous-integration/)  
 [DevOps Lifeycle](https://about.gitlab.com/stages-devops-lifecycle/)  
