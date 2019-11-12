@@ -6,13 +6,11 @@
 | :-------: | :-----: |
 |   Azure   |  X.X.X  |
 
-### In bulk
-
 ## Azure ressources
 
 ### Organiser vos ressources Azure
 
-![scope-levels.](/img/az-001.png)
+![scope-levels](/img/az-001.png)
 
 -   **Groupes d’administration** : Ces groupes sont des conteneurs qui vous permettent de gérer plus facilement l’accès, la stratégie et la conformité pour plusieurs abonnements. Tous les abonnements dans un groupe d’administration héritent automatiquement des conditions appliquées à ce groupe d’administration.
 -   **Abonnements** : Un abonnement regroupe les comptes d’utilisateur et les ressources qui ont été créées par ces derniers. Chaque abonnement a des limites ou quotas sur la quantité de ressources que vous pouvez créer et utiliser. Les organisations peuvent utiliser des abonnements pour gérer les coûts et les ressources qui sont créées par les utilisateurs, les équipes ou les projets.
@@ -65,7 +63,9 @@ Azure Advisor est un conseiller personnalisé gratuit basé dans le cloud qui vo
 **Centre de sécurité Azure**
 Azure Security Center joue également un rôle important dans votre stratégie de supervision. Il peut vous aider à superviser la sécurité de vos machines, réseaux, systèmes de stockage, services de données et applications. Security Center fournit la détection avancée des menaces en utilisant l’apprentissage automatique et l’analytique comportementale pour aider à identifier les menaces actives ciblant vos ressources Azure. Il met également à disposition une protection contre les menaces qui bloque les programmes malveillants ou autres codes indésirables et réduit la surface d’exposition aux attaques par force brute et autres attaques réseau.
 
-### Availability in Azure
+* * *
+
+## Availability in Azure
 
 **Availability sets**  
 An availability set is a logical grouping of VMs within a datacenter that allows Azure to understand how your application is built to provide for redundancy and availability.
@@ -76,6 +76,21 @@ A fault domain is a logical group of underlying hardware that share a common pow
 **Update domains**
 An update domain is a logical group of underlying hardware that can undergo maintenance or be rebooted at the same time. As you create VMs within an availability set, the Azure platform automatically distributes your VMs across these update domains. This approach ensures that at least one instance of your application always remains running as the Azure platform undergoes periodic maintenance. The order of update domains being rebooted may not proceed sequentially during planned maintenance, but only one update domain is rebooted at a time.
 
+* * *
+
+## Azure fundamentals
+
+What is cloud computing?
+
+-   Compute power - such as Linux servers or web applications
+-   Storage - such as files and databases
+-   Networking - such as secure connections between the cloud provider and your company
+-   Analytics - such as visualizing telemetry and performance data
+
+![Vm/Container/Serverless](/img/az-002.png)
+
+Benefits of cloud computing
+
 ### Source
 
-[Availability options for virtual machines in Azure](https://docs.microsoft.com/fr-fr/azure/virtual-machines/linux/availability)
+(Azure fundamentals)[https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/][availability options for virtual machines in azure](<https://docs.microsoft.com/fr-fr/azure/virtual-machines/linux/availability>)
