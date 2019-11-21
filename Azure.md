@@ -6,6 +6,148 @@
 | :-------: | :-----: |
 |   Azure   |  X.X.X  |
 
+## Azure fundamentals
+
+### What is cloud computing?
+
+-   Compute power - such as Linux servers or web applications
+-   Storage - such as files and databases
+-   Networking - such as secure connections between the cloud provider and your company
+-   Analytics - such as visualizing telemetry and performance data
+
+![Vm/Container/Serverless](/img/az-002.png)
+
+### Benefits of cloud computing
+
+**It's cost-effective**
+
+-   Pay-as-you-go
+-   Consumption-based
+
+**It's scalable**
+
+-   Vertical scaling
+-   Horizontal scaling
+
+**It's elastic**
+
+-   Compensate automatically adding or removing resources
+
+**It's current**
+
+-   Focus on what matters: building and deploying applications
+-   Eliminates the burdens of maintaining software patches, hardware setup, upgrades
+
+**It's reliable**
+
+-   Data backup
+-   Disaster recovery
+-   Data replication
+
+**It's global**
+
+-   Fully redundant datacenters located in various regions all over the globe
+
+**It's secure**
+
+-   Physical security
+-   Digital security
+
+### Compliance terms and requirements
+
+-   How compliant is the cloud provider when it comes to handling sensitive data ?
+-   How compliant are the services offered by the cloud provider?
+-   How can I deploy my own cloud-based solutions to scenarios that have accreditation or compliance requirements?
+-   What terms are part of the privacy statement for the provider?
+
+### Economies of scale Capital expenditure (CapEx) versus operational expenditure (OpEx)
+
+**CapEx**
+
+-   Server costs
+-   Storage costs
+-   Storage costs
+-   Network costs
+-   Backup and archive costs
+-   Organization continuity and disaster recovery costs
+-   Datacenter infrastructure costs
+-   Technical personnel
+
+**Benefits of CapEx**
+With capital expenditures, you plan your expenses at the start of a project or budget period. Your costs are fixed, meaning you know exactly how much is being spent. This is appealing when you need to predict the expenses before a project starts due to a limited budget.
+
+**OpEx**
+
+-   Leasing software and customized features.
+-   Scaling charges based on usage/demand instead of fixed hardware or capacity.
+-   Billing at the user or organization level.
+
+**Benefits of OpEx**
+With the OpEx model, companies wanting to try a new product or service don't need to invest in equipment. Instead, they pay as much or as little for the infrastructure as required.
+
+### Cloud deployment models
+
+#### Public cloud
+
+**Advantages**
+
+-   High scalability/agility – you don't have to buy a new server in order to scale
+-   Pay-as-you-go pricing – you pay only for what you use, no CapEx costs
+-   You're not responsible for maintenance or updates of the hardware
+-   Minimal technical knowledge to set up and use - you can leverage the skills and expertise of the cloud provider to ensure workloads are secure, safe, and highly available
+
+**Disadvantages**
+
+-   There may be specific security requirements that cannot be met by using public cloud
+-   There may be government policies, industry standards, or legal requirements which public clouds cannot meet
+-   You don't own the hardware or services and cannot manage them as you may want to
+-   Unique business requirements, such as having to maintain a legacy application might be hard to meet
+
+#### Private cloud
+
+**Advantages**
+
+-   You can ensure the configuration can support any scenario or legacy application
+-   You have control (and responsibility) over security
+-   Private clouds can meet strict security, compliance, or legal requirements
+
+**Disadvantages**
+
+-   You have some initial CapEx costs and must purchase the hardware for startup and maintenance
+-   Owning the equipment limits the agility - to scale you must buy, install, and setup new hardware
+-   Private clouds require IT skills and expertise that's hard to come by
+
+#### Hybrid cloud
+
+**Advantages**
+
+-   You can keep any systems running and accessible that use out-of-date hardware or an out-of-date operating system
+-   You have flexibility with what you run locally versus in the cloud
+-   You can take advantage of economies of scale from public cloud providers for services and resources where it's cheaper, and then supplement with your own equipment when it's not
+-   You can use your own equipment to meet security, compliance, or legacy scenarios where you need to completely control the environment
+
+**Disadvantages**
+
+-   It can be more expensive than selecting one deployment model since it involves some CapEx cost up front
+-   It can be more complicated to set up and manage
+
+### Types of cloud services
+
+**Infrastructure as a service (IaaS)**
+Infrastructure as a Service is the most flexible category of cloud services. It aims to give you complete control over the hardware that runs your application (IT infrastructure servers and virtual machines (VMs), storage, networks, and operating systems). Instead of buying hardware, with IaaS, you rent it. It's an instant computing infrastructure, provisioned and managed over the internet.
+
+**Platform as a service (PaaS)**
+PaaS provides an environment for building, testing, and deploying software applications. The goal of PaaS is to help you create an application quickly without managing the underlying infrastructure. For example, when deploying a web application using PaaS, you don't have to install an operating system, web server, or even system updates.
+
+**Software as a service (SaaS)**
+SaaS is software that is centrally hosted and managed for the end customer. It is usually based on an architecture where one version of the application is used for all customers, and licensed through a monthly or annual subscription. Office 365, Skype, and Dynamics CRM Online are perfect examples of SaaS software.
+
+**Management responsibilities**
+
+![scope-levels](/img/az-003.png)
+
+* * *
+
 ## Azure ressources
 
 ### Organiser vos ressources Azure
@@ -76,21 +218,6 @@ A fault domain is a logical group of underlying hardware that share a common pow
 **Update domains**
 An update domain is a logical group of underlying hardware that can undergo maintenance or be rebooted at the same time. As you create VMs within an availability set, the Azure platform automatically distributes your VMs across these update domains. This approach ensures that at least one instance of your application always remains running as the Azure platform undergoes periodic maintenance. The order of update domains being rebooted may not proceed sequentially during planned maintenance, but only one update domain is rebooted at a time.
 
-* * *
-
-## Azure fundamentals
-
-What is cloud computing?
-
--   Compute power - such as Linux servers or web applications
--   Storage - such as files and databases
--   Networking - such as secure connections between the cloud provider and your company
--   Analytics - such as visualizing telemetry and performance data
-
-![Vm/Container/Serverless](/img/az-002.png)
-
-Benefits of cloud computing
-
 ### Source
 
-(Azure fundamentals)[https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/][availability options for virtual machines in azure](<https://docs.microsoft.com/fr-fr/azure/virtual-machines/linux/availability>)
+[Azure fundamentals](https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/)
