@@ -8,6 +8,8 @@
 
 ## Azure fundamentals
 
+## Cloud Concepts - Principles of cloud computing
+
 ### What is cloud computing?
 
 -   Compute power - such as Linux servers or web applications
@@ -145,6 +147,28 @@ SaaS is software that is centrally hosted and managed for the end customer. It i
 **Management responsibilities**
 
 ![scope-levels](/img/az-003.png)
+
+## Core Cloud Services - Introduction to Azure
+
+### What is Azure
+
+### Tour of Azure services
+
+## Core Cloud Services - Azure architecture and service guarantees
+
+### Understand Datacenters and Regions in Azure
+
+### Understand Geographies in Azure
+
+### Understand Availability Zones in Azure
+
+### Understand Region Pairs in Azure
+
+### Understand Service-Level Agreements for Azure
+
+### Compose SLAs across services
+
+### Improve your app reliability in Azure
 
 * * *
 
