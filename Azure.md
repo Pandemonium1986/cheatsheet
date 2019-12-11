@@ -6,11 +6,15 @@
 | :-------: | :-----: |
 |   Azure   |  X.X.X  |
 
+* * *
+
 ## Azure fundamentals
+
+* * *
 
 ## Cloud Concepts - Principles of cloud computing
 
-### What is cloud computing?
+#### What is cloud computing?
 
 -   Compute power - such as Linux servers or web applications
 -   Storage - such as files and databases
@@ -19,7 +23,7 @@
 
 ![Vm/Container/Serverless](/img/az-002.png)
 
-### Benefits of cloud computing
+#### Benefits of cloud computing
 
 **It's cost-effective**
 
@@ -55,14 +59,14 @@
 -   Physical security
 -   Digital security
 
-### Compliance terms and requirements
+#### Compliance terms and requirements
 
 -   How compliant is the cloud provider when it comes to handling sensitive data ?
 -   How compliant are the services offered by the cloud provider?
 -   How can I deploy my own cloud-based solutions to scenarios that have accreditation or compliance requirements?
 -   What terms are part of the privacy statement for the provider?
 
-### Economies of scale Capital expenditure (CapEx) versus operational expenditure (OpEx)
+#### Economies of scale Capital expenditure (CapEx) versus operational expenditure (OpEx)
 
 **CapEx**
 
@@ -87,9 +91,9 @@ With capital expenditures, you plan your expenses at the start of a project or b
 **Benefits of OpEx**
 With the OpEx model, companies wanting to try a new product or service don't need to invest in equipment. Instead, they pay as much or as little for the infrastructure as required.
 
-### Cloud deployment models
+#### Cloud deployment models
 
-#### Public cloud
+##### Public cloud
 
 **Advantages**
 
@@ -105,7 +109,7 @@ With the OpEx model, companies wanting to try a new product or service don't nee
 -   You don't own the hardware or services and cannot manage them as you may want to
 -   Unique business requirements, such as having to maintain a legacy application might be hard to meet
 
-#### Private cloud
+##### Private cloud
 
 **Advantages**
 
@@ -119,7 +123,7 @@ With the OpEx model, companies wanting to try a new product or service don't nee
 -   Owning the equipment limits the agility - to scale you must buy, install, and setup new hardware
 -   Private clouds require IT skills and expertise that's hard to come by
 
-#### Hybrid cloud
+##### Hybrid cloud
 
 **Advantages**
 
@@ -133,7 +137,7 @@ With the OpEx model, companies wanting to try a new product or service don't nee
 -   It can be more expensive than selecting one deployment model since it involves some CapEx cost up front
 -   It can be more complicated to set up and manage
 
-### Types of cloud services
+#### Types of cloud services
 
 **Infrastructure as a service (IaaS)**
 Infrastructure as a Service is the most flexible category of cloud services. It aims to give you complete control over the hardware that runs your application (IT infrastructure servers and virtual machines (VMs), storage, networks, and operating systems). Instead of buying hardware, with IaaS, you rent it. It's an instant computing infrastructure, provisioned and managed over the internet.
@@ -148,27 +152,116 @@ SaaS is software that is centrally hosted and managed for the end customer. It i
 
 ![scope-levels](/img/az-003.png)
 
+* * *
+
 ## Core Cloud Services - Introduction to Azure
 
-### What is Azure
+#### What is Azure?
 
-### Tour of Azure services
+Azure is Microsoft's cloud computing platform. Azure is a continually expanding set of cloud services that help your organization meet your current and future business challenges. Azure gives you the freedom to build, manage, and deploy applications on a massive global network using your favorite tools and frameworks.
+
+#### Tour of Azure services
+
+![azure-services](/img/az-004.png)
+
+* * *
 
 ## Core Cloud Services - Azure architecture and service guarantees
 
-### Understand Datacenters and Regions in Azure
+#### Understand Datacenters and Regions in Azure
 
-### Understand Geographies in Azure
+![azure-regions](/img/az-005.png)
 
-### Understand Availability Zones in Azure
+A region is a geographical area on the planet containing at least one, but potentially multiple datacenters that are nearby and networked together with a low-latency network. Azure intelligently assigns and controls the resources within each region to ensure workloads are appropriately balanced.
 
-### Understand Region Pairs in Azure
+#### Understand Geographies in Azure
 
-### Understand Service-Level Agreements for Azure
+Azure divides the world into geographies that are defined by geopolitical boundaries or country borders. An Azure geography is a discrete market typically containing two or more regions that preserve data residency and compliance boundaries
 
-### Compose SLAs across services
+Geographies are broken up into the following areas:
 
-### Improve your app reliability in Azure
+-   Americas
+-   Europe
+-   Asia Pacific
+-   Middle East and Africa
+
+#### Understand Availability Zones in Azure
+
+Availability Zones are physically separate datacenters within an Azure region.
+
+![azure-regions](/img/az-006.png)
+
+#### Understand Region Pairs in Azure
+
+Each Azure region is always paired with another region within the same geography (such as US, Europe, or Asia) at least 300 miles away. This approach allows for the replication of resources (such as virtual machine storage) across a geography that helps reduce the likelihood of interruptions due to events such as natural disasters, civil unrest, power outages, or physical network outages affecting both regions at once.
+
+#### Understand Service-Level Agreements for Azure
+
+There are three key characteristics of SLAs for Azure products and services:
+
+-   Performance Targets
+-   Uptime and Connectivity Guarantees
+-   Service credits
+
+#### Compose SLAs across services
+
+When combining SLAs across different service offerings, the resultant SLA is called a Composite SLA. The resulting composite SLA can provide higher or lower uptime values, depending on your application architecture.
+
+* * *
+
+## Sign up for Azure
+
+* * *
+
+## Core Cloud Services - Manage services with the Azure portal
+
+#### Azure management options
+
+#### Navigate the portal
+
+#### Azure Portal dashboards
+
+#### Access public and private preview features
+
+* * *
+
+## Core Cloud Services - Azure compute options
+
+#### Essential Azure compute concepts
+
+#### Explore Azure Virtual Machines
+
+![scope-levels](/img/az-006.png)
+
+#### Explore Containers in Azure
+
+#### Explore Azure App Service
+
+#### Explore Serverless computing in Azure
+
+* * *
+
+## Core Cloud Services - Azure data storage options
+
+* * *
+
+## Core Cloud Services - Azure networking options
+
+* * *
+
+## Security, responsibility, and trust in Azure
+
+* * *
+
+## Apply and monitor infrastructure standards with Azure Policy
+
+* * *
+
+## Control and organize Azure resources with Azure Resource Manager
+
+* * *
+
+## Predict costs and optimize spending for Azure
 
 * * *
 
