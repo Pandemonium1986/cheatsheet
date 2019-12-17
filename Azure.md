@@ -302,7 +302,6 @@ Azure supports Docker containers (a standardized container model), and there are
 
 -   Azure Kubernetes Service (AKS)
     The task of automating, managing, and interacting with a large number of containers is known as orchestration. Azure Kubernetes Service (AKS) is a complete orchestration service for containers with distributed architectures with multiple containers.
-    #### Explore Azure App Service
 
 #### Explore Azure App Service
 
