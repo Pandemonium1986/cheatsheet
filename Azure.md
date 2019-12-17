@@ -211,6 +211,30 @@ When combining SLAs across different service offerings, the resultant SLA is cal
 
 ## Sign up for Azure
 
+#### Understand Azure billing
+
+**Azure subscription**
+When you sign up, an Azure subscription is created by default. An Azure subscription is a logical container used to provision resources in Azure.
+
+**Create additional Azure subscriptions**
+
+-   Environments
+-   Organizational structures
+-   Billing: You might
+
+![azure-billing](/img/az-007.png)
+
+#### Azure support options
+
+**Azure free support resources**
+You have 24/7 access to the online documentation, community support, and new Azure capabilities demo videos on YouTube channel.
+
+**Azure support plans**
+
+-   Developer 	
+-   Standard 	
+-   Professional Direct
+
 * * *
 
 ## Core Cloud Services - Manage services with the Azure portal
