@@ -241,11 +241,21 @@ You have 24/7 access to the online documentation, community support, and new Azu
 
 #### Azure management options
 
-#### Navigate the portal
+-   Azure portal for interacting with Azure via a Graphical User Interface (GUI)
+-   Azure PowerShell and Azure Command-Line Interface (CLI) for command line and automation-based interactions with Azure
+-   Azure Cloud Shell for a web-based command-line interface
+-   Azure mobile app for monitoring and managing your resources from your mobile device
 
 #### Azure Portal dashboards
 
+A dashboard is a customizable collection of UI tiles displayed in the Azure portal. You add, remove, and position tiles to create the exact view you want, and then save that view as a dashboard. Multiple dashboards are supported, and you can switch between them as needed. You can even share your dashboards with other team members.
+
 #### Access public and private preview features
+
+* Private Preview. An Azure feature marked "private preview" is available to specific Azure customers for evaluation purposes. This is typically by invite only and issued directly by the product team responsible for the feature or service.
+
+-   Public Preview. An Azure feature marked "public preview" is available to all Azure customers for evaluation purposes. These previews can be turned on through the preview features page as detailed below.
+
 
 * * *
 
