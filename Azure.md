@@ -252,10 +252,10 @@ A dashboard is a customizable collection of UI tiles displayed in the Azure port
 
 #### Access public and private preview features
 
-* Private Preview. An Azure feature marked "private preview" is available to specific Azure customers for evaluation purposes. This is typically by invite only and issued directly by the product team responsible for the feature or service.
+-   Private Preview. An Azure feature marked "private preview" is available to specific Azure customers for evaluation purposes. This is typically by invite only and issued directly by the product team responsible for the feature or service.
+
 
 -   Public Preview. An Azure feature marked "public preview" is available to all Azure customers for evaluation purposes. These previews can be turned on through the preview features page as detailed below.
-
 
 * * *
 
@@ -263,15 +263,72 @@ A dashboard is a customizable collection of UI tiles displayed in the Azure port
 
 #### Essential Azure compute concepts
 
+**What is Azure compute?**
+Azure compute is an on-demand computing service for running cloud-based applications. It provides computing resources like multi-core processors and supercomputers via virtual machines and containers. It also provides serverless computing to run apps without requiring infrastructure setup or configuration. The resources are available on-demand and can typically be created in minutes or even seconds. You pay only for the resources you use and only for as long as you're using them.
+
+-   Virtual machines
+-   Containers
+-   Azure App Service
+-   Serverless computing
+
 #### Explore Azure Virtual Machines
 
-![scope-levels](/img/az-006.png)
+Azure Virtual Machines (VMs) let you create and use virtual machines in the cloud. They provide infrastructure as a service (IaaS) in the form of a virtualized server and can be used in many ways. Just like a physical computer, you can customize all of the software running on the VM. VMs are an ideal choice when you need:
+
+-   Total control over the operating system (OS)
+-   The ability to run custom software, or
+-   To use custom hosting configurations
+
+**Scaling VMs in Azure**
+You can run single VMs for testing, development, or minor tasks; or you can group VMs together to provide high availability, scalability, and redundancy. Azure has several features such that, no matter what your uptime requirements are, Azure can meet them. These features include:
+
+-   Availability sets
+    An availability set is a logical grouping of two or more VMs that help keep your application available during planned or unplanned maintenance.
+
+-   Virtual Machine Scale Sets
+    Azure Virtual Machine Scale Sets let you create and manage a group of identical, load balanced VMs
+
+-   Azure Batch
+    Azure Batch enables large-scale job scheduling and compute management with the ability to scale to tens, hundreds, or thousands of VMs.
+
+![scope-levels](/img/az-008.png)
 
 #### Explore Containers in Azure
 
+Azure supports Docker containers (a standardized container model), and there are several ways to manage containers in Azure.
+
+-   Azure Container Instances (ACI)
+    Azure Container Instances (ACI) offers the fastest and simplest way to run a container in Azure. You don't have to manage any virtual machines or configure any additional services. It is a PaaS offering that allows you to upload your containers and execute them directly with automatic elastic scale.
+
+-   Azure Kubernetes Service (AKS)
+    The task of automating, managing, and interacting with a large number of containers is known as orchestration. Azure Kubernetes Service (AKS) is a complete orchestration service for containers with distributed architectures with multiple containers.
+    #### Explore Azure App Service
+
 #### Explore Azure App Service
 
+Azure App Service enables you to build and host web apps, background jobs, mobile backends, and RESTful APIs in the programming language of your choice without managing infrastructure. It offers automatic scaling and high availability.
+
+With Azure App Service, you can host most common web app styles including:
+
+-   Web Apps
+-   API Apps
+-   WebJobs
+-   Mobile Apps
+
 #### Explore Serverless computing in Azure
+
+Serverless computing is the abstraction of servers, infrastructure, and OSs. With serverless computing, Azure takes care of managing the server infrastructure and allocation/deallocation of resources based on demand. Infrastructure isn't your responsibility. Scaling and performance are handled automatically, and you are billed only for the exact resources you use. There's no need to even reserve capacity.
+
+Serverless computing encompasses three ideas:
+
+-   Abstraction of servers
+-   Event-driven scale
+-   Micro-billing
+
+Azure has two implementations of serverless compute:
+
+-   Azure Functions
+-   Azure Logic Apps
 
 * * *
 
