@@ -333,6 +333,78 @@ Azure has two implementations of serverless compute:
 
 ## Core Cloud Services - Azure data storage options
 
+#### Benefits of using Azure to store data
+
+**Benefits**
+
+-   Automated backup and recovery.
+-   Replication across the globe.
+-   Support for data analytics.
+-   Encryption capabilities.
+-   Multiple data types.
+-   Data storage in virtual disks.
+-   Storage tiers.
+
+**Types of data**
+
+-   Structured data.
+-   Semi-structured data.
+-   Unstructured data.
+
+#### How Azure data storage can meet your business storage needs
+
+**Azure SQL Database**
+Azure SQL Database is a relational database as a service (DaaS) based on the latest stable version of the Microsoft SQL Server database engine.
+
+**Azure Cosmos DB**
+Azure Cosmos DB is a globally distributed database service. It supports schema-less data that lets you build highly responsive and Always On applications to support constantly changing data.
+
+**Azure Blob storage**
+
+Azure Blob Storage is unstructured, meaning that there are no restrictions on the kinds of data it can hold.
+
+**Azure Data Lake Storage**
+
+The Data Lake feature allows you to perform analytics on your data usage and prepare reports. Data Lake is a large repository that stores both structured and unstructured data.
+
+**Azure Files**
+
+Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol.
+
+**Azure Queue**
+
+Azure Queue storage is a service for storing large numbers of messages that can be accessed from anywhere in the world.
+
+**Disk Storage**
+
+Disk storage provides disks for virtual machines, applications, and other services to access and use as they need, similar to how they would in on-premises scenarios
+
+**Storage tiers**
+
+Azure offers three storage tiers for blob object storage:
+
+-   Hot storage tier: optimized for storing data that is accessed frequently.
+-   Cool storage tier: optimized for data that are infrequently accessed and stored for at least 30 days.
+-   Archive storage tier: for data that are rarely accessed and stored for at least 180 days with flexible latency requirements.
+
+**Encryption and replication**
+
+Azure provides security and high availability to your data through encryption and replication features.
+
+-   Azure Storage Service Encryption (SSE) for data at rest helps you secure your data to meet the organization's security and regulatory compliance. It encrypts the data before storing it and decrypts the data before retrieving it. The encryption
+    and decryption are transparent to the user.
+
+-   Client-side encryption is where the data is already encrypted by the client libraries. Azure stores the data in the encrypted state at rest, which is then decrypted during retrieval.
+
+#### Comparison between Azure data storage and on-premises storage
+
+-   Cost effectiveness
+-   Reliability
+-   Storage types
+-   Agility
+
+![scope-levels](/img/az-009.png)
+
 * * *
 
 ## Core Cloud Services - Azure networking options
