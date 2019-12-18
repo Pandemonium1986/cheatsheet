@@ -409,6 +409,81 @@ Azure provides security and high availability to your data through encryption an
 
 ## Core Cloud Services - Azure networking options
 
+#### Deploy your site to Azure
+
+**Using an N-tier architecture**
+An N-tier architecture divides an application into two or more logical tiers. Architecturally, a higher tier can access services from a lower tier, but a lower tier should never access a higher tier.
+
+-   The web tier provides the web interface to your users through a browser.
+-   The application tier runs business logic.
+-   The data tier includes databases and other storage that hold product information and customer orders.
+
+![n-tiers](/img/az-010.png)
+
+**What's an Azure region?**
+A region is one or more Azure data centers within a specific geographic location. East US, West US, and North Europe are examples of regions. In this instance, you see that the application is running in the East US region.
+
+**What's a virtual network?**
+A virtual network allows Azure resources to securely communicate with each other, the internet, and on-premises networks. A virtual network is scoped to a single region; however, multiple virtual networks from different regions can be connected together using virtual network peering.
+
+**What's a network security group?**
+A network security group, or NSG, allows or denies inbound network traffic to your Azure resources. Think of a network security group as a cloud-level firewall for your network.
+
+#### Scale with Azure Load Balancer
+
+**What are availability and high availability?**
+Availability refers to how long your service is up and running without interruption. High availability, or highly available, refers to a service that's up and running for a long period of time.
+
+**What is resiliency?**
+Resiliency refers to a system's ability to stay operational during abnormal conditions.
+
+-   Natural disasters
+-   System maintenance, both planned and unplanned, including software updates and security patches.
+-   Spikes in traffic to your site
+-   Threats made by malicious parties, such as distributed denial of service, or DDoS, attacks
+
+**What is a load balancer?**
+A load balancer distributes traffic evenly among each system in a pool. A load balancer can help you achieve both high availability and resiliency.
+
+**What is Azure Load Balancer?**
+Azure Load Balancer is a load balancer service that Microsoft provides that helps take care of the maintenance for you. Load Balancer supports inbound and outbound scenarios, provides low latency and high throughput, and scales up to millions of flows for all Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) applications.
+
+![azure-lb](/img/az-011.png)
+
+**Azure Application Gateway**
+Application Gateway is a load balancer designed for web applications. It uses Azure Load Balancer at the transport level (TCP) and applies sophisticated URL-based routing rules to support several advanced scenarios.
+
+Here are some of the benefits of using Azure Application Gateway over a simple load balancer:
+
+-   Cookie affinity.
+-   SSL termination.
+-   Web application firewall.
+-   URL rule-based routes.
+-   Rewrite HTTP headers.
+
+**What is a Content Delivery Network?**
+A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. It is a way to get content to users in their local region to minimize latency.
+
+**What about DNS?**
+DNS, or Domain Name System, is a way to map user-friendly names to their IP addresses. You can think of DNS as the phonebook of the internet.
+
+#### Reduce latency with Azure Traffic Manager
+
+**What is network latency?**
+Latency refers to the time it takes for data to travel over the network. Latency is typically measured in milliseconds.
+
+Compare latency to bandwidth. Bandwidth refers to the amount of data that can fit on the connection. Latency refers to the time it takes for that data to reach its destination.
+
+**Scale out to different regions**
+One way to reduce latency is to provide exact copies of your service in more than one region. The following illustration shows an example of global deployment.
+
+![scale-region](/img/az-012.png)
+
+**Use Traffic Manager to route users to the closest endpoint**
+One answer is Azure Traffic Manager. Traffic Manager uses the DNS server that's closest to the user to direct user traffic to a globally distributed endpoint.
+
+![scale-region](/img/az-013.png)
+
 * * *
 
 ## Security, responsibility, and trust in Azure
