@@ -472,11 +472,10 @@ One answer is Azure Traffic Manager. Traffic Manager uses the DNS server that's 
 
 #### Cloud security is a shared responsibility
 
-**Security is a shared responsibility**
-
 ![shared-responsibility](/img/az-014.png)
 
 **A layered approach to security**
+
 ![layered-approach](/img/az-015.png)
 
 -   Data
