@@ -10,8 +10,6 @@
 
 ## Azure fundamentals
 
-* * *
-
 ## Cloud Concepts - Principles of cloud computing
 
 #### What is cloud computing?
@@ -152,8 +150,6 @@ SaaS is software that is centrally hosted and managed for the end customer. It i
 
 ![scope-levels](/img/az-003.png)
 
-* * *
-
 ## Core Cloud Services - Introduction to Azure
 
 #### What is Azure?
@@ -163,8 +159,6 @@ Azure is Microsoft's cloud computing platform. Azure is a continually expanding 
 #### Tour of Azure services
 
 ![azure-services](/img/az-004.png)
-
-* * *
 
 ## Core Cloud Services - Azure architecture and service guarantees
 
@@ -207,8 +201,6 @@ There are three key characteristics of SLAs for Azure products and services:
 
 When combining SLAs across different service offerings, the resultant SLA is called a Composite SLA. The resulting composite SLA can provide higher or lower uptime values, depending on your application architecture.
 
-* * *
-
 ## Sign up for Azure
 
 #### Understand Azure billing
@@ -235,8 +227,6 @@ You have 24/7 access to the online documentation, community support, and new Azu
 -   Standard 	
 -   Professional Direct
 
-* * *
-
 ## Core Cloud Services - Manage services with the Azure portal
 
 #### Azure management options
@@ -256,8 +246,6 @@ A dashboard is a customizable collection of UI tiles displayed in the Azure port
 
 
 -   Public Preview. An Azure feature marked "public preview" is available to all Azure customers for evaluation purposes. These previews can be turned on through the preview features page as detailed below.
-
-* * *
 
 ## Core Cloud Services - Azure compute options
 
@@ -328,8 +316,6 @@ Azure has two implementations of serverless compute:
 
 -   Azure Functions
 -   Azure Logic Apps
-
-* * *
 
 ## Core Cloud Services - Azure data storage options
 
@@ -404,8 +390,6 @@ Azure provides security and high availability to your data through encryption an
 -   Agility
 
 ![scope-levels](/img/az-009.png)
-
-* * *
 
 ## Core Cloud Services - Azure networking options
 
@@ -484,19 +468,29 @@ One answer is Azure Traffic Manager. Traffic Manager uses the DNS server that's 
 
 ![scale-region](/img/az-013.png)
 
-* * *
-
 ## Security, responsibility, and trust in Azure
 
-* * *
+#### Cloud security is a shared responsibility
+
+#### Get tips from Azure Security Center
+
+#### Identity and access
+
+#### Encryption
+
+#### Overview of Azure certificates
+
+#### Protect your network
+
+#### Protect your shared documents
+
+#### Azure Advanced Threat Protection
+
+#### Understand Security Considerations for Application Lifecycle Management Solutions
 
 ## Apply and monitor infrastructure standards with Azure Policy
 
-* * *
-
 ## Control and organize Azure resources with Azure Resource Manager
-
-* * *
 
 ## Predict costs and optimize spending for Azure
 
