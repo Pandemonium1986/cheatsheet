@@ -712,17 +712,88 @@ Resource locks are a setting that can be applied to any resource to block modifi
 
 #### Purchase Azure products and services
 
+**Usage meters**
+When you provision an Azure resource, Azure creates one or more meter instances for that resource. The meters track the resources' usage, and generate a usage record that is used to calculate your bill.
+
+For example, a single virtual machine that you provision in Azure might have the following meters tracking its usage:
+
+-   Compute Hours
+-   IP Address Hours
+-   Data Transfer In
+-   Data Transfer Out
+-   Standard Managed Disk
+-   Standard Managed Disk Operations
+-   Standard IO-Disk
+-   Standard IO-Block Blob Read
+-   Standard IO-Block Blob Write
+-   Standard IO-Block Blob Delete
+
+The meters and pricing vary per product and often have different pricing tiers based on the size or capacity of the resource. Check the documentation for specific details on what each service area costs.
+
 #### Factors affecting costs
 
-#### Exercise - Estimate costs with the Azure pricing calculator
+Just like your on-premises equipment costs, there are several elements that will affect your monthly costs when using Azure services. Let's look at a few of the primary factors including resource type, services, the user's location, and the billing zone.
 
-#### Exercise - Predict and optimize with Cost Management and Azure Advisor
+**Resource type**
 
-#### Exercise - Estimate the Total Cost of Ownership with the Azure TCO calculator
+Costs are resource-specific, so the usage that a meter tracks and the number of meters associated with a resource depend on the resource type.
+
+**Services**
+
+Azure usage rates and billing periods can differ between Enterprise, Web Direct, and Cloud Solution Provider (CSP) customers. Some subscription types also include usage allowances, which affect costs.
+
+**Location**
+
+Azure has datacenters all over the world. Usage costs vary between locations that offer particular Azure products, services, and resources based on popularity, demand, and local infrastructure costs
+
+**Azure billing zones**
+
+Bandwidth refers to data moving in and out of Azure datacenters. Most of the time inbound data transfers (data going into Azure datacenters) are free. For outbound data transfers (data going out of Azure datacenters), the data transfer pricing is based on Billing Zones.
+
+#### Estimate costs with the Azure pricing calculator
+
+**Introducing the Azure pricing calculator**
+
+To make estimates easy for customers to create, Microsoft developed the Azure pricing calculator. The Azure pricing calculator is a free web-based tool that allows you to input Azure services and modify properties and options of the services. It outputs the costs per service and total cost for the full estimate.
+
+The options that you can configure in the pricing calculator vary between products, but basic configuration options include:
+
+-   Region
+-   Tier
+-   Billing Options
+-   Support Options
+-   Programs and Offers
+-   Azure Dev/Test Pricing
+
+#### Predict and optimize with Cost Management and Azure Advisor
+
+**What is Azure Advisor?**
+
+Azure Advisor is a free service built into Azure that provides recommendations on high availability, security, performance, and cost. Advisor analyzes your deployed services and looks for ways to improve your environment across those four areas. We'll focus on the cost recommendations, but you'll want to take some time to review the other recommendations as well.
+
+Advisor makes cost recommendations in the following areas:
+
+-   Reduce costs by eliminating unprovisioned Azure ExpressRoute circuits.
+-   Buy reserved instances to save money over pay-as-you-go.
+-   Right-size or shutdown underutilized virtual machines.
+
+#### Estimate the Total Cost of Ownership with the Azure TCO calculator
+
+The pricing calculator and cost management advisor can help you predict and analyze your spend for new or existing services.
+
+If you are starting to migrate to the cloud, a useful tool you can use to predict your cost savings is the Total Cost of Ownership (TCO) calculator. To use the TCO calculator, you need to complete four steps.
 
 #### Save on infrastructure costs
 
-#### Save on licensing costs
+-   Use Azure credits
+-   Use spending limits
+-   Use reserved instances
+-   Choose low-cost locations and regions
+-   Research available cost-saving offers
+-   Right-size underutilized virtual machines
+-   Deallocate virtual machines in off hours
+-   Delete unused virtual machines
+-   Migrate to PaaS or SaaS services
 
 * * *
 
