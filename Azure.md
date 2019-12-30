@@ -472,21 +472,137 @@ One answer is Azure Traffic Manager. Traffic Manager uses the DNS server that's 
 
 #### Cloud security is a shared responsibility
 
+**Security is a shared responsibility**
+
+![shared-responsibility](/img/az-014.png)
+
+**A layered approach to security**
+![layered-approach](/img/az-015.png)
+
+-   Data
+    It's the responsibility of those storing and controlling access to data to ensure that it's properly secured.
+
+-   Application
+    Integrating security into the application development life cycle will help reduce the number of vulnerabilities introduced in code.
+
+-   Compute
+    Malware, unpatched systems, and improperly secured systems open your environment to attacks.
+
+-   Networking
+    At this layer, the focus is on limiting the network connectivity across all your resources to allow only what is required. By limiting this communication, you reduce the risk of lateral movement throughout your network.
+
+-   Perimeter
+    At the network perimeter, it's about protecting from network-based attacks against your resources.
+
+-   Identity and access
+    The identity and access layer is all about ensuring identities are secure, access granted is only what is needed, and changes are logged.
+
+-   Physical security
+    With physical security, the intent is to provide physical safeguards against access to assets. These safeguards ensure that other layers can't be bypassed, and loss or theft is handled appropriately.
+
 #### Get tips from Azure Security Center
+
+A great place to start when examining the security of your Azure-based solutions is Azure Security Center. Security Center is a monitoring service that provides threat protection across all of your services both in Azure, and on-premises. Security Center can:
+
+**Available tiers**
+
+-   Free :
+    Available as part of your Azure subscription, this tier is limited to assessments and recommendations of Azure resources only.
+-   Standard :
+    This tier provides a full suite of security-related services including continuous monitoring, threat detection, just-in-time access control for ports, and more.
 
 #### Identity and access
 
+**Authentication and authorization**
+
+-   Authentication is the process of establishing the identity of a person or service looking to access a resource. It involves the act of challenging a party for legitimate credentials, and provides the basis for creating a security principal for identity and access control use. It establishes if they are who they say they are.
+
+-   Authorization is the process of establishing what level of access an authenticated person or service has. It specifies what data they're allowed to access and what they can do with it.
+
+**What is Azure Active Directory?**
+Azure AD is a cloud-based identity service. It has built in support for synchronizing with your existing on-premises Active Directory or can be used stand-alone.
+
+Azure AD provides services such as:
+
+-   Authentication.
+-   Single-Sign-On (SSO).
+-   Business to business (B2B) identity services.
+-   Device Management.
+
+**Single sign-on**
+
+**Multi-factor authentication**
+
+-   Something you know : password.
+-   Something you possess :mobile app.
+-   Something you are : biometric property.
+
+**Providing identities to services**
+It's usually valuable for services to have identities. Often, and against best practices, credential information is embedded in configuration files. With no security around these configuration files, anyone with access to the systems or repositories can access these credentials and risk exposure.
+
+-   Service principals
+    An identity is just a thing that can be authenticated.
+    A principal is an identity acting with certain roles or claims. Usually, it is not useful to consider identity and principal separately, but think of using 'sudo' on a Bash prompt in Linux or on Windows using "run as Administrator."
+
+-   Managed identities for Azure services
+    The creation of service principals can be a tedious process, and there are a lot of touch points that can make maintaining them difficult. Managed identities for Azure services are much easier and will do most of the work for you.
+
+**Role-based access control**
+Roles are sets of permissions, like "Read-only" or "Contributor", that users can be granted to access an Azure service instance.
+
+Identities are mapped to roles directly or through group membership. Separating security principals, access permissions, and resources provides simple access management and fine-grained control. Administrators are able to ensure the minimum necessary permissions are granted.
+
+![rbac](/img/az-016.png)
+
 #### Encryption
+
+**What is encryption?**
+
+-   Symmetric encryption uses the same key to encrypt and decrypt the data.
+-   Asymmetric encryption uses a public key and private key pair.
+
+**Encryption at rest**
+
+![encryption-rest](/img/az-017.png)
+
+**Encryption in transit**
+
+![encryption-rest](/img/az-018.png)
+
+**Encryption on Azure**
+
+-   Encrypt raw storage : Azure Storage Service Encryption.
+-   Encrypt virtual machine disks : Azure Disk Encryption.
+-   Encrypt databases : Transparent data encryption (TDE).
+-   Encrypt secrets : Azure Key Vault
 
 #### Overview of Azure certificates
 
+Certificates used in Azure are x.509 v3 can be signed by a trusted certificate authority, or they can be self-signed.
+
+**Types of certificates**
+
+-   Service certificates are used for cloud services.
+-   Management certificates are used for authenticating with the management API.
+
+**Using Azure Key Vault with certificates**
+You can store your certificates in Azure Key Vault - much like any other secret. However, Key Vault provides additional features above and beyond the typical certificate management.
+
 #### Protect your network
+
+-   Azure Firewall is a managed, cloud-based, network security service that protects your Azure Virtual Network
+-   Azure Application Gateway is a load balancer that includes a Web Application Firewall (WAF) that provides protection from common, known vulnerabilities in websites.
+-   Network virtual appliances (NVAs)are ideal options for non-HTTP services or advanced configurations, and are similar to hardware firewall appliances.
+
+![azure-ddos](/img/az-019.png)
 
 #### Protect your shared documents
 
+Microsoft Azure Information Protection (sometimes referred to as AIP) is a cloud-based solution that helps organizations classify and optionally protect documents and emails by applying labels.
+
 #### Azure Advanced Threat Protection
 
-#### Understand Security Considerations for Application Lifecycle Management Solutions
+Azure Advanced Threat Protection (Azure ATP) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
 
 ## Apply and monitor infrastructure standards with Azure Policy
 
