@@ -605,9 +605,124 @@ Azure Advanced Threat Protection (Azure ATP) is a cloud-based security solution 
 
 ## Apply and monitor infrastructure standards with Azure Policy
 
+#### Define IT compliance with Azure Policy
+
+Planning out a consistent cloud infrastructure starts with setting up policy. Your policies will enforce your rules for created resources, so your infrastructure stays compliant with your corporate standards, cost requirements, and service-level agreements (SLAs) you have with your customers.  
+
+Azure Policy is an Azure service you use to create, assign and, manage policies. These policies enforce different rules and effects over your resources so that those resources stay compliant with your corporate standards and service level agreements.
+
+**Creating a policy**
+
+-   Create a policy definition
+-   Assign a definition to a scope of resources
+-   View policy evaluation results
+
+#### Organize policy with initiatives
+
+Managing a few policy definitions is easy, but once you have more than a few, you will want to organize them. That's where initiatives come in.
+
+Initiatives work alongside policies in Azure Policy. An initiative definition is a set or group of policy definitions to help track your compliance state for a larger goal. Even if you have a single policy, we recommend using initiatives if you anticipate increasing the number of policies over time.
+
+#### Enterprise governance management
+
+Access management occurs at the Azure subscription level. This allows an organization to configure each division of the company in a specific fashion based on their responsibilities and requirements. Planning and keeping rules consistent across subscriptions can be challenging without a little help.
+
+Azure Management Groups are containers for managing access, policies, and compliance across multiple Azure subscriptions.
+
+![azure-management-groups](/img/az-020.png)
+
+#### Define standard resources with Azure Blueprints
+
+Adhering to security or compliance requirements, whether government or industry requirements, can be difficult and time-consuming. To help you with auditing, traceability, and compliance with your deployments, use Azure Blueprint artifacts and tools.
+
+#### Explore your service compliance with Compliance Manager
+
+Governing your own resources and how they are used is only part of the solution when using a cloud provider. You also have to understand how the provider manages the underlying resources you are building on.
+
+Microsoft takes this management very seriously and provides full transparency with four sources:
+
+-   Microsoft Privacy Statement
+-   Microsoft Trust Center
+-   Service Trust Portal
+-   Compliance Manager
+
+#### Monitor your service health
+
+Defining policy and access provides fine-grained control over resources in your cloud IT infrastructure. Once those resources are deployed, you will want to know about any issues or performance problems they might encounter.
+
+Azure provides two primary services to monitor the health of your apps and resources.
+
+-   Azure Monitor
+-   Azure Service Health
+
+**Azure Monitor**
+
+Azure Monitor maximizes the availability and performance of your applications by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments.
+
+**Azure Service Health**
+
+Azure Service Health is a suite of experiences that provide personalized guidance and support when issues with Azure services affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue is resolved. Azure Service Health can also help you prepare for planned maintenance and changes that could affect the availability of your resources.
+
 ## Control and organize Azure resources with Azure Resource Manager
 
+#### Principles of resource groups
+
+**What are resource groups?**
+
+Resource groups are a fundamental element of the Azure platform. A resource group is a logical container for resources deployed on Azure. These resources are anything you create in an Azure subscription like virtual machines, Application Gateways, and CosmosDB instances. All resources must be in a resource group and a resource can only be a member of a single resource group. Many resources can be moved between resource groups with some services having specific limitations or requirements to move. Resource groups can't be nested. Before any resource can be provisioned, you need a resource group for it to be placed in.
+
+_Life cycle_  
+If you delete a resource group, all resources contained within are also deleted. Organizing resources by life cycle can be useful in non-production environments, where you might try an experiment, but then dispose of it when done. Resource groups make it easy to remove a set of resources at once.
+
+_Authorization_  
+Resource groups are also a scope for applying role-based access control (RBAC) permissions. By applying RBAC permissions to a resource group, you can ease administration and limit access to allow only what is needed.
+
+**Organizing principles**
+
+Core infrastructure :  
+![rg-infrastructure](/img/az-021.png)
+
+Environments :  
+![rg-environments](/img/az-022.png)
+
+Departments :  
+![core-departments](/img/az-023.png)
+
+Combinaison :  
+![core-combinaison](/img/az-024.png)
+
+#### Use tagging to organize resources
+
+**What are tags?**
+
+Tags are name/value pairs of text data that you can apply to resources and resource groups. Tags allow you to associate custom details about your resource, in addition to the standard Azure properties a resource has:
+
+-   department (like finance, marketing, and more)
+-   environment (prod, test, dev),
+-   cost center
+-   life cycle and automation (like shutdown and startup of virtual machines).
+
+#### Use resource locks to protect resources
+
+**What are resource locks?**
+
+Resource locks are a setting that can be applied to any resource to block modification or deletion. Resource locks can set to either Delete or Read-only. Delete will allow all operations against the resource but block the ability to delete it. Read-only will only allow read activities to be performed against it, blocking any modification or deletion of the resource. Resource locks can be applied to subscriptions, resource groups, and to individual resources, and are inherited when applied at higher levels.
+
 ## Predict costs and optimize spending for Azure
+
+#### Purchase Azure products and services
+
+#### Factors affecting costs
+
+#### Exercise - Estimate costs with the Azure pricing calculator
+
+#### Exercise - Predict and optimize with Cost Management and Azure Advisor
+
+#### Exercise - Estimate the Total Cost of Ownership with the Azure TCO calculator
+
+#### Save on infrastructure costs
+
+#### Save on licensing costs
 
 * * *
 
