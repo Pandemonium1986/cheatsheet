@@ -1,28 +1,112 @@
-# Molecule : Installation et Configuration
+# Molecule: Installation and Configuration
 
-### Version des outils
+## Tools versions
 
-|         Os / Tool        | Version |
-| :----------------------: | :-----: |
-| Windows 10 Professionnel |   1803  |
-|  Wsl - Debian GNU/Linux  |  9.5.0  |
-|          Ansible         |   2.6+  |
-|         Molecule         |  2.1.9+ |
+|  Os / Tool | Version |
+| :--------: | :-----: |
+| Linux Mint |   19.3  |
+|   Ansible  |  2.9.2  |
+|  Molecule  |   2.22  |
 
-### Procédure d'installation
+## Todo
 
-La procédure d'installation de _Molecule_ sur _Debian 9.5.0_ se déroule de la façon suivante :
-**Attention** installer molecule via pip install la dernière version d'ansible.
+N/A
+
+## Bulk Note
+
+N/A
+
+## About
+
+> Molecule is designed to aid in the development and testing of Ansible roles.
+> Molecule provides support for testing with multiple instances, operating systems and distributions, virtualization providers, test frameworks and testing scenarios.
+> Molecule encourages an approach that results in consistently developed roles that are well-written, easily understood and maintained.
+
+## Installation procedure
+
+**Centos requirements**
 
 ```sh
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo apt install python-dev
-sudo python get-pip.py
-sudo pip install molecule
-sudo pip install molecule --ignore-installed -U PyYAML
+sudo yum install -y epel-release
+sudo yum install -y gcc python-pip python-devel openssl-devel libselinux-python
 ```
 
-### Source
+**Debian requirements**
+
+```sh
+sudo apt-get update
+sudo apt-get install -y python-pip libssl-dev
+```
+
+**Molecule**
+
+```sh
+pip install --upgrade --user setuptools
+pip install --user molecule
+```
+
+**Docker**
+
+```sh
+docker pull quay.io/ansible/molecule:2.22
+```
+
+## Getting start
+
+**Creating a new role**
+
+```sh
+molecule init role -r my-new-role
+```
+
+**Molecule Scenario**
+
+After init role there is a molecule folder wich containes a default folder wich is the default scenario. In this scenario we can found :
+
+-   _Dockerfile.j2_ Jinja2 template file in place. Molecule will use this file to build a docker image to test your role against.
+-   _INSTALL.rst_ contains instructions on what additional software or setup steps you will need to take in order to allow Molecule to successfully interface with the driver.
+-   _molecule.yml_ is the central configuration entrypoint for Molecule.
+-   _playbook.yml_ is the playbook file that contains the call site for your role.
+-   tests is the tests directory created because Molecule uses TestInfra as the default Verifier.
+
+**Molecule.yml**
+
+The molecule.yml is for configuring Molecule. It is a YAML file whose keys represent the high level components that Molecule provides. These are:
+
+-   The Dependency manager.
+-   The Driver provider.
+-   The Lint provider.
+-   The Platforms definitions.
+-   The Provisioner. Molecule only provides an Ansible provisioner.
+-   The Scenario definition.
+-   The Verifier framework.
+
+**Run test sequence commands**
+
+```sh
+# Create instance
+molecule create
+
+# List instance
+molecule list
+
+# Execute playbook
+molecule converge
+
+# Inspect instance
+molecule login
+
+# Destroy instance
+molecule instance
+```
+
+**Run a full test sequence**
+```sh
+molecule test
+```
+
+## Source
 
 [Molecule Read the docs](https://molecule.readthedocs.io/en/latest/)
 [Molecule Github](https://github.com/ansible/molecule)
+[Molecule Docker images](https://quay.io/repository/ansible/molecule)
