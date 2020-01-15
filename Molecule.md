@@ -101,9 +101,30 @@ molecule instance
 ```
 
 **Run a full test sequence**
+
 ```sh
 molecule test
 ```
+
+## Usage
+
+-   **check**        Use the provisioner to perform a Dry-Run...
+-   **cleanup**      Use the provisioner to cleanup any changes...
+-   **converge**     Use the provisioner to configure instances...
+-   **create**       Use the provisioner to start the instances.
+-   **dependency**   Manage the role's dependencies.
+-   **destroy**      Use the provisioner to destroy the instances.
+-   **idempotence**  Use the provisioner to configure the...
+-   **init**         Initialize a new role or scenario.
+-   **lint**         Lint the role.
+-   **list**         Lists status of instances.
+-   **login**        Log in to one instance.
+-   **matrix**       List matrix of steps used to test instances.
+-   **prepare**      Use the provisioner to prepare the instances...
+-   **side-effect**  Use the provisioner to perform side-effects...
+-   **syntax**       Use the provisioner to syntax check the role.
+-   **test**         Test (lint, cleanup, destroy, dependency,...
+-   **verify**       Run automated tests against instances.
 
 ## Source
 
