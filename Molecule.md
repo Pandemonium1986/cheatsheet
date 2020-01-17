@@ -126,6 +126,142 @@ molecule test
 -   **test**         Test (lint, cleanup, destroy, dependency,...
 -   **verify**       Run automated tests against instances.
 
+## Config
+
+#### Dependency
+
+Testing roles may rely upon additional dependencies. Molecule handles managing these dependencies by invoking configurable dependency managers.  
+
+-   Ansible Galaxy
+-   Gilt
+-   Shell
+
+Example:
+
+```yaml
+dependency:
+  name: galaxy
+  options:
+    ignore-certs: True
+    ignore-errors: True
+    role-file: requirements.yml
+```
+
+#### Driver
+
+Molecule uses Ansible to manage instances to operate on. Molecule supports any provider Ansible supports. This work is offloaded to the provisioner.  
+The driver’s name is specified in molecule.yml, and can be overriden on the command line. Molecule will remember the last successful driver used, and continue to use the driver for all subsequent subcommands, or until the instances are destroyed by Molecule.
+
+-   Azure
+-   Delegated
+-   DigitalOcean
+-   Docker
+-   EC2
+-   GCE
+-   Hetzner Cloud
+-   Linode
+-   LXC
+-   LXD
+-   Openstack
+-   Podman
+-   Vagrant
+
+Example:
+
+```yaml
+driver:
+  name: docker
+platforms:
+  - name: instance
+    hostname: instance
+    image: image_name:tag
+    dockerfile: Dockerfile.j2
+    pull: True|False
+    pre_build_image: True|False
+    registry:
+      url: registry.example.com
+      credentials:
+        username: $USERNAME
+        password: $PASSWORD
+        email: user@example.com
+        user: root
+    override_command: True|False
+    command: sleep infinity
+    tty: True|False
+    pid_mode: host
+    privileged: True|False
+    security_opts:
+      - seccomp=unconfined
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    keep_volumes: True|False
+    tmpfs:
+      - /tmp
+      - /run
+    capabilities:
+      - SYS_ADMIN
+    sysctls:
+      net.core.somaxconn: 1024
+      net.ipv4.tcp_syncookies: 0
+    exposed_ports:
+      - 53/udp
+      - 53/tcp
+    published_ports:
+      - 0.0.0.0:8053:53/udp
+      - 0.0.0.0:8053:53/tcp
+    ulimits:
+      - nofile:262144:262144
+    dns_servers:
+      - 8.8.8.8
+    etc_hosts: "{'host1.example.com': '10.3.1.5'}"
+    networks:
+      - name: foo
+      - name: bar
+    network_mode: host
+    purge_networks: true
+    docker_host: tcp://localhost:12376
+    cacert_path: /foo/bar/ca.pem
+    cert_path: /foo/bar/cert.pem
+    key_path: /foo/bar/key.pem
+    tls_verify: true
+    env:
+      FOO: bar
+    restart_policy: on-failure
+    restart_retries: 1
+    buildargs:
+        http_proxy: http://proxy.example.com:8080/
+```
+
+#### Lint
+
+Molecule handles project linting by invoking configurable linters.
+
+-   Yaml lint
+
+Example:
+
+```yaml
+lint:
+  name: yamllint
+  options:
+    config-file: foo/bar
+```
+
+#### Platforms
+
+Platforms define the instances to be tested, and the groups to which the instances belong.
+
+Example:
+
+```yaml
+platforms:
+  - name: instance-1
+    groups:
+      - group1
+      - group2
+    children:
+      - child_group1
+```
 ## Source
 
 [Molecule Read the docs](https://molecule.readthedocs.io/en/latest/)
