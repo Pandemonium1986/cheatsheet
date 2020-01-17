@@ -262,8 +262,72 @@ platforms:
     children:
       - child_group1
 ```
+
+#### Provisioner
+
+Molecule handles provisioning and converging the role.
+
+-   Ansible
+
+**Important**
+
+Ansible is the default provisioner. No other provisioner will be supported.  
+
+Molecule’s provisioner manages the instances lifecycle. However, the user must provide the create, destroy, and converge playbooks. Molecule’s init subcommand will provide the necessary files for
+ convenience.  
+
+Molecule will skip tasks which are tagged with either molecule-notest or notest. With the tag molecule-idempotence-notest tasks are only skipped during the idempotence action step.
+
+Reserve the create and destroy playbooks for provisioning. Do not attempt to gather facts or perform operations on the provisioned nodes inside these playbooks.  
+
+Molecule will remove any options matching ‘^[v]+$’, and pass -vvv to the underlying ansible-playbook command when executing molecule –debug.  
+
+The playbook loading order is:
+
+-   provisioner.playbooks.$driver_name.$action
+-   provisioner.playbooks.$action
+-   bundled_playbook.$driver_name.$action
+
+**side_effect playbook**
+
+The side effect playbook executes actions which produce side effects to the instances(s). Intended to test HA failover scenarios or the like. It is not enabled by default. Add the following to the provisioner’s playbooks section to enable.
+
+```yaml
+provisioner:
+  name: ansible
+  playbooks:
+    side_effect: side_effect.yml
+```
+
+**prepare playbook**
+
+The prepare playbook executes actions which bring the system to a given state prior to converge. It is executed after create, and only once for the duration of the instances life.  
+
+```yaml
+provisioner:
+  name: ansible
+  playbooks:
+    prepare: prepare.yml
+```
+
+**cleanup playbook**
+
+The cleanup playbook is for cleaning up test infrastructure that may not be present on the instance that will be destroyed. The primary use-case is for “cleaning up” changes that were made outside of Molecule’s test environment. For example, remote database connections or user accounts. Intended to be used in conjunction with prepare to modify external resources when required.
+
+The cleanup step is executed directly before every destroy step. Just like the destroy step, it will be run twice. An initial clean before converge and then a clean before the last destroy step. This means that the cleanup playbook must handle failures to cleanup resources which have not been created yet.
+
+Add the following to the provisioner’s playbooks section to enable.
+
+```yaml
+provisioner:
+  name: ansible
+  playbooks:
+    cleanup: cleanup.yml
+```
+
 ## Source
 
+[Molecule Docker images](https://quay.io/repository/ansible/molecule)  
+[Molecule Driver](https://molecule.readthedocs.io/en/stable/configuration.html#driver)  
+[Molecule Github](https://github.com/ansible/molecule)  
 [Molecule Read the docs](https://molecule.readthedocs.io/en/latest/)
-[Molecule Github](https://github.com/ansible/molecule)
-[Molecule Docker images](https://quay.io/repository/ansible/molecule)
