@@ -389,7 +389,7 @@ scenario:
     - destroy
 ```
 
-### Verifier
+#### Verifier
 
 Molecule handles role testing by invoking configurable verifiers.
 
@@ -397,6 +397,35 @@ Molecule handles role testing by invoking configurable verifiers.
 -   Goss
 -   Inspec
 -   Testinfra
+
+## Testing
+
+#### Gitlab CI
+
+Here is an example setting up a virtualenv and testing an Ansible role via Molecule. User-level pip is cached and so is the virtual environment to save time. And this is run over a runner tagged pip36 and docker, because its a minimal CentOS 7 VM installed with pip36 from IUS repository and docker.
+
+```yaml
+---
+image: docker:git
+
+services:
+  - docker:dind
+
+before_script:
+  - apk update && apk add --no-cache docker
+    python3-dev py3-pip docker gcc git curl build-base
+    autoconf automake py3-cryptography linux-headers
+    musl-dev libffi-dev openssl-dev openssh
+  - docker info
+  - python3 --version
+
+molecule:
+stage: test
+script:
+  - pip3 install ansible molecule docker
+  - ansible --version
+  - cd roles/testrole && molecule test
+```
 
 ## Source
 
