@@ -325,6 +325,25 @@ provisioner:
     cleanup: cleanup.yml
 ```
 
+**Ansible Lint**
+
+Molecule handles provisioner linting by invoking configurable linters.
+
+Example:
+
+```yaml
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+    options:
+      exclude:
+        - path/exclude1
+        - path/exclude2
+      x: ["ANSIBLE0011,ANSIBLE0012"]
+      force-color: True
+```
+
 ## Source
 
 [Molecule Docker images](https://quay.io/repository/ansible/molecule)  
