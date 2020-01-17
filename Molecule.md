@@ -389,6 +389,15 @@ scenario:
     - destroy
 ```
 
+### Verifier
+
+Molecule handles role testing by invoking configurable verifiers.
+
+-   Ansible
+-   Goss
+-   Inspec
+-   Testinfra
+
 ## Source
 
 [Molecule Docker images](https://quay.io/repository/ansible/molecule)  
