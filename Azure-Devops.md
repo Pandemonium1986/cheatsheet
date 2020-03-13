@@ -113,6 +113,24 @@ DevOps is the union of people, process, and products to enable continuous delive
 -   Bug Bounce Percentage - What percentage of customer or bug tickets are being reopened?
 -   Unplanned Work Percentage - What percentage of the overall work being performed is unplanned?
 
+## Choose an Agile approach to software development
+
+### What is Agile?
+
+-   Individuals and interactions over processes and tools
+-   Working software over comprehensive documentation
+-   Customer collaboration over contract negotiation
+-   Responding to change over following a plan
+
+### What is Azure Boards?
+
+There are four processes to choose from. We can use:
+
+-   **Capability Maturity Model Integration (CMMI)**. This is really for large organizations and it's pretty complicated so I didn't use it.
+-   **Scrum**. Scrum depends on a Scrum master who leads the Scrum team. The Scrum master makes sure everybody understands Scrum theory, practices, and rules. We don't have a Scrum master; that's someone who's usually received some training and certification so I didn't pick that one either.
+-   **Agile**. This seemed like the obvious choice since I'm always talking about Agile, but it has a few more things to consider than the simplest option.
+-   **Basic**. Basic is, well, basic. It's simple but gives us enough power to start doing effective planning right away, and that's why I picked it. In the Basic workflow, you move work from To Do to Doing to Done.
+
 * * *
 
 # Build applications with Azure DevOps
