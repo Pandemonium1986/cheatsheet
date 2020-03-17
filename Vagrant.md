@@ -7,6 +7,14 @@
 | Windows 10 Professionnel |   1803  |
 |          Vagrant         |  2.1.5  |
 
+### Naming convention
+
+|        Type       |                 Name                 |     Example     |
+| :---------------: | :----------------------------------: | :-------------: |
+|      Base box     | operating_system_namecurrent_version |     debian10    |
+|    Vagrant box    |    ff7_city_name-base_box_trigram    |    midgar-deb   |
+| Vagrant box Tools | tools-ff7_city_name-base_box_trigram | cicd-midgar-deb |
+
 ### Procédure d'installation
 
 La procédure d'installation de _Vagrant_ sur _Windows 10_ se déroule de la façon suivante :
