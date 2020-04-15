@@ -5,8 +5,8 @@
 |  Os / Tool | Version |
 | :--------: | :-----: |
 | Linux Mint |   19.3  |
-|   Ansible  |  2.9.2  |
-|  Molecule  |   2.22  |
+|   Ansible  |  2.9.6  |
+|  Molecule  |  3.0.3  |
 
 ## Todo
 
@@ -28,27 +28,27 @@ N/A
 
 ```sh
 sudo yum install -y epel-release
-sudo yum install -y gcc python-pip python-devel openssl-devel libselinux-python
+sudo yum install -y gcc python3-pip python3-devel openssl-devel libselinux-python
 ```
 
 **Debian requirements**
 
 ```sh
 sudo apt-get update
-sudo apt-get install -y python-pip libssl-dev
+sudo apt-get install -y python3-pip libssl-dev
 ```
 
 **Molecule**
 
 ```sh
-pip install --upgrade --user setuptools
-pip install --user molecule
+python3 -m pip install --upgrade --user setuptools
+python3 -m pip install --user "molecule[lint]"
 ```
 
 **Docker**
 
 ```sh
-docker pull quay.io/ansible/molecule:2.22
+docker pull quay.io/ansible/molecule:3.0.3
 ```
 
 ## Getting start
@@ -66,7 +66,7 @@ After init role there is a molecule folder wich containes a default folder wich 
 -   _Dockerfile.j2_ Jinja2 template file in place. Molecule will use this file to build a docker image to test your role against.
 -   _INSTALL.rst_ contains instructions on what additional software or setup steps you will need to take in order to allow Molecule to successfully interface with the driver.
 -   _molecule.yml_ is the central configuration entrypoint for Molecule.
--   _playbook.yml_ is the playbook file that contains the call site for your role.
+-   _converge.yml_ is the playbook file that contains the call site for your role.
 -   tests is the tests directory created because Molecule uses TestInfra as the default Verifier.
 
 **Molecule.yml**
@@ -97,7 +97,7 @@ molecule converge
 molecule login
 
 # Destroy instance
-molecule instance
+molecule destroy
 ```
 
 **Run a full test sequence**
@@ -150,21 +150,11 @@ dependency:
 #### Driver
 
 Molecule uses Ansible to manage instances to operate on. Molecule supports any provider Ansible supports. This work is offloaded to the provisioner.  
-The driver’s name is specified in molecule.yml, and can be overriden on the command line. Molecule will remember the last successful driver used, and continue to use the driver for all subsequent subcommands, or until the instances are destroyed by Molecule.
+The driver’s name is specified in molecule.yml, and can be overridden on the command line. Molecule will remember the last successful driver used, and continue to use the driver for all subsequent subcommands, or until the instances are destroyed by Molecule.
 
--   Azure
 -   Delegated
--   DigitalOcean
--   Docker
--   EC2
--   GCE
--   Hetzner Cloud
--   Linode
--   LXC
--   LXD
--   Openstack
+-   Docker (default)
 -   Podman
--   Vagrant
 
 Example:
 
@@ -192,6 +182,8 @@ platforms:
     privileged: True|False
     security_opts:
       - seccomp=unconfined
+    devices:
+      - /dev/fuse:/dev/fuse:rwm
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     keep_volumes: True|False
@@ -234,17 +226,20 @@ platforms:
 
 #### Lint
 
-Molecule handles project linting by invoking configurable linters.
+Starting with v3, Molecule handles project linting by invoking and external lint commands as exemplified below.
 
--   Yaml lint
+The decision to remove the complex linting support was not easily taken as we do find it very useful. The issue was that molecule runs on scenarios and linting is usually performed at repository level.
+
+It makes little sense to perform linting in more than one place per project. Molecule was able to use up to three linters and while it was aimed to flexible about them, it ended up creating more confusions to the users. We decided to maximize flexibility by just calling an external shell command.
 
 Example:
 
 ```yaml
-lint:
-  name: yamllint
-  options:
-    config-file: foo/bar
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
+  flake8
 ```
 
 #### Platforms
@@ -273,8 +268,7 @@ Molecule handles provisioning and converging the role.
 
 Ansible is the default provisioner. No other provisioner will be supported.  
 
-Molecule’s provisioner manages the instances lifecycle. However, the user must provide the create, destroy, and converge playbooks. Molecule’s init subcommand will provide the necessary files for
- convenience.  
+Molecule’s provisioner manages the instances lifecycle. However, the user must provide the create, destroy, and converge playbooks. Molecule’s init subcommand will provide the necessary files for convenience.  
 
 Molecule will skip tasks which are tagged with either molecule-notest or notest. With the tag molecule-idempotence-notest tasks are only skipped during the idempotence action step.
 
@@ -325,32 +319,12 @@ provisioner:
     cleanup: cleanup.yml
 ```
 
-**Ansible Lint**
-
-Molecule handles provisioner linting by invoking configurable linters.
-
-Example:
-
-```yaml
-provisioner:
-  name: ansible
-  lint:
-    name: ansible-lint
-    options:
-      exclude:
-        - path/exclude1
-        - path/exclude2
-      x: ["ANSIBLE0011,ANSIBLE0012"]
-      force-color: True
-```
-
 #### Scenario
 
 A scenario is a self-contained directory containing everything necessary for testing the role in a particular way. The default scenario is named default, and every role should contain a default scenario.
 
 ```yaml
 scenario:
-  name: default  # optional
   create_sequence:
     - dependency
     - create
@@ -374,8 +348,8 @@ scenario:
     - cleanup
     - destroy
   test_sequence:
-    - lint
     - dependency
+    - lint
     - cleanup
     - destroy
     - syntax
@@ -393,10 +367,14 @@ scenario:
 
 Molecule handles role testing by invoking configurable verifiers.
 
--   Ansible
--   Goss
--   Inspec
+-   Ansible (default)
 -   Testinfra
+
+**Ansible**
+Molecule executes a playbook (verify.yml) located in the role’s scenario.directory.
+
+**Testinfra**
+Testinfra is no longer the default test verifier since version 3.0.
 
 ## Testing
 
@@ -406,30 +384,36 @@ Here is an example setting up a virtualenv and testing an Ansible role via Molec
 
 ```yaml
 ---
-image: docker:git
+image: docker:latest
 
 services:
   - docker:dind
 
 before_script:
-  - apk update && apk add --no-cache docker
-    python3-dev py3-pip docker gcc git curl build-base
+  - apk update && apk add --no-cache
+    python3-dev py3-pip gcc git curl build-base
     autoconf automake py3-cryptography linux-headers
     musl-dev libffi-dev openssl-dev openssh
   - docker info
   - python3 --version
+  - python3 -m pip install ansible molecule[docker] ansible-lint
+  - ansible --version
+  - molecule --version
 
 molecule:
-stage: test
-script:
-  - pip3 install ansible molecule docker
-  - ansible --version
-  - cd roles/testrole && molecule test
+  stage: test
+  script:
+    - molecule test
 ```
 
 ## Source
 
+[Molecule 2 to 3 migration script](https://gist.github.com/geerlingguy/19aace82f94b2d07a0dfb23db7345a57)
+[Molecule breakable changes](https://github.com/ansible-community/molecule/issues/2560)
+[Molecule Changelog](https://molecule.readthedocs.io/en/latest/changelog.html)  
 [Molecule Docker images](https://quay.io/repository/ansible/molecule)  
 [Molecule Driver](https://molecule.readthedocs.io/en/stable/configuration.html#driver)  
 [Molecule Github](https://github.com/ansible/molecule)  
 [Molecule Read the docs](https://molecule.readthedocs.io/en/latest/)
+[TestInfra](https://testinfra.readthedocs.io/en/latest/index.html)
+[Yamllint](https://yamllint.readthedocs.io/en/stable/index.html#)
