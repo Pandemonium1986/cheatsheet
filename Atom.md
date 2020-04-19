@@ -58,7 +58,7 @@ apm install <package_name>@<package_version>  # to install a specific version.
 | Actions                                         | Shortcuts     |
 | ----------------------------------------------- | ------------- |
 | Navigate with symbol                            | `Ctrl+R`      |
-| Bookmarks line                                  | `Alt+Ctrl+F2` |
+| Bookmarks line                                  | `Maj+Ctrl+F2` |
 | Next Bookmarks                                  | `F2`          |
 | Previous Bookmarks                              | `Shift+F2`    |
 | Open Bookmarks                                  | `Ctrl+F2`     |
