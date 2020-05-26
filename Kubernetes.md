@@ -75,6 +75,109 @@ Systemd-nspawn may be used to run a simple script or boot an entire Linux-like o
 
 ## Container Standards and Runtimes
 
+### Container
+
+Most times, to ease the understanding of the concept, a container is compared to a regular Virtual Machine - which is a result of full virtualization. A container, however, is the product of several OS-level virtualization features of the Linux kernel used in conjunction to build a lightweight isolated environment  
+There are quite a few differences as well, between VMs and containers: containers use the host kernel and are bound to boot the host OS only, and are processes running on the host system managed individually or in groups.
+
+#### What Are Containers?
+
+Application centric environments ensure an application’s efficiency, performance, and responsiveness to external factors such as load spikes and in response the application scales accordingly.  
+Containers are the application centric method to deliver high performing and scalable applications on any infrastructure.  
+This ideal solution is, in fact, a container image, and the isolated and secure execution environment created from it at runtime is a container.
+
+#### Where Are Containers Deployed?
+
+Containers are able to run anywhere.  
+
+### Standards
+
+Being able to move container images between different container runtime environments, by enabling containers to be interoperable and allowing them to integrate with third-party storage and network plugins of various projects and vendors, are just a few of the benefits of container standards.  
+The App Container standard has not received any new features  
+
+#### Container Image Standards - App Container (appc)
+
+The App Container (appc) specification was introduced in 2014 by CoreOS in collaboration with Google and RedHat  
+One of the container runtimes implementing the appc specification is rkt  
+
+**App Container Image**  
+The App Container Image (ACI) defines the packaging, compression and extraction methods of files that make up the container image together with the validation of container image’s integrity.  
+
+**App Container Image Discovery**  
+The App Container Image Discovery defines how a container image name is linked to a downloadable container image.  
+
+**App Container Pod**  
+The App Container Pod defines a Pod as the deployment and execution unit for one or a group of container images.  
+
+**App Container Executor**  
+The App Container Executor (ACE) defines how to run an app container image, more specifically environment configuration for the running app, and the app’s interaction with the environment.  
+
+#### Container Image Standards - Open Container Initiative (OCI)
+
+The Open Container Initiative (OCI) was introduced in 2015 by Docker together with other leaders in the container industry  
+One of the container runtimes implementing the OCI specification is runC.  
+
+**Runtime Specification**
+The Runtime Specification defines how to run a "filesystem bundle" that is unpacked on disk. An OCI implementation would download and unpack an OCI image into an OCI Runtime filesystem bundle. Then, an OCI Runtime would run the OCI Runtime Bundle.
+
+The Image Specification helps with the development of compatible tools to ensure consistent container image conversion into containers.
+
+#### Unification Process
+
+To ease the unification process between the two existing standards, features of the appc standard are being merged into OCI
+
+### Container Runtimes
+
+A container runtime is guided by a runtime specification, which describes the configuration, execution environment and the lifecycle of the container. he role of a container runtime is to provide an environment supporting basic operations with images and the running containers, that is both configurable and consistent, where container processes are able to run.  
+A container runtime is designed to perform some default operations under the hood as a response to user commands.  
+
+-   Extracts the container image
+-   Stores it on an overlay filesystem
+-   When the runtime executes a container, it interacts with the kernel to set resource limits via control groups and namespaces.
+
+#### runc
+
+-   Developed by Docker.
+-   runc implements the OCI specification.
+-   does not expose an API.
+-   does not provide container image management.
+-   does not support image build operations.
+-   does not provide image download or image integrity check capabilities.
+-   does not include a centralized daemon, it may be integrated with the Linux service manager - systemd.
+
+#### containerd
+
+-   Adopt by Docker engine, Kubernetes services of IBM (IKS) and Google Cloud (GKE), Cloud Foundry, and Kata Containers.
+-   implements the OCI specification.
+-   support several container operations, (storage and transfer  executing, attaching storage and network to containers.).
+-   used runc at low level
+-   containerd adds implementation for some missing, yet desired, capabilities of runc
+
+#### Docker
+
+Docker is one of the most robust and complex container development and management platforms in the container industry. Although we list it here as a container runtime, Docker is a lot more than just a simple, or not so simple, container platform. The Docker platform supports a wide range of operations, from container image management to container lifecycle and runtime management.  
+Earlier Docker versions were based on the Linux Containers (LXC). Then ocker decided to develop in-house its own proprietary runtime, libcontainer, its a component of runc.  
+Docker’s complexity is not only reflected by the multitude of operations it supports on container images and running containers, but also by its architecture. Docker is powered by the Docker Engine - a client-server application.  
+The Docker Engine is composed of the Docker host running the Docker daemon, a REST API to communicate with the daemon, and a Docker client
+![docker-engine](./img/lf-004.png)
+
+**Docker client**
+This is the CLI tool that allows users to run docker commands against a Docker daemon running on a Docker host. The client and daemon communicate through REST API, over UNIX sockets or a network interface. Also, the client is capable of communicating with more than one daemon running on different Docker hosts.
+
+**Docker host**
+The Docker host is a system running the Docker daemon - called dockerd.
+The daemon is responsible for building, running, and distributing Docker containers. He manage docker objects such as images, containers, networks, and volumes. He can interact with other daemons to manage distributed Docker services across multiple Docker hosts clustered together.
+
+**Docker registries**
+The Docker registries store Docker container images.
+
+**Docker Desktop**
+The Docker Desktop is the installer for the Docker framework components on Windows and Mac systems.
+
+#### rkt
+
+#### CRI-O
+
 ## Image Operations
 
 ## Container Operations
