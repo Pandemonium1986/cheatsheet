@@ -176,7 +176,29 @@ The Docker Desktop is the installer for the Docker framework components on Windo
 
 #### rkt
 
+Developed by CoreOS, rkt is a simpler application container runtime that implements the modern App Container (appc) specification and relies on the Application Container Image (ACI) format.  
+rkt is an application container engine developed for modern production cloud-native environments.  
+
+-   It features a pod-native approach.  
+-   rkt may be integrated with systemd.  
+
+When running containers in pods, rkt goes through three different stages in execution:
+
+-   Stage 0 invokes the rkt binary in order to perform various initialization steps.
+-   Stage 1 isolates the pod’s environment using chroot, cgroups and namespaces.
+-   Stage 2 runs the applications in the environment setup by Stage 1.
+
+rkt also supports full hardware virtualization, specific to Virtual Machines.
+rkt is interoperable as well, being able to query multiple container image registries, such as quay of CoreOS, Docker Hub.  
+Despite its initial popularity, the rkt project reached its end.  
+
 #### CRI-O
+
+CRI-O is a minimal implementation of the Container Runtime Interface (CRI) to enable the usage of any  Open Container Initiative (OCI) compatible runtime with Kubernetes, a popular container orchestrator.  
+CRI-O supports runc and Kata Containers as the container runtimes but any OCI-conformant runtime can be plugged in instead.  
+The CRI-O runtime has been optimized for Kubernetes, and it also implements the Container Network Interface (CNI) for networking and supports CNI plugins.  
+CRI-O is packed with libraries that pull container images from registries and create container filesystems.  
+CRI-O also supports container security such as SELinux, capabilities or seccomp.  
 
 ## Image Operations
 
