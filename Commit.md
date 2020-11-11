@@ -85,6 +85,21 @@ sudo chmod 755 /usr/local/bin/hadolint
 
 This allows pre-commit to use certain linter with the configuration files located at the root of the projects.
 
+#### Git-lint
+
+Add a gitlint configuration
+
+```sh
+cd MY_REPO && \
+gitlint generate-config
+```
+
+Linting a range of commits
+
+```sh
+gitlint --commits "019cf40...d6bc75a"
+```
+
 ## Source
 
 [Docs: convetional commit](https://www.conventionalcommits.org/fr/v1.0.0/)
