@@ -100,6 +100,23 @@ Linting a range of commits
 gitlint --commits "019cf40...d6bc75a"
 ```
 
+## Convetional commit
+
+The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
+
+types:
+
+-   fix:
+-   feat:
+-   build:
+-   chore:
+-   ci:
+-   docs:
+-   style:
+-   refactor:
+-   perf:
+-   test:
+
 ## Source
 
 [Docs: convetional commit](https://www.conventionalcommits.org/fr/v1.0.0/)
