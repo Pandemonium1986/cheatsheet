@@ -78,7 +78,9 @@ In my case cli must be installed before running pre-commit hooks.
 
 ```sh
 pip install --user --upgrade ansible-lint yamllint && \
-sudo npm install -g eclint
+sudo npm install -g eclint && \
+sudo curl -L https://github.com/hadolint/hadolint/releases/download/v1.18.2/hadolint-Linux-x86_64 --output /usr/local/bin/hadolint && \
+sudo chmod 755 /usr/local/bin/hadolint
 ```
 
 This allows pre-commit to use certain linter with the configuration files located at the root of the projects.
