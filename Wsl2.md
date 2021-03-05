@@ -44,3 +44,8 @@ Add-AppxPackage $Env:tmp\\wsl-ubuntu-2004.appx;
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]&#x3A;:SecurityProtocol = [System.Net.ServicePointManager]&#x3A;:SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('<https://chocolatey.org/install.ps1'>));
 choco install -y wsl2 -params "/Version:2 /Retry:true"
 ```
+
+
+### Source
+
+[Enable Nested Virtualization In VirtualBox](https://ostechnix.com/how-to-enable-nested-virtualization-in-virtualbox)  
