@@ -40,11 +40,30 @@ Add-AppxPackage $Env:tmp\\wsl-ubuntu-2004.appx;
 
 ##### Chocolatey (the lazy way)
 
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]&#x3A;:SecurityProtocol = [System.Net.ServicePointManager]&#x3A;:SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('<https://chocolatey.org/install.ps1'>));
-choco install -y wsl2 -params "/Version:2 /Retry:true"
-```
+**Step 1**
 
+```powershell
+"############################`n###  Chocolatey install  ###`n############################`n";
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'));
+"############################`n###     Wsl2 install     ###`n############################`n";
+choco install -y wsl2 -params "/Version:2 /Retry:true";
+"############################`n###        Reboot        ###`n############################";
+restart-computer -Confirm;
+
+```
+**Step 2**
+
+Redémarrage fin d'installation du wsl
+
+**Step 3**
+
+```powershell
+"###############################`n###  Download Linux images  ###`n###############################`n";
+$ProgressPreference = 'SilentlyContinue';
+Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile $Env:tmp\\wsl-ubuntu-2004.appx -UseBasicParsing;
+"#############################`n###  Install Linux images  ###`n#############################`n";
+Add-AppxPackage $Env:tmp\\wsl-ubuntu-2004.appx;
+```
 
 ### Source
 
