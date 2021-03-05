@@ -55,7 +55,7 @@ if ( $amIAdmin )
   restart-computer -Confirm;
 
 }
-else {O
+else {
   "###############################`n###  Requires admin rights  ###`n###############################`n";
 }
 ```
@@ -79,7 +79,7 @@ if ( $amIAdmin )
   Add-AppxPackage $Env:tmp\\wsl-ubuntu-2004.appx;
 
 }
-else {O
+else {
   "###############################`n###  Requires admin rights  ###`n###############################`n";
 }
 
@@ -98,7 +98,7 @@ if ( $amIAdmin )
   "############################`n###        Reboot        ###`n############################";
   restart-computer -Confirm;
 }
-else {O
+else {
   "###############################`n###  Requires admin rights  ###`n###############################`n";
 }
 
