@@ -58,21 +58,21 @@ Install the base-devel and mingw-w64-x86_64-toolchain packages
 pacman -S --needed --noconfirm base-devel mingw-w64-x86_64-toolchain
 ```
 
-### Specific installation procedure
+### Customisation
 
-Conventional tools
+##### Basic tools
 
 ```sh
 pacman -S --needed --noconfirm ansible curl gcc git make man-db tmux tree unzip vim zsh
 ```
 
-Langage tools
+##### Programming language and Co
 
 ```sh
 pacman -S --needed --noconfirm libcrypt-devel libffi-devel libyaml-devel mingw-w64-x86_64-libffi mingw-w64-x86_64-libsodium mingw-w64-x86_64-openssl mingw-w64-x86_64-pkg-config mingw-w64-x86_64-python mingw-w64-x86_64-python-pip mingw-w64-x86_64-ruby openssh openssl-devel
 ```
 
-Python tools
+##### Python tools
 
 ```sh
 export CRYPTOGRAPHY_DONT_BUILD_RUST=1
@@ -96,6 +96,55 @@ do
    which $i >/dev/null 2>&1 && echo "$i ok" || echo "$i ko"
 done
 ```
+
+### Advanced customisation
+
+Generate your ssh key
+
+```sh
+ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519 -C $(whoami)@$HOSTNAME
+```
+
+Install ohmyzsh
+
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+Install additional ohmyzsh plugins
+
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+```
+
+Change msys2 launch to switch from bash to zsh edit the `C:\Users\USER_NAME\.msys64\msys2_shell.cmd`
+
+```powershell
+@echo off
+setlocal EnableDelayedExpansion
+
+set "WD=%__CD__%"
+if NOT EXIST "%WD%msys-2.0.dll" set "WD=%~dp0usr\bin\"
+set "LOGINSHELL=zsh"
+[...] truncate output
+```
+
+Clone and install the powerline font and tmuxifier
+
+```sh
+mkdir -p /opt/github && cd /opt/github
+git clone https://github.com/powerline/fonts.git
+git clone https://github.com/jimeh/tmuxifier.git
+```
+
+Install powerline font by running the script `C:\Users\USER_NAME\.msys64\opt\github\fonts\install.ps1`
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+C:\Users\USER_NAME\.msys64\opt\github\fonts\install.ps1
+```
+
 ### Source
 
 [GitHub - Msys2 installer](https://github.com/msys2/msys2-installer)  
