@@ -55,19 +55,50 @@ pacman -Syu
 Install the base-devel and mingw-w64-x86_64-toolchain packages
 
 ```sh
-pacman -S --needed base-devel mingw-w64-x86_64-toolchain
-# [...] output truncated
-Enter a selection (default=all): 1-48
-# [...] output truncated
-Enter a selection (default=all): 1-19
-# [...] output truncated
-:: Proceed with installation? [Y/n] Y
+pacman -S --needed --noconfirm base-devel mingw-w64-x86_64-toolchain
 ```
 
 ### Specific installation procedure
 
+Conventional tools
 
+```sh
+pacman -S --needed --noconfirm ansible curl gcc git make man-db tmux tree unzip vim zsh
+```
+
+Langage tools
+
+```sh
+pacman -S --needed --noconfirm libcrypt-devel libffi-devel libyaml-devel mingw-w64-x86_64-libffi mingw-w64-x86_64-libsodium mingw-w64-x86_64-openssl mingw-w64-x86_64-pkg-config mingw-w64-x86_64-python mingw-w64-x86_64-python-pip mingw-w64-x86_64-ruby openssh openssl-devel
+```
+
+Python tools
+
+```sh
+export CRYPTOGRAPHY_DONT_BUILD_RUST=1
+export SODIUM_INSTALL=system CFLAGS=`pkg-config --cflags libffi`
+export LDFLAGS=`pkg-config --libs libffi`
+pip install cffi --no-binary :all:
+export C_INCLUDE_PATH=/mingw64/include
+export LIBRARY_PATH=/mingw64/lib
+pip install pynacl
+pip install beautysh gita gitlint httpie pre-commit yamllint
+```
+
+### Smoke Tests
+
+Check that everything is correctly installed
+
+```sh
+tools=( ansible beautysh curl gcc git gita gitlint http locate make pip  pre-commit tmux tree unzip vim yamllint zsh )
+for i in "${tools[@]}"
+do
+   which $i >/dev/null 2>&1 && echo "$i ok" || echo "$i ko"
+done
+```
 ### Source
 
 [GitHub - Msys2 installer](https://github.com/msys2/msys2-installer)  
+[Microsoft - Maximum Path Length Limitation](https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=powershell)  
 [Msys2 - Website](https://www.msys2.org/)  
+[GitHub - Install Ansible on msys2](https://gist.github.com/DaveB93/db94a6b310e08c928c0778f766562ab0)  
