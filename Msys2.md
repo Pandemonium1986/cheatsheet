@@ -145,6 +145,10 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 C:\Users\USER_NAME\.msys64\opt\github\fonts\install.ps1
 ```
 
+Finally
+* Install dotfiles
+* Configure mingw color
+
 ### Source
 
 [GitHub - Msys2 installer](https://github.com/msys2/msys2-installer)  
