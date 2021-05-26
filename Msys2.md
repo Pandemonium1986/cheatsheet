@@ -152,6 +152,7 @@ Finally
 ### Source
 
 [GitHub - Msys2 installer](https://github.com/msys2/msys2-installer)  
+[GitHub - Msys2 Terminus](https://github.com/Eugeny/terminus/issues/759)  
 [Microsoft - Maximum Path Length Limitation](https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=powershell)  
 [Msys2 - Website](https://www.msys2.org/)  
 [GitHub - Install Ansible on msys2](https://gist.github.com/DaveB93/db94a6b310e08c928c0778f766562ab0)  
