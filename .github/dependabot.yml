@@ -1,0 +1,32 @@
+---
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "Europe/Paris"
+    labels:
+      - "actions"
+      - "dependencies"
+    assignees:
+      - "Pandemonium1986"
+    # commit-message:
+    #   prefix: "dependabot-action"
+
+  # Maintain dependencies for Docker
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "Europe/Paris"
+    labels:
+      - "docker"
+      - "dependencies"
+    assignees:
+      - "Pandemonium1986"
+    # commit-message:
+    #   prefix: "dependabot-docker"
