@@ -11,27 +11,31 @@ Ce projet regroupe l'ensemble des curations sur les sujets qui me passionnent.
 L'ensemble des cheatsheet sont disponibles 'as in' ou via l'outil [hads](https://github.com/sinedied/hads).
 
 ### Installing
+
 Cloner simplement le repository
-```
+
+```sh
 mkdir -p ~/git/Pandemonium1986
 cd  ~/git/Pandemonium1986
 git clone https://github.com/Pandemonium1986/cheatsheet.git
 ```
 
 Pour installer hads
-```
+
+```sh
 sudo npm install -g hads
 ```
 
 Pour lancer Pandemonium1986/cheatsheet depuis hads
-```
+
+```sh
 cd  ~/git/Pandemonium1986/cheatsheet
 hads -o
 ```
 
 ### Hads Browsing
 
-\[[Index]]
+[[Index]] <!-- markdownlint-disable-line -->
 
 ## License
 
@@ -39,4 +43,4 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## Authors
 
--   **Michael Maffait** - _Initial work_ - [Pandemonium1986](https://github.com/Pandemonium1986)
+- **Michael Maffait** - _Initial work_ - [Pandemonium1986](https://github.com/Pandemonium1986)
