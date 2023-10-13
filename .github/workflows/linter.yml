@@ -1,0 +1,25 @@
+---
+name: "GitHub Super Linter"
+
+on:
+  schedule:
+    - cron: "0 21 * * *"
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  called-linter:
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+    name: "Called: GitHub Super Linter"
+    uses: pandemonium1986/.github/.github/workflows/called-linter.yml@main
+    secrets:
+      github-token: inherit
