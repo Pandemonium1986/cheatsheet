@@ -1,17 +1,17 @@
 # Atom : Installation et Configuration
 
-### Version des outils
+## Version des outils
 
 |         Os / Tool        | Version |
 | :----------------------: | :-----: |
 | Windows 10 Professionnel |   1803  |
 |           Atom           |  1.28.1 |
 
-### Procédure d'installation
+## Procédure d'installation
 
 Dl + Clic + Install
 
-### Procédure de post-installation
+## Procédure de post-installation
 
 Installation des packages supplémentaires :
 
@@ -19,29 +19,29 @@ Installation des packages supplémentaires :
 apm install atom-beautify busy-signal compare-files file-icons highlight-selected intentions language-ansible language-docker language-groovy linter linter-ansible-linting linter-ansible-syntax linter-js-yaml linter-ui-default linter-vagrant-validate minimap minimap-highlight-selected minimap-linter minimap-split-diff sort-lines split-diff
 ```
 
-### Knowledge Base
+## Knowledge Base
 
-#### ATOM_HOME
+### ATOM_HOME
 
 Alternatively you can set the _ATOM_HOME_ environment variable to point wherever you want (you can write a .sh or .cmd script to temporarily set it and launch it from that)  
 
-#### Proxy and firewall settings
+### Proxy and firewall settings
 
 ```shell
 apm config set strict-ssl false
 apm config set https-proxy YOUR_PROXY_ADDRESS
 ```
 
-#### Apm Install package
+### Apm Install package
 
 ```shell
 apm install <package_name> # to install the latest version.
 apm install <package_name>@<package_version>  # to install a specific version.
 ```
 
-### Cheat Sheet
+## Cheat Sheet
 
-#### Atom Basics
+### Atom Basics
 
 | Actions                           | Shortcuts          |
 | --------------------------------- | ------------------ |
@@ -53,7 +53,7 @@ apm install <package_name>@<package_version>  # to install a specific version.
 | Open a file in a project          | `Ctrl+T or Ctrl+P` |
 | Open a file in a project recently | `Ctrl+B`           |
 
-#### Moving in Atom
+### Moving in Atom
 
 | Actions                                         | Shortcuts     |
 | ----------------------------------------------- | ------------- |
@@ -70,7 +70,7 @@ apm install <package_name>@<package_version>  # to install a specific version.
 | Move to the bottom of the file                  | `Ctrl+End`    |
 | Move directly                                   | `Ctrl+G`      |
 
-#### Editing and Deleting Text
+### Editing and Deleting Text
 
 | Actions                                                                              | Shortcuts          |
 | ------------------------------------------------------------------------------------ | ------------------ |
@@ -87,14 +87,14 @@ apm install <package_name>@<package_version>  # to install a specific version.
 | Select all the text inside the current brackets                                      | `Alt+Ctrl+,`       |
 | Close the current XML/HTML tag                                                       | `Alt+Ctrl+.`       |
 
-#### Find and Replace
+### Find and Replace
 
 | Actions                   | Shortcuts      |
 | ------------------------- | -------------- |
 | Search within a buffer    | `Ctrl+F`       |
 | Search the entire project | `Ctrl+Shift+F` |
 
-#### Panes
+### Panes
 
 | Actions    | Shortcuts                        |
 | ---------- | -------------------------------- |
@@ -102,25 +102,25 @@ apm install <package_name>@<package_version>  # to install a specific version.
 | Move Pane  | `Ctrl+K Ctrl+Up/Down/Left/Right` |
 | Close Pane | `Ctrl+K Ctrl+W`                  |
 
-#### Grammar
+### Grammar
 
 | Actions        | Shortcuts      |
 | -------------- | -------------- |
 | Select grammar | `Ctrl+Shift+L` |
 
-#### Snippets
+### Snippets
 
 | Actions       | Shortcuts      |
 | ------------- | -------------- |
 | Show Snippets | `Ctrl+Shift+P` |
 
-#### Plugins
+### Plugins
 
 | Actions    | Shortcuts    |
 | ---------- | ------------ |
 | Beautify   | `Ctrl+Alt+B` |
 | Sort Lines | `F5`         |
 
-### Source
+## Source
 
 [Atom Flight Manual](https://flight-manual.atom.io/)

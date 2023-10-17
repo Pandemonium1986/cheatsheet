@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD001 MD036 -->
 # Reveal.js
 
 ## Tools versions
@@ -98,19 +99,19 @@ External Markdown
 
 ```html
 <section data-markdown="example.md"
-         data-separator="^\n\n\n"
-         data-separator-vertical="^\n\n"
-         data-separator-notes="^Note:"
-         data-charset="iso-8859-15">
+  data-separator="^\n\n\n"
+  data-separator-vertical="^\n\n"
+  data-separator-notes="^Note:"
+  data-charset="iso-8859-15">
 </section>
 ```
 
 Note :
 
--   data-markdown: defines the external markdown
--   data-separator: defines a regular expression for horizontal slides
--   data--separator-vertical: defines a regular expression for vertical slides
--   data--separator-notes: specifying the beginning of the current slide's speaker notes
+- data-markdown: defines the external Markdown
+- data-separator: defines a regular expression for horizontal slides
+- data--separator-vertical: defines a regular expression for vertical slides
+- data--separator-notes: specifying the beginning of the current slide's speaker notes
 
 Element and Slide Attributes  
 Can be added through HTML comments
@@ -176,19 +177,20 @@ Simple example
 ```html
 <section>
   <pre><code data-trim data-noescape>
-(def lazy-fib
-  (concat
-   [0 1]
-   ((fn rfib [a b]
-        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+  (def lazy-fib
+    (concat
+    [0 1]
+    ((fn rfib [a b]
+      (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1))
+  )
   </code></pre>
 </section>
 ```
 
 Note :
 
--   data-trim: surrounding whitespace within the `<code>` is automatically removed
--   data-noescape: defines a regular expression for horizontal slides
+- data-trim: surrounding whitespace within the `<code>` is automatically removed
+- data-noescape: defines a regular expression for horizontal slides
 
 #### Theming
 
@@ -286,14 +288,14 @@ Fragments order
 
 ```html
 <section>
-	<a href="#/grand-finale">Go to the last slide</a>
+  <a href="#/grand-finale">Go to the last slide</a>
 </section>
 <section>
-	<h2>Slide 2</h2>
+  <h2>Slide 2</h2>
 </section>
 <section id="grand-finale">
-	<h2>The end</h2>
-	<a href="#/0">Back to the first</a>
+  <h2>The end</h2>
+  <a href="#/0">Back to the first</a>
 </section>
 <section>
   <a href="#/2">Go to 2nd slide</a>
@@ -307,9 +309,9 @@ Simple example
 
 Layout provide a few different helper classes for controlling the layout and styling your content.
 
--   r-stack: The r-stack layout helper lets you center and place multiple elements on top of each other.
--   r-fit-text: The r-fit-text class makes text as large as possible without overflowing the slide.
--   r-stretch: The r-stretch layout helper lets you resize an element, like an image or video, to cover the remaining vertical space in a slide.
+- r-stack: The r-stack layout helper lets you center and place multiple elements on top of each other.
+- r-fit-text: The r-fit-text class makes text as large as possible without overflowing the slide.
+- r-stretch: The r-stretch layout helper lets you resize an element, like an image or video, to cover the remaining vertical space in a slide.
 
 #### Slide Visibility
 
@@ -408,9 +410,9 @@ Simple example
 
 Navigation mode can be tuned by setting `navigationMode` config option
 
--   default
--   linear
--   grid
+- default
+- linear
+- grid
 
 #### Auto-Animate
 
@@ -493,8 +495,11 @@ Reveal.initialize({
     Shhh, these are your private notes 📝
   </aside>
 </section>
-<section data-markdown="example.md" data-separator="^\n\n\n"
-         data-separator-vertical="^\n\n" data-separator-notes="^Note:">
+<section 
+  data-markdown="example.md"
+  data-separator="^\n\n\n"
+  data-separator-vertical="^\n\n"
+  data-separator-notes="^Note:">
 # Title
 ## Sub-title
 
@@ -549,8 +554,8 @@ Press F button
 
 ## Plugins
 
-1.  Include the plugin script in the document. (Some plugins may require styles as well.)
-2.  Tell reveal.js about the plugin by including it in the plugins array when initializing.
+1. Include the plugin script in the document. (Some plugins may require styles as well.)
+2. Tell reveal.js about the plugin by including it in the plugins array when initializing.
 
 ```html
 <script src="plugin/markdown/markdown.js"></script>

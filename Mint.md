@@ -1,27 +1,28 @@
 # Linux Mint 19.1 : Installation et Configuration
 
-### Version des outils
+## Version des outils
 
 |     Os / Tool    | Version |
 | :--------------: | :-----: |
 | Linux Mint Tessa |   19.1  |
 
-### Procédure d'installation
+## Procédure d'installation
 
-### Procédure de post-installation
+## Procédure de post-installation
 
-#### One Line installer:
+### One Line installer
+
 ```sh
 sudo apt install apt-transport-https build-essential ca-certificates cowsay curl dkms dnsutils fonts-powerline git gnupg2 htop libfortune-perl man mlocate module-assistant net-tools nmap powerline python-dev software-properties-common sudo tmux tree unzip vim zsh pip
 ```
 
-#### 7zip
+### 7zip
 
 ```sh
 sudo apt install p7zip
 ```
 
-#### Atom
+### Atom
 
 ```sh
 wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
@@ -29,7 +30,7 @@ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ 
 sudo apt-get install atom
 ```
 
-#### Cryptomator
+### Cryptomator
 
 ```sh
 sudo add-apt-repository ppa:sebastian-stenzel/cryptomator
@@ -37,13 +38,13 @@ sudo apt-get update
 sudo apt-get install cryptomator
 ```
 
-#### Git
+### Git
 
 ```sh
 add-apt-repository ppa:git-core/ppa && apt update && apt install git
 ```
 
-#### VirtualBox
+### VirtualBox
 
 ```sh
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
@@ -52,7 +53,7 @@ sudo sh -c 'echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/de
 sudo apt update && sudo apt-get install virtualbox-6.0
 ```
 
-#### Vagrant
+### Vagrant
 
 ```sh
 cd ~/Téléchargements
@@ -60,13 +61,13 @@ wget https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
 sudo apt install ./vagrant_2.2.4_x86_64.deb
 ```
 
-#### Ansible
+### Ansible
 
 ```sh
 pip install --usser molecule
 ```
 
-#### Signal
+### Signal
 
 ```sh
 curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
@@ -74,21 +75,21 @@ echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sud
 sudo apt update && sudo apt install signal-desktop
 ```
 
-#### Forticlient
+### Forticlient
 
 ```sh
 wget -O - https://repo.fortinet.com/repo/ubuntu/DEB-GPG-KEY | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /bionic multiverse" > /etc/apt/sources.list.d/forticlient.list'
 ```
 
-#### Steam
+### Steam
 
 ```sh
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B05498B7
 sudo sh -c 'echo "deb http://repo.steampowered.com/steam/ precise steam" > /etc/apt/sources.list.d/steam.list'
 ```
 
-#### Keepassxc
+### Keepassxc
 
 ```sh
 sudo add-apt-repository ppa:phoerious/keepassxc
@@ -96,11 +97,11 @@ sudo apt-get update
 sudo apt install keepassxc
 ```
 
-### Knowledge Base
+## Knowledge Base
 
-### Cheat Sheet
+## Cheat Sheet
 
-### Source
+## Source
 
 [Battery drains](https://askubuntu.com/questions/974573/battery-drains-down-even-after-shut-down)  
 [Cinnamon Settings](<https://github.com/linuxmint/Cinnamon/wiki/Backing-up-and-restoring-your-cinnamon-settings-(dconf>)  

@@ -1,18 +1,18 @@
 # Debian 9 : Installation et Configuration
 
-### Version des outils
+## Version des outils
 
 | Os / Tool | Version |
 | :-------: | :-----: |
 |   Debian  |  9.5.0  |
 
-### Procédure d'installation
+## Procédure d'installation
 
 Classique de l'install d'une vm.
 
-### Procédure de post-installation
+## Procédure de post-installation
 
-#### Install VirtualBox Guest Additions
+### Install VirtualBox Guest Additions
 
 ```sh
 apt install build-essential module-assistant dkms
@@ -25,21 +25,21 @@ cd /mnt
 reboot
 ```
 
-#### Packages
+### Packages
 
 ```sh
 sudo apt update && sudo apt upgrade
 sudo apt update && sudo apt install build-essential cowsay curl dkms dnsutils fonts-powerline git gitk htop libfortune-perl man mlocate module-assistant net-tools nmap powerline sudo tmux tree unzip vim zsh
 ```
 
-#### Packages in Debian backports
+### Packages in Debian backports
 
 ```sh
 sudo su -c 'echo "deb http://ftp.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/backports.list'
 sudo apt -t stretch-backports install git ansible tmux
 ```
 
-#### Tools
+### Tools
 
 ```sh
 cd
@@ -50,7 +50,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 ```
 
-####Configurer le réseaux
+### Configurer le réseaux
 
 ```sh
 vim /etc/network/interfaces

@@ -1,13 +1,13 @@
 # Git : Installation et Configuration
 
-### Version des outils
+## Version des outils
 
 |         Os / Tool        |      Version     |
 | :----------------------: | :--------------: |
 | Windows 10 Professionnel |       1709       |
 |      Git For Windows     | 2.16.2.windows.1 |
 
-### Procédure d'installation
+## Procédure d'installation
 
 La procédure d'installation de _Git for Windows_ sur _Windows 10_ se déroule de la façon suivante :
 
@@ -43,7 +43,7 @@ Dans la fenêtre _Configuring the terminal emulator to use with Git Bash_ laisse
 Dans la fenêtre _Configuring extra options_ laissez par défault et cliquez sur **_Next_**  
 ![Configuring extra options](/img/git-010.png)  
 
-### Procédure de configuration
+## Procédure de configuration
 
 La procédure de confiuguration de _Git for Windows_ sur _Windows 10_ se déroule de la façon suivante :  
 

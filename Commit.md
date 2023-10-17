@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD024 -->
 # Commit Best Practice
 
 ## Tools versions
@@ -23,13 +24,13 @@ N/A
 
 ## Installation procedure
 
-#### Pre-commit
+### Pre-commit
 
 ```sh
 pip install --user --upgrade pre-commit
 ```
 
-#### Git-lint
+### Git-lint
 
 ```sh
 pip install --user --upgrade gitlint
@@ -37,7 +38,7 @@ pip install --user --upgrade gitlint
 
 ## Getting start
 
-#### Pre-commit
+### Pre-commit
 
 Add a pre-commit configuration
 
@@ -64,11 +65,11 @@ How does it work
 pre-commit is configured via the .pre-commit-config.yaml file.  
 The configuration file is divided into three levels :
 
--   Top level (see [here](https://pre-commit.com/#pre-commit-configyaml---top-level)).
-    -   repos (see [here](https://pre-commit.com/#pre-commit-configyaml---repos)).
-        -   hooks(see [here](https://pre-commit.com/#pre-commit-configyaml---hooks)).
+- Top level (see [here](https://pre-commit.com/#pre-commit-configyaml---top-level)).
+  - repos (see [here](https://pre-commit.com/#pre-commit-configyaml---repos)).
+    - hooks(see [here](https://pre-commit.com/#pre-commit-configyaml---hooks)).
 
-Repos should be a git url to clone.  
+Repos should be a git URL to clone.  
 Hooks represent the "action" to perfom.  
 A repository can contain many hooks.
 
@@ -85,7 +86,7 @@ sudo chmod 755 /usr/local/bin/hadolint
 
 This allows pre-commit to use certain linter with the configuration files located at the root of the projects.
 
-#### Git-lint
+### Git-lint
 
 Add a gitlint configuration
 
@@ -106,16 +107,16 @@ The Conventional Commits specification is a lightweight convention on top of com
 
 types:
 
--   fix:
--   feat:
--   build:
--   chore:
--   ci:
--   docs:
--   style:
--   refactor:
--   perf:
--   test:
+- fix:
+- feat:
+- build:
+- chore:
+- ci:
+- docs:
+- style:
+- refactor:
+- perf:
+- test:
 
 ## Source
 

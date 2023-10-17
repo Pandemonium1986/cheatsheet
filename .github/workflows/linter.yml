@@ -22,4 +22,4 @@ jobs:
     name: "Called: GitHub Super Linter"
     uses: pandemonium1986/.github/.github/workflows/called-linter.yml@main
     secrets:
-      github-token: inherit
+      github-token: ${{ secrets.GITHUB_TOKEN }}

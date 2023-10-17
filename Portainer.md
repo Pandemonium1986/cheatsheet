@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD036 -->
 # Portainer : Installation et Configuration
 
 ## Version des outils
@@ -75,30 +76,30 @@ docker run --rm httpd:2.4-alpine htpasswd -nbB admin <password> | cut -d ":" -f 
 docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --admin-password='$2y$05$qFHAlNAH0A.6oCDe1/4W.ueCWC/iTfBMXIHBI97QYfMWlMCJ7N.a6'
 ```
 
-**Available flags**   
+**Available flags**
 
--   **--admin-password:** Admin password in the form admin:&lt;hashed_password>
--   **--admin-password-file:** Path to the file containing the password for the admin user
--   **--bind, -p:** Address and port to serve Portainer (default: :9000)
--   **--data, -d:** Directory where Portainer data will be stored (default: /data on Linux, C:\\data on Windows)
--   **--external-endpoints:** Enable external endpoint management by specifying the path to a JSON endpoint source in a file
--   **--hide-label, -l:** Hide containers with a specific label in the UI
--   **--host, -H:** Docker daemon endpoint
--   **--logo:** URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
--   **--no-analytics:** Disable analytics (default: false)
--   **--no-auth:** Disable internal authentication mechanism (default: false)
--   **--no-snapshot:** Disable periodic endpoint snapshot (default: false)
--   **--snapshot-interval:** Time interval between two endpoint snapshot jobs expressed as a string, e.g. 30s, 5m, 1h… as supported by the time.ParseDuration method (default: 5m)
--   **--ssl:** Secure Portainer instance using SSL (default: false)
--   **--sslcert:** Path to the SSL certificate used to secure the Portainer instance (default: /certs/portainer.crt, C:\\certs\\portainer.crt on Windows)
--   **--sslkey:** Path to the SSL key used to secure the Portainer instance (default: /certs/portainer.key, C:\\certs\\portainer.key on Windows)
--   **--sync-interval:** Time interval between two endpoint synchronization requests expressed as a string, e.g. 30s, 5m, 1h… as supported by the time.ParseDuration method (default:\*\* 60s)
--   **--templates, -t:** URL to templates (apps) definitions
--   **--template-file:** Path on disk to templates (apps) definitions (default: /templates.json)
--   **--tlscacert:** Path to the CA (default: /certs/ca.pem on Linux, C:\\certs\\ca.pem on Windows)
--   **--tlscert:** Path to the TLS certificate file (default: /certs/cert.pem, C:\\certs\\cert.pem on Windows)
--   **--tlskey:** Path to the TLS key (default: /certs/key.pem, C:\\certs\\key.pem on Windows)
--   **--tlsverify:** TLS support (default: false)
+- **--admin-password:** Admin password in the form admin:&lt;hashed_password>
+- **--admin-password-file:** Path to the file containing the password for the admin user
+- **--bind, -p:** Address and port to serve Portainer (default: :9000)
+- **--data, -d:** Directory where Portainer data will be stored (default: /data on Linux, C:\\data on Windows)
+- **--external-endpoints:** Enable external endpoint management by specifying the path to a JSON endpoint source in a file
+- **--hide-label, -l:** Hide containers with a specific label in the UI
+- **--host, -H:** Docker daemon endpoint
+- **--logo:** URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
+- **--no-analytics:** Disable analytics (default: false)
+- **--no-auth:** Disable internal authentication mechanism (default: false)
+- **--no-snapshot:** Disable periodic endpoint snapshot (default: false)
+- **--snapshot-interval:** Time interval between two endpoint snapshot jobs expressed as a string, e.g. 30s, 5m, 1h… as supported by the time.ParseDuration method (default: 5m)
+- **--ssl:** Secure Portainer instance using SSL (default: false)
+- **--sslcert:** Path to the SSL certificate used to secure the Portainer instance (default: /certs/portainer.crt, C:\\certs\\portainer.crt on Windows)
+- **--sslkey:** Path to the SSL key used to secure the Portainer instance (default: /certs/portainer.key, C:\\certs\\portainer.key on Windows)
+- **--sync-interval:** Time interval between two endpoint synchronization requests expressed as a string, e.g. 30s, 5m, 1h… as supported by the time.ParseDuration method (default:\*\* 60s)
+- **--templates, -t:** URL to templates (apps) definitions
+- **--template-file:** Path on disk to templates (apps) definitions (default: /templates.json)
+- **--tlscacert:** Path to the CA (default: /certs/ca.pem on Linux, C:\\certs\\ca.pem on Windows)
+- **--tlscert:** Path to the TLS certificate file (default: /certs/cert.pem, C:\\certs\\cert.pem on Windows)
+- **--tlskey:** Path to the TLS key (default: /certs/key.pem, C:\\certs\\key.pem on Windows)
+- **--tlsverify:** TLS support (default: false)
 
 ## Source
 
