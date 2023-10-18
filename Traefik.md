@@ -54,33 +54,33 @@ curl -H Host:whoami.docker.localhost http://127.0.0.1
 
 ### Features
 
--   Continuously updates its configuration (No restarts!)
--   Supports multiple load balancing algorithms
--   Provides HTTPS to your microservices by leveraging Let's Encrypt (wildcard certificates support)
--   Circuit breakers, retry
--   High Availability with cluster mode (beta)
--   See the magic through its clean web UI
--   Websocket, HTTP/2, GRPC ready
--   Provides metrics (Rest, Prometheus, Datadog, Statsd, InfluxDB)
--   Keeps access logs (JSON, CLF)
--   Fast
--   Exposes a Rest API
--   Packaged as a single binary file (made with ❤️ with go) and available as a tiny official docker image
+- Continuously updates its configuration (No restarts!)
+- Supports multiple load balancing algorithms
+- Provides HTTPS to your microservices by leveraging Let's Encrypt (wildcard certificates support)
+- Circuit breakers, retry
+- High Availability with cluster mode (beta)
+- See the magic through its clean web UI
+- Websocket, HTTP/2, GRPC ready
+- Provides metrics (Rest, Prometheus, Datadog, Statsd, InfluxDB)
+- Keeps access logs (JSON, CLF)
+- Fast
+- Exposes a Rest API
+- Packaged as a single binary file (made with ❤️ with go) and available as a tiny official docker image
 
 ### Supported Providers
 
--   Docker / Swarm mode
--   Kubernetes
--   Mesos / Marathon
--   Rancher (API, Metadata)
--   Azure Service Fabric
--   Consul Catalog
--   Consul / Etcd / Zookeeper / BoltDB
--   Eureka
--   Amazon ECS
--   Amazon DynamoDB
--   File
--   Rest
+- Docker / Swarm mode
+- Kubernetes
+- Mesos / Marathon
+- Rancher (API, Metadata)
+- Azure Service Fabric
+- Consul Catalog
+- Consul / Etcd / Zookeeper / BoltDB
+- Eureka
+- Amazon ECS
+- Amazon DynamoDB
+- File
+- Rest
 
 ## Basics
 
@@ -90,18 +90,18 @@ Quick overview
 Zoom into traefik  
 ![Zoom](/img/tfk-002.png)
 
--   Incoming requests end on entrypoints, as the name suggests, they are the network entry points into Traefik (listening port, SSL, traffic redirection...).
--   Traffic is then forwarded to a matching frontend. A frontend defines routes from entrypoints to backends. Routes are created using requests fields (Host, Path, Headers...) and can match or not a request.
--   The frontend will then send the request to a backend. A backend can be composed by one or more servers, and by a load-balancing strategy.
--   Finally, the server will forward the request to the corresponding microservice in the private network.
+- Incoming requests end on entrypoints, as the name suggests, they are the network entry points into Traefik (listening port, SSL, traffic redirection...).
+- Traffic is then forwarded to a matching frontend. A frontend defines routes from entrypoints to backends. Routes are created using requests fields (Host, Path, Headers...) and can match or not a request.
+- The frontend will then send the request to a backend. A backend can be composed by one or more servers, and by a load-balancing strategy.
+- Finally, the server will forward the request to the corresponding microservice in the private network.
 
 ### Entrypoints
 
 Entrypoints are the network entry points into Traefik. They can be defined using:
 
--   a port (80, 443...)
--   SSL (Certificates, Keys, authentication with a client certificate signed by a trusted CA...)
--   redirection to another entrypoint (redirect HTTP to HTTPS)
+- a port (80, 443...)
+- SSL (Certificates, Keys, authentication with a client certificate signed by a trusted CA...)
+- redirection to another entrypoint (redirect HTTP to HTTPS)
 
 ### Frontends
 
@@ -115,10 +115,10 @@ A backend is responsible to load-balance the traffic coming from one or more fro
 
 Traefik's configuration has two parts:
 
--   The static Traefik configuration which is loaded only at the beginning.
--   The dynamic Traefik configuration which can be hot-reloaded (no need to restart the process).
+- The static Traefik configuration which is loaded only at the beginning.
+- The dynamic Traefik configuration which can be hot-reloaded (no need to restart the process).
 
-## Configuration
+## Config
 
 ### Docker Provider
 
@@ -183,7 +183,7 @@ swarmModeRefreshSeconds = 15
 ```
 
 ### On container
-
+<!-- textlint-disable -->
 | Label                      | Description                                                                                                                                                  |
 | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | traefik.docker.network     | Overrides the default docker network to use for connections to the container.                                                                                |
@@ -195,7 +195,7 @@ swarmModeRefreshSeconds = 15
 | traefik.weight=10          | Assigns this weight to the container.                                                                                                                        |
 | traefik.backend=foo        | Overrides the container name by foo in the generated name of the backend.                                                                                    |
 | traefik.frontend.rule=EXPR | Overrides the default frontend rule. Default: Host:{containerName}.{domain} or Host:{service}.{project_name}.{domain} if you are using docker-compose.       |
-
+<!-- textlint-enable -->
 ### On containers with Multiple Ports (segment labels)
 
 | Label                                       | Description                   |

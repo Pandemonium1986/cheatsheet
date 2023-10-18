@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD036 -->
 # Molecule: Installation and Configuration
 
 ## Tools versions
@@ -63,23 +64,23 @@ molecule init role -r my-new-role
 
 After init role there is a molecule folder wich containes a default folder wich is the default scenario. In this scenario we can found :
 
--   _Dockerfile.j2_ Jinja2 template file in place. Molecule will use this file to build a docker image to test your role against.
--   _INSTALL.rst_ contains instructions on what additional software or setup steps you will need to take in order to allow Molecule to successfully interface with the driver.
--   _molecule.yml_ is the central configuration entrypoint for Molecule.
--   _converge.yml_ is the playbook file that contains the call site for your role.
--   tests is the tests directory created because Molecule uses TestInfra as the default Verifier.
+- _Dockerfile.j2_ Jinja2 template file in place. Molecule will use this file to build a docker image to test your role against.
+- _INSTALL.rst_ contains instructions on what additional software or setup steps you will need to take in order to allow Molecule to successfully interface with the driver.
+- _molecule.yml_ is the central configuration entrypoint for Molecule.
+- _converge.yml_ is the playbook file that contains the call site for your role.
+- tests is the tests directory created because Molecule uses TestInfra as the default Verifier.
 
 **Molecule.yml**
 
 The molecule.yml is for configuring Molecule. It is a YAML file whose keys represent the high level components that Molecule provides. These are:
 
--   The Dependency manager.
--   The Driver provider.
--   The Lint provider.
--   The Platforms definitions.
--   The Provisioner. Molecule only provides an Ansible provisioner.
--   The Scenario definition.
--   The Verifier framework.
+- The Dependency manager.
+- The Driver provider.
+- The Lint provider.
+- The Platforms definitions.
+- The Provisioner. Molecule only provides an Ansible provisioner.
+- The Scenario definition.
+- The Verifier framework.
 
 **Run test sequence commands**
 
@@ -108,33 +109,33 @@ molecule test
 
 ## Usage
 
--   **check**        Use the provisioner to perform a Dry-Run...
--   **cleanup**      Use the provisioner to cleanup any changes...
--   **converge**     Use the provisioner to configure instances...
--   **create**       Use the provisioner to start the instances.
--   **dependency**   Manage the role's dependencies.
--   **destroy**      Use the provisioner to destroy the instances.
--   **idempotence**  Use the provisioner to configure the...
--   **init**         Initialize a new role or scenario.
--   **lint**         Lint the role.
--   **list**         Lists status of instances.
--   **login**        Log in to one instance.
--   **matrix**       List matrix of steps used to test instances.
--   **prepare**      Use the provisioner to prepare the instances...
--   **side-effect**  Use the provisioner to perform side-effects...
--   **syntax**       Use the provisioner to syntax check the role.
--   **test**         Test (lint, cleanup, destroy, dependency,...
--   **verify**       Run automated tests against instances.
+- **check**        Use the provisioner to perform a Dry-Run...
+- **cleanup**      Use the provisioner to cleanup any changes...
+- **converge**     Use the provisioner to configure instances...
+- **create**       Use the provisioner to start the instances.
+- **dependency**   Manage the role's dependencies.
+- **destroy**      Use the provisioner to destroy the instances.
+- **idempotence**  Use the provisioner to configure the...
+- **init**         Initialize a new role or scenario.
+- **lint**         Lint the role.
+- **list**         Lists status of instances.
+- **login**        Log in to one instance.
+- **matrix**       List matrix of steps used to test instances.
+- **prepare**      Use the provisioner to prepare the instances...
+- **side-effect**  Use the provisioner to perform side-effects...
+- **syntax**       Use the provisioner to syntax check the role.
+- **test**         Test (lint, cleanup, destroy, dependency,...
+- **verify**       Run automated tests against instances.
 
 ## Config
 
-#### Dependency
+### Dependency
 
 Testing roles may rely upon additional dependencies. Molecule handles managing these dependencies by invoking configurable dependency managers.  
 
--   Ansible Galaxy
--   Gilt
--   Shell
+- Ansible Galaxy
+- Gilt
+- Shell
 
 Example:
 
@@ -147,14 +148,14 @@ dependency:
     role-file: requirements.yml
 ```
 
-#### Driver
+### Driver
 
 Molecule uses Ansible to manage instances to operate on. Molecule supports any provider Ansible supports. This work is offloaded to the provisioner.  
-The driver’s name is specified in molecule.yml, and can be overridden on the command line. Molecule will remember the last successful driver used, and continue to use the driver for all subsequent subcommands, or until the instances are destroyed by Molecule.
+The driver’s name is specified in molecule.yml, and can be overridden on the command-line. Molecule will remember the last successful driver used, and continue to use the driver for all subsequent subcommands, or until the instances are destroyed by Molecule.
 
--   Delegated
--   Docker (default)
--   Podman
+- Delegated
+- Docker (default)
+- Podman
 
 Example:
 
@@ -224,7 +225,7 @@ platforms:
         http_proxy: http://proxy.example.com:8080/
 ```
 
-#### Lint
+### Lint
 
 Starting with v3, Molecule handles project linting by invoking and external lint commands as exemplified below.
 
@@ -242,7 +243,7 @@ lint: |
   flake8
 ```
 
-#### Platforms
+### Platforms
 
 Platforms define the instances to be tested, and the groups to which the instances belong.
 
@@ -258,11 +259,11 @@ platforms:
       - child_group1
 ```
 
-#### Provisioner
+### Provisioner
 
 Molecule handles provisioning and converging the role.
 
--   Ansible
+- Ansible
 
 **Important**
 
@@ -278,9 +279,9 @@ Molecule will remove any options matching ‘^[v]+$’, and pass -vvv to the und
 
 The playbook loading order is:
 
--   provisioner.playbooks.$driver_name.$action
--   provisioner.playbooks.$action
--   bundled_playbook.$driver_name.$action
+- provisioner.playbooks.$driver_name.$action
+- provisioner.playbooks.$action
+- bundled_playbook.$driver_name.$action
 
 **side_effect playbook**
 
@@ -319,7 +320,7 @@ provisioner:
     cleanup: cleanup.yml
 ```
 
-#### Scenario
+### Scenario
 
 A scenario is a self-contained directory containing everything necessary for testing the role in a particular way. The default scenario is named default, and every role should contain a default scenario.
 
@@ -363,12 +364,12 @@ scenario:
     - destroy
 ```
 
-#### Verifier
+### Verifier
 
 Molecule handles role testing by invoking configurable verifiers.
 
--   Ansible (default)
--   Testinfra
+- Ansible (default)
+- Testinfra
 
 **Ansible**
 Molecule executes a playbook (verify.yml) located in the role’s scenario.directory.
@@ -378,7 +379,7 @@ Testinfra is no longer the default test verifier since version 3.0.
 
 ## Testing
 
-#### Gitlab CI
+### Gitlab CI
 
 Here is an example setting up a virtualenv and testing an Ansible role via Molecule. User-level pip is cached and so is the virtual environment to save time. And this is run over a runner tagged pip36 and docker, because its a minimal CentOS 7 VM installed with pip36 from IUS repository and docker.
 
@@ -413,7 +414,7 @@ molecule:
 [Molecule Changelog](https://molecule.readthedocs.io/en/latest/changelog.html)  
 [Molecule Docker images](https://quay.io/repository/ansible/molecule)  
 [Molecule Driver](https://molecule.readthedocs.io/en/stable/configuration.html#driver)  
-[Molecule Github](https://github.com/ansible/molecule)  
+[Molecule GitHub](https://github.com/ansible/molecule)  
 [Molecule Read the docs](https://molecule.readthedocs.io/en/latest/)
 [TestInfra](https://testinfra.readthedocs.io/en/latest/index.html)
 [Yamllint](https://yamllint.readthedocs.io/en/stable/index.html#)

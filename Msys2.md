@@ -1,13 +1,13 @@
 # Msys2 : Installation et Configuration
 
-### Tool Versions
+## Tool Versions
 
 |         Os / Tool        |  Version |
 | :----------------------: | :------: |
 | Windows 10 Professionnel |   20H2   |
 |           Msys2          | 20210419 |
 
-### Installation procedure
+## Installation procedure
 
 Start by getting and installing the [Msys2](https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20210419.exe) binary
 
@@ -25,11 +25,11 @@ Run the installer and follow the steps. Make sure to install MSYS2 in your user 
 
 ![msys2-006](./img/msys2-006.png)
 
-### Post installation procedure
+## Post installation procedure
 
 Run `MSYS2 MinGW 64-bit`  
 
-If you are behind a proxy configure it from the command line to start:
+If you are behind a proxy configure it from the command-line to start:
 
 ```sh
 export http_proxy="http://LOGIN:PASSWORD@PROXY:PORT" && export https_proxy=$http_proxy && curl -ivks https://github.com
@@ -58,21 +58,21 @@ Install the base-devel and mingw-w64-x86_64-toolchain packages
 pacman -S --needed --noconfirm base-devel mingw-w64-x86_64-toolchain
 ```
 
-### Customisation
+## Customisation
 
-##### Basic tools
+### Basic tools
 
 ```sh
 pacman -S --needed --noconfirm ansible curl gcc git make man-db tmux tree unzip vim zsh
 ```
 
-##### Programming language and Co
+### Programming language and Co
 
 ```sh
 pacman -S --needed --noconfirm libcrypt-devel libffi-devel libyaml-devel mingw-w64-x86_64-libffi mingw-w64-x86_64-libsodium mingw-w64-x86_64-openssl mingw-w64-x86_64-pkg-config mingw-w64-x86_64-python mingw-w64-x86_64-python-pip mingw-w64-x86_64-ruby openssh openssl-devel
 ```
 
-##### Python tools
+### Python tools
 
 ```sh
 export CRYPTOGRAPHY_DONT_BUILD_RUST=1
@@ -85,7 +85,7 @@ pip install pynacl
 pip install beautysh gita gitlint httpie pre-commit yamllint
 ```
 
-### Smoke Tests
+## Smoke Tests
 
 Check that everything is correctly installed
 
@@ -93,11 +93,11 @@ Check that everything is correctly installed
 tools=( ansible beautysh curl gcc git gita gitlint http locate make pip  pre-commit tmux tree unzip vim yamllint zsh )
 for i in "${tools[@]}"
 do
-   which $i >/dev/null 2>&1 && echo "$i ok" || echo "$i ko"
+  which $i >/dev/null 2>&1 && echo "$i ok" || echo "$i ko"
 done
 ```
 
-### Advanced customisation
+## Advanced customisation
 
 Generate your ssh key
 
@@ -146,12 +146,13 @@ C:\Users\USER_NAME\.msys64\opt\github\fonts\install.ps1
 ```
 
 Finally
+
 * Install dotfiles
 * Configure mingw color
 
-### Source
+## Source
 
 [GitHub - Msys2 installer](https://github.com/msys2/msys2-installer)  
 [Microsoft - Maximum Path Length Limitation](https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=powershell)  
-[Msys2 - Website](https://www.msys2.org/)  
+[Msys2 - site](https://www.msys2.org/)  
 [GitHub - Install Ansible on msys2](https://gist.github.com/DaveB93/db94a6b310e08c928c0778f766562ab0)  

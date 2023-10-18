@@ -131,27 +131,27 @@ To ease the unification process between the two existing standards, features of 
 A container runtime is guided by a runtime specification, which describes the configuration, execution environment and the lifecycle of the container. he role of a container runtime is to provide an environment supporting basic operations with images and the running containers, that is both configurable and consistent, where container processes are able to run.  
 A container runtime is designed to perform some default operations under the hood as a response to user commands.  
 
--   Extracts the container image
--   Stores it on an overlay filesystem
--   When the runtime executes a container, it interacts with the kernel to set resource limits via control groups and namespaces.
+- Extracts the container image
+- Stores it on an overlay filesystem
+- When the runtime executes a container, it interacts with the kernel to set resource limits via control groups and namespaces.
 
 #### runc
 
--   Developed by Docker.
--   runc implements the OCI specification.
--   does not expose an API.
--   does not provide container image management.
--   does not support image build operations.
--   does not provide image download or image integrity check capabilities.
--   does not include a centralized daemon, it may be integrated with the Linux service manager - systemd.
+- Developed by Docker.
+- runc implements the OCI specification.
+- does not expose an API.
+- does not provide container image management.
+- does not support image build operations.
+- does not provide image download or image integrity check capabilities.
+- does not include a centralized daemon, it may be integrated with the Linux service manager - systemd.
 
 #### containerd
 
--   Adopt by Docker engine, Kubernetes services of IBM (IKS) and Google Cloud (GKE), Cloud Foundry, and Kata Containers.
--   implements the OCI specification.
--   support several container operations, (storage and transfer  executing, attaching storage and network to containers.).
--   used runc at low level
--   containerd adds implementation for some missing, yet desired, capabilities of runc
+- Adopt by Docker engine, Kubernetes services of IBM (IKS) and Google Cloud (GKE), Cloud Foundry, and Kata Containers.
+- implements the OCI specification.
+- support several container operations, (storage and transfer  executing, attaching storage and network to containers.).
+- used runc at low level
+- containerd adds implementation for some missing, yet desired, capabilities of runc
 
 #### Docker
 
@@ -162,7 +162,7 @@ The Docker Engine is composed of the Docker host running the Docker daemon, a RE
 ![docker-engine](./img/lf-004.png)
 
 **Docker client**
-This is the CLI tool that allows users to run docker commands against a Docker daemon running on a Docker host. The client and daemon communicate through REST API, over UNIX sockets or a network interface. Also, the client is capable of communicating with more than one daemon running on different Docker hosts.
+This is the command-line tool that allows users to run docker commands against a Docker daemon running on a Docker host. The client and daemon communicate through REST API, over UNIX sockets or a network interface. Also, the client is capable of communicating with more than one daemon running on different Docker hosts.
 
 **Docker host**
 The Docker host is a system running the Docker daemon - called dockerd.
@@ -179,14 +179,14 @@ The Docker Desktop is the installer for the Docker framework components on Windo
 Developed by CoreOS, rkt is a simpler application container runtime that implements the modern App Container (appc) specification and relies on the Application Container Image (ACI) format.  
 rkt is an application container engine developed for modern production cloud-native environments.  
 
--   It features a pod-native approach.  
--   rkt may be integrated with systemd.  
+- It features a pod-native approach.  
+- rkt may be integrated with systemd.  
 
 When running containers in pods, rkt goes through three different stages in execution:
 
--   Stage 0 invokes the rkt binary in order to perform various initialization steps.
--   Stage 1 isolates the pod’s environment using chroot, cgroups and namespaces.
--   Stage 2 runs the applications in the environment setup by Stage 1.
+- Stage 0 invokes the rkt binary in order to perform various initialization steps.
+- Stage 1 isolates the pod’s environment using chroot, cgroups and namespaces.
+- Stage 2 runs the applications in the environment setup by Stage 1.
 
 rkt also supports full hardware virtualization, specific to Virtual Machines.
 rkt is interoperable as well, being able to query multiple container image registries, such as quay of CoreOS, Docker Hub.  

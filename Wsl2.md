@@ -1,15 +1,16 @@
+<!-- markdownlint-disable MD036 -->
 # Wsl2 : Installation et Configuration
 
-### Tool Versions
+## Tool Versions
 
 |         Os / Tool        | Version |
 | :----------------------: | :-----: |
 | Windows 10 Professionnel |   20H2  |
 |  Wsl - Ubuntu GNU/Linux  |   20.4  |
 
-### Installation procedure
+## Installation procedure
 
-##### Vanilla (the hardest way)
+### Vanilla (the hardest way)
 
 The vanilla installation is made to free you from the use of a third party tool.  
 However you must scrupulously respect the execution of the commands and the different steps (being an admin user, reboot ...).
@@ -38,7 +39,7 @@ Invoke-WebRequest -Uri <https://aka.ms/wslubuntu2004> -OutFile $Env:tmp\\wsl-ubu
 Add-AppxPackage $Env:tmp\\wsl-ubuntu-2004.appx;
 ```
 
-##### Chocolatey (the lazy way)
+### Chocolatey (the lazy way)
 
 **Step 1**
 
@@ -47,18 +48,19 @@ $amIAdmin = (([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups 
 if ( $amIAdmin )
 {
 
-  "############################`n###  Chocolatey install  ###`n############################`n";
+  ############################`n###  Chocolatey install  ###`n############################`n";
   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'));
-  "############################`n###     Wsl2 install     ###`n############################`n";
+  ############################`n###     Wsl2 install     ###`n############################`n";
   choco install -y wsl2 -params "/Version:2 /Retry:true";
-  "############################`n###        Reboot        ###`n############################";
+  ############################`n###        Reboot        ###`n############################";
   restart-computer -Confirm;
 
 }
 else {
-  "###############################`n###  Requires admin rights  ###`n###############################`n";
+  ###############################`n###  Requires admin rights  ###`n###############################`n";
 }
 ```
+
 **Step 2**
 
 Redémarrage fin d'installation du wsl
@@ -70,17 +72,17 @@ $amIAdmin = (([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups 
 if ( $amIAdmin )
 {
 
-  "########################`n###  Configure Wsl2  ###`n########################`n";
+  ########################`n###  Configure Wsl2  ###`n########################`n";
   wsl --set-default-version 2
-  "###############################`n###  Download Linux images  ###`n###############################`n";
+  ###############################`n###  Download Linux images  ###`n###############################`n";
   $ProgressPreference = 'SilentlyContinue';
   Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile $Env:tmp\\wsl-ubuntu-2004.appx -UseBasicParsing;
-  "##############################`n###  Install Linux images  ###`n##############################`n";
+  ##############################`n###  Install Linux images  ###`n##############################`n";
   Add-AppxPackage $Env:tmp\\wsl-ubuntu-2004.appx;
 
 }
 else {
-  "###############################`n###  Requires admin rights  ###`n###############################`n";
+  ###############################`n###  Requires admin rights  ###`n###############################`n";
 }
 
 ```
@@ -91,19 +93,19 @@ else {
 $amIAdmin = (([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -match "S-1-5-32-544");
 if ( $amIAdmin )
 {
-  "########################`n###  Vcxsrv Install   ###`n########################`n";
+  ########################`n###  Vcxsrv Install   ###`n########################`n";
   choco install -y vcxsrv
-  "###############################`n###  Docker desktop install  ###`n###############################`n";
+  ###############################`n###  Docker desktop install  ###`n###############################`n";
   choco install -y docker-desktop
-  "############################`n###        Reboot        ###`n############################";
+  ############################`n###        Reboot        ###`n############################";
   restart-computer -Confirm;
 }
 else {
-  "###############################`n###  Requires admin rights  ###`n###############################`n";
+  ###############################`n###  Requires admin rights  ###`n###############################`n";
 }
 
 ```
 
-### Source
+## Source
 
 [Enable Nested Virtualization In VirtualBox](https://ostechnix.com/how-to-enable-nested-virtualization-in-virtualbox)  

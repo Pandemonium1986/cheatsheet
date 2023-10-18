@@ -1,13 +1,14 @@
+<!-- markdownlint-disable MD036 -->
 # Vagrant : Installation et Configuration
 
-### Version des outils
+## Version des outils
 
 |         Os / Tool        | Version |
 | :----------------------: | :-----: |
 | Windows 10 Professionnel |   1803  |
 |          Vagrant         |  2.1.5  |
 
-### Naming convention
+## Naming convention
 
 |        Type       |                 Name                 |     Example     |
 | :---------------: | :----------------------------------: | :-------------: |
@@ -15,7 +16,7 @@
 |    Vagrant box    |    ff7_city_name-base_box_trigram    |    midgar-deb   |
 | Vagrant box Tools | tools-ff7_city_name-base_box_trigram | cicd-midgar-deb |
 
-### Procédure d'installation
+## Procédure d'installation
 
 La procédure d'installation de _Vagrant_ sur _Windows 10_ se déroule de la façon suivante :
 
@@ -24,11 +25,11 @@ Commencez par exécuter l'installeur **vagrant_2.1.5_x86_64.msi**.
 Dans la fenêtre _Welcome to the Vagrant Setup Wizard_ cliquez sur **_Next_**  
 ![Welcome](/img/vagrant-001.png)  
 
-Dans la fenêtre _End-User Licence Agreement_ cochez _I  accept the terms in License Agreement_ et cliquez sur **_Next_**  
+Dans la fenêtre _End User Licence Agreement_ cochez _I  accept the terms in License Agreement_ et cliquez sur **_Next_**  
 ![End-User Licence Agreement](/img/vagrant-002.png)  
 
 Dans la fenêtre _Destination Folder_ laissez par défaut et cliquez sur **_Next_**  
-![Destination Folder](/img/vagrant-003.png)   
+![Destination Folder](/img/vagrant-003.png)
 
 Dans la fenêtre _Ready to install Vagrant_ cliquez sur **_Install_**  
 ![Ready to install Vagrant](/img/vagrant-004.png)  
@@ -39,7 +40,7 @@ Dans la fenêtre _Installing Vagrant_ attendez la fin des opérations et cliquez
 Dans la fenêtre _Completed the Vagrant Setup Wizard_ cliquez sur **_Finish_**  
 ![Adjusting your Path environment](/img/vagrant-006.png)  
 
-### Procédure de post-installation
+## Procédure de post-installation
 
 Verifying the Installation :  
 
@@ -52,9 +53,9 @@ Usage: vagrant [options] <command> [<args>]
   [...]
 ```
 
-### Cheat Sheet
+## Cheat Sheet
 
-#### Vagrant Basics
+### Vagrant Basics
 
 | Commands | Description                                                                                                                                  |
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -69,7 +70,7 @@ Usage: vagrant [options] <command> [<args>]
 | status   | This will tell you the state of the machines Vagrant is managing.                                                                            |
 | snapshot | This is the command used to manage snapshots with the guest machine.                                                                         |
 
-#### Vagrant Essential
+### Vagrant Essential
 
 | Commands      | Description                                                                                                                                           |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -82,7 +83,7 @@ Usage: vagrant [options] <command> [<args>]
 | ssh-config    | This will output valid configuration for an SSH config file to SSH into the running Vagrant machine from ssh directly (instead of using vagrant ssh). |
 | version       | This command tells you the version of Vagrant you have installed as well as the latest version of Vagrant that is currently available.                |
 
-#### Vagrant Advanced
+### Vagrant Advanced
 
 | Commands   | Description                                                                                                                     |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -93,18 +94,18 @@ Usage: vagrant [options] <command> [<args>]
 | rdp        | This will start an RDP client for a remote desktop session with the guest.                                                      |
 | share      | The share command initializes a Vagrant Share session, allowing you to share your Vagrant environment with anyone in the world. |
 
-### Tutoriels Vagrant
+## Tutoriels Vagrant
 
-#### Vagrant : Getting Started
+### Vagrant : Getting Started
 
-##### Introduction
+#### Introduction
 
 Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.
 
-##### Vagrant vs. Other Software
+#### Vagrant vs. Other Software
 
-CLI Tools :  
-Virtualization software like VirtualBox and VMware come with command line utilities for managing the lifecycle of machines on their platform. Many people make use of these utilities to write their own automation. Vagrant actually uses many of these utilities internally.  
+Command-line tools :  
+Virtualization software like VirtualBox and VMware come with command-line utilities for managing the lifecycle of machines on their platform. Many people make use of these utilities to write their own automation. Vagrant actually uses many of these utilities internally.  
 
 Docker :  
 Vagrant is a tool focused on providing a consistent development environment workflow across multiple operating systems. Docker is a container management that can consistently run software as long as a containerization system exists.  
@@ -112,7 +113,7 @@ Vagrant is a tool focused on providing a consistent development environment work
 Terraform :  
 Vagrant and Terraform are both projects from HashiCorp. Vagrant is a tool focused for managing development environments and Terraform is a tool for building infrastructure.
 
-##### Quickly start and try
+#### Quickly start and try
 
 ```sh
 vagrant init hashicorp/precise64
@@ -121,13 +122,13 @@ vagrant up
 
 After running the above two commands, you will have a fully running virtual machine in VirtualBox running Ubuntu 12.04 LTS 64-bit. You can SSH into this machine with `vagrant ssh`, and when you are done playing around, you can terminate the virtual machine with vagrant destroy.
 
-##### Project Setup
+#### Project Setup
 
 The first step in configuring any Vagrant project is to create a Vagrantfile. The purpose of the Vagrantfile is twofold:
 
--   Mark the root directory of your project. Many of the configuration options in Vagrant are relative to this root directory.
+- Mark the root directory of your project. Many of the configuration options in Vagrant are relative to this root directory.
 
--   Describe the kind of machine and resources you need to run your project, as well as what software to install and how you want to access it.
+- Describe the kind of machine and resources you need to run your project, as well as what software to install and how you want to access it.
 
 ```sh
 mkdir vagrant_getting_started
@@ -135,7 +136,7 @@ cd vagrant_getting_started
 vagrant init
 ```
 
-##### Boxes
+#### Boxes
 
 Boxes are added to Vagrant with vagrant box add. This stores the box under a specific name so that multiple Vagrant environments can re-use it. If you have not added a box yet, you can do so now:
 
@@ -161,7 +162,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-##### Up And SSH
+#### Up And SSH
 
 Boot vagrant Box :  
 
@@ -175,7 +176,7 @@ Ssh connection :
 vagrant ssh
 ```
 
-##### Synced Folders
+#### Synced Folders
 
 By default, Vagrant shares your project directory (remember, that is the one with the Vagrantfile) to the /vagrant directory in your guest machine.
 
@@ -188,7 +189,7 @@ vagrant@precise64:~$ ls /vagrant
 Vagrantfile
 ```
 
-##### Provisioning
+#### Provisioning
 
 Vagrant has built-in support for automated provisioning. Using this feature, Vagrant will automatically install software when you vagrant up so that the guest machine can be repeatably created and ready-to-use.
 
@@ -206,7 +207,7 @@ vagrant reload --provision
 vagrant provision
 ```
 
-##### Networking Port Forwarding
+#### Networking Port Forwarding
 
 ```ruby
 Vagrant.configure("2") do |config|
@@ -216,9 +217,9 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-##### Share
+#### Share
 
-Vagrant Share lets you share your Vagrant environment to anyone around the world with an Internet connection. It will give you a URL that will route directly to your Vagrant environment from any device in the world that is connected to the Internet.
+Vagrant Share lets you share your Vagrant environment to anyone around the world with an internet connection. It will give you a URL that will route directly to your Vagrant environment from any device in the world that is connected to the internet.
 
 ```sh
 vagrant share
@@ -228,7 +229,7 @@ vagrant share
 ...
 ```
 
-##### Teardown
+#### Teardown
 
 Suspending the virtual machine by calling vagrant suspend will save the current running state of the machine and stop it.
 Internet.
@@ -249,7 +250,7 @@ Destroying the virtual machine by calling vagrant destroy will remove all traces
 vagrant destroy
 ```
 
-##### Rebuild
+#### Rebuild
 
 Simply :
 
@@ -257,7 +258,7 @@ Simply :
 vagrant up
 ```
 
-### Vagrant Base Box Creation
+## Vagrant Base Box Creation
 
 ```sh
 vagrant package --base pandama-vanilla --output debvanilla.box
@@ -286,20 +287,20 @@ vagrant box outdated --global
 vagrant box update --box pandemonium/debvanilla
 ```
 
-#### Base Box : Centos
+### Base Box : Centos
 
 Download latest CentOS release. Create a virtualbox machine :
 
--   Name : ctsvanilla
--   Memory : 1024
--   Cpu : 2
--   Système de pointage : Souris PS/2
--   Ordre d'amorçage : Optique, Disque Dur
--   Acceleration : VT-x/AMD-V, Pagination Imbriquée, PAE/NX, Paravirtualisation KVM
--   Mémoire vidéo : 16 Mo
--   Contrôleur graphique : VBoxVGA
--   Son : Désactivé
--   Usb : Désactivé
+- Name : ctsvanilla
+- Memory : 1024
+- Cpu : 2
+- Système de pointage : Souris PS/2
+- Ordre d'amorçage : Optique, Disque Dur
+- Acceleration : VT-x/AMD-V, Pagination Imbriquée, PAE/NX, Paravirtualisation KVM
+- Mémoire vidéo : 16 Mo
+- Contrôleur graphique : VBoxVGA
+- Son : Désactivé
+- Usb : Désactivé
 
 **As root user**  
 
@@ -352,20 +353,20 @@ cat /dev/null > .bash_history && history -c
 # Poweroff via vbox
 ```
 
-#### Base Box : Ubuntu
+### Base Box : Ubuntu
 
 Download latest Ubuntu release. Create a virtualbox machine :
 
--   Name : ubtvanilla
--   Memory : 1024
--   Cpu : 2
--   Système de pointage : Souris PS/2
--   Ordre d'amorçage : Optique, Disque Dur
--   Acceleration : VT-x/AMD-V, Pagination Imbriquée, PAE/NX, Paravirtualisation KVM
--   Mémoire vidéo : 16 Mo
--   Contrôleur graphique : VBoxVGA
--   Son : Désactivé
--   Usb : Désactivé
+- Name : ubtvanilla
+- Memory : 1024
+- Cpu : 2
+- Système de pointage : Souris PS/2
+- Ordre d'amorçage : Optique, Disque Dur
+- Acceleration : VT-x/AMD-V, Pagination Imbriquée, PAE/NX, Paravirtualisation KVM
+- Mémoire vidéo : 16 Mo
+- Contrôleur graphique : VBoxVGA
+- Son : Désactivé
+- Usb : Désactivé
 
 **As root user**  
 
@@ -417,21 +418,21 @@ cat /dev/null > .bash_history && history -c
 #Poweroff via vbox
 ```
 
-#### Base Box : Mint
+### Base Box : Mint
 
 Download latest Linux Mint release. Create a virtualbox machine :
 
--   Name : mntvanilla
--   Memory : 2048
--   Cpu : 2
--   Système de pointage : Souris PS/2
--   Ordre d'amorçage : Optique, Disque Dur
--   Acceleration : VT-x/AMD-V, Pagination Imbriquée, PAE/NX, Paravirtualisation KVM
--   Mémoire vidéo : 64 Mo
--   Contrôleur graphique : VBoxVGA
--   Accélération : 3D
--   Son : Désactivé
--   Usb : Désactivé
+- Name : mntvanilla
+- Memory : 2048
+- Cpu : 2
+- Système de pointage : Souris PS/2
+- Ordre d'amorçage : Optique, Disque Dur
+- Acceleration : VT-x/AMD-V, Pagination Imbriquée, PAE/NX, Paravirtualisation KVM
+- Mémoire vidéo : 64 Mo
+- Contrôleur graphique : VBoxVGA
+- Accélération : 3D
+- Son : Désactivé
+- Usb : Désactivé
 
 **As root user**  
 
@@ -484,7 +485,7 @@ cat /dev/null > .bash_history && history -c
 #Poweroff via vbox
 ```
 
-### Vagrant Provisioners
+## Vagrant Provisioners
 
 Provisioners can also be named :
 
@@ -513,6 +514,6 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-### Source
+## Source
 
 [Vagrant Getting Started](https://www.vagrantup.com/intro/getting-started)

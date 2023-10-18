@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD036 -->
 # Gitlab : Installation et Configuration
 
 ## Version des outils
@@ -25,8 +26,8 @@ Les "missing feature" peuvent apparaître comme des épics dans gitlab :
 
 Tests :
 
--   Runners
--   Auto DevOps
+- Runners
+- Auto DevOps
 
 ## Avant propos
 
@@ -44,133 +45,133 @@ Manage -> Plan -> Create -> Verify -> Package -> Release -> Configure -> Monitor
 
 _Authentication and Authorization_
 
--   Protected tags
--   Enforced Two-factor Authentication (2FA)
+- Protected tags
+- Enforced Two-factor Authentication (2FA)
 
 _Workflow Policies_
 
--   Custom header and footer system message in web and email
+- Custom header and footer system message in web and email
 
 **Plan** : Regardless of your process, GitLab provides powerful planning tools to keep everyone synchronized.  
 
 _Project Management_
 
--   Issues
--   Description Templates
--   Task Lists
--   Labels
--   Jira Integration
+- Issues
+- Description Templates
+- Task Lists
+- Labels
+- Jira Integration
 
 _Kanban Boards_
 
--   Project Issue Board
--   Group Issue Board
+- Project Issue Board
+- Group Issue Board
 
 _Time Tracking_
 
--   Time Tracking
+- Time Tracking
 
 _Agile Portfolio Management_
 
--   Scrum
--   DevOps Pipeline
--   Kanban
+- Scrum
+- DevOps Pipeline
+- Kanban
 
 **Create** : Create, view, and manage code and project data through powerful branching tools.  
 
 _Source Code Management_
 
--   Commit graph and reporting tools
--   Task Lists
--   Discussions
--   Merge Requests
--   Protected branches
--   Private profile page
--   Merge request reviews (Premium Ultimate)
--   Git is fast
--   Git LFS 2.0 support
--   Project badges
--   Keep personal email private
+- Commit graph and reporting tools
+- Task Lists
+- Discussions
+- Merge Requests
+- Protected branches
+- Private profile page
+- Merge request reviews (Premium Ultimate)
+- Git is fast
+- Git LFS 2.0 support
+- Project badges
+- Keep personal email private
 
 _Code Review_
 
--   Assignee
--   Suggest changes
+- Assignee
+- Suggest changes
 
 _Web IDE_
 
--   Web IDE
+- Web IDE
 
 **Verify** : Keep strict quality standards for production code with automatic testing and reporting.  
 
 _Continuous Integration (CI)_
 
--   Built-in CI/CD
--   CI/CD Horizontal Autoscaling
--   See JUnit test summaries in merge request widget
--   Free CI/CD with shared or personal Runners
--   Scheduled triggering of pipelines
--   Group-level variables
+- Built-in CI/CD
+- CI/CD Horizontal Autoscaling
+- See JUnit test summaries in merge request widget
+- Free CI/CD with shared or personal Runners
+- Scheduled triggering of pipelines
+- Group-level variables
 
 **Package** : Create a consistent and dependable software supply chain with built-in universal package management.  
 
 _Container Registry_
 
--   Built-in Container Registry
+- Built-in Container Registry
 
 **Secure** : Security capabilities, integrated into your development lifecycle.  
 
 _SAST, DAST, Dependency Scanning, Container Scanning, License Management_
 
--   Ultimate feature
+- Ultimate feature
 
 **Release** : GitLab's integrated CD solution allows you to ship code with zero-touch, be it on one or one thousand servers.  
 
 _Continuous Delivery (CD)_
 
--   Comprehensive pipeline graphs
--   Browsable artifacts
--   Deploy Tokens
+- Comprehensive pipeline graphs
+- Browsable artifacts
+- Deploy Tokens
 
 _Release Orchestration_
 
--   Keep track of releases using GitLab Releases
--   Environments history
+- Keep track of releases using GitLab Releases
+- Environments history
 
 _Pages_
 
--   Publish static websites for free with GitLab Pages
+- Publish static sites for free with GitLab Pages
 
 **Configure** : Configure your applications and infrastructure.  
 
 _Kubernetes Configuration_
 
--   Easy Deployment of Helm, Ingress, and Prometheus on Kubernetes
--   Easy integration of existing Kubernetes clusters
--   Easy creation of Kubernetes clusters on GKE
+- Easy Deployment of Helm, Ingress, and Prometheus on Kubernetes
+- Easy integration of existing Kubernetes clusters
+- Easy creation of Kubernetes clusters on GKE
 
 _ChatOps_
 
--   Deploy from Chat
--   Create, search and view issues from chat
+- Deploy from Chat
+- Create, search and view issues from chat
 
 _Serverless_
 
--   Serverless
--   Serverless Monitoring
+- Serverless
+- Serverless Monitoring
 
 **Monitor** : Automatically monitor metrics so you know how any change in code impacts your production environment.  
 
 _Metrics_
 
--   Application performance monitoring
--   GitLab server monitoring
--   Log Correlation
--   Cloud Native Monitoring
+- Application performance monitoring
+- GitLab server monitoring
+- Log Correlation
+- Cloud Native Monitoring
 
 _Logging, Cluster Monitoring, Tracing_
 
--   Ultimate
+- Ultimate
 
 **Defend** : Defend your apps and infrastructure from security intrusions.  
 
@@ -208,4 +209,4 @@ _Logging, Cluster Monitoring, Tracing_
 [Status Page](https://status.gitlab.com/)  
 [Value Stream Management](https://about.gitlab.com/solutions/value-stream-management/)  
 
-[Youtube - Reseller Enablement - GitLab101](https://www.youtube.com/watch?v=6IvHb0sV9Bc&feature=youtu.be&mkt_tok=eyJpIjoiWXpaaE56TmtPRGhtWldFMSIsInQiOiI3UU5oREZud1JzNFVSc2VqMzBTaEQraEpoV3VodVRcLzU4aEJxS1hRQVp2T3lHWUk2ek5GbUpvYWJIK1FZckdxU3d0RHc0NlJYVEhyVVZZUVo3WHJaWVBiSG5SdFM5K0dwSVpsR0xiWXFiV25kNTZ0VmtiVmFDUTZUeHRFMDlkNmMifQ%3D%3D)
+[YouTube - Reseller Enablement - GitLab101](https://www.youtube.com/watch?v=6IvHb0sV9Bc&feature=youtu.be&mkt_tok=eyJpIjoiWXpaaE56TmtPRGhtWldFMSIsInQiOiI3UU5oREZud1JzNFVSc2VqMzBTaEQraEpoV3VodVRcLzU4aEJxS1hRQVp2T3lHWUk2ek5GbUpvYWJIK1FZckdxU3d0RHc0NlJYVEhyVVZZUVo3WHJaWVBiSG5SdFM5K0dwSVpsR0xiWXFiV25kNTZ0VmtiVmFDUTZUeHRFMDlkNmMifQ%3D%3D)

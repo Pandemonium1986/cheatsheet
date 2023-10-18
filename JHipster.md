@@ -24,11 +24,11 @@ jh app --skip-server --skip-user-management --auth jwt --db h2
 
 ## JHipster Quick Start
 
--   Install JHipster `npm install -g generator-jhipster`
--   Create a new directory and go into it `mkdir myApp && cd myApp`
--   Run JHipster and follow instructions on screen `jhipster`
--   Model your entities with JDL Studio and download the resulting `jhipster-jdl.jh` file
--   Generate your entities with `jhipster import-jdl jhipster-jdl.jh`
+- Install JHipster `npm install -g generator-jhipster`
+- Create a new directory and go into it `mkdir myApp && cd myApp`
+- Run JHipster and follow instructions on screen `jhipster`
+- Model your entities with JDL Studio and download the resulting `jhipster-jdl.jh` file
+- Generate your entities with `jhipster import-jdl jhipster-jdl.jh`
 
 ### Procédure de post-installation
 

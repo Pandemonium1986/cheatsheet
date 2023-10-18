@@ -1,6 +1,6 @@
 # Minikube : Installation et Configuration
 
-### Version des outils
+## Version des outils
 
 |  Os / Tool | Version |
 | :--------: | :-----: |
@@ -10,7 +10,7 @@
 |   Kubectl  |  1.12.2 |
 |  Minikube  | v0.30.0 |
 
-### Avant propos
+## Avant propos
 
 > Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
 
@@ -18,57 +18,56 @@ Minikube est une sorte de "vagrant" dédié à kubernetes. Il permet d'instancie
 L'installation de Minikube fournit un simple _CLI_.
 On peut :
 
--   Instancier un cluster (de un noeud) de
--   l'arréter,
--   le configurer,
--   si connecter etc ...  
--   Y installer des modules.
+- Instancier un cluster (de un noeud) de
+- l'arréter,
+- le configurer,
+- si connecter etc ...  
+- Y installer des modules.
 
 Minikube n'installe pas kubenetes et n'opère pas kubenetes. Au premier minikube start celui ci va télécharger une machine virtuel choisit en fonction d'un provider et la configuré comme on le souhaite.
 On manage donc la vm et la configuration du kubernetes de minikube via le cli, mais on opère le cluster via kubectl comme sur une instance classique.
 
 La liste des providers fournit disponible pour minikube :
 
--   virtualbox
--   vmwarefusion
--   KVM2
--   hyperkit
--   xhyve
--   hyperv
--   none
+- virtualbox
+- vmwarefusion
+- KVM2
+- hyperkit
+- xhyve
+- hyperv
+- none
 
-### Procédure d'installation
+## Procédure d'installation
 
 Comme expliqué précédemment minikube n'est qu'un "simple" CLI. Vous pouvez l'installer sur plusieur OS de différentes manière.  
 
--   Via des packages binaire natif à l'os  
--   En télécharchant et en éxécutant l'éxécutable
-    
+- Via des packages binaire natif à l'os  
+- En télécharchant et en éxécutant l'éxécutable
 
-### Procédure de post-installation
+## Procédure de post-installation
 
 Verifying the Installation :  
 
-### Cheat Sheet
+## Cheat Sheet
 
-#### Kubernetes Basics
-
-| Commands | Description |
-| -------- | ----------- |
-
-#### Kubernetes Essential
+### Kubernetes Basics
 
 | Commands | Description |
 | -------- | ----------- |
 
-#### Kubernetes Advanced
+### Kubernetes Essential
 
 | Commands | Description |
 | -------- | ----------- |
 
-### Tutoriels Kubernetes
+### Kubernetes Advanced
 
-### Source
+| Commands | Description |
+| -------- | ----------- |
+
+## Tutoriels Kubernetes
+
+## Source
 
 [Minikube Setup](https://kubernetes.io/docs/setup/minikube/)  
 [Minikube Tutorials](https://kubernetes.io/docs/tutorials/hello-minikube/)  
