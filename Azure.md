@@ -72,7 +72,6 @@
 
 - Server costs.
 - Storage costs.
-- Storage costs.
 - Network costs.
 - Backup and archive costs.
 - Organization continuity and disaster recovery costs.
