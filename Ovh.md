@@ -12,6 +12,7 @@
 ## Intro Ovh
 
 En tant que leader européen du cloud, nous fournissons des solutions de **cloud public** et **privé**, **d’hébergement mutualisé** et de **serveurs dédiés** dans 140 pays à travers le globe. Nous proposons également à nos clientes et clients **l’enregistrement de noms de domaine**, de la **téléphonie**, ainsi que de **l’accès à internet**. Créé en 1999, OVHcloud est une entreprise française présente dans le monde entier, grâce à la localisation internationale de ses datacenters et points de présence.
+
 ![ovh-001.png](/img/ovh-001.png)
 
 ## Produits Public Cloud
@@ -103,11 +104,13 @@ Garantie 99.99 % sauf pour Discovery
 ##### Private Image catalog
 
 Vos systèmes d'exploitation rassemblés et disponibles pour vos instances. En plus du Public Image Catalog fournissant des images système maintenues par OVHcloud, vous pouvez bâtir un Private Image Catalog pour mettre à disposition de vos instances des systèmes d'exploitation spécifiquement paramétrés pour vos usages ou des appliances fournis par un éditeur par exemple.
+
 ![ovh-007.png](/img/ovh-007.png)
 
 ##### Public Image Catalog
 
 Les images système et applications pré-installées les plus populaires. Afin de démarrer au plus vite votre infrastructure, OVHcloud fournit les images cloud standards du marché, ainsi que les applications pré-installées les plus populaires.
+
 ![ovh-008.png](/img/ovh-008.png)
 
 #### Interaction (Idam)
