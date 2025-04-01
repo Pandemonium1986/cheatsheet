@@ -2,11 +2,11 @@
 
 ## Tools versions
 
-| Os / Tool  | Version |
-| :--------: | :-----: |
-| Linux Mint |  19.3   |
-|   Vscode   | 1.63.2  |
-|  Molecule  |  3.0.3  |
+|     Os / Tool      | Version |
+| :----------------: | :-----: |
+|     Linux Mint     |  19.3   |
+| Visual Studio Code | 1.63.2  |
+|      Molecule      |  3.0.3  |
 
 ## How to install
 

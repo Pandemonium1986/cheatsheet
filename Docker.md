@@ -447,7 +447,7 @@ On peut créer des labels dans une image directement via le _Dockerfile_ via la 
 
 Pour connaitre les labels d'une image ou d'un container on utilise la commande `docker inspect rd`.  
 On peut alors "filtrer" les containers ou les images sur des labels via l'option `--filter`. Par exemple `docker ps --filter "label=user=scrapbook"` ou encore `docker images --filter "label=vendor=Katacoda"`.  
-Pour ajouter des labels directement dans le démon unix :
+Pour ajouter des labels directement dans le démon Unix :
 
 ```sh
     docker -d \
@@ -463,7 +463,7 @@ Ce scénario utilise un container spécifique "nginx_proxy" pour proxyfier et lo
 #### Scénario 15 Orchestration using Docker Compose
 
 Docker Compose permet d'orchestrer des applications mutli-containers.  
-Docker Compose est basé sur un fichier yaml _docker-compose.yml_ qui à la forme suivante.  
+Docker Compose est basé sur un fichier YAML _docker-compose.yml_ qui à la forme suivante.  
 
 ```yaml
 container_name:

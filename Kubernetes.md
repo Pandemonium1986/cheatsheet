@@ -43,7 +43,7 @@ While one of the first known mechanisms to implement operating system-level virt
 
 ### Chroot
 
-Chroot is a mechanism implementing OS-level virtualization. It was first introduced on UNIX Version 7 in 1979, then in 1982 it was added to BSD.  
+Chroot is a mechanism implementing OS-level virtualization. It was first introduced on Unix Version 7 in 1979, then in 1982 it was added to BSD.  
 Any user process and/or its children running inside this virtual chrooted directory tree runs under the false impression that it is in the real root directory tree of the operating system.  
 
 ### FreeBSD Jails
@@ -162,7 +162,7 @@ The Docker Engine is composed of the Docker host running the Docker daemon, a RE
 ![docker-engine](./img/lf-004.png)
 
 **Docker client**
-This is the command-line tool that allows users to run docker commands against a Docker daemon running on a Docker host. The client and daemon communicate through REST API, over UNIX sockets or a network interface. Also, the client is capable of communicating with more than one daemon running on different Docker hosts.
+This is the command-line tool that allows users to run docker commands against a Docker daemon running on a Docker host. The client and daemon communicate through REST API, over Unix sockets or a network interface. Also, the client is capable of communicating with more than one daemon running on different Docker hosts.
 
 **Docker host**
 The Docker host is a system running the Docker daemon - called dockerd.
