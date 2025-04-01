@@ -19,3 +19,4 @@
 - Analytics
 - Data Platform
 - AI & Machine learning
+- Idam
