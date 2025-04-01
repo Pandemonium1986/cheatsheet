@@ -255,10 +255,10 @@ Le repository est l'endroit qui rend accessible les composants.
 _Nexus 3_ est une webapps java totalement autonome. Il existe deux méthodes "d'installation" de nexus :
 
 - Via l'archive de distribution classique.  
-   Il suffit de dézipper le contenu de l'archive (/opt/nexus) et d'exécuter bin/nexus start.
+  Il suffit de dézipper le contenu de l'archive (/opt/nexus) et d'exécuter bin/nexus start.
   L'application est démarrée lorsque le message de log de la console "Started Sonatype Nexus".
 - Via l'image docker.  
-   Exécuter la commande suivante :
+  Exécuter la commande suivante :
 
   ```sh
   mkdir /some/dir/nexus-data && chown -R 200 /some/dir/nexus-data
@@ -338,19 +338,19 @@ _Repository Format Support_
   Nécessaire si le Nexus 2 et 3 sont sur deux machines différentes.
 - File System Copying
   Possible si et seulement si le Nexus 2 et 3 sont configurés pour accéder au même espace de stockage.  
-   C'est la méthode alternative
+  C'est la méthode alternative
 - File System Hard Linking
   Possible si et seulement si le Nexus 2 et 3 sont configurés pour accéder au même espace de stockage.  
-   C'est la méthode la plus rAPIde.
+  C'est la méthode la plus rAPIde.
 
 #### Upgrade Details for Specific Elements
 
 - Repository IDs
   Attention les repository ID n'existe plus dans Nexus 3.  
-   Ils sont néanmoins "case sensitive" pendant le process de migration.
+  Ils sont néanmoins "case sensitive" pendant le process de migration.
 - Repository Groups
   S'assurer que dans un groupe l'ensemble des repositories soient éligibles.  
-   Au risque de ne pas upgrader le groupe entier...
+  Au risque de ne pas upgrader le groupe entier...
 - HTTP(S) Proxy Configuration
   Ils sont à configurer manuellement dans chaque environment.
 

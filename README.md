@@ -1,4 +1,4 @@
-# Pandemonium's cheatsheet
+# Pandemonium's cheat sheet
 
 My awesome cheat sheet, because they're awesomes. Don't forget to share/fork/star.
 
