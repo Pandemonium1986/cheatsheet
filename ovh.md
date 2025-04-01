@@ -5,9 +5,13 @@
 ## Tools versions
 
 | Os / Tool |   Version    |
-| :-------: | :----------: |
-|   Sles    |    15sp6     |
-|    Ovh    | Cloud Public |
+| :-------- | :----------: |
+| Sles      |    15sp6     |
+| Ovh       | Cloud Public |
+
+## Intro Ovh
+
+En tant que leader européen du cloud, nous fournissons des solutions de cloud public et privé, d’hébergement mutualisé et de serveurs dédiés dans 140 pays à travers le globe. Nous proposons également à nos clientes et clients l’enregistrement de noms de domaine, de la téléphonie, ainsi que de l’accès à Internet. Créé en 1999, OVHcloud est une entreprise française présente dans le monde entier, grâce à la localisation internationale de ses datacenters et points de présence.
 
 ## Produits Public Cloud
 
@@ -29,7 +33,7 @@
 | Storage                    | <span style="color:green">M</span>  |
 | Network                    | <span style="color:yellow">S</span> |
 | Containers & Orchestration | <span style="color:green">M</span>  |
-| Databases                  | <span style="color:red">W</span>  |
+| Databases                  |  <span style="color:red">W</span>   |
 | Analytics                  | <span style="color:orange">C</span> |
 | Data Platform              |  <span style="color:red">W</span>   |
 | AI & Machine learning      | <span style="color:yellow">S</span> |
