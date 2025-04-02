@@ -25,17 +25,17 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 | :------------------------- | :---------------------------------: |
 | Compute                    | <span style="color:green">M</span>  |
 | Storage                    | <span style="color:green">M</span>  |
-| Network                    | <span style="color:yellow">S</span> |
+| Network                    |  <span style="color:blue">S</span>  |
 | Containers & Orchestration | <span style="color:green">M</span>  |
 | Databases                  |  <span style="color:red">W</span>   |
 | Analytics                  | <span style="color:orange">C</span> |
 | Data Platform              |  <span style="color:red">W</span>   |
-| AI & Machine learning      | <span style="color:yellow">S</span> |
+| AI & Machine learning      |  <span style="color:blue">S</span>  |
 | Idam                       | <span style="color:green">M</span>  |
 
 ## MoSCoW (Services)
 
-| Produits                   | Services                  | Sous Services     |               MoSCoW                |
+| Produits                   | Services                  | Options           |               MoSCoW                |
 | :------------------------- | :------------------------ | :---------------- | :---------------------------------: |
 | Compute                    | Virtual Machine Instances | General Purpose   | <span style="color:green">M</span>  |
 |                            |                           | Compute Optimized | <span style="color:green">M</span>  |
@@ -46,8 +46,16 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 |                            | Metal Instances           |                   |  <span style="color:red">W</span>   |
 |                            | Instance Backup           |                   | <span style="color:orange">C</span> |
 |                            | Private Image catalog     |                   | <span style="color:green">M</span>  |
-|                            | Public Image Catalog      |                   | <span style="color:yellow">S</span> |
-| Storage                    |                           |                   |                                     |
+|                            | Public Image Catalog      |                   |  <span style="color:blue">S</span>  |
+| Storage                    | Block Storage             | Block Storage     | <span style="color:green">M</span>  |
+|                            |                           | Volume snapshot   | <span style="color:orange">C</span> |
+|                            |                           | Volume Backup     | <span style="color:orange">C</span> |
+|                            | Object Storage            | Standard          | <span style="color:green">M</span>  |
+|                            |                           | Standard 3-AZ     | <span style="color:orange">C</span> |
+|                            |                           | High Performance  | <span style="color:orange">C</span> |
+|                            |                           | Standard (SWIFT)  | <span style="color:orange">C</span> |
+|                            |                           | Cloud Archive     |  <span style="color:red">W</span>   |
+|                            | Cold Archive              |                   |  <span style="color:red">W</span>   |
 | Network                    |                           |                   |                                     |
 | Containers & Orchestration |                           |                   |                                     |
 | Databases                  |                           |                   |                                     |
@@ -60,8 +68,6 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 #### Description
 
-La puissance des machines virtuelles pour tous vos usages.  
-Bénéficiez de la fiabilité, de la flexibilité et de la réversibilité du cloud.  
 Créez et exécutez facilement des VM en ligne sur une infrastructure cloud fiable et hautes performances. Faites votre choix parmi des types de machines prédéfinis ou personnalisés pour les serveurs Web, les bases de données, l'IA, etc.
 
 #### Services
@@ -118,6 +124,36 @@ Les images système et applications pré-installées les plus populaires. Afin d
 ### Storage
 
 #### Description
+
+Le stockage cloud est un service qui permet de sauvegarder des données sur des serveurs distants accessibles via Internet. Il offre la possibilité de stocker, gérer et consulter des fichiers et des données depuis n’importe quel appareil connecté à Internet, à tout moment. Ce type de stockage est géré par des fournisseurs de services qui maintiennent l’infrastructure et garantissent la sécurité et la disponibilité des données. Le stockage cloud est souvent utilisé pour la sauvegarde de données, le partage de fichiers et la collaboration en ligne. Il représente une alternative flexible et évolutive au stockage traditionnel sur disque dur, sur des dispositifs de stockage locaux ou sur des serveurs dédiés
+
+#### Services
+
+> Note  
+> Les options des service block et object storage dépendent de la région.  
+> Globalement l'object storage est moins chère que le block storage.
+
+##### Block Storage
+
+- Sécurisé par la réplication
+- Basé sur Ceph
+- Performance et scalabilité au meilleur coût
+
+##### Object Storage
+
+- Coûts de stockage maîtrisés et optimisés
+- Solution réversible et interopérable
+- Résilience et haute disponibilité de vos données
+
+![ovh-010.png](/img/ovh-010.png)
+
+##### Cold Archive
+
+- Stratégies de résilience à long terme
+- Service compatible S3\*
+- Archivage de données critiques
+
+![ovh-012.png](/img/ovh-012.png)
 
 #### Interaction (Services)
 
@@ -192,13 +228,13 @@ Les images système et applications pré-installées les plus populaires. Afin d
 
 ![ovh-009.png](/img/ovh-009.png)
 
-## Questions
+## Misc
 
-### Qu’est-ce que le cloud computing ?
+## Qu’est-ce que le cloud computing ?
 
 Le cloud computing est un modèle de fourniture de services informatiques qui permet aux utilisateurs d’accéder à des ressources informatiques (comme des serveurs, du stockage, des bases de données, des applications et des services réseau) via internet. Ces services sont facturés à la demande et à l’usage. Ce modèle informatique offre une flexibilité, une scalabilité et une efficacité considérables en éliminant la nécessité pour les entreprises de gérer leur propre infrastructure physique.
 
-### Quels sont les principaux types de cloud computing ?
+## Quels sont les principaux types de cloud computing ?
 
 Il existe plusieurs types de cloud computing :
 
@@ -208,7 +244,11 @@ Il existe plusieurs types de cloud computing :
 
 **Software-as-a-service (SaaS)** : fournit des applications logicielles via internet sur un modèle d’abonnement. Les utilisateurs accèdent aux logiciels sans avoir à les installer sur leur ordinateur personnel ou sur les serveurs de l’entreprise.
 
+## Object storage vs. block storage: How are they different?
+
+![ovh-011.png](/img/ovh-011.png)
+
 ## Links
 
-[Ovhcloud](https://www.ovhcloud.com/fr/)
+[Ovhcloud](https://www.ovhcloud.com/fr/)  
 [Ovhcloud Blog](https://blog.ovhcloud.com/)
