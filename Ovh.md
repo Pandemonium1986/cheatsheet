@@ -56,7 +56,12 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 |                            |                              | Standard (SWIFT)  | <span style="color:orange">C</span> |
 |                            |                              | Cloud Archive     |  <span style="color:red">W</span>   |
 |                            | Cold Archive                 |                   |  <span style="color:red">W</span>   |
-| Network                    |                              |                   |                                     |
+| Network                    | Private Network              |                   | <span style="color:green">M</span>  |
+|                            | Load Balancer                |                   | <span style="color:green">M</span>  |
+|                            | Floating IP                  |                   | <span style="color:green">M</span>  |
+|                            | Gateway                      |                   | <span style="color:green">M</span>  |
+|                            | Instance Public Traffic      |                   | <span style="color:green">M</span>  |
+|                            | Anti-DDoS                    |                   | <span style="color:green">M</span>  |
 | Containers & Orchestration |                              |                   |                                     |
 | Databases                  |                              |                   |                                     |
 | Analytics                  |                              |                   |                                     |
@@ -159,6 +164,60 @@ Le stockage cloud est un service qui permet de sauvegarder des données sur des 
 ### Network
 
 #### Description
+
+Un réseau cloud est une infrastructure virtuelle permettant de connecter appareils, services et applications via Internet en utilisant la puissance et la flexibilité des ressources cloud. Il repose sur des centres de données distants pour offrir évolutivité et gestion centralisée des ressources réseau.
+
+#### Services
+
+##### Private Network
+
+Une connexion privée et flexible entre vos instances.
+
+- Réseaux étendus entre les localisations
+- Isolation
+- Extension aux autres services d’OVHcloud
+- Certifications ISO/IEC 27001, 27701 et HDS
+
+##### Load Balancer
+
+L’OVHcloud Load Balancer vous permet d’assurer plus facilement l’évolutivité, la haute disponibilité et la résilience de vos applications. Pour ce faire, la charge de trafic est répartie de manière dynamique entre plusieurs instances et régions. Améliorez l’expérience utilisateur en automatisant la gestion du trafic et de la charge, tout en maîtrisant les coûts. En combinant le Load Balancer et laFloating IP, vous pouvez créer un point d’entrée unique et sécurisé pour votre application, tout en activant des scénarios de basculement et en protégeant vos ressources privées.
+
+- Déployable dans les régions
+- Connecté aux réseaux privés
+- Gestion simplifiée
+- Charges de travail privées
+- Intégration à l’écosystème Public Cloud
+- Plusieurs protocoles de contrôle d'intégrité
+- Chiffrement SSL/TLS
+- Compatible avec les instances Public Cloud
+
+![ovh-015.png](/img/ovh-015.png)
+
+##### Floating IP
+
+Une Floating IP est une adresse IP publique et statique qui peut être réaffectée dynamiquement à plusieurs appareils sur votre réseau, ce qui facilite la haute disponibilité, la tolérance aux pannes et le basculement pour vos applications et services dans le cloud. Ce type d’IP peut être assigné à une instance comme un Load Balancer, puis rapidement réassigné. Vous pouvez également anticiper et gérer les allocations d’IP publiques grâce à l’automatisation via API.
+
+- Haute disponibilité
+- Migration des environnements
+- Point d’accès principal
+
+![ovh-016.png](/img/ovh-016.png)
+
+##### Gateway
+
+Le service Gateway est le moyen le plus simple d’assurer une connexion sécurisée et évolutive entre une infrastructure vRack et un réseau connecté à Internet. Il permet un accès Internet sécurisé à toutes vos instances, sans nécessiter d'adresse IP publique séparée. Plusieurs offres sont disponibles, chacune disposant de capacités de bande passante différentes pour répondre à vos besoins spécifiques.
+
+- Exposition flexible des services grâce aux Floating IP
+- Combiner un Load Balancer et des Floating IP
+- Trafic sortant vers Internet
+
+##### Instance Public Traffic
+
+Le trafic réseau public sortant des instances est inclus dans le prix des instances sur toutes les localisations, excepté la région Asie-Pacifique (Singapour, Sydney et Mumbai). Sur ces trois régions, 1 To/mois de trafic public sortant est inclus pour chaque projet Public Cloud. Au-delà de ce quota, chaque Go de trafic supplémentaire est facturé. Le trafic réseau entrant depuis le réseau public est inclus dans tous les cas et dans toutes les régions.
+
+##### Anti-DDoS
+
+Profitez d'une protection permanente sur l'ensemble de vos ressources cloud, pour garantir un niveau de service optimal
 
 ### Containers & Orchestration
 
@@ -275,5 +334,6 @@ Il existe plusieurs types de cloud computing :
 
 [Ovhcloud](https://www.ovhcloud.com/fr/)  
 [Ovhcloud Blog](https://blog.ovhcloud.com/)  
-[OVHcloud Public Cloud Status](https://public-cloud.status-ovhcloud.com/)  
+[Ovhcloud Learn](https://www.ovhcloud.com/fr/learn/)  
 [OVHcloud Public Cloud Doc](https://help.ovhcloud.com/csm/fr-documentation-public-cloud?id=kb_browse_cat&kb_id=574a8325551974502d4c6e78b7421938)
+[OVHcloud Public Cloud Status](https://public-cloud.status-ovhcloud.com/)
