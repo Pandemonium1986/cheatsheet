@@ -183,6 +183,15 @@ Les images système et applications pré-installées les plus populaires. Afin d
 
 ## Saving Plan
 
+- Optimisez vos coûts avec les Savings Plans
+- Évoluez à votre rythme
+- Gagnez en prévisibilité
+- Économisez sur vos workloads stables
+- Pilotez la croissance de votre application
+- Gérez la saisonnalité de votre infrastructure
+
+![ovh-009.png](/img/ovh-009.png)
+
 ## Questions
 
 ### Qu’est-ce que le cloud computing ?
