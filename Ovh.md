@@ -35,34 +35,37 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 ## MoSCoW (Services)
 
-| Produits                   | Services                  | Options           |               MoSCoW                |
-| :------------------------- | :------------------------ | :---------------- | :---------------------------------: |
-| Compute                    | Virtual Machine Instances | General Purpose   | <span style="color:green">M</span>  |
-|                            |                           | Compute Optimized | <span style="color:green">M</span>  |
-|                            |                           | Memory Optimized  | <span style="color:green">M</span>  |
-|                            |                           | Storage Optimized | <span style="color:green">M</span>  |
-|                            |                           | Discovery         | <span style="color:green">M</span>  |
-|                            | Cloud GPU                 |                   | <span style="color:green">M</span>  |
-|                            | Metal Instances           |                   |  <span style="color:red">W</span>   |
-|                            | Instance Backup           |                   | <span style="color:orange">C</span> |
-|                            | Private Image catalog     |                   | <span style="color:green">M</span>  |
-|                            | Public Image Catalog      |                   |  <span style="color:blue">S</span>  |
-| Storage                    | Block Storage             | Block Storage     | <span style="color:green">M</span>  |
-|                            |                           | Volume snapshot   | <span style="color:orange">C</span> |
-|                            |                           | Volume Backup     | <span style="color:orange">C</span> |
-|                            | Object Storage            | Standard          | <span style="color:green">M</span>  |
-|                            |                           | Standard 3-AZ     | <span style="color:orange">C</span> |
-|                            |                           | High Performance  | <span style="color:orange">C</span> |
-|                            |                           | Standard (SWIFT)  | <span style="color:orange">C</span> |
-|                            |                           | Cloud Archive     |  <span style="color:red">W</span>   |
-|                            | Cold Archive              |                   |  <span style="color:red">W</span>   |
-| Network                    |                           |                   |                                     |
-| Containers & Orchestration |                           |                   |                                     |
-| Databases                  |                           |                   |                                     |
-| Analytics                  |                           |                   |                                     |
-| Data Platform              |                           |                   |                                     |
-| AI & Machine learning      |                           |                   |                                     |
-| Idam                       |                           |                   |                                     |
+| Produits                   | Services                     | Options           |               MoSCoW                |
+| :------------------------- | :--------------------------- | :---------------- | :---------------------------------: |
+| Compute                    | Virtual Machine Instances    | General Purpose   | <span style="color:green">M</span>  |
+|                            |                              | Compute Optimized | <span style="color:green">M</span>  |
+|                            |                              | Memory Optimized  | <span style="color:green">M</span>  |
+|                            |                              | Storage Optimized | <span style="color:green">M</span>  |
+|                            |                              | Discovery         | <span style="color:green">M</span>  |
+|                            | Cloud GPU                    |                   | <span style="color:green">M</span>  |
+|                            | Metal Instances              |                   |  <span style="color:red">W</span>   |
+|                            | Instance Backup              |                   | <span style="color:orange">C</span> |
+|                            | Private Image catalog        |                   | <span style="color:green">M</span>  |
+|                            | Public Image Catalog         |                   |  <span style="color:blue">S</span>  |
+| Storage                    | Block Storage                | Block Storage     | <span style="color:green">M</span>  |
+|                            |                              | Volume snapshot   | <span style="color:orange">C</span> |
+|                            |                              | Volume Backup     | <span style="color:orange">C</span> |
+|                            | Object Storage               | Standard          | <span style="color:green">M</span>  |
+|                            |                              | Standard 3-AZ     | <span style="color:orange">C</span> |
+|                            |                              | High Performance  | <span style="color:orange">C</span> |
+|                            |                              | Standard (SWIFT)  | <span style="color:orange">C</span> |
+|                            |                              | Cloud Archive     |  <span style="color:red">W</span>   |
+|                            | Cold Archive                 |                   |  <span style="color:red">W</span>   |
+| Network                    |                              |                   |                                     |
+| Containers & Orchestration |                              |                   |                                     |
+| Databases                  |                              |                   |                                     |
+| Analytics                  |                              |                   |                                     |
+| Data Platform              |                              |                   |                                     |
+| AI & Machine learning      |                              |                   |                                     |
+| Idam                       | IAM                          |                   | <span style="color:green">M</span>  |
+|                            | Logs Data Platform           |                   | <span style="color:orange">C</span> |
+|                            | Key Management Service (KMS) |                   | <span style="color:orange">C</span> |
+|                            | Service Logs                 |                   | <span style="color:orange">C</span> |
 
 ### Compute
 
@@ -119,8 +122,6 @@ Les images système et applications pré-installées les plus populaires. Afin d
 
 ![ovh-008.png](/img/ovh-008.png)
 
-#### Interaction (Idam)
-
 ### Storage
 
 #### Description
@@ -155,65 +156,87 @@ Le stockage cloud est un service qui permet de sauvegarder des données sur des 
 
 ![ovh-012.png](/img/ovh-012.png)
 
-#### Interaction (Services)
-
-#### Interaction (Idam)
-
 ### Network
 
 #### Description
-
-#### Interaction (Services)
-
-#### Interaction (Idam)
 
 ### Containers & Orchestration
 
 #### Description
 
-#### Interaction (Services)
-
-#### Interaction (Idam)
-
 ### Databases
 
 #### Description
-
-#### Interaction (Services)
-
-#### Interaction (Idam)
 
 ### Analytics
 
 #### Description
 
-#### Interaction (Services)
-
-#### Interaction (Idam)
-
 ### Data Platform
 
 #### Description
-
-#### Interaction (Services)
-
-#### Interaction (Idam)
 
 ### AI & Machine learning
 
 #### Description
 
-#### Interaction (Services)
-
-#### Interaction (Idam)
-
 ### Idam
 
 #### Description
 
-#### Interaction (Services)
+Identité, sécurité et opérations est une gamme de services d'OVHcloud. Ils visent à améliorer la sécurité, la gestion et l'efficacité opérationnelle de votre solution. Ces services comprennent la gestion des identités et des accès (IAM) pour le contrôle d'accès à vos données, le service de gestion de clés (KMS) pour gérer les clés de chiffrement et les journaux de service pour la surveillance des performances et de la sécurité.
 
-#### Interaction (Idam)
+#### Services
+
+##### Gestion des identités et des accès (IAM)
+
+Gérez de manière sécurisée l’identité de vos utilisateurs et applications, ainsi que leurs droits via une interface unique pour tous vos services.  
+La solution IAM d’OVHcloud assure une gestion granulaire des accès à vos produits OVHcloud et renforce la sécurité de votre gestion des accès en s’appuyant sur une interface centralisée.
+
+- Identité fédérée
+- Unifié et harmonisé sur l’ensemble du portefeuille OVHcloud y compris pour les logiciels tiers
+- Gestion fine des stratégies
+- Une plus grande sécurité pour vos services
+- Inclus sans frais supplémentaires
+
+Les politiques contiennent une liste d'identités (comptes, utilisateurs, groupes d'utilisateurs) concernées par les politiques, une liste de ressources auxquelles les politiques doivent s'appliquer et une liste d'actions autorisées sur ces ressources.
+
+![ovh-013.png](/img/ovh-013.png)
+
+##### Logs Data Platform
+
+Augmentez la visibilité des environnements de vos applications en collectant, traitant, analysant et stockant vos logs sur une plateforme à la fois complète et managée. L'analyse de logs est essentielle pour maintenir votre infrastructure et vos applications en bon état de fonctionnement.
+
+- Standard et réversible
+- Performante et évolutive
+- Tarification complète
+- Sécurité et conformité
+
+![ovh-014.png](/img/ovh-014.png)
+
+##### Key Management Service (KMS)
+
+Améliorez votre sécurité et gérez efficacement vos clés de chiffrement avec le service de gestion de clés (KMS) d'OVHcloud.
+
+Conçu pour une intégration transparente, notre KMS vous permet de gérer de manière centralisée les clés de chiffrement de toutes vos applications, qu'elles soient hébergées dans le cloud ou on-premises. Cela maximise la sécurisation des données et rationalise les opérations de sécurité.
+
+- Protection instantanée des données grâce au chiffrement en un clic
+- Sécurité renforcée avec gestion complète des accès aux clés
+- Vos clés : renforcez la confidentialité des données avec Bring Your Own Keys (BYOK)
+- Modèle de tarification prévisible : requêtes incluses sans frais supplémentaires
+- Certification Nutanix Ready
+- SDK et CLI open source
+
+##### Service Logs (Beta)
+
+OVHcloud Service logs vous aide à suivre « qui a fait quoi, où et quand » sur l’ensemble de vos ressources OVHcloud. Combinée à Logs Data Platform, cette solution vous permet de transformer vos logs en données précieuses à l'aide d'outils de stockage, d'archivage, d'interrogation et de visualisation. Vous pouvez désormais surveiller vos données et votre système en temps réel, pour une meilleure sécurité et une efficacité opérationnelle accrue.
+
+- Efficacité opérationnelle accrue
+- Sécurité renforcée
+- Conformité sans effort
+- Intégration fluide et non intrusive avec le catalogue de services OVHcloud
+- Gestion unifiée des logs
+- Solution open source évolutive et entièrement managée
 
 ## Local Zones
 
@@ -251,4 +274,6 @@ Il existe plusieurs types de cloud computing :
 ## Links
 
 [Ovhcloud](https://www.ovhcloud.com/fr/)  
-[Ovhcloud Blog](https://blog.ovhcloud.com/)
+[Ovhcloud Blog](https://blog.ovhcloud.com/)  
+[OVHcloud Public Cloud Status](https://public-cloud.status-ovhcloud.com/)  
+[OVHcloud Public Cloud Doc](https://help.ovhcloud.com/csm/fr-documentation-public-cloud?id=kb_browse_cat&kb_id=574a8325551974502d4c6e78b7421938)
