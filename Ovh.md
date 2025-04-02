@@ -165,7 +165,7 @@ Le stockage cloud est un service qui permet de sauvegarder des données sur des 
 
 #### Description
 
-Un réseau cloud est une infrastructure virtuelle permettant de connecter appareils, services et applications via Internet en utilisant la puissance et la flexibilité des ressources cloud. Il repose sur des centres de données distants pour offrir évolutivité et gestion centralisée des ressources réseau.
+Un réseau cloud est une infrastructure virtuelle permettant de connecter appareils, services et applications via internet en utilisant la puissance et la flexibilité des ressources cloud. Il repose sur des centres de données distants pour offrir évolutivité et gestion centralisée des ressources réseau.
 
 #### Services
 
@@ -205,11 +205,11 @@ Une Floating IP est une adresse IP publique et statique qui peut être réaffect
 
 ##### Gateway
 
-Le service Gateway est le moyen le plus simple d’assurer une connexion sécurisée et évolutive entre une infrastructure vRack et un réseau connecté à Internet. Il permet un accès Internet sécurisé à toutes vos instances, sans nécessiter d'adresse IP publique séparée. Plusieurs offres sont disponibles, chacune disposant de capacités de bande passante différentes pour répondre à vos besoins spécifiques.
+Le service Gateway est le moyen le plus simple d’assurer une connexion sécurisée et évolutive entre une infrastructure vRack et un réseau connecté à internet. Il permet un accès internet sécurisé à toutes vos instances, sans nécessiter d'adresse IP publique séparée. Plusieurs offres sont disponibles, chacune disposant de capacités de bande passante différentes pour répondre à vos besoins spécifiques.
 
 - Exposition flexible des services grâce aux Floating IP
 - Combiner un Load Balancer et des Floating IP
-- Trafic sortant vers Internet
+- Trafic sortant vers internet
 
 ##### Instance Public Traffic
 
