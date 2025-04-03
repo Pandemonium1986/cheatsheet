@@ -427,7 +427,6 @@ Il existe plusieurs types de cloud computing :
 
 Un registre privé de conteneurs est un système de stockage et de distribution pour les images de conteneurs, c'est-à-dire des fichiers qui incluent tout le code, les bibliothèques et les autres ressources nécessaires pour exécuter une application dans un environnement conteneurisé. Accessible uniquement aux utilisateurs autorisés, un registre de conteneurs privé constitue un espace sécurisé pour stocker les images de conteneurs. Il permet aux organisations de gérer et de contrôler facilement leurs images de conteneurs, tout en offrant une intégration simple avec les workflows existants d'intégration continue et de déploiement continu (CI/CD) pour un développement, des tests et un déploiement d'applications fluides.
 
-
 ## Links
 
 [Ovhcloud](https://www.ovhcloud.com/fr/)  
