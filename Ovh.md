@@ -223,21 +223,33 @@ Profitez d'une protection permanente sur l'ensemble de vos ressources cloud, pou
 
 #### Description
 
+L'orchestration de conteneurs est un processus automatisé qui permet de gérer le déploiement, la mise à l'échelle et l'administration de conteneurs applicatifs sur des environnements de serveurs multiples. Cette technique facilite le déploiement d'applications complexes réparties sur plusieurs conteneurs, assure leur fonctionnement optimal, et gère les aspects tels que la mise à jour sans interruption de service, la répartition de la charge et la résilience face aux pannes.
+
+#### Services
+
 ### Databases
 
 #### Description
+
+#### Services
 
 ### Analytics
 
 #### Description
 
+#### Services
+
 ### Data Platform
 
 #### Description
 
+#### Services
+
 ### AI & Machine learning
 
 #### Description
+
+#### Services
 
 ### Idam
 
