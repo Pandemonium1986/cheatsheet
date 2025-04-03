@@ -66,7 +66,26 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 |                            | Managed Kubernetes Service   |                   | <span style="color:green">M</span>  |
 |                            | Managed Private Registry     |                   | <span style="color:green">M</span>  |
 |                            | Load Balancer for M.K.S      |                   | <span style="color:green">M</span>  |
-| Databases                  |                              |                   |                                     |
+| Databases                  | MySQL                        | Essential Plan    |  <span style="color:red">W</span>   |
+|                            |                              | Business Plan     |  <span style="color:red">W</span>   |
+|                            |                              | Enterprise Plan   |  <span style="color:red">W</span>   |
+|                            | PostgreSQL                   | Essential Plan    |  <span style="color:red">W</span>   |
+|                            |                              | Business Plan     |  <span style="color:red">W</span>   |
+|                            |                              | Enterprise Plan   |  <span style="color:red">W</span>   |
+|                            | MongoDB                      | Discovery         |  <span style="color:red">W</span>   |
+|                            |                              | Production        |  <span style="color:red">W</span>   |
+|                            |                              | Advanced          |  <span style="color:red">W</span>   |
+|                            | Managed Caching              | Essential Plan    |  <span style="color:red">W</span>   |
+|                            |                              | Business Plan     |  <span style="color:red">W</span>   |
+|                            | Cassandra                    | Essential Plan    |  <span style="color:red">W</span>   |
+|                            |                              | Business Plan     |  <span style="color:red">W</span>   |
+|                            |                              | Enterprise Plan   |  <span style="color:red">W</span>   |
+|                            | M3DB                         | Essential Plan    |  <span style="color:red">W</span>   |
+|                            |                              | Business Plan     |  <span style="color:red">W</span>   |
+|                            |                              | Enterprise Plan   |  <span style="color:red">W</span>   |
+|                            | M3 Aggregator                | Essential Plan    |  <span style="color:red">W</span>   |
+|                            |                              | Business Plan     |  <span style="color:red">W</span>   |
+|                            |                              | Enterprise Plan   |  <span style="color:red">W</span>   |
 | Analytics                  |                              |                   |                                     |
 | Data Platform              |                              |                   |                                     |
 | AI & Machine learning      |                              |                   |                                     |
@@ -312,7 +331,37 @@ Gérez les variations d’activité en répartissant le trafic sur vos différen
 
 #### Description
 
+Une base de données cloud est souvent appelée « Database as a Service » ou « Cloud database Service ». Elle est conçue et accessible via une plateforme cloud. Le cloud permet aux entreprises d'héberger des bases de données sans acheter de matériel dédié. Les bases de données cloud prennent en charge à la fois les bases de données relationnelles (MySQL , PostgreSQL) et NoSQL (MongoDB, Caching, Apache Cassandra).
+
 #### Services
+
+##### MySQL
+
+Bénéficiez d’un service 100 % managé pour déployer et opérer les bases de données MySQL de vos sites e-commerce et de vos applications. Nous nous chargeons de la gestion de votre service.
+
+##### PostgreSQL
+
+Déployez un cluster managé PostgreSQL en quelques clics. Bénéficiez du moteur de bases de données relationnelles open-source de référence pour vos données et vos applications.
+
+##### MongoDB
+
+Accélérez votre time to market en nous confiant l’administration de vos bases de données NoSQL. Laissez vos équipes se concentrer sur leur cœur de métier et le développement de vos services. Nous nous occupons de la configuration, de la maintenance, de la sauvegarde, de la sécurité et du monitoring de votre moteur de base de données NoSQL orienté documents préféré.
+
+##### Managed Caching
+
+Votre service « in-memory database » NoSQL compatible Redis® OSS et managée par OVHcloud. Améliorez la vitesse d'exécution de vos applications grâce à une solution de caching haut performance
+
+##### Cassandra
+
+Déployez et exécutez un cluster distribué Apache Cassandra en quelques clics, managé par nos équipes. Très performant et hautement disponibilité, ce service NoSQL est spécialement adapté pour vos traitements massifs de requêtes en écriture.
+
+##### M3DB
+
+Déployez un moteur de base de données time series (TSBD) open source, distribué et performant. Un service 100% managé idéal pour collecter vos métriques à petite ou grande échelle en un instant.
+
+##### M3 Aggregator
+
+Déployez une architecture M3 Aggregator dédiée à l'agrégation de flux pour vos bases de données M3DB. Intégrez vos flux directement à vos workflows de métriques, en fonction de critères prédéfinis.
 
 ### Analytics
 
