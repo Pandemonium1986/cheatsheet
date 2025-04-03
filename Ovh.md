@@ -62,7 +62,10 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 |                            | Gateway                      |                   | <span style="color:green">M</span>  |
 |                            | Instance Public Traffic      |                   | <span style="color:green">M</span>  |
 |                            | Anti-DDoS                    |                   | <span style="color:green">M</span>  |
-| Containers & Orchestration |                              |                   |                                     |
+| Containers & Orchestration | Managed Rancher Service      |                   | <span style="color:orange">C</span> |
+|                            | Managed Kubernetes Service   |                   | <span style="color:green">M</span>  |
+|                            | Managed Private Registry     |                   | <span style="color:green">M</span>  |
+|                            | Load Balancer for M.K.S      |                   | <span style="color:green">M</span>  |
 | Databases                  |                              |                   |                                     |
 | Analytics                  |                              |                   |                                     |
 | Data Platform              |                              |                   |                                     |
@@ -227,6 +230,84 @@ L'orchestration de conteneurs est un processus automatisé qui permet de gérer 
 
 #### Services
 
+##### Managed Rancher Service
+
+Unifiez l’administration de vos clusters Kubernetes grâce à un outil managé de gestion centralisée.
+
+- Versatilité
+- Sécurité
+- Scalabilité
+- Support
+
+###### Pro
+
+- La gestion du rancher est managé
+- Maitrise du déploiement des clusters k8s.
+- Possibilité de déployer en mode multi cloud et/ou on premise.
+
+###### Cons
+
+- Cas d'usage particulié ou à raffiner.
+- Il faut avoir les compétences.
+- Il faut faire la M.C.O.
+
+> Notes
+>
+> - Managed Rancher Service permet de faciliter la gestion de plusieurs clusters Kubernetes, dont ceux créés avec Managed Kubernetes Service.
+> - Managed Kubernetes Service est un service managé pour gérer vos applications conteneurisées au sein d’un même cluster Kubernetes.
+> - Ces deux services sont complémentaires, mais l’un ne nécessite pas obligatoirement l’utilisation de l’autre.
+>   Vous pouvez gérer manuellement vos clusters Kubernetes créés avec Managed Kubernetes Service sans utiliser Managed Rancher Service. À l’inverse, vous pouvez utiliser Managed Rancher Service pour gérer des clusters Kubernetes autres que ceux créés avec Managed Kubernetes Service, par exemple, des clusters Kubernetes sur des serveurs Bare Metal OVHcloud ou bien chez d’autres fournisseurs de cloud (sur site ou non).
+> - Vous pouvez gérer n’importe quel cluster Kubernetes (chez OVHcloud, d’autres fournisseurs de cloud ou sur site) via Managed Rancher Service.
+
+##### Managed Kubernetes Service
+
+Libérez-vous de l’installation et de la maintenance de vos clusters Kubernetes et déployez rapidement vos applications grâce à la solution d’orchestration de conteneurs de référence.
+
+- Gestion intégrale par OVHcloud
+- Interopérabilité
+- Écosystème de services
+- Évolutivité et résilience
+
+###### Pro
+
+- La gestion du cluster est managé.
+
+###### Cons
+
+- Limité à ce que supporte le cloud opérateur (CSI/CNI/Version de k8s).
+
+##### Managed Private Registry
+
+Stockez, gérez et accédez facilement à vos images de conteneurs et Helm charts grâce à ce service entièrement géré.
+
+- Interopérabilité complète.
+- Sécurité maximale.
+- Tarifs prévisibles.
+- Conformité en matière d'hébergement de données de santé.
+
+###### Pro
+
+- Nous avons besoin d'un registry privé accessible depuis le cloud afin de déployer nos applications.
+
+###### Cons
+
+- N/A.
+
+> Notes
+>
+> - L'hébergement d'un registre privé de conteneurs nécessite un environnement sécurisé pour le stockage de vos images de conteneurs. Pour ce faire, vous pouvez soit utiliser un service d'un fournisseur de cloud, installer des logiciels tiers sur votre propre infrastructure ou créer votre propre solution personnalisée.
+> - Utiliser le service d'un fournisseur de cloud, tel que Managed Private Registry d'OVHcloud, constitue la solution la plus simple pour héberger un registre privé de conteneurs. Ce service entièrement géré vous libère du stress lié à la maintenance de votre registre privé, tout en offrant une sécurité élevée, des tarifs prévisibles et une gamme de fonctionnalités.
+
+##### Load Balancer for M.K.S
+
+Gérez les variations d’activité en répartissant le trafic sur vos différentes ressources.  
+Équilibrez la charge de votre application en temps réel sur plusieurs nœuds de manière automatique et sécurisée.
+
+- 99,99 % de disponibilité
+- Gestion automatique des nœuds
+- Intégré directement à Kubernetes
+- Conforme et certifié
+
 ### Databases
 
 #### Description
@@ -324,11 +405,11 @@ OVHcloud Service logs vous aide à suivre « qui a fait quoi, où et quand » su
 
 ## Misc
 
-## Qu’est-ce que le cloud computing ?
+### Qu’est-ce que le cloud computing ?
 
 Le cloud computing est un modèle de fourniture de services informatiques qui permet aux utilisateurs d’accéder à des ressources informatiques (comme des serveurs, du stockage, des bases de données, des applications et des services réseau) via internet. Ces services sont facturés à la demande et à l’usage. Ce modèle informatique offre une flexibilité, une scalabilité et une efficacité considérables en éliminant la nécessité pour les entreprises de gérer leur propre infrastructure physique.
 
-## Quels sont les principaux types de cloud computing ?
+### Quels sont les principaux types de cloud computing ?
 
 Il existe plusieurs types de cloud computing :
 
@@ -338,9 +419,14 @@ Il existe plusieurs types de cloud computing :
 
 **Software-as-a-service (SaaS)** : fournit des applications logicielles via internet sur un modèle d’abonnement. Les utilisateurs accèdent aux logiciels sans avoir à les installer sur leur ordinateur personnel ou sur les serveurs de l’entreprise.
 
-## Object storage vs. block storage: How are they different?
+### Object storage vs. block storage: How are they different?
 
 ![ovh-011.png](/img/ovh-011.png)
+
+### Qu’est-ce qu’un registre privé de conteneurs ?
+
+Un registre privé de conteneurs est un système de stockage et de distribution pour les images de conteneurs, c'est-à-dire des fichiers qui incluent tout le code, les bibliothèques et les autres ressources nécessaires pour exécuter une application dans un environnement conteneurisé. Accessible uniquement aux utilisateurs autorisés, un registre de conteneurs privé constitue un espace sécurisé pour stocker les images de conteneurs. Il permet aux organisations de gérer et de contrôler facilement leurs images de conteneurs, tout en offrant une intégration simple avec les workflows existants d'intégration continue et de déploiement continu (CI/CD) pour un développement, des tests et un déploiement d'applications fluides.
+
 
 ## Links
 
