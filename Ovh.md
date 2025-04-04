@@ -101,7 +101,12 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 |                            | Managed Dashboards (Grafana) | Essential         | <span style="color:orange">C</span> |
 |                            | Logs Data Platform           | Standard          |  <span style="color:blue">S</span>  |
 |                            |                              | Entreprise        |  <span style="color:red">W</span>   |
-| Data Platform              |                              |                   |                                     |
+| Data Platform              | Lakehouse Manager            |                   |  <span style="color:red">W</span>   |
+|                            | Data Catalog                 |                   |  <span style="color:red">W</span>   |
+|                            | Data Processing Engine       |                   |  <span style="color:red">W</span>   |
+|                            | Analytics Manager            |                   |  <span style="color:red">W</span>   |
+|                            | Applications Services        |                   |  <span style="color:red">W</span>   |
+|                            | Control Center               |                   |  <span style="color:red">W</span>   |
 | AI & Machine learning      |                              |                   |                                     |
 | Idam                       | IAM                          |                   | <span style="color:green">M</span>  |
 |                            | Logs Data Platform           |                   | <span style="color:orange">C</span> |
@@ -459,7 +464,37 @@ Augmentez la visibilité des environnements de vos applications en collectant, t
 
 #### Description
 
+Une plateforme collaborative unifiée pour intégrer, stocker massivement, préparer et exploiter vos données, afin d'accélérer vos projets Data & Analytics.
+
+![ovh-020.png](/img/ovh-020.png)
+
+![ovh-021.png](/img/ovh-021.png)
+
 #### Services
+
+##### Lakehouse Manager
+
+Un service serverless de data lake et data warehouse sur OVHcloud Data Platform, utilisant Apache Iceberg pour le stockage massif de données.
+
+##### Data Catalog
+
+Référentiel central pour la gestion de toutes les sources de données de OVHcloud Data Platform : connectez-les, analysez-les et ajoutez des règles de planification pour définir des normes de formatage.
+
+##### Data Processing Engine
+
+Service d'intégration et de transformation des données de OVHcloud Data Platform, pour automatiser l’exécution et l’orchestration de vos workflows ETL/ELT en production.
+
+##### Analytics Manager
+
+Service de visualisation de données et de gestion des requêtes de OVHcloud Data Platform. Faites vos analyses en libre-service, réalisez vos tableaux de bord, et facilitez les prises de décisions en vous appuyant sur vos données.
+
+##### Applications Services
+
+Service de conception et déploiement d’API et de web apps personnalisées. Développez vos API et partagez des tableaux de bord détaillés avec OVHcloud Data Platform.
+
+##### Control Center
+
+Gérez les droits d'accès et accédez en temps réel aux informations de votre infrastructure. Obtenez une vue d’ensemble complète de vos pipelines de données, applications et connecteurs afin de collecter des métriques, surveiller les performances et configurer des alertes.
 
 ### AI & Machine learning
 
