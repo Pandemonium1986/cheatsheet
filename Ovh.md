@@ -21,17 +21,17 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 ## MoSCoW (Produits)
 
-| Produits                   |                 MoSCoW                 |
-| :------------------------- | :------------------------------------: |
-| Compute                    | <span style="color:lawngreen">M</span> |
-| Storage                    | <span style="color:lawngreen">M</span> |
-| Network                    |   <span style="color:green">S</span>   |
-| Containers & Orchestration | <span style="color:lawngreen">M</span> |
-| Databases                  |    <span style="color:red">W</span>    |
-| Analytics                  |  <span style="color:orange">C</span>   |
-| Data Platform              |    <span style="color:red">W</span>    |
-| AI & Machine learning      |   <span style="color:green">S</span>   |
-| Idam                       | <span style="color:lawngreen">M</span> |
+| Produits                   |              MoSCoW (D.C               |            MoSCoW (A.V.P.G)            |
+| :------------------------- | :------------------------------------: | :------------------------------------: |
+| Compute                    | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+| Storage                    | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+| Network                    | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+| Containers & Orchestration | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+| Databases                  |    <span style="color:red">W</span>    |  <span style="color:orange">C</span>   |
+| Analytics                  |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+| Data Platform              |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+| AI & Machine learning      |   <span style="color:green">S</span>   | <span style="color:lawngreen">M</span> |
+| Idam                       | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
 
 ## MoSCoW (Services)
 
@@ -69,7 +69,7 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 | Databases                  | MySQL                            | Essential Plan    |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
 |                            |                                  | Business Plan     |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
 |                            |                                  | Enterprise Plan   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
-|                            | PostgreSQL                       | Essential Plan    |  <span style="color:orange">C</span>   |  <span style="color:orange">C</span>   |
+|                            | PostgreSQL                       | Essential Plan    |    <span style="color:red">W</span>    |  <span style="color:orange">C</span>   |
 |                            |                                  | Business Plan     |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
 |                            |                                  | Enterprise Plan   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
 |                            | MongoDB                          | Discovery         |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
