@@ -19,7 +19,9 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 ![ovh-002.png](/img/ovh-002.png)
 
-## MoSCoW (Produits)
+## MoSCoW
+
+### Produits
 
 | Produits                   |              MoSCoW (D.C               |            MoSCoW (A.V.P.G)            |
 | :------------------------- | :------------------------------------: | :------------------------------------: |
@@ -33,7 +35,7 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 | AI & Machine learning      |   <span style="color:green">S</span>   | <span style="color:lawngreen">M</span> |
 | Idam                       | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
 
-## MoSCoW (Services)
+### Services
 
 | Produits                   | Services                         | Options           |              MoSCoW (D.C)              |            MoSCoW (A.V.P.G)            |
 | :------------------------- | :------------------------------- | :---------------- | :------------------------------------: | :------------------------------------: |
@@ -121,6 +123,8 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 |                            | Logs Data Platform               |                   |  <span style="color:orange">C</span>   | <span style="color:lawngreen">M</span> |
 |                            | Key Management Service (KMS)     |                   |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
 |                            | Service Logs                     |                   |  <span style="color:orange">C</span>   | <span style="color:lawngreen">M</span> |
+
+## Public Cloud détail
 
 ### Compute
 
