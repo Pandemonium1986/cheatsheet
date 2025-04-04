@@ -193,8 +193,6 @@ Combinez les avantages du Bare Metal avec l’automatisation du cloud.
 - Une maîtrise des coûts assurée
 - Sécurité des données et conformité
 
-![ovh-005.png](/img/ovh-005.png)
-
 ##### Instance Backup
 
 Des sauvegardes système à la demande
@@ -207,13 +205,19 @@ Vos systèmes d'exploitation rassemblés et disponibles pour vos instances.
 
 En plus du Public Image Catalog fournissant des images système maintenues par OVHcloud, vous pouvez bâtir un Private Image Catalog pour mettre à disposition de vos instances des systèmes d'exploitation spécifiquement paramétrés pour vos usages ou des appliances fournis par un éditeur par exemple.
 
+###### Pro
+
+- Permettrait de déployer les ova/qcow2 de nos instances.
+
+###### Cons
+
+- N/A.
+
 ##### Public Image Catalog
 
-Les images système et applications pré-installées les plus populaires.  
+Les images système et applications pré-installées les plus populaires.
 
 Afin de démarrer au plus vite votre infrastructure, OVHcloud fournit les images cloud standards du marché, ainsi que les applications pré-installées les plus populaires.
-
-![ovh-008.png](/img/ovh-008.png)
 
 ### Storage
 
