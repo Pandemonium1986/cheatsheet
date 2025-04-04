@@ -167,17 +167,16 @@ Un large choix d’instances adaptées à tous vos usages
 
 Des serveurs cloud taillés pour le traitement de l'IA, des graphismes et des tâches massivement parallèles
 
-- Solutions Cloud GPU sur mesure
-- Prix transparents et compétitifs
-- Durabilité et efficacité
-- Sécurité des données et conformité
+- Solutions Cloud GPU sur mesure.
+- Prix transparents et compétitifs.
+- Durabilité et efficacité.
+- Sécurité des données et conformité.
 
-![ovh-004.png](/img/ovh-003.png)
+![ovh-004.png](/img/ovh-004.png)
 
 ###### Pro
 
 - La base du cloud computing en mode IaaS.
-- Peut permettre une approche Lift and Shift.
 - Accès à un GPU.
 
 ###### Cons
@@ -198,19 +197,21 @@ Combinez les avantages du Bare Metal avec l’automatisation du cloud.
 
 ##### Instance Backup
 
-À l’heure des déploiements automatisés et de « l’infrastructure as code », de nombreuses situations peuvent nécessiter une sauvegarde de votre système. Vos instances peuvent être sauvegardées à tout moment. La machine réalisera un export du disque de l’instance. Grâce à cela, vous pouvez donc industrialiser vos déploiements.
+Des sauvegardes système à la demande
 
-![ovh-006.png](/img/ovh-006.png)
+À l’heure des déploiements automatisés et de « l’infrastructure as code », de nombreuses situations peuvent nécessiter une sauvegarde de votre système. Vos instances peuvent être sauvegardées à tout moment. La machine réalisera un export du disque de l’instance. Grâce à cela, vous pouvez donc industrialiser vos déploiements.
 
 ##### Private Image catalog
 
-Vos systèmes d'exploitation rassemblés et disponibles pour vos instances. En plus du Public Image Catalog fournissant des images système maintenues par OVHcloud, vous pouvez bâtir un Private Image Catalog pour mettre à disposition de vos instances des systèmes d'exploitation spécifiquement paramétrés pour vos usages ou des appliances fournis par un éditeur par exemple.
+Vos systèmes d'exploitation rassemblés et disponibles pour vos instances.
 
-![ovh-007.png](/img/ovh-007.png)
+En plus du Public Image Catalog fournissant des images système maintenues par OVHcloud, vous pouvez bâtir un Private Image Catalog pour mettre à disposition de vos instances des systèmes d'exploitation spécifiquement paramétrés pour vos usages ou des appliances fournis par un éditeur par exemple.
 
 ##### Public Image Catalog
 
-Les images système et applications pré-installées les plus populaires. Afin de démarrer au plus vite votre infrastructure, OVHcloud fournit les images cloud standards du marché, ainsi que les applications pré-installées les plus populaires.
+Les images système et applications pré-installées les plus populaires.  
+
+Afin de démarrer au plus vite votre infrastructure, OVHcloud fournit les images cloud standards du marché, ainsi que les applications pré-installées les plus populaires.
 
 ![ovh-008.png](/img/ovh-008.png)
 
