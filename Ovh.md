@@ -597,9 +597,7 @@ Il existe plusieurs types de cloud computing :
 
 Un registre privé de conteneurs est un système de stockage et de distribution pour les images de conteneurs, c'est-à-dire des fichiers qui incluent tout le code, les bibliothèques et les autres ressources nécessaires pour exécuter une application dans un environnement conteneurisé. Accessible uniquement aux utilisateurs autorisés, un registre de conteneurs privé constitue un espace sécurisé pour stocker les images de conteneurs. Il permet aux organisations de gérer et de contrôler facilement leurs images de conteneurs, tout en offrant une intégration simple avec les workflows existants d'intégration continue et de déploiement continu (CI/CD) pour un développement, des tests et un déploiement d'applications fluides.
 
-###
-
-Qu’est-ce que le data processing ?
+### Qu’est-ce que le data processing ?
 
 Le data processing, ou traitement des données, désigne le processus d’analyse des données brutes. En effet, ces vastes quantités d’informations s’avèrent capitales pour les entreprises. Une fois traitées, elles permettent une meilleure compréhension des chiffres de ventes, de l’efficacité d’une campagne marketing ou encore d’un risque financier. Cette opération s’articule en plusieurs étapes :
 
