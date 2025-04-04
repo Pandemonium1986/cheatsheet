@@ -15,7 +15,7 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 ![ovh-001.png](/img/ovh-001.png)
 
-## Produits Public Cloud
+## Public Cloud produit
 
 ![ovh-002.png](/img/ovh-002.png)
 
@@ -128,6 +128,8 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 ### Compute
 
+![ovh-025.png](/img/ovh-025.png)
+
 #### Description
 
 Créez et exécutez facilement des VM en ligne sur une infrastructure cloud fiable et hautes performances. Faites votre choix parmi des types de machines prédéfinis ou personnalisés pour les serveurs Web, les bases de données, l'IA, etc.
@@ -183,6 +185,8 @@ Les images système et applications pré-installées les plus populaires. Afin d
 
 ### Storage
 
+![ovh-026.png](/img/ovh-026.png)
+
 #### Description
 
 Le stockage cloud est un service qui permet de sauvegarder des données sur des serveurs distants accessibles via internet. Il offre la possibilité de stocker, gérer et consulter des fichiers et des données depuis n’importe quel appareil connecté à internet, à tout moment. Ce type de stockage est géré par des fournisseurs de services qui maintiennent l’infrastructure et garantissent la sécurité et la disponibilité des données. Le stockage cloud est souvent utilisé pour la sauvegarde de données, le partage de fichiers et la collaboration en ligne. Il représente une alternative flexible et évolutive au stockage traditionnel sur disque dur, sur des dispositifs de stockage locaux ou sur des serveurs dédiés
@@ -216,6 +220,8 @@ Le stockage cloud est un service qui permet de sauvegarder des données sur des 
 ![ovh-012.png](/img/ovh-012.png)
 
 ### Network
+
+![ovh-027.png](/img/ovh-027.png)
 
 #### Description
 
@@ -274,6 +280,8 @@ Le trafic réseau public sortant des instances est inclus dans le prix des insta
 Profitez d'une protection permanente sur l'ensemble de vos ressources cloud, pour garantir un niveau de service optimal
 
 ### Containers & Orchestration
+
+![ovh-028.png](/img/ovh-028.png)
 
 #### Description
 
@@ -361,6 +369,8 @@ Gérez les variations d’activité en répartissant le trafic sur vos différen
 
 ### Databases
 
+![ovh-030.png](/img/ovh-030.png)
+
 #### Description
 
 Une base de données cloud est souvent appelée « Database as a Service » ou « Cloud database Service ». Elle est conçue et accessible via une plateforme cloud. Le cloud permet aux entreprises d'héberger des bases de données sans acheter de matériel dédié. Les bases de données cloud prennent en charge à la fois les bases de données relationnelles (MySQL , PostgreSQL) et NoSQL (MongoDB, Caching, Apache Cassandra).
@@ -397,11 +407,11 @@ Déployez une architecture M3 Aggregator dédiée à l'agrégation de flux pour 
 
 ### Analytics
 
+![ovh-017.png](/img/ovh-017.png)
+
 #### Description
 
 Le cloud analytics désigne l’utilisation de services d’analyse de données hébergés sur des plateformes cloud. Cette approche permet de traiter et d’analyser de grandes quantités de données en utilisant des ressources informatiques cloud fournies et gérées par des tiers. Elle offre évolutivité, efficacité et réduction des coûts liés à l’infrastructure informatique.
-
-![ovh-017.png](/img/ovh-017.png)
 
 #### Services
 
@@ -439,7 +449,7 @@ Créez des tableaux de bord et des graphiques dynamiques depuis différentes sou
 - Sécurité et conformité
 - Plus de 60 services Public Cloud
 
-![ovh-017.png](/img/ovh-017.png)
+![ovh-018.png](/img/ovh-018.png)
 
 ###### Pro
 
@@ -449,8 +459,6 @@ Créez des tableaux de bord et des graphiques dynamiques depuis différentes sou
 
 - Pricing élevé pour le service rendu.
 - A étudier face aux grafana(s) fournient par les autres services.
-
-![ovh-018.png](/img/ovh-018.png)
 
 ##### Logs Data Platform
 
@@ -475,13 +483,13 @@ Augmentez la visibilité des environnements de vos applications en collectant, t
 
 ### Data Platform
 
-#### Description
-
-Une plateforme collaborative unifiée pour intégrer, stocker massivement, préparer et exploiter vos données, afin d'accélérer vos projets Data & Analytics.
-
 ![ovh-020.png](/img/ovh-020.png)
 
 ![ovh-021.png](/img/ovh-021.png)
+
+#### Description
+
+Une plateforme collaborative unifiée pour intégrer, stocker massivement, préparer et exploiter vos données, afin d'accélérer vos projets Data & Analytics.
 
 #### Services
 
@@ -511,6 +519,8 @@ Gérez les droits d'accès et accédez en temps réel aux informations de votre 
 
 ### AI & Machine learning
 
+![ovh-029.png](/img/ovh-029.png)
+
 #### Description
 
 Le Machine learning as a Service (ou MLaaS) est un service cloud récent qui propose du machine learning. Il bénéficie de l’essor du cloud ces dernières années, à l’instar des SaaS, PaaS et IaaS. Grâce à lui, les entreprises peuvent se lancer dans l’intelligence artificielle (IA) à moindres frais, grâce aux différents outils de machine learning et solutions de développement. Vous gagnez ainsi du temps lors du lancement de votre activité. De plus, la maîtrise de votre budget rend possible le développement de tous les usages pour lesquels le logiciel de machine learning est conçu : estimation des risques, détection des fraudes, stratégies marketing, optimisation logistique, etc.
@@ -526,7 +536,7 @@ Accélérez le lancement de vos projets et modèles avec des notebooks entièrem
 - Vos frameworks AI préférés
 - Un cloud européen pour le respect de vos données
 
-![ovh-021.png](/img/ovh-021.png)
+![ovh-021.png](/img/ovh-022.png)
 
 ###### Pro
 
@@ -592,9 +602,11 @@ Il permet aux utilisateurs d’exécuter leurs projets sur une plateforme fiable
 
 Designed with simplicity in mind, our platform allows developers of all skill levels to enhance their applications with cutting-edge AI APIs —no AI expertise required.
 
-![ovh-021.png](/img/ovh-021.png)
+![ovh-023.png](/img/ovh-023.png)
 
 ### Idam
+
+![ovh-033.png](/img/ovh-033.png)
 
 #### Description
 
