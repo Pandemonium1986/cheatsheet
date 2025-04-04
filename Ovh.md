@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD001 MD013 MD024 MD025 MD036 -->
+<!-- markdownlint-disable MD001 MD013 MD024 MD025 MD033 MD036 -->
 
 # Ovh
 
@@ -21,106 +21,106 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 ## MoSCoW (Produits)
 
-| Produits                   |               MoSCoW                |
-| :------------------------- | :---------------------------------: |
-| Compute                    | <span style="color:green">M</span>  |
-| Storage                    | <span style="color:green">M</span>  |
-| Network                    |  <span style="color:blue">S</span>  |
-| Containers & Orchestration | <span style="color:green">M</span>  |
-| Databases                  |  <span style="color:red">W</span>   |
-| Analytics                  | <span style="color:orange">C</span> |
-| Data Platform              |  <span style="color:red">W</span>   |
-| AI & Machine learning      |  <span style="color:blue">S</span>  |
-| Idam                       | <span style="color:green">M</span>  |
+| Produits                   |                 MoSCoW                 |
+| :------------------------- | :------------------------------------: |
+| Compute                    | <span style="color:lawngreen">M</span> |
+| Storage                    | <span style="color:lawngreen">M</span> |
+| Network                    |   <span style="color:green">S</span>   |
+| Containers & Orchestration | <span style="color:lawngreen">M</span> |
+| Databases                  |    <span style="color:red">W</span>    |
+| Analytics                  |  <span style="color:orange">C</span>   |
+| Data Platform              |    <span style="color:red">W</span>    |
+| AI & Machine learning      |   <span style="color:green">S</span>   |
+| Idam                       | <span style="color:lawngreen">M</span> |
 
 ## MoSCoW (Services)
 
-| Produits                   | Services                         | Options           |               MoSCoW                |
-| :------------------------- | :------------------------------- | :---------------- | :---------------------------------: |
-| Compute                    | Virtual Machine Instances        | General Purpose   | <span style="color:green">M</span>  |
-|                            |                                  | Compute Optimized | <span style="color:green">M</span>  |
-|                            |                                  | Memory Optimized  | <span style="color:green">M</span>  |
-|                            |                                  | Storage Optimized | <span style="color:green">M</span>  |
-|                            |                                  | Discovery         | <span style="color:green">M</span>  |
-|                            | Cloud GPU                        |                   | <span style="color:green">M</span>  |
-|                            | Metal Instances                  |                   |  <span style="color:red">W</span>   |
-|                            | Instance Backup                  |                   | <span style="color:orange">C</span> |
-|                            | Private Image catalog            |                   | <span style="color:green">M</span>  |
-|                            | Public Image Catalog             |                   |  <span style="color:blue">S</span>  |
-| Storage                    | Block Storage                    | Block Storage     | <span style="color:green">M</span>  |
-|                            |                                  | Volume snapshot   | <span style="color:orange">C</span> |
-|                            |                                  | Volume Backup     | <span style="color:orange">C</span> |
-|                            | Object Storage                   | Standard          | <span style="color:green">M</span>  |
-|                            |                                  | Standard 3-AZ     | <span style="color:orange">C</span> |
-|                            |                                  | High Performance  | <span style="color:orange">C</span> |
-|                            |                                  | Standard (SWIFT)  | <span style="color:orange">C</span> |
-|                            |                                  | Cloud Archive     |  <span style="color:red">W</span>   |
-|                            | Cold Archive                     |                   |  <span style="color:red">W</span>   |
-| Network                    | Private Network                  |                   | <span style="color:green">M</span>  |
-|                            | Load Balancer                    |                   | <span style="color:green">M</span>  |
-|                            | Floating IP                      |                   | <span style="color:green">M</span>  |
-|                            | Gateway                          |                   | <span style="color:green">M</span>  |
-|                            | Instance Public Traffic          |                   | <span style="color:green">M</span>  |
-|                            | Anti-DDoS                        |                   | <span style="color:green">M</span>  |
-| Containers & Orchestration | Managed Rancher Service          |                   | <span style="color:orange">C</span> |
-|                            | Managed Kubernetes Service       |                   | <span style="color:green">M</span>  |
-|                            | Managed Private Registry         |                   | <span style="color:green">M</span>  |
-|                            | Load Balancer for M.K.S          |                   | <span style="color:green">M</span>  |
-| Databases                  | MySQL                            | Essential Plan    |  <span style="color:red">W</span>   |
-|                            |                                  | Business Plan     |  <span style="color:red">W</span>   |
-|                            |                                  | Enterprise Plan   |  <span style="color:red">W</span>   |
-|                            | PostgreSQL                       | Essential Plan    |  <span style="color:red">W</span>   |
-|                            |                                  | Business Plan     |  <span style="color:red">W</span>   |
-|                            |                                  | Enterprise Plan   |  <span style="color:red">W</span>   |
-|                            | MongoDB                          | Discovery         |  <span style="color:red">W</span>   |
-|                            |                                  | Production        |  <span style="color:red">W</span>   |
-|                            |                                  | Advanced          |  <span style="color:red">W</span>   |
-|                            | Managed Caching                  | Essential Plan    |  <span style="color:red">W</span>   |
-|                            |                                  | Business Plan     |  <span style="color:red">W</span>   |
-|                            | Cassandra                        | Essential Plan    |  <span style="color:red">W</span>   |
-|                            |                                  | Business Plan     |  <span style="color:red">W</span>   |
-|                            |                                  | Enterprise Plan   |  <span style="color:red">W</span>   |
-|                            | M3DB                             | Essential Plan    |  <span style="color:red">W</span>   |
-|                            |                                  | Business Plan     |  <span style="color:red">W</span>   |
-|                            |                                  | Enterprise Plan   |  <span style="color:red">W</span>   |
-|                            | M3 Aggregator                    | Essential Plan    |  <span style="color:red">W</span>   |
-|                            |                                  | Business Plan     |  <span style="color:red">W</span>   |
-|                            |                                  | Enterprise Plan   |  <span style="color:red">W</span>   |
-| Analytics                  | Data Processing                  |                   |  <span style="color:red">W</span>   |
-|                            | Kafka                            | Business          |  <span style="color:red">W</span>   |
-|                            | Kafka                            | Enterprise        |  <span style="color:red">W</span>   |
-|                            | OpenSearch                       | Essential         |  <span style="color:red">W</span>   |
-|                            | OpenSearch                       | Business          |  <span style="color:red">W</span>   |
-|                            | OpenSearch                       | Enterprise        |  <span style="color:red">W</span>   |
-|                            | Kafka MirrorMaker                | Essential         |  <span style="color:red">W</span>   |
-|                            | Kafka MirrorMaker                | Business          |  <span style="color:red">W</span>   |
-|                            | Kafka MirrorMaker                | Enterprise        |  <span style="color:red">W</span>   |
-|                            | Kafka Connect                    | Essential         |  <span style="color:red">W</span>   |
-|                            | Kafka Connect                    | Business          |  <span style="color:red">W</span>   |
-|                            | Kafka Connect                    | Enterprise        |  <span style="color:red">W</span>   |
-|                            | Managed Dashboards (Grafana)     | Essential         | <span style="color:orange">C</span> |
-|                            | Logs Data Platform               | Standard          |  <span style="color:blue">S</span>  |
-|                            |                                  | Entreprise        |  <span style="color:red">W</span>   |
-| Data Platform              | Lakehouse Manager                |                   |  <span style="color:red">W</span>   |
-|                            | Data Catalog                     |                   |  <span style="color:red">W</span>   |
-|                            | Data Processing Engine           |                   |  <span style="color:red">W</span>   |
-|                            | Analytics Manager                |                   |  <span style="color:red">W</span>   |
-|                            | Applications Services            |                   |  <span style="color:red">W</span>   |
-|                            | Control Center                   |                   |  <span style="color:red">W</span>   |
-| AI & Machine learning      | AI Notebooks & Quantum Notebooks | Unités CPU        | <span style="color:green">M</span>  |
-|                            |                                  | Unités GPU        | <span style="color:green">M</span>  |
-|                            | AI Training                      | Unités CPU        | <span style="color:orange">C</span> |
-|                            |                                  | Unités GPU        | <span style="color:orange">C</span> |
-|                            | AI Deploy                        | Unités CPU        | <span style="color:orange">C</span> |
-|                            |                                  | Unités GPU        | <span style="color:orange">C</span> |
-|                            | Lettria                          |                   |  <span style="color:red">W</span>   |
-|                            | Voxist                           |                   |  <span style="color:red">W</span>   |
-|                            | NVIDIA NGC Platform              |                   | <span style="color:green">M</span>  |
-|                            | AI Endpoints (Beta)              |                   | <span style="color:orange">C</span> |
-| Idam                       | IAM                              |                   | <span style="color:green">M</span>  |
-|                            | Logs Data Platform               |                   | <span style="color:orange">C</span> |
-|                            | Key Management Service (KMS)     |                   | <span style="color:orange">C</span> |
-|                            | Service Logs                     |                   | <span style="color:orange">C</span> |
+| Produits                   | Services                         | Options           |              MoSCoW (D.C)              |            MoSCoW (A.V.P.G)            |
+| :------------------------- | :------------------------------- | :---------------- | :------------------------------------: | :------------------------------------: |
+| Compute                    | Virtual Machine Instances        | General Purpose   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            |                                  | Compute Optimized |    <span style="color:red">W</span>    | <span style="color:lawngreen">M</span> |
+|                            |                                  | Memory Optimized  |    <span style="color:red">W</span>    | <span style="color:lawngreen">M</span> |
+|                            |                                  | Storage Optimized |  <span style="color:orange">C</span>   | <span style="color:lawngreen">M</span> |
+|                            |                                  | Discovery         | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Cloud GPU                        |                   |  <span style="color:orange">C</span>   | <span style="color:lawngreen">M</span> |
+|                            | Metal Instances                  |                   |    <span style="color:red">W</span>    |  <span style="color:orange">C</span>   |
+|                            | Instance Backup                  |                   |  <span style="color:orange">C</span>   |  <span style="color:orange">C</span>   |
+|                            | Private Image catalog            |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Public Image Catalog             |                   |   <span style="color:green">S</span>   |   <span style="color:green">S</span>   |
+| Storage                    | Block Storage                    | Block Storage     | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            |                                  | Volume snapshot   |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+|                            |                                  | Volume Backup     |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+|                            | Object Storage                   | Standard          | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            |                                  | Standard 3-AZ     |    <span style="color:red">W</span>    |  <span style="color:orange">C</span>   |
+|                            |                                  | High Performance  |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+|                            |                                  | Standard (SWIFT)  |    <span style="color:red">W</span>    |  <span style="color:orange">C</span>   |
+|                            |                                  | Cloud Archive     |    <span style="color:red">W</span>    |  <span style="color:orange">C</span>   |
+|                            | Cold Archive                     |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+| Network                    | Private Network                  |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Load Balancer                    |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Floating IP                      |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Gateway                          |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Instance Public Traffic          |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Anti-DDoS                        |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+| Containers & Orchestration | Managed Rancher Service          |                   |    <span style="color:red">W</span>    |  <span style="color:orange">C</span>   |
+|                            | Managed Kubernetes Service       |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Managed Private Registry         |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Load Balancer for M.K.S          |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+| Databases                  | MySQL                            | Essential Plan    |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Business Plan     |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Enterprise Plan   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | PostgreSQL                       | Essential Plan    |  <span style="color:orange">C</span>   |  <span style="color:orange">C</span>   |
+|                            |                                  | Business Plan     |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Enterprise Plan   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | MongoDB                          | Discovery         |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Production        |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Advanced          |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Managed Caching                  | Essential Plan    |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Business Plan     |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Cassandra                        | Essential Plan    |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Business Plan     |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Enterprise Plan   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | M3DB                             | Essential Plan    |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Business Plan     |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Enterprise Plan   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | M3 Aggregator                    | Essential Plan    |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Business Plan     |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            |                                  | Enterprise Plan   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+| Analytics                  | Data Processing                  |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Kafka                            | Business          |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Kafka                            | Enterprise        |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | OpenSearch                       | Essential         |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | OpenSearch                       | Business          |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | OpenSearch                       | Enterprise        |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Kafka MirrorMaker                | Essential         |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Kafka MirrorMaker                | Business          |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Kafka MirrorMaker                | Enterprise        |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Kafka Connect                    | Essential         |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Kafka Connect                    | Business          |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Kafka Connect                    | Enterprise        |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Managed Dashboards (Grafana)     | Essential         |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+|                            | Logs Data Platform               | Standard          |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+|                            |                                  | Entreprise        |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+| Data Platform              | Lakehouse Manager                |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Data Catalog                     |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Data Processing Engine           |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Analytics Manager                |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Applications Services            |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Control Center                   |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+| AI & Machine learning      | AI Notebooks & Quantum Notebooks | Unités CPU        | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            |                                  | Unités GPU        | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | AI Training                      | Unités CPU        |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+|                            |                                  | Unités GPU        |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+|                            | AI Deploy                        | Unités CPU        |    <span style="color:red">W</span>    |   <span style="color:green">S</span>   |
+|                            |                                  | Unités GPU        |    <span style="color:red">W</span>    |   <span style="color:green">S</span>   |
+|                            | Lettria                          |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | Voxist                           |                   |    <span style="color:red">W</span>    |    <span style="color:red">W</span>    |
+|                            | NVIDIA NGC Platform              |                   |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+|                            | AI Endpoints (Beta)              |                   |    <span style="color:red">W</span>    |  <span style="color:orange">C</span>   |
+| Idam                       | IAM                              |                   | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
+|                            | Logs Data Platform               |                   |  <span style="color:orange">C</span>   | <span style="color:lawngreen">M</span> |
+|                            | Key Management Service (KMS)     |                   |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
+|                            | Service Logs                     |                   |  <span style="color:orange">C</span>   | <span style="color:lawngreen">M</span> |
 
 ### Compute
 
@@ -715,3 +715,4 @@ Notez que le stockage d’informations est soumis à certaines réglementations.
 [Ovhcloud Learn](https://www.ovhcloud.com/fr/learn/)  
 [OVHcloud Public Cloud Doc](https://help.ovhcloud.com/csm/fr-documentation-public-cloud?id=kb_browse_cat&kb_id=574a8325551974502d4c6e78b7421938)
 [OVHcloud Public Cloud Status](https://public-cloud.status-ovhcloud.com/)
+[OVHcloud Market Place Santé](https://marketplace.ovhcloud.com/c/healthcare)
