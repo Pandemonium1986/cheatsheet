@@ -86,7 +86,21 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 |                            | M3 Aggregator                | Essential Plan    |  <span style="color:red">W</span>   |
 |                            |                              | Business Plan     |  <span style="color:red">W</span>   |
 |                            |                              | Enterprise Plan   |  <span style="color:red">W</span>   |
-| Analytics                  |                              |                   |                                     |
+| Analytics                  | Data Processing              |                   |  <span style="color:red">W</span>   |
+|                            | Kafka                        | Business          |  <span style="color:red">W</span>   |
+|                            | Kafka                        | Enterprise        |  <span style="color:red">W</span>   |
+|                            | OpenSearch                   | Essential         |  <span style="color:red">W</span>   |
+|                            | OpenSearch                   | Business          |  <span style="color:red">W</span>   |
+|                            | OpenSearch                   | Enterprise        |  <span style="color:red">W</span>   |
+|                            | Kafka MirrorMaker            | Essential         |  <span style="color:red">W</span>   |
+|                            | Kafka MirrorMaker            | Business          |  <span style="color:red">W</span>   |
+|                            | Kafka MirrorMaker            | Enterprise        |  <span style="color:red">W</span>   |
+|                            | Kafka Connect                | Essential         |  <span style="color:red">W</span>   |
+|                            | Kafka Connect                | Business          |  <span style="color:red">W</span>   |
+|                            | Kafka Connect                | Enterprise        |  <span style="color:red">W</span>   |
+|                            | Managed Dashboards (Grafana) | Essential         | <span style="color:orange">C</span> |
+|                            | Logs Data Platform           | Standard          |  <span style="color:blue">S</span>  |
+|                            |                              | Entreprise        |  <span style="color:red">W</span>   |
 | Data Platform              |                              |                   |                                     |
 | AI & Machine learning      |                              |                   |                                     |
 | Idam                       | IAM                          |                   | <span style="color:green">M</span>  |
@@ -367,7 +381,79 @@ Déployez une architecture M3 Aggregator dédiée à l'agrégation de flux pour 
 
 #### Description
 
+Le cloud analytics désigne l’utilisation de services d’analyse de données hébergés sur des plateformes cloud. Cette approche permet de traiter et d’analyser de grandes quantités de données en utilisant des ressources informatiques cloud fournies et gérées par des tiers. Elle offre évolutivité, efficacité et réduction des coûts liés à l’infrastructure informatique.
+
+![ovh-017.png](/img/ovh-017.png)
+
 #### Services
+
+##### Data Processing
+
+Analysez vos données rapidement et en toute simplicité sur Apache Spark. OVHcloud se charge de déployer en quelques minutes un cluster Apache Spark dédié pour traiter votre requête.
+
+- Parallélisation des traitements.
+- Vous codez, nous déployons.
+- Réduction des coûts.
+- Sécurité et conformité.
+
+##### Kafka
+
+Déployez en quelques clics un cluster Apache Kafka complet et managé par nos équipes, tout en conservant le contrôle de vos données.
+
+##### OpenSearch
+
+Le moteur NoSQL d’indexation, de recherche de contenu et d’analyse de données entièrement managé par nos soins. Simplifiez le quotidien de vos développeurs en leur permettant de se concentrer sur la création d’applications.
+
+##### Kafka MirrorMaker
+
+Copiez et streamez facilement les données entre deux clusters Apache Kafka. Service 100% managé pour maintenir une replication complète dans un datacenter distant et une haute disponibilité de vos clusters Kafka.
+
+##### Kafka Connect
+
+Kafka Connect permet de connecter des systèmes externes à un cluster Apache Kafka. Plus besoin de vous préoccuper de la gestion matérielle du service : configuration, monitoring et mises à jour.
+
+##### Managed Dashboards (Grafana)
+
+Créez des tableaux de bord et des graphiques dynamiques depuis différentes sources avec la plateforme Grafana®.
+
+- Open-source et managé
+- Rapport performances/prix
+- Sécurité et conformité
+- Plus de 60 services Public Cloud
+
+![ovh-017.png](/img/ovh-017.png)
+
+###### Pro
+
+- La gestion du dashboard est managé.
+
+###### Cons
+
+- Pricing élevé pour le service rendu.
+- A étudier face aux grafana(s) fournient par les autres services.
+
+![ovh-018.png](/img/ovh-018.png)
+
+##### Logs Data Platform
+
+Augmentez la visibilité des environnements de vos applications en collectant, traitant, analysant et stockant vos logs sur une plateforme à la fois complète et managée. L'analyse de logs est essentielle pour maintenir votre infrastructure et vos applications en bon état de fonctionnement.
+
+- Standard et réversible
+- Performante et évolutive
+- Tarification complète
+- Sécurité et conformité
+
+![ovh-019.png](/img/ovh-019.png)
+
+###### Pro
+
+- Une plateforme complète entierement managé.
+- Plateforme offerte en "standard".
+
+###### Cons
+
+- Pricing flous ...
+- Beaucoup d'options flous ...
 
 ### Data Platform
 
@@ -475,6 +561,20 @@ Il existe plusieurs types de cloud computing :
 ### Qu’est-ce qu’un registre privé de conteneurs ?
 
 Un registre privé de conteneurs est un système de stockage et de distribution pour les images de conteneurs, c'est-à-dire des fichiers qui incluent tout le code, les bibliothèques et les autres ressources nécessaires pour exécuter une application dans un environnement conteneurisé. Accessible uniquement aux utilisateurs autorisés, un registre de conteneurs privé constitue un espace sécurisé pour stocker les images de conteneurs. Il permet aux organisations de gérer et de contrôler facilement leurs images de conteneurs, tout en offrant une intégration simple avec les workflows existants d'intégration continue et de déploiement continu (CI/CD) pour un développement, des tests et un déploiement d'applications fluides.
+
+###
+
+Qu’est-ce que le data processing ?
+
+Le data processing, ou traitement des données, désigne le processus d’analyse des données brutes. En effet, ces vastes quantités d’informations s’avèrent capitales pour les entreprises. Une fois traitées, elles permettent une meilleure compréhension des chiffres de ventes, de l’efficacité d’une campagne marketing ou encore d’un risque financier. Cette opération s’articule en plusieurs étapes :
+
+- La collecte des données. La quantité d’informations recueillies influence la qualité du résultat. Elles peuvent provenir de différentes sources : fichiers client, inventaires, études antérieures, etc. Pour être utilisables, elles doivent être fiables
+- La préparation des informations. Il s’agit d’une phase de « nettoyage » de vos bases de données. Elle vise à éliminer les éléments de mauvaise qualité et/ou les erreurs.
+- L’importation des données travaillées et le démarrage du traitement. L’automatisation de cette analyse passe par un algorithme de machine learning.
+- L’interprétation des données. Cette étape vous permet de dégager des informations lisibles et exploitables par tous.
+- Le stockage des données. Il sert à conserver des données qui pourront servir lors de futures études.
+
+Notez que le stockage d’informations est soumis à certaines réglementations. Par exemple, le RGPD exige une solution sécurisée et conforme pour l’ensemble de vos données.
 
 ## Links
 
