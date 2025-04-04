@@ -132,31 +132,62 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 #### Description
 
-Créez et exécutez facilement des VM en ligne sur une infrastructure cloud fiable et hautes performances. Faites votre choix parmi des types de machines prédéfinis ou personnalisés pour les serveurs Web, les bases de données, l'IA, etc.
+Le cloud computing est un modèle de fourniture de services informatiques qui permet aux utilisateurs d’accéder à des ressources informatiques (comme des serveurs, du stockage, des bases de données, des applications et des services réseau) via Internet. Ces services sont facturés à la demande et à l’usage. Ce modèle informatique offre une flexibilité, une scalabilité et une efficacité considérables en éliminant la nécessité pour les entreprises de gérer leur propre infrastructure physique.
 
 #### Services
 
 ##### Virtual Machine Instances
 
-Garantie 99.99 % sauf pour Discovery
+Un large choix d’instances adaptées à tous vos usages
 
-- General Purpose: Ces instances offrent à vos serveurs de développement et vos applications web ou d'entreprise des ressources CPU/RAM équilibrées. Les vCores sont cadencés à 2 GHz et plus.
-- Compute Optimized: Ces instances sont idéales pour les applications nécessitant des fréquences de calcul importantes ou de la parallélisation de tâches. Les vCores sont cadencés à 2,3 GHz et plus.
-- Memory Optimized: Ces instances sont pensées pour les usages d'analyse des données et la datascience grâce à leurs ratios CPU/RAM optimisés et des IOPS accélérées. Les vCores sont cadencés à 2 GHz et plus.
-- Storage Optimized: Profitez d'IOPS ultrarapides grâce à des cartes NVMe spécialement conçues pour les bases de données et les applications big data
-- Discovery: Démarrez l’expérience Public Cloud avec des instances dont les ressources sont partagées, qui fourniront des performances stables à un prix très accessible.
+- **General Purpose**: Ces instances offrent à vos serveurs de développement et vos applications web ou d'entreprise des ressources CPU/RAM équilibrées. Les vCores sont cadencés à 2 GHz et plus.
+- **Compute Optimized**: Ces instances sont idéales pour les applications nécessitant des fréquences de calcul importantes ou de la parallélisation de tâches. Les vCores sont cadencés à 2,3 GHz et plus.
+- **Memory Optimized**: Ces instances sont pensées pour les usages d'analyse des données et la datascience grâce à leurs ratios CPU/RAM optimisés et des IOPS accélérées. Les vCores sont cadencés à 2 GHz et plus.
+- **Storage Optimized**: Profitez d'IOPS ultrarapides grâce à des cartes NVMe spécialement conçues pour les bases de données et les applications big data
+- **Discovery**: Démarrez l’expérience Public Cloud avec des instances dont les ressources sont partagées, qui fourniront des performances stables à un prix très accessible.
 
 ![ovh-003.png](/img/ovh-003.png)
 
+###### Pro
+
+- La base du cloud computing en mode IaaS.
+- Peut permettre une approche Lift and Shift.
+- Facile d'accès.
+
+###### Cons
+
+- Il n'y a que l'infra sous jacente qui est managé.
+- Il faut faire la M.C.O.
+
+> Notes
+>
+> - Garantie 99.99 % sauf pour Discovery
+
 ##### Cloud GPU
 
-- Inférence de modèles d’IA générative pour les chatbots
-- Deep learning appliqué à la vision par ordinateur
-- Rendu graphique de nouvelle génération
+Des serveurs cloud taillés pour le traitement de l'IA, des graphismes et des tâches massivement parallèles
+
+- Solutions Cloud GPU sur mesure
+- Prix transparents et compétitifs
+- Durabilité et efficacité
+- Sécurité des données et conformité
 
 ![ovh-004.png](/img/ovh-003.png)
 
+###### Pro
+
+- La base du cloud computing en mode IaaS.
+- Peut permettre une approche Lift and Shift.
+- Accès à un GPU.
+
+###### Cons
+
+- Il n'y a que l'infra sous jacente qui est managé.
+- Il faut faire la M.C.O.
+
 ##### Metal Instances
+
+Combinez les avantages du Bare Metal avec l’automatisation du cloud.
 
 - Les avantages du serveur dédié…
 - …combinés avec l’automatisation du cloud
@@ -193,9 +224,10 @@ Le stockage cloud est un service qui permet de sauvegarder des données sur des 
 
 #### Services
 
-> Note  
-> Les options des service block et object storage dépendent de la région.  
-> Globalement l'object storage est moins chère que le block storage.
+> Notes
+>
+> - Les options des service block et object storage dépendent de la région.
+> - Globalement l'object storage est moins chère que le block storage.
 
 ##### Block Storage
 
@@ -690,9 +722,9 @@ Développez votre activité et celle de votre clientèle à l’échelle mondial
 
 ## Misc
 
-### Qu’est-ce que le cloud computing ?
+### Quels sont les avantages du cloud computing ?
 
-Le cloud computing est un modèle de fourniture de services informatiques qui permet aux utilisateurs d’accéder à des ressources informatiques (comme des serveurs, du stockage, des bases de données, des applications et des services réseau) via internet. Ces services sont facturés à la demande et à l’usage. Ce modèle informatique offre une flexibilité, une scalabilité et une efficacité considérables en éliminant la nécessité pour les entreprises de gérer leur propre infrastructure physique.
+Les avantages du cloud computing sont nombreux : il permet une grande flexibilité et une scalabilité des ressources informatiques, réduit les coûts en faisant payer uniquement pour ce qui est utilisé, facilite l’accès aux services et applications de n’importe où et minimise la maintenance nécessaire, car l’infrastructure est gérée par le fournisseur.
 
 ### Quels sont les principaux types de cloud computing ?
 
