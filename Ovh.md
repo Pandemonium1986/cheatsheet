@@ -650,6 +650,17 @@ OVHcloud Service logs vous aide à suivre « qui a fait quoi, où et quand » su
 
 ## Local Zones
 
+Développez votre activité et celle de votre clientèle à l’échelle mondiale tout en opérant localement. Stimulez la croissance de votre entreprise en optimisant votre accès aux données, en améliorant les performances des applications et en tirant parti de la faible latence, du stockage optimal, de l’edge computing, etc.
+
+- Faible latence et proximité
+- Localisation des données
+- Couverture internationale
+- De hautes performances au meilleur prix
+- Flexibilité et évolutivité du cloud
+- Standard et facile d'utilisation
+
+![ovh-024.png](/img/ovh-024.png)
+
 ## Saving Plan
 
 - Optimisez vos coûts avec les Savings Plans
