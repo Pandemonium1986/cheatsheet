@@ -515,7 +515,7 @@ Le Machine learning as a Service (ou MLaaS) est un service cloud récent qui pro
 
 ##### AI Notebooks & Quantum Notebooks
 
-Accélérez le lancement de vos projets et modèles avec des notebooks entièrement gérés en quelques secondes. Accédez à Jupyter ou VS Code et démarrez rapidement avec les ressources adéquates.
+Accélérez le lancement de vos projets et modèles avec des notebooks entièrement gérés en quelques secondes. Accédez à Jupyter ou Visual Studio Code et démarrez rapidement avec les ressources adéquates.
 
 - Pour les développeurs et les data scientists
 - Tarification claire et flexible
@@ -562,7 +562,7 @@ Déployez facilement des modèles et des applications de machine learning en pro
 
 ###### Pro
 
-- Fournit des service Saas afin de faire tourner des algo headless ou des mini-apps.
+- Fournit des service SaaS afin de faire tourner des algo headless ou des mini-apps.
 
 ###### Cons
 
