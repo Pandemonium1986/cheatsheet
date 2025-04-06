@@ -301,6 +301,14 @@ Une connexion privée et flexible entre vos instances.
 - Extension aux autres services d’OVHcloud
 - Certifications ISO/IEC 27001, 27701 et HDS
 
+##### Pro
+
+- Obligatoire pour toutes construction d'un vpc (virtual private cloud).
+
+##### Cons
+
+- N/A.
+
 ##### Load Balancer
 
 L’OVHcloud Load Balancer vous permet d’assurer plus facilement l’évolutivité, la haute disponibilité et la résilience de vos applications. Pour ce faire, la charge de trafic est répartie de manière dynamique entre plusieurs instances et régions. Améliorez l’expérience utilisateur en automatisant la gestion du trafic et de la charge, tout en maîtrisant les coûts. En combinant le Load Balancer et laFloating IP, vous pouvez créer un point d’entrée unique et sécurisé pour votre application, tout en activant des scénarios de basculement et en protégeant vos ressources privées.
@@ -316,6 +324,16 @@ L’OVHcloud Load Balancer vous permet d’assurer plus facilement l’évolutiv
 
 ![ovh-015.png](/img/ovh-015.png)
 
+##### Pro
+
+- Permet d'avoir un LB dans le vpc.
+- Permet des déploiements blue green sur du legacy.
+- Fait office de terminaison SSL.
+
+##### Cons
+
+- A voir si obligatoire avec une gateway pour une mono-instance.
+
 ##### Floating IP
 
 Une Floating IP est une adresse IP publique et statique qui peut être réaffectée dynamiquement à plusieurs appareils sur votre réseau, ce qui facilite la haute disponibilité, la tolérance aux pannes et le basculement pour vos applications et services dans le cloud. Ce type d’IP peut être assigné à une instance comme un Load Balancer, puis rapidement réassigné. Vous pouvez également anticiper et gérer les allocations d’IP publiques grâce à l’automatisation via API.
@@ -326,6 +344,14 @@ Une Floating IP est une adresse IP publique et statique qui peut être réaffect
 
 ![ovh-016.png](/img/ovh-016.png)
 
+##### Pro
+
+- Obligatoire pour exposer un service.
+
+##### Cons
+
+- N/A.
+
 ##### Gateway
 
 Le service Gateway est le moyen le plus simple d’assurer une connexion sécurisée et évolutive entre une infrastructure vRack et un réseau connecté à internet. Il permet un accès internet sécurisé à toutes vos instances, sans nécessiter d'adresse IP publique séparée. Plusieurs offres sont disponibles, chacune disposant de capacités de bande passante différentes pour répondre à vos besoins spécifiques.
@@ -333,6 +359,15 @@ Le service Gateway est le moyen le plus simple d’assurer une connexion sécuri
 - Exposition flexible des services grâce aux Floating IP
 - Combiner un Load Balancer et des Floating IP
 - Trafic sortant vers internet
+
+##### Pro
+
+- Obligatoire pour exposer un service combinant LB & Floating IP.
+- Obligatoire pour avoir un traffic sorant vers internet.
+
+##### Cons
+
+- N/A.
 
 ##### Instance Public Traffic
 
