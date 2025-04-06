@@ -465,6 +465,16 @@ Gérez les variations d’activité en répartissant le trafic sur vos différen
 - Intégré directement à Kubernetes
 - Conforme et certifié
 
+###### Pro
+
+- Service managé compatible nativement avec l'offre ovh.
+- Seul moyen pour avoir un LB sur du multinode.
+- Compatible avec les ingress nginx.
+
+###### Cons
+
+- Compétence nécéssaire à l'opérationnalisation.
+
 ### Databases
 
 ![ovh-030.png](/img/ovh-030.png)
