@@ -301,11 +301,11 @@ Une connexion privée et flexible entre vos instances.
 - Extension aux autres services d’OVHcloud
 - Certifications ISO/IEC 27001, 27701 et HDS
 
-##### Pro
+###### Pro
 
 - Obligatoire pour toutes construction d'un vpc (virtual private cloud).
 
-##### Cons
+###### Cons
 
 - N/A.
 
@@ -324,13 +324,13 @@ L’OVHcloud Load Balancer vous permet d’assurer plus facilement l’évolutiv
 
 ![ovh-015.png](/img/ovh-015.png)
 
-##### Pro
+###### Pro
 
 - Permet d'avoir un LB dans le vpc.
 - Permet des déploiements blue green sur du legacy.
 - Fait office de terminaison SSL.
 
-##### Cons
+###### Cons
 
 - A voir si obligatoire avec une gateway pour une mono-instance.
 
@@ -344,11 +344,11 @@ Une Floating IP est une adresse IP publique et statique qui peut être réaffect
 
 ![ovh-016.png](/img/ovh-016.png)
 
-##### Pro
+###### Pro
 
 - Obligatoire pour exposer un service.
 
-##### Cons
+###### Cons
 
 - N/A.
 
@@ -360,12 +360,12 @@ Le service Gateway est le moyen le plus simple d’assurer une connexion sécuri
 - Combiner un Load Balancer et des Floating IP
 - Trafic sortant vers internet
 
-##### Pro
+###### Pro
 
 - Obligatoire pour exposer un service combinant LB & Floating IP.
 - Obligatoire pour avoir un traffic sorant vers internet.
 
-##### Cons
+###### Cons
 
 - N/A.
 
