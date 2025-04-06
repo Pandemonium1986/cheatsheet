@@ -124,7 +124,7 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 |                            | Key Management Service (KMS)     |                   |  <span style="color:orange">C</span>   |   <span style="color:green">S</span>   |
 |                            | Service Logs                     |                   |  <span style="color:orange">C</span>   | <span style="color:lawngreen">M</span> |
 
-## Public Cloud détail
+## Public Cloud deep dive
 
 ### Compute
 
