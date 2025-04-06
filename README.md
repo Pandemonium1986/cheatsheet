@@ -1,6 +1,6 @@
-# Pandemonium's cheatsheet
+# Pandemonium's cheat sheet
 
-My awesome cheatsheet, because they're awesomes. Don't forget to share/fork/star.
+My awesome cheat sheet, because they're awesomes. Don't forget to share/fork/star.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ Ce projet regroupe l'ensemble des curations sur les sujets qui me passionnent.
 
 ### Prerequisites
 
-L'ensemble des cheatsheet sont disponibles 'as in' ou via l'outil [hads](https://github.com/sinedied/hads).
+L'ensemble des cheat sheet sont disponibles 'as in' ou via l'outil [hads](https://github.com/sinedied/hads).
 
 ### Installing
 
@@ -26,10 +26,10 @@ Pour installer hads
 sudo npm install -g hads
 ```
 
-Pour lancer Pandemonium1986/cheatsheet depuis hads
+Pour lancer Pandemonium1986/cheat sheet depuis hads
 
 ```sh
-cd  ~/git/Pandemonium1986/cheatsheet
+cd  ~/git/Pandemonium1986/cheat sheet
 hads -o
 ```
 

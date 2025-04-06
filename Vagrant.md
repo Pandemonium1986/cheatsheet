@@ -74,13 +74,13 @@ Usage: vagrant [options] <command> [<args>]
 
 | Commands      | Description                                                                                                                                           |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ssh           | This will SSH into a running Vagrant machine and give you access to a shell.                                                                          |
+| SSH           | This will SSH into a running Vagrant machine and give you access to a shell.                                                                          |
 | port          | The port command displays the full list of guest ports mapped to the host machine ports.                                                              |
 | provision     | Runs any configured provisioners against the running Vagrant managed machine.                                                                         |
 | package       | This packages a currently running VirtualBox or Hyper-V environment into a re-usable box.                                                             |
 | global-status | This command will tell you the state of all active Vagrant environments on the system for the currently logged in user.                               |
 | validate      | This command validates your Vagrantfile.                                                                                                              |
-| ssh-config    | This will output valid configuration for an SSH config file to SSH into the running Vagrant machine from ssh directly (instead of using vagrant ssh). |
+| ssh-config    | This will output valid configuration for an SSH config file to SSH into the running Vagrant machine from SSH directly (instead of using vagrant SSH). |
 | version       | This command tells you the version of Vagrant you have installed as well as the latest version of Vagrant that is currently available.                |
 
 ### Vagrant Advanced
@@ -170,7 +170,7 @@ Boot vagrant Box :
 vagrant up
 ```
 
-Ssh connection :  
+SSH connection :  
 
 ```sh
 vagrant ssh

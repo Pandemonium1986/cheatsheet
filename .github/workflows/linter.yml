@@ -13,6 +13,8 @@ on:
       - main
   workflow_dispatch:
 
+permissions: read-all
+
 jobs:
   called-linter:
     permissions:

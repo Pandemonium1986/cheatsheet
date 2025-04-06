@@ -48,7 +48,7 @@ touch .pre-commit-config.yaml && \
 pre-commit sample-config > .pre-commit-config.yaml
 ```
 
-Install the git hook scripts
+Install the Git hook scripts
 
 ```sh
 cd MY_REPO && \
@@ -69,7 +69,7 @@ The configuration file is divided into three levels :
   - repos (see [here](https://pre-commit.com/#pre-commit-configyaml---repos)).
     - hooks(see [here](https://pre-commit.com/#pre-commit-configyaml---hooks)).
 
-Repos should be a git URL to clone.  
+Repos should be a Git URL to clone.  
 Hooks represent the "action" to perfom.  
 A repository can contain many hooks.
 

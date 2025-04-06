@@ -99,7 +99,7 @@ done
 
 ## Advanced customisation
 
-Generate your ssh key
+Generate your SSH key
 
 ```sh
 ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519 -C $(whoami)@$HOSTNAME
@@ -118,7 +118,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/cust
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 ```
 
-Change msys2 launch to switch from bash to zsh edit the `C:\Users\USER_NAME\.msys64\msys2_shell.cmd`
+Change msys2 launch to switch from bash to Zsh edit the `C:\Users\USER_NAME\.msys64\msys2_shell.cmd`
 
 ```powershell
 @echo off
