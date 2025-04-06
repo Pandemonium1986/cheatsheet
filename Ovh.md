@@ -23,7 +23,7 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 ### Produits
 
-| Produits                   |              MoSCoW (D.C               |            MoSCoW (A.V.P.G)            |
+| Produits                   |              MoSCoW (D.C)              |            MoSCoW (A.V.P.G)            |
 | :------------------------- | :------------------------------------: | :------------------------------------: |
 | Compute                    | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
 | Storage                    | <span style="color:lawngreen">M</span> | <span style="color:lawngreen">M</span> |
@@ -138,7 +138,7 @@ Le cloud computing est un modèle de fourniture de services informatiques qui pe
 
 ##### Virtual Machine Instances
 
-Un large choix d’instances adaptées à tous vos usages
+Un large choix d’instances adaptées à tous vos usages:
 
 - **General Purpose**: Ces instances offrent à vos serveurs de développement et vos applications web ou d'entreprise des ressources CPU/RAM équilibrées. Les vCores sont cadencés à 2 GHz et plus.
 - **Compute Optimized**: Ces instances sont idéales pour les applications nécessitant des fréquences de calcul importantes ou de la parallélisation de tâches. Les vCores sont cadencés à 2,3 GHz et plus.
@@ -165,7 +165,7 @@ Un large choix d’instances adaptées à tous vos usages
 
 ##### Cloud GPU
 
-Des serveurs cloud taillés pour le traitement de l'IA, des graphismes et des tâches massivement parallèles
+Des serveurs cloud taillés pour le traitement de l'IA, des graphismes et des tâches massivement parallèles.
 
 - Solutions Cloud GPU sur mesure.
 - Prix transparents et compétitifs.
@@ -189,13 +189,13 @@ Des serveurs cloud taillés pour le traitement de l'IA, des graphismes et des t�
 Combinez les avantages du Bare Metal avec l’automatisation du cloud.
 
 - Les avantages du serveur dédié…
-- …combinés avec l’automatisation du cloud
-- Une maîtrise des coûts assurée
-- Sécurité des données et conformité
+- …combinés avec l’automatisation du cloud.
+- Une maîtrise des coûts assurée.
+- Sécurité des données et conformité.
 
 ##### Instance Backup
 
-Des sauvegardes système à la demande
+Des sauvegardes système à la demande.
 
 À l’heure des déploiements automatisés et de « l’infrastructure as code », de nombreuses situations peuvent nécessiter une sauvegarde de votre système. Vos instances peuvent être sauvegardées à tout moment. La machine réalisera un export du disque de l’instance. Grâce à cela, vous pouvez donc industrialiser vos déploiements.
 
@@ -274,9 +274,9 @@ Il s’agit d’une technologie proposant un service de stockage en ligne, acces
 
 ##### Cold Archive
 
-- Stratégies de résilience à long terme
-- Service compatible S3\*
-- Archivage de données critiques
+- Stratégies de résilience à long terme.
+- Service compatible S3.
+- Archivage de données critiques.
 
 ![ovh-012.png](/img/ovh-012.png)
 
@@ -296,10 +296,10 @@ Une connexion privée et flexible entre vos instances.
 
 ![ovh-034.png](/img/ovh-034.png)
 
-- Réseaux étendus entre les localisations
-- Isolation
-- Extension aux autres services d’OVHcloud
-- Certifications ISO/IEC 27001, 27701 et HDS
+- Réseaux étendus entre les localisations.
+- Isolation.
+- Extension aux autres services d’OVHcloud.
+- Certifications ISO/IEC 27001, 27701 et HDS.
 
 ###### Pro
 
@@ -313,14 +313,14 @@ Une connexion privée et flexible entre vos instances.
 
 L’OVHcloud Load Balancer vous permet d’assurer plus facilement l’évolutivité, la haute disponibilité et la résilience de vos applications. Pour ce faire, la charge de trafic est répartie de manière dynamique entre plusieurs instances et régions. Améliorez l’expérience utilisateur en automatisant la gestion du trafic et de la charge, tout en maîtrisant les coûts. En combinant le Load Balancer et laFloating IP, vous pouvez créer un point d’entrée unique et sécurisé pour votre application, tout en activant des scénarios de basculement et en protégeant vos ressources privées.
 
-- Déployable dans les régions
-- Connecté aux réseaux privés
-- Gestion simplifiée
-- Charges de travail privées
-- Intégration à l’écosystème Public Cloud
-- Plusieurs protocoles de contrôle d'intégrité
-- Chiffrement SSL/TLS
-- Compatible avec les instances Public Cloud
+- Déployable dans les régions.
+- Connecté aux réseaux privés.
+- Gestion simplifiée.
+- Charges de travail privées.
+- Intégration à l’écosystème Public Cloud.
+- Plusieurs protocoles de contrôle d'intégrité.
+- Chiffrement SSL/TLS.
+- Compatible avec les instances Public Cloud.
 
 ![ovh-015.png](/img/ovh-015.png)
 
@@ -338,9 +338,9 @@ L’OVHcloud Load Balancer vous permet d’assurer plus facilement l’évolutiv
 
 Une Floating IP est une adresse IP publique et statique qui peut être réaffectée dynamiquement à plusieurs appareils sur votre réseau, ce qui facilite la haute disponibilité, la tolérance aux pannes et le basculement pour vos applications et services dans le cloud. Ce type d’IP peut être assigné à une instance comme un Load Balancer, puis rapidement réassigné. Vous pouvez également anticiper et gérer les allocations d’IP publiques grâce à l’automatisation via API.
 
-- Haute disponibilité
-- Migration des environnements
-- Point d’accès principal
+- Haute disponibilité.
+- Migration des environnements.
+- Point d’accès principal.
 
 ![ovh-016.png](/img/ovh-016.png)
 
@@ -356,9 +356,9 @@ Une Floating IP est une adresse IP publique et statique qui peut être réaffect
 
 Le service Gateway est le moyen le plus simple d’assurer une connexion sécurisée et évolutive entre une infrastructure vRack et un réseau connecté à internet. Il permet un accès internet sécurisé à toutes vos instances, sans nécessiter d'adresse IP publique séparée. Plusieurs offres sont disponibles, chacune disposant de capacités de bande passante différentes pour répondre à vos besoins spécifiques.
 
-- Exposition flexible des services grâce aux Floating IP
-- Combiner un Load Balancer et des Floating IP
-- Trafic sortant vers internet
+- Exposition flexible des services grâce aux Floating IP.
+- Combiner un Load Balancer et des Floating IP.
+- Trafic sortant vers internet.
 
 ###### Pro
 
@@ -375,7 +375,7 @@ Le trafic réseau public sortant des instances est inclus dans le prix des insta
 
 ##### Anti-DDoS
 
-Profitez d'une protection permanente sur l'ensemble de vos ressources cloud, pour garantir un niveau de service optimal
+Profitez d'une protection permanente sur l'ensemble de vos ressources cloud, pour garantir un niveau de service optimal.
 
 ### Containers & Orchestration
 
@@ -391,14 +391,14 @@ L'orchestration de conteneurs est un processus automatisé qui permet de gérer 
 
 Unifiez l’administration de vos clusters Kubernetes grâce à un outil managé de gestion centralisée.
 
-- Versatilité
-- Sécurité
-- Scalabilité
-- Support
+- Versatilité.
+- Sécurité.
+- Scalabilité.
+- Support.
 
 ###### Pro
 
-- La gestion du rancher est managé
+- La gestion du rancher est managé.
 - Maitrise du déploiement des clusters k8s.
 - Possibilité de déployer en mode multi cloud et/ou on premise.
 
@@ -420,10 +420,10 @@ Unifiez l’administration de vos clusters Kubernetes grâce à un outil managé
 
 Libérez-vous de l’installation et de la maintenance de vos clusters Kubernetes et déployez rapidement vos applications grâce à la solution d’orchestration de conteneurs de référence.
 
-- Gestion intégrale par OVHcloud
-- Interopérabilité
-- Écosystème de services
-- Évolutivité et résilience
+- Gestion intégrale par OVHcloud.
+- Interopérabilité.
+- Écosystème de services.
+- Évolutivité et résilience.
 
 ###### Pro
 
@@ -460,10 +460,10 @@ Stockez, gérez et accédez facilement à vos images de conteneurs et Helm chart
 Gérez les variations d’activité en répartissant le trafic sur vos différentes ressources.  
 Équilibrez la charge de votre application en temps réel sur plusieurs nœuds de manière automatique et sécurisée.
 
-- 99,99 % de disponibilité
-- Gestion automatique des nœuds
-- Intégré directement à Kubernetes
-- Conforme et certifié
+- 99,99 % de disponibilité.
+- Gestion automatique des nœuds.
+- Intégré directement à Kubernetes.
+- Conforme et certifié.
 
 ###### Pro
 
@@ -499,7 +499,7 @@ Accélérez votre time to market en nous confiant l’administration de vos base
 
 ##### Managed Caching
 
-Votre service « in-memory database » NoSQL compatible Redis® OSS et managée par OVHcloud. Améliorez la vitesse d'exécution de vos applications grâce à une solution de caching haut performance
+Votre service « in-memory database » NoSQL compatible Redis® OSS et managée par OVHcloud. Améliorez la vitesse d'exécution de vos applications grâce à une solution de caching haut performance.
 
 ##### Cassandra
 
@@ -552,10 +552,10 @@ Kafka Connect permet de connecter des systèmes externes à un cluster Apache Ka
 
 Créez des tableaux de bord et des graphiques dynamiques depuis différentes sources avec la plateforme Grafana®.
 
-- Open-source et managé
-- Rapport performances/prix
-- Sécurité et conformité
-- Plus de 60 services Public Cloud
+- Open-source et managé.
+- Rapport performances/prix.
+- Sécurité et conformité.
+- Plus de 60 services Public Cloud.
 
 ![ovh-018.png](/img/ovh-018.png)
 
@@ -572,10 +572,10 @@ Créez des tableaux de bord et des graphiques dynamiques depuis différentes sou
 
 Augmentez la visibilité des environnements de vos applications en collectant, traitant, analysant et stockant vos logs sur une plateforme à la fois complète et managée. L'analyse de logs est essentielle pour maintenir votre infrastructure et vos applications en bon état de fonctionnement.
 
-- Standard et réversible
-- Performante et évolutive
-- Tarification complète
-- Sécurité et conformité
+- Standard et réversible.
+- Performante et évolutive.
+- Tarification complète.
+- Sécurité et conformité.
 
 ![ovh-019.png](/img/ovh-019.png)
 
@@ -639,10 +639,10 @@ Le Machine learning as a Service (ou MLaaS) est un service cloud récent qui pro
 
 Accélérez le lancement de vos projets et modèles avec des notebooks entièrement gérés en quelques secondes. Accédez à Jupyter ou Visual Studio Code et démarrez rapidement avec les ressources adéquates.
 
-- Pour les développeurs et les data scientists
-- Tarification claire et flexible
-- Vos frameworks AI préférés
-- Un cloud européen pour le respect de vos données
+- Pour les développeurs et les data scientists.
+- Tarification claire et flexible.
+- Vos frameworks AI préférés.
+- Un cloud européen pour le respect de vos données.
 
 ![ovh-021.png](/img/ovh-022.png)
 
@@ -661,10 +661,10 @@ Accélérez le lancement de vos projets et modèles avec des notebooks entièrem
 
 Entraînez efficacement et simplement vos modèles d’intelligence artificielle, de machine learning et de deep learning tout en optimisant vos usages GPU.
 
-- Pour les équipes de développement et les data scientists
-- Optimisation de l’usage des ressources
-- Puissance GPU au meilleur prix
-- Certifications et conformité
+- Pour les équipes de développement et les data scientists.
+- Optimisation de l’usage des ressources.
+- Puissance GPU au meilleur prix.
+- Certifications et conformité.
 
 ###### Pro
 
@@ -678,9 +678,9 @@ Entraînez efficacement et simplement vos modèles d’intelligence artificielle
 
 Déployez facilement des modèles et des applications de machine learning en production, créez vos points d’accès API en toute simplicité et réalisez des prédictions efficaces.
 
-- Flexibilité, performance et haute disponibilité
-- Déploiement rapide et architecture managée
-- Sécurité et conformité
+- Flexibilité, performance et haute disponibilité.
+- Déploiement rapide et architecture managée.
+- Sécurité et conformité.
 
 ###### Pro
 
@@ -727,11 +727,11 @@ Identité, sécurité et opérations est une gamme de services d'OVHcloud. Ils v
 Gérez de manière sécurisée l’identité de vos utilisateurs et applications, ainsi que leurs droits via une interface unique pour tous vos services.  
 La solution IAM d’OVHcloud assure une gestion granulaire des accès à vos produits OVHcloud et renforce la sécurité de votre gestion des accès en s’appuyant sur une interface centralisée.
 
-- Identité fédérée
-- Unifié et harmonisé sur l’ensemble du portefeuille OVHcloud y compris pour les logiciels tiers
-- Gestion fine des stratégies
-- Une plus grande sécurité pour vos services
-- Inclus sans frais supplémentaires
+- Identité fédérée.
+- Unifié et harmonisé sur l’ensemble du portefeuille OVHcloud y compris pour les logiciels tiers.
+- Gestion fine des stratégies.
+- Une plus grande sécurité pour vos services.
+- Inclus sans frais supplémentaires.
 
 Les politiques contiennent une liste d'identités (comptes, utilisateurs, groupes d'utilisateurs) concernées par les politiques, une liste de ressources auxquelles les politiques doivent s'appliquer et une liste d'actions autorisées sur ces ressources.
 
@@ -749,10 +749,10 @@ Les politiques contiennent une liste d'identités (comptes, utilisateurs, groupe
 
 Augmentez la visibilité des environnements de vos applications en collectant, traitant, analysant et stockant vos logs sur une plateforme à la fois complète et managée. L'analyse de logs est essentielle pour maintenir votre infrastructure et vos applications en bon état de fonctionnement.
 
-- Standard et réversible
-- Performante et évolutive
-- Tarification complète
-- Sécurité et conformité
+- Standard et réversible.
+- Performante et évolutive.
+- Tarification complète.
+- Sécurité et conformité.
 
 ![ovh-014.png](/img/ovh-014.png)
 
@@ -764,7 +764,7 @@ Augmentez la visibilité des environnements de vos applications en collectant, t
 
 ###### Cons
 
-- Tariification incompréhensible
+- Tarification incompréhensible.
 
 ##### Key Management Service (KMS)
 
@@ -772,45 +772,45 @@ Améliorez votre sécurité et gérez efficacement vos clés de chiffrement avec
 
 Conçu pour une intégration transparente, notre KMS vous permet de gérer de manière centralisée les clés de chiffrement de toutes vos applications, qu'elles soient hébergées dans le cloud ou on-premises. Cela maximise la sécurisation des données et rationalise les opérations de sécurité.
 
-- Protection instantanée des données grâce au chiffrement en un clic
-- Sécurité renforcée avec gestion complète des accès aux clés
-- Vos clés : renforcez la confidentialité des données avec Bring Your Own Keys (BYOK)
-- Modèle de tarification prévisible : requêtes incluses sans frais supplémentaires
-- Certification Nutanix Ready
-- SDK et CLI open source
+- Protection instantanée des données grâce au chiffrement en un clic.
+- Sécurité renforcée avec gestion complète des accès aux clés.
+- Vos clés : renforcez la confidentialité des données avec Bring Your Own Keys (BYOK).
+- Modèle de tarification prévisible : requêtes incluses sans frais supplémentaires.
+- Certification Nutanix Ready.
+- SDK et CLI open source.
 
 ##### Service Logs (Beta)
 
 OVHcloud Service logs vous aide à suivre « qui a fait quoi, où et quand » sur l’ensemble de vos ressources OVHcloud. Combinée à Logs Data Platform, cette solution vous permet de transformer vos logs en données précieuses à l'aide d'outils de stockage, d'archivage, d'interrogation et de visualisation. Vous pouvez désormais surveiller vos données et votre système en temps réel, pour une meilleure sécurité et une efficacité opérationnelle accrue.
 
-- Efficacité opérationnelle accrue
-- Sécurité renforcée
-- Conformité sans effort
-- Intégration fluide et non intrusive avec le catalogue de services OVHcloud
-- Gestion unifiée des logs
-- Solution open source évolutive et entièrement managée
+- Efficacité opérationnelle accrue.
+- Sécurité renforcée.
+- Conformité sans effort.
+- Intégration fluide et non intrusive avec le catalogue de services OVHcloud.
+- Gestion unifiée des logs.
+- Solution open source évolutive et entièrement managée.
 
 ## Local Zones
 
 Développez votre activité et celle de votre clientèle à l’échelle mondiale tout en opérant localement. Stimulez la croissance de votre entreprise en optimisant votre accès aux données, en améliorant les performances des applications et en tirant parti de la faible latence, du stockage optimal, de l’edge computing, etc.
 
-- Faible latence et proximité
-- Localisation des données
-- Couverture internationale
-- De hautes performances au meilleur prix
-- Flexibilité et évolutivité du cloud
-- Standard et facile d'utilisation
+- Faible latence et proximité.
+- Localisation des données.
+- Couverture internationale.
+- De hautes performances au meilleur prix.
+- Flexibilité et évolutivité du cloud.
+- Standard et facile d'utilisation.
 
 ![ovh-024.png](/img/ovh-024.png)
 
 ## Saving Plan
 
-- Optimisez vos coûts avec les Savings Plans
-- Évoluez à votre rythme
-- Gagnez en prévisibilité
-- Économisez sur vos workloads stables
-- Pilotez la croissance de votre application
-- Gérez la saisonnalité de votre infrastructure
+- Optimisez vos coûts avec les Savings Plans.
+- Évoluez à votre rythme.
+- Gagnez en prévisibilité.
+- Économisez sur vos workloads stables.
+- Pilotez la croissance de votre application.
+- Gérez la saisonnalité de votre infrastructure.
 
 ![ovh-009.png](/img/ovh-009.png)
 
