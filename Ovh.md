@@ -692,11 +692,11 @@ Déployez facilement des modèles et des applications de machine learning en pro
 
 ##### Lettria
 
-N/A
+- N/A.
 
 ##### Voxist
 
-N/A
+- N/A.
 
 ##### NVIDIA NGC Platform
 
@@ -737,6 +737,14 @@ Les politiques contiennent une liste d'identités (comptes, utilisateurs, groupe
 
 ![ovh-013.png](/img/ovh-013.png)
 
+###### Pro
+
+- Oligatoire pour créer des identités, des actions et des policies.
+
+###### Cons
+
+- Compétence nécéssaire à l'opérationnalisation.
+
 ##### Logs Data Platform
 
 Augmentez la visibilité des environnements de vos applications en collectant, traitant, analysant et stockant vos logs sur une plateforme à la fois complète et managée. L'analyse de logs est essentielle pour maintenir votre infrastructure et vos applications en bon état de fonctionnement.
@@ -747,6 +755,16 @@ Augmentez la visibilité des environnements de vos applications en collectant, t
 - Sécurité et conformité
 
 ![ovh-014.png](/img/ovh-014.png)
+
+###### Pro
+
+- Solution clefs en main.
+- C'est un service cross service.
+- Obligatoire pour des besoins d'audit et de surveillance des accès.
+
+###### Cons
+
+- Tariification incompréhensible
 
 ##### Key Management Service (KMS)
 
