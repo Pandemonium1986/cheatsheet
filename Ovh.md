@@ -227,26 +227,50 @@ Afin de démarrer au plus vite votre infrastructure, OVHcloud fournit les images
 
 Le stockage cloud est un service qui permet de sauvegarder des données sur des serveurs distants accessibles via internet. Il offre la possibilité de stocker, gérer et consulter des fichiers et des données depuis n’importe quel appareil connecté à internet, à tout moment. Ce type de stockage est géré par des fournisseurs de services qui maintiennent l’infrastructure et garantissent la sécurité et la disponibilité des données. Le stockage cloud est souvent utilisé pour la sauvegarde de données, le partage de fichiers et la collaboration en ligne. Il représente une alternative flexible et évolutive au stockage traditionnel sur disque dur, sur des dispositifs de stockage locaux ou sur des serveurs dédiés
 
-#### Services
-
 > Notes
 >
 > - Les options des service block et object storage dépendent de la région.
 > - Globalement l'object storage est moins chère que le block storage.
 
+#### Services
+
 ##### Block Storage
 
-- Sécurisé par la réplication
-- Basé sur Ceph
-- Performance et scalabilité au meilleur coût
+Block Storage est une solution de stockage de données par blocs rendue possible grâce à une méthode divisant les contenus en blocs de données de taille fixe. Ces dernières sont stockées sur des disques attachés à vos instances dans des baies de stockage. Vos informations sont réparties sur des disques indépendants de votre machine. Chaque bloc de données est traité comme une unité distincte et reçoit un identifiant unique. Ainsi, vous contrôlez votre capacité de stockage par l’ajout de disques selon vos besoins, tout en maîtrisant la sécurité et les performances de votre infrastructure.
+
+- Sécurisé par la réplication.
+- Basé sur Ceph.
+- Performance et scalabilité au meilleur coût.
+
+###### Pro
+
+- Intéréssant pour un accès rapide à la données.
+- Backupable et snapshotable.
+
+###### Cons
+
+- Pas de client S3.
+- Pas d'accès direct (A confirmer).
 
 ##### Object Storage
 
-- Coûts de stockage maîtrisés et optimisés
-- Solution réversible et interopérable
-- Résilience et haute disponibilité de vos données
+Il s’agit d’une technologie proposant un service de stockage en ligne, accessible via API et permettant de stocker des données sans limite d’espace, le cluster d’Object Storage étant géré par le fournisseur de cloud. Il est possible de pousser tous types de données dans un service de stockage d’objets.
+
+- Coûts de stockage maîtrisés et optimisés.
+- Solution réversible et interopérable.
+- Résilience et haute disponibilité de vos données.
 
 ![ovh-010.png](/img/ovh-010.png)
+
+###### Pro
+
+- Client S3.
+- Accès direct au stockage.
+
+###### Cons
+
+- Pas de backup si ce n'est la Cloud Archive.
+- Moins performant que le block par nature.
 
 ##### Cold Archive
 
@@ -269,6 +293,8 @@ Un réseau cloud est une infrastructure virtuelle permettant de connecter appare
 ##### Private Network
 
 Une connexion privée et flexible entre vos instances.
+
+![ovh-034.png](/img/ovh-034.png)
 
 - Réseaux étendus entre les localisations
 - Isolation
