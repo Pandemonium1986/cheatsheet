@@ -37,7 +37,7 @@ Tests :
 
 The entire DevOps lifecycle in one application.  
 Manage -> Plan -> Create -> Verify -> Package -> Release -> Configure -> Monitor -> Secure
-![Lifecycle](/img/gitlab-001.png)
+![Lifecycle](img/gitlab-001.png)
 
 ### DevOps lifecycle
 
@@ -176,10 +176,10 @@ _Logging, Cluster Monitoring, Tracing_
 **Defend** : Defend your apps and infrastructure from security intrusions.  
 
 **The DevOps lifecycle cross the arguments**  
-![Devops Lifecycle](/img/gitlab-002.png)
+![Devops Lifecycle](img/gitlab-002.png)
 
 **DevOps Tools Landscape**  
-![DevOps Tools Landscape](/img/gitlab-003.png)
+![DevOps Tools Landscape](img/gitlab-003.png)
 
 ## Procédure d'installation docker
 

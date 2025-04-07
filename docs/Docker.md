@@ -78,7 +78,7 @@ By contrast, a virtual machine (VM) runs a full-blown “guest” operating syst
 
 |            Container           |            Vms           |
 | :----------------------------: | :----------------------: |
-| ![Container](/img/dck-001.png) | ![Vms](/img/dck-002.png) |
+| ![Container](img/dck-001.png) | ![Vms](img/dck-002.png) |
 
 ## Tutoriels Dockers
 

@@ -1,0 +1,71 @@
+site_name: Michael M. Cheat sheet
+site_url: https://cheatsheet.pdm.ovh
+repo_url: https://github.com/Pandemonium1986/cheatsheet
+repo_name: Cheat sheet
+edit_uri: -/edit/master/docs/
+site_description: My awesome cheatsheet, because they're awesomes
+site_author: Michael Maffait
+# nav:
+#   - "Home": index.md
+#   - "Projects":
+#       - "Project 001":
+#           - "Lot 001": "pj001/lt001/page001.md"
+#           - "Lot 002": "pj001/lt002/page001.md"
+#           - "Lot 003": "pj001/lt003/page001.md"
+#       - "Project 002":
+#           - "Lot 001": "pj001/lt001/page001.md"
+#   - "Mkdocs Cheatsheet": mkdocs-cheatsheet.md
+theme:
+  name: material
+  # font:
+  #   text: Source Sans Pro
+  #   code: Source Sans Pro Mono
+  icon:
+    repo: fontawesome/brands/github
+  language: en
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  logo: img/cheatsheet.png
+  plugins:
+    - search
+  features:
+    - navigation.top
+    - search.highlight
+# docs_dir: docs
+# site_dir: site
+extra_css:
+  - stylesheets/extra.css
+extra:
+  generator: false
+strict: true
+dev_addr: 192.168.56.10:8081
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
