@@ -17,9 +17,9 @@ site_author: Michael Maffait
 #   - "Mkdocs Cheatsheet": mkdocs-cheatsheet.md
 theme:
   name: material
-  font:
-    text: Source Sans Pro
-    code: Source Sans Pro Mono
+  # font:
+  #   text: Source Sans Pro
+  #   code: Source Sans Pro Mono
   icon:
     repo: fontawesome/brands/github
   language: en
