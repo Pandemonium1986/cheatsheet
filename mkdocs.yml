@@ -35,7 +35,7 @@ nav:
   - "Software":
     - "Atom": "software/atom.md"
     - "Msys2": "software/msys2.md"
-    - "Reveal": "software/reveal.js".md
+    - "Reveal": "software/reveal.js.md"
     - "Vagrant": "software/vagrant.md"
     - "Virtualbox": "software/virtualbox.md"
     - "Vscode": "software/vscode.md"
@@ -68,8 +68,8 @@ theme:
     - search.highlight
 # docs_dir: docs
 # site_dir: site
-extra_css:
-  - stylesheets/extra.css
+# extra_css:
+#   - stylesheets/extra.css
 extra:
   generator: false
 strict: true
