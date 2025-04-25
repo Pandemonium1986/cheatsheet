@@ -1,41 +1,36 @@
 # Pandemonium's cheat sheet
 
-My awesome cheat sheet, because they're awesomes. Don't forget to share/fork/star.
+![GitHub release](https://img.shields.io/github/release/pandemonium1986/cheatsheet.svg?logo=github)
+![Github license](https://img.shields.io/github/license/pandemonium1986/cheatsheet.svg?logo=github)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
+My awesome cheat sheet, because they're awesomes.  
+Don't forget to **share/fork/star**.
 
 ## Getting Started
 
-Ce projet regroupe l'ensemble des curations sur les sujets qui me passionnent.
+This project brings together all the curations on the subjects that fascinate me.
 
 ### Prerequisites
 
-L'ensemble des cheat sheet sont disponibles 'as in' ou via l'outil [hads](https://github.com/sinedied/hads).
+All this cheat sheet are available 'as in' or with [mkdocs](https://squidfunk.github.io/mkdocs-material/).
 
 ### Installing
 
-Cloner simplement le repository
+Simply clone the repository
 
 ```sh
-mkdir -p ~/git/Pandemonium1986
-cd  ~/git/Pandemonium1986
-git clone https://github.com/Pandemonium1986/cheatsheet.git
+mkdir -p ~/git/pandemonium1986
+cd  ~/git/pandemonium1986
+git clone https://github.com/pandemonium1986/cheatsheet.git
 ```
 
-Pour installer hads
+To run Pandemonium1986/cheatsheet with mkdocs
 
 ```sh
-sudo npm install -g hads
+cd  ~/git/pandemonium1986/cheatsheet
+mkdocs serve -a 192.168.56.10:8081
 ```
-
-Pour lancer Pandemonium1986/cheat sheet depuis hads
-
-```sh
-cd  ~/git/Pandemonium1986/cheat sheet
-hads -o
-```
-
-### Hads Browsing
-
-[[Index]] <!-- markdownlint-disable-line -->
 
 ## License
 
@@ -43,4 +38,4 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## Authors
 
-- **Michael Maffait** - _Initial work_ - [Pandemonium1986](https://github.com/Pandemonium1986)
+- **Michael Maffait** - _Initial work_ - [Pandemonium1986](https://github.com/pandemonium1986)
