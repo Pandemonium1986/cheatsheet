@@ -85,10 +85,10 @@ curl -H Host:whoami.docker.localhost http://127.0.0.1
 ## Basics
 
 Quick overview  
-![Overview](img/tfk-001.png)
+![Overview](../img/tfk-001.png)
 
 Zoom into traefik  
-![Zoom](img/tfk-002.png)
+![Zoom](../img/tfk-002.png)
 
 - Incoming requests end on entrypoints, as the name suggests, they are the network entry points into Traefik (listening port, SSL, traffic redirection...).
 - Traffic is then forwarded to a matching frontend. A frontend defines routes from entrypoints to backends. Routes are created using requests fields (Host, Path, Headers...) and can match or not a request.

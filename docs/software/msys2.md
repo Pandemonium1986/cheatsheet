@@ -13,17 +13,17 @@ Start by getting and installing the [Msys2](https://repo.msys2.org/distrib/x86_6
 
 Run the installer and follow the steps. Make sure to install MSYS2 in your user directory. `C:\Users\USER_NAME\.msys64`
 
-![msys2-001](img/msys2-001.png)
+![msys2-001](../img/msys2-001.png)
 
-![msys2-002](img/msys2-002.png)
+![msys2-002](../img/msys2-002.png)
 
-![msys2-003](img/msys2-003.png)
+![msys2-003](../img/msys2-003.png)
 
-![msys2-004](img/msys2-004.png)
+![msys2-004](../img/msys2-004.png)
 
-![msys2-005](img/msys2-005.png)
+![msys2-005](../img/msys2-005.png)
 
-![msys2-006](img/msys2-006.png)
+![msys2-006](../img/msys2-006.png)
 
 ## Post installation procedure
 

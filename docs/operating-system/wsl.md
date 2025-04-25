@@ -25,16 +25,16 @@ start cmd /k "D:\Downloads\Colortool\colortool.exe -b Argonaut.itermcolors && ec
 Configurer la console WSL comme ceci :  
 
 Options :  
-![Options](img/wsl-001.png)  
+![Options](../img/wsl-001.png)  
 
 Police :  
-![Police](img/wsl-002.png)  
+![Police](../img/wsl-002.png)  
 
 Configuration :  
-![Configuration](img/wsl-003.png)  
+![Configuration](../img/wsl-003.png)  
 
 Couleurs :  
-![Couleurs](img/wsl-004.png)  
+![Couleurs](../img/wsl-004.png)  
 
 ## Activer le DrvFs
 
