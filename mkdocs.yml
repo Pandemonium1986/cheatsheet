@@ -5,16 +5,40 @@ repo_name: Cheat sheet
 edit_uri: -/edit/master/docs/
 site_description: My awesome cheatsheet, because they're awesomes
 site_author: Michael Maffait
-# nav:
-#   - "Home": index.md
-#   - "Projects":
-#       - "Project 001":
-#           - "Lot 001": "pj001/lt001/page001.md"
-#           - "Lot 002": "pj001/lt002/page001.md"
-#           - "Lot 003": "pj001/lt003/page001.md"
-#       - "Project 002":
-#           - "Lot 001": "pj001/lt001/page001.md"
-#   - "Mkdocs Cheatsheet": mkdocs-cheatsheet.md
+nav:
+  - "Home": index.md
+  - "Cloud":
+      - "Azure": "cloud/azure.md"
+      - "Azure DevOps": "cloud/azure-devops.md"
+      - "Ovh": "cloud/ovh.md"
+  - "Development":
+      - "Jhipster": "development/jhipster.md"
+  - "DevOps":
+      - "Commit": "devops/commit.md"
+      - "Docker Compose": "devops/docker-compose.md"
+      - "Docker": "devops/docker.md"
+      - "Gitlab": "devops/gitlab.md"
+      - "Git": "devops/git.md"
+      - "Jenkins": "devops/jenkins.md"
+      - "Kubernetes": "devops/kubernetes.md"
+      - "Longhorn": "devops/longhorn.md"
+      - "Minikube": "devops/minikube.md"
+      - "Molecule": "devops/molecule.md"
+      - "Nexus3": "devops/nexus3.md"
+      - "Portainer": "devops/portainer.md"
+      - "Traefik": "devops/traefik.md"
+  - "Os":
+      - "Debian": "operating-system/debian.md"
+      - "Mint": "operating-system/mint.md"
+      - "Wsl2": "operating-system/wsl2.md"
+      - "Wsl": "operating-system/wsl.md"
+  - "Software":
+    - "Atom": "software/atom.md"
+    - "Msys2": "software/msys2.md"
+    - "Reveal": "software/reveal.js".md
+    - "Vagrant": "software/vagrant.md"
+    - "Virtualbox": "software/virtualbox.md"
+    - "Vscode": "software/vscode.md"
 theme:
   name: material
   # font:
