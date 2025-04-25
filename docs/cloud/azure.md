@@ -21,7 +21,7 @@
 - Networking - such as secure connections between the cloud provider and your company.
 - Analytics - such as visualizing telemetry and performance data.
 
-![Vm/Container/Serverless](img/az-002.png)
+![Vm/Container/Serverless](../img/az-002.png)
 
 #### Benefits of cloud computing
 
@@ -154,7 +154,7 @@ SaaS is software that is centrally hosted and managed for the end customer. It i
 
 **Management responsibilities**
 
-![scope-levels](img/az-003.png)
+![scope-levels](../img/az-003.png)
 
 ## Core Cloud Services - Introduction to Azure
 
@@ -164,13 +164,13 @@ Azure is Microsoft's cloud computing platform. Azure is a continually expanding 
 
 #### Tour of Azure services
 
-![azure-services](img/az-004.png)
+![azure-services](../img/az-004.png)
 
 ## Core Cloud Services - Azure architecture and service guarantees
 
 #### Understand Datacenters and Regions in Azure
 
-![azure-regions](img/az-005.png)
+![azure-regions](../img/az-005.png)
 
 A region is a geographical area on the planet containing at least one, but potentially multiple datacenters that are nearby and networked together with a low-latency network. Azure intelligently assigns and controls the resources within each region to ensure workloads are appropriately balanced.
 
@@ -189,7 +189,7 @@ Geographies are broken up into the following areas:
 
 Availability Zones are physically separate datacenters within an Azure region.
 
-![azure-regions](img/az-006.png)
+![azure-regions](../img/az-006.png)
 
 #### Understand Region Pairs in Azure
 
@@ -221,7 +221,7 @@ When you sign up, an Azure subscription is created by default. An Azure subscrip
 - Organizational structures.
 - Billing: You might.
 
-![azure-billing](img/az-007.png)
+![azure-billing](../img/az-007.png)
 
 #### Azure support options
 
@@ -285,7 +285,7 @@ You can run single VMs for testing, development, or minor tasks; or you can grou
 - Azure Batch :
     Azure Batch enables large-scale job scheduling and compute management with the ability to scale to tens, hundreds, or thousands of VMs.
 
-![scope-levels](img/az-008.png)
+![scope-levels](../img/az-008.png)
 
 #### Explore Containers in Azure
 
@@ -394,7 +394,7 @@ Azure provides security and high availability to your data through encryption an
 - Storage types.
 - Agility.
 
-![scope-levels](img/az-009.png)
+![scope-levels](../img/az-009.png)
 
 ## Core Cloud Services - Azure networking options
 
@@ -408,7 +408,7 @@ An N-tier architecture divides an application into two or more logical tiers. Ar
 - The application tier runs business logic.
 - The data tier includes databases and other storage that hold product information and customer orders.
 
-![n-tiers](img/az-010.png)
+![n-tiers](../img/az-010.png)
 
 **What's an Azure region?**
 
@@ -445,7 +445,7 @@ A load balancer distributes traffic evenly among each system in a pool. A load b
 
 Azure Load Balancer is a load balancer service that Microsoft provides that helps take care of the maintenance for you. Load Balancer supports inbound and outbound scenarios, provides low latency and high throughput, and scales up to millions of flows for all Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) applications.
 
-![azure-lb](img/az-011.png)
+![azure-lb](../img/az-011.png)
 
 **Azure Application Gateway**
 
@@ -479,23 +479,23 @@ Compare latency to bandwidth. Bandwidth refers to the amount of data that can fi
 
 One way to reduce latency is to provide exact copies of your service in more than one region. The following illustration shows an example of global deployment.
 
-![scale-region](img/az-012.png)
+![scale-region](../img/az-012.png)
 
 **Use Traffic Manager to route users to the closest endpoint**
 
 One answer is Azure Traffic Manager. Traffic Manager uses the DNS server that's closest to the user to direct user traffic to a globally distributed endpoint.
 
-![scale-region](img/az-013.png)
+![scale-region](../img/az-013.png)
 
 ## Security, responsibility, and trust in Azure
 
 #### Cloud security is a shared responsibility
 
-![shared-responsibility](img/az-014.png)
+![shared-responsibility](../img/az-014.png)
 
 **A layered approach to security**
 
-![layered-approach](img/az-015.png)
+![layered-approach](../img/az-015.png)
 
 - Data :
     It's the responsibility of those storing and controlling access to data to ensure that it's properly secured.
@@ -565,7 +565,7 @@ Roles are sets of permissions, like "Read-only" or "Contributor", that users can
 
 Identities are mapped to roles directly or through group membership. Separating security principals, access permissions, and resources provides simple access management and fine-grained control. Administrators are able to ensure the minimum necessary permissions are granted.
 
-![rbac](img/az-016.png)
+![rbac](../img/az-016.png)
 
 #### Encryption
 
@@ -576,11 +576,11 @@ Identities are mapped to roles directly or through group membership. Separating 
 
 **Encryption at rest**
 
-![encryption-rest](img/az-017.png)
+![encryption-rest](../img/az-017.png)
 
 **Encryption in transit**
 
-![encryption-rest](img/az-018.png)
+![encryption-rest](../img/az-018.png)
 
 **Encryption on Azure**
 
@@ -608,7 +608,7 @@ You can store your certificates in Azure Key Vault - much like any other secret.
 - Azure Application Gateway is a load balancer that includes a Web Application Firewall (WAF) that provides protection from common, known vulnerabilities in sites.
 - Network virtual appliances (NVAs)are ideal options for non-HTTP services or advanced configurations, and are similar to hardware firewall appliances.
 
-![azure-ddos](img/az-019.png)
+![azure-ddos](../img/az-019.png)
 
 #### Protect your shared documents
 
@@ -644,7 +644,7 @@ Access management occurs at the Azure subscription level. This allows an organiz
 
 Azure Management Groups are containers for managing access, policies, and compliance across multiple Azure subscriptions.
 
-![azure-management-groups](img/az-020.png)
+![azure-management-groups](../img/az-020.png)
 
 #### Define standard resources with Azure Blueprints
 
@@ -695,16 +695,16 @@ Resource groups are also a scope for applying role-based access control (RBAC) p
 **Organizing principles**
 
 Core infrastructure :  
-![rg-infrastructure](img/az-021.png)
+![rg-infrastructure](../img/az-021.png)
 
 Environments :  
-![rg-environments](img/az-022.png)
+![rg-environments](../img/az-022.png)
 
 Departments :  
-![core-departments](img/az-023.png)
+![core-departments](../img/az-023.png)
 
 Combinaison :  
-![core-combinaison](img/az-024.png)
+![core-combinaison](../img/az-024.png)
 
 #### Use tagging to organize resources
 
@@ -816,7 +816,7 @@ If you are starting to migrate to the cloud, a useful tool you can use to predic
 
 ### Organiser vos ressources Azure
 
-![scope-levels](img/az-001.png)
+![scope-levels](../img/az-001.png)
 
 - **Groupes d’administration** : Ces groupes sont des conteneurs qui vous permettent de gérer plus facilement l’accès, la stratégie et la conformité pour plusieurs abonnements. Tous les abonnements dans un groupe d’administration héritent automatiquement des conditions appliquées à ce groupe d’administration.
 - **Abonnements** : Un abonnement regroupe les comptes d’utilisateur et les ressources qui ont été créées par ces derniers. Chaque abonnement a des limites ou quotas sur la quantité de ressources que vous pouvez créer et utiliser. Les organisations peuvent utiliser des abonnements pour gérer les coûts et les ressources qui sont créées par les utilisateurs, les équipes ou les projets.

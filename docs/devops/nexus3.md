@@ -42,9 +42,9 @@ docker run -d -p 8081:8081 --name nexus -v /some/dir/nexus-data:/nexus-data sona
 
 ###### Etape 2: Supprimer les repositories par défaut
 
-![nxs3-003.png](img/nxs3-003.png)
+![nxs3-003.png](../img/nxs3-003.png)
 
-![nxs3-004.png](img/nxs3-004.png)
+![nxs3-004.png](../img/nxs3-004.png)
 
 ###### Etape 3: Executer les groovy scripts pour peupler le Nexus 3
 
@@ -55,12 +55,12 @@ cd $nexusgit-dir/provisioning
 
 ###### Etape 4: Configurer le non automatisable
 
-![nxs3-005.png](img/nxs3-005.png)
+![nxs3-005.png](../img/nxs3-005.png)
 
-![nxs3-006.png](img/nxs3-006.png)
+![nxs3-006.png](../img/nxs3-006.png)
 
 Note : L'activation du RPC entraine automatiquement la création de tasks
-![nxs3-007.png](img/nxs3-007.png)
+![nxs3-007.png](../img/nxs3-007.png)
 
 ###### Etape 5: Modifier la conf de nexus
 
@@ -395,17 +395,17 @@ Ceci permet de s’affranchir d’éventuelle problème d’incompatibilité de 
 ###### Etape 3 : Activer les "Upgrade Capability" de Nexus 2 et Nexus 3
 
 Dans Nexus 2 / 3 en tant qu'admin
-![nxs3-008.png](img/nxs3-008.png)
+![nxs3-008.png](../img/nxs3-008.png)
 
-![nxs3-009.png](img/nxs3-009.png)
+![nxs3-009.png](../img/nxs3-009.png)
 
-![nxs3-010.png](img/nxs3-010.png)
+![nxs3-010.png](../img/nxs3-010.png)
 
 ###### Etape 4 : Créer les blobstore cible
 
 Si ce n'est pas déjà fait (à l'instanciation du Nexus 3). Il faut créer les blobstores via le sript de provionning.
 
-![nxs3-011.png](img/nxs3-011.png)
+![nxs3-011.png](../img/nxs3-011.png)
 
 ###### Etape 5 : Lancer la procédure de migration
 
@@ -432,7 +432,7 @@ La migration est terminée, passons aux post migration tasks :
 ### User Interface
 
 En se connectant on arrive sur l'interface de base.  
-![nxs3-001.pngWelcome](img/nxs3-001.png)  
+![nxs3-001.pngWelcome](../img/nxs3-001.png)  
 En tant qu'utilisateur anonyme on peut accéder à l'interface de recherche rAPIde et avancé et naviguer dans les repositories.  
 En tant qu'admin on peut manager via le bouton engrenage.  
 En tant qu'utilisateur identifié possédant les droits suffisants, on peut uploader depuis l'interface un component.
@@ -440,7 +440,7 @@ En tant qu'utilisateur identifié possédant les droits suffisants, on peut uplo
 ### Administration Menu
 
 L'interface d'administration est découpée en 5 sous menu.  
-![nxs3-002.pngadministration](img/nxs3-002.png)
+![nxs3-002.pngadministration](../img/nxs3-002.png)
 
 - Repository, gère les repositories, blob stores, cleanup policies et Content Selector.
 - IQ Server, gère la connexion au IQ Server.

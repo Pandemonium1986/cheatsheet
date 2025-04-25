@@ -13,11 +13,11 @@
 
 En tant que leader européen du cloud, nous fournissons des solutions de **cloud public** et **privé**, **d’hébergement mutualisé** et de **serveurs dédiés** dans 140 pays à travers le globe. Nous proposons également à nos clientes et clients **l’enregistrement de noms de domaine**, de la **téléphonie**, ainsi que de **l’accès à internet**. Créé en 1999, OVHcloud est une entreprise française présente dans le monde entier, grâce à la localisation internationale de ses datacenters et points de présence.
 
-![ovh-001.png](img/ovh-001.png)
+![ovh-001.png](../img/ovh-001.png)
 
 ## Public Cloud produit
 
-![ovh-002.png](img/ovh-002.png)
+![ovh-002.png](../img/ovh-002.png)
 
 ## MoSCoW
 
@@ -128,7 +128,7 @@ En tant que leader européen du cloud, nous fournissons des solutions de **cloud
 
 ### Compute
 
-![ovh-025.png](img/ovh-025.png)
+![ovh-025.png](../img/ovh-025.png)
 
 #### Description
 
@@ -146,7 +146,7 @@ Un large choix d’instances adaptées à tous vos usages:
 - **Storage Optimized**: Profitez d'IOPS ultrarapides grâce à des cartes NVMe spécialement conçues pour les bases de données et les applications big data
 - **Discovery**: Démarrez l’expérience Public Cloud avec des instances dont les ressources sont partagées, qui fourniront des performances stables à un prix très accessible.
 
-![ovh-003.png](img/ovh-003.png)
+![ovh-003.png](../img/ovh-003.png)
 
 ###### Pro
 
@@ -172,7 +172,7 @@ Des serveurs cloud taillés pour le traitement de l'IA, des graphismes et des t�
 - Durabilité et efficacité.
 - Sécurité des données et conformité.
 
-![ovh-004.png](img/ovh-004.png)
+![ovh-004.png](../img/ovh-004.png)
 
 ###### Pro
 
@@ -221,7 +221,7 @@ Afin de démarrer au plus vite votre infrastructure, OVHcloud fournit les images
 
 ### Storage
 
-![ovh-026.png](img/ovh-026.png)
+![ovh-026.png](../img/ovh-026.png)
 
 #### Description
 
@@ -260,7 +260,7 @@ Il s’agit d’une technologie proposant un service de stockage en ligne, acces
 - Solution réversible et interopérable.
 - Résilience et haute disponibilité de vos données.
 
-![ovh-010.png](img/ovh-010.png)
+![ovh-010.png](../img/ovh-010.png)
 
 ###### Pro
 
@@ -278,11 +278,11 @@ Il s’agit d’une technologie proposant un service de stockage en ligne, acces
 - Service compatible S3.
 - Archivage de données critiques.
 
-![ovh-012.png](img/ovh-012.png)
+![ovh-012.png](../img/ovh-012.png)
 
 ### Network
 
-![ovh-027.png](img/ovh-027.png)
+![ovh-027.png](../img/ovh-027.png)
 
 #### Description
 
@@ -294,7 +294,7 @@ Un réseau cloud est une infrastructure virtuelle permettant de connecter appare
 
 Une connexion privée et flexible entre vos instances.
 
-![ovh-034.png](img/ovh-034.png)
+![ovh-034.png](../img/ovh-034.png)
 
 - Réseaux étendus entre les localisations.
 - Isolation.
@@ -322,7 +322,7 @@ L’OVHcloud Load Balancer vous permet d’assurer plus facilement l’évolutiv
 - Chiffrement SSL/TLS.
 - Compatible avec les instances Public Cloud.
 
-![ovh-015.png](img/ovh-015.png)
+![ovh-015.png](../img/ovh-015.png)
 
 ###### Pro
 
@@ -342,7 +342,7 @@ Une Floating IP est une adresse IP publique et statique qui peut être réaffect
 - Migration des environnements.
 - Point d’accès principal.
 
-![ovh-016.png](img/ovh-016.png)
+![ovh-016.png](../img/ovh-016.png)
 
 ###### Pro
 
@@ -379,7 +379,7 @@ Profitez d'une protection permanente sur l'ensemble de vos ressources cloud, pou
 
 ### Containers & Orchestration
 
-![ovh-028.png](img/ovh-028.png)
+![ovh-028.png](../img/ovh-028.png)
 
 #### Description
 
@@ -477,7 +477,7 @@ Gérez les variations d’activité en répartissant le trafic sur vos différen
 
 ### Databases
 
-![ovh-030.png](img/ovh-030.png)
+![ovh-030.png](../img/ovh-030.png)
 
 #### Description
 
@@ -515,7 +515,7 @@ Déployez une architecture M3 Aggregator dédiée à l'agrégation de flux pour 
 
 ### Analytics
 
-![ovh-017.png](img/ovh-017.png)
+![ovh-017.png](../img/ovh-017.png)
 
 #### Description
 
@@ -557,7 +557,7 @@ Créez des tableaux de bord et des graphiques dynamiques depuis différentes sou
 - Sécurité et conformité.
 - Plus de 60 services Public Cloud.
 
-![ovh-018.png](img/ovh-018.png)
+![ovh-018.png](../img/ovh-018.png)
 
 ###### Pro
 
@@ -577,7 +577,7 @@ Augmentez la visibilité des environnements de vos applications en collectant, t
 - Tarification complète.
 - Sécurité et conformité.
 
-![ovh-019.png](img/ovh-019.png)
+![ovh-019.png](../img/ovh-019.png)
 
 ###### Pro
 
@@ -591,9 +591,9 @@ Augmentez la visibilité des environnements de vos applications en collectant, t
 
 ### Data Platform
 
-![ovh-020.png](img/ovh-020.png)
+![ovh-020.png](../img/ovh-020.png)
 
-![ovh-021.png](img/ovh-021.png)
+![ovh-021.png](../img/ovh-021.png)
 
 #### Description
 
@@ -627,7 +627,7 @@ Gérez les droits d'accès et accédez en temps réel aux informations de votre 
 
 ### AI & Machine learning
 
-![ovh-029.png](img/ovh-029.png)
+![ovh-029.png](../img/ovh-029.png)
 
 #### Description
 
@@ -644,7 +644,7 @@ Accélérez le lancement de vos projets et modèles avec des notebooks entièrem
 - Vos frameworks AI préférés.
 - Un cloud européen pour le respect de vos données.
 
-![ovh-021.png](img/ovh-022.png)
+![ovh-021.png](../img/ovh-022.png)
 
 ###### Pro
 
@@ -710,11 +710,11 @@ Il permet aux utilisateurs d’exécuter leurs projets sur une plateforme fiable
 
 Designed with simplicity in mind, our platform allows developers of all skill levels to enhance their applications with cutting-edge AI APIs —no AI expertise required.
 
-![ovh-023.png](img/ovh-023.png)
+![ovh-023.png](../img/ovh-023.png)
 
 ### Idam
 
-![ovh-033.png](img/ovh-033.png)
+![ovh-033.png](../img/ovh-033.png)
 
 #### Description
 
@@ -735,7 +735,7 @@ La solution IAM d’OVHcloud assure une gestion granulaire des accès à vos pro
 
 Les politiques contiennent une liste d'identités (comptes, utilisateurs, groupes d'utilisateurs) concernées par les politiques, une liste de ressources auxquelles les politiques doivent s'appliquer et une liste d'actions autorisées sur ces ressources.
 
-![ovh-013.png](img/ovh-013.png)
+![ovh-013.png](../img/ovh-013.png)
 
 ###### Pro
 
@@ -754,7 +754,7 @@ Augmentez la visibilité des environnements de vos applications en collectant, t
 - Tarification complète.
 - Sécurité et conformité.
 
-![ovh-014.png](img/ovh-014.png)
+![ovh-014.png](../img/ovh-014.png)
 
 ###### Pro
 
@@ -801,7 +801,7 @@ Développez votre activité et celle de votre clientèle à l’échelle mondial
 - Flexibilité et évolutivité du cloud.
 - Standard et facile d'utilisation.
 
-![ovh-024.png](img/ovh-024.png)
+![ovh-024.png](../img/ovh-024.png)
 
 ## Saving Plan
 
@@ -812,7 +812,7 @@ Développez votre activité et celle de votre clientèle à l’échelle mondial
 - Pilotez la croissance de votre application.
 - Gérez la saisonnalité de votre infrastructure.
 
-![ovh-009.png](img/ovh-009.png)
+![ovh-009.png](../img/ovh-009.png)
 
 ## Misc
 
@@ -832,7 +832,7 @@ Il existe plusieurs types de cloud computing :
 
 ### Object storage vs. block storage: How are they different?
 
-![ovh-011.png](img/ovh-011.png)
+![ovh-011.png](../img/ovh-011.png)
 
 ### Qu’est-ce qu’un registre privé de conteneurs ?
 

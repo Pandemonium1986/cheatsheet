@@ -6,7 +6,7 @@
 
 **Control groups**, known as cgroups, are a feature of the Linux kernel allowing the limitation, accounting, and isolation of resources used by groups of processes and their subgroups.
 
-![cgroups](img/lf-001.png)
+![cgroups](../img/lf-001.png)
 
 ### Namespaces
 
@@ -16,7 +16,7 @@
 
 **UnionFS** is a feature found in the Linux, FreeBSD and NetBSD kernels, allowing the overlay of separate transparent file systems to produce an apparent single unified file system.
 
-![cgroups](img/lf-002.png)
+![cgroups](../img/lf-002.png)
 
 ## Virtualization Mechanisms
 
@@ -24,7 +24,7 @@
 
 Although Containers are not considered to be Virtual Machines (VMs), not even light-weight VMs, their similarities cannot be overlooked.  
 
-![cgroups](img/lf-003.png)
+![cgroups](../img/lf-003.png)
 
 A Virtual Machine is created on top of a hypervisor software. A typical application runs inside such a VM, and it requires extensive overhead to reach the physical hardware or the outside world considering that it has to go through so many layers of abstraction - the guest OS, then the hypervisor, and finally the host OS.
 
@@ -159,7 +159,7 @@ Docker is one of the most robust and complex container development and managemen
 Earlier Docker versions were based on the Linux Containers (LXC). Then ocker decided to develop in-house its own proprietary runtime, libcontainer, its a component of runc.  
 Docker’s complexity is not only reflected by the multitude of operations it supports on container images and running containers, but also by its architecture. Docker is powered by the Docker Engine - a client-server application.  
 The Docker Engine is composed of the Docker host running the Docker daemon, a REST API to communicate with the daemon, and a Docker client
-![docker-engine](img/lf-004.png)
+![docker-engine](../img/lf-004.png)
 
 **Docker client**
 This is the command-line tool that allows users to run docker commands against a Docker daemon running on a Docker host. The client and daemon communicate through REST API, over Unix sockets or a network interface. Also, the client is capable of communicating with more than one daemon running on different Docker hosts.
