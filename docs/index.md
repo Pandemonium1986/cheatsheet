@@ -25,7 +25,7 @@ cd  ~/git/pandemonium1986
 git clone https://github.com/pandemonium1986/cheatsheet.git
 ```
 
-To run Pandemonium1986/cheatsheet with mkdocs
+To run Pandemonium1986 cheat sheet with mkdocs
 
 ```sh
 cd  ~/git/pandemonium1986/cheatsheet
