@@ -35,6 +35,7 @@ nav:
   - "Software":
     - "Atom": "software/atom.md"
     - "Msys2": "software/msys2.md"
+    - "Mise": "software/mise.md"
     - "Reveal": "software/reveal.js.md"
     - "Vagrant": "software/vagrant.md"
     - "Virtualbox": "software/virtualbox.md"
