@@ -1,0 +1,2720 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My awesome cheatsheet, because they're awesomes">
+      
+      
+        <meta name="author" content="Michael Maffait">
+      
+      
+        <link rel="canonical" href="https://cheatsheet.pdm.ovh/devops/docker/">
+      
+      
+        <link rel="prev" href="../docker-compose/">
+      
+      
+        <link rel="next" href="../gitlab/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Docker - Michael M. Cheat sheet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#docker-installation-et-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Michael M. Cheat sheet" class="md-header__button md-logo" aria-label="Michael M. Cheat sheet" data-md-component="logo">
+      
+  <img src="../../../img/cheatsheet.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Michael M. Cheat sheet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Docker
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Pandemonium1986/cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cheat sheet
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Michael M. Cheat sheet" class="md-nav__button md-logo" aria-label="Michael M. Cheat sheet" data-md-component="logo">
+      
+  <img src="../../../img/cheatsheet.png" alt="logo">
+
+    </a>
+    Michael M. Cheat sheet
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Pandemonium1986/cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cheat sheet
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cloud
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud/azure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud/azure-devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud/ovh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ovh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/jhipster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jhipster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DevOps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-des-outils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version des outils
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avant-propos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avant propos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-dinstallation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procédure d'installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-de-post-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procédure de post-installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutoriels-dockers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tutoriels Dockers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutoriels Dockers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker : Get Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker : Get Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1 Orientation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 Containers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-4-swarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4 Swarms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-5-stacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 5 Stacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-6-deploy-your-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 6 Deploy your app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annexe-sur-docker-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annexe sur docker-machine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#katacoda-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Katacoda : Get Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Katacoda : Get Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-deploying-your-first-docker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 1 Deploying Your First Docker Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-deploy-static-html-site-as-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 2 Deploy Static HTML site as Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-building-container-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 3 Building Container Images
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-dockerizing-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 4 Dockerizing Node.js
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-5-optimise-builds-with-docker-onbuild" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 5 Optimise Builds With Docker OnBuild
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-6-ignoring-files-during-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 6 Ignoring Files During Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-7-create-data-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 7 Create Data Containers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-8-creating-networks-between-containers-using-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 8 Creating Networks Between Containers using Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-9-creating-networks-between-containers-using-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 9 Creating Networks Between Containers using Networks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-10-persisting-data-using-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 10 Persisting Data Using Volumes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-11-manage-container-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 11 Manage Container Log Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-12-ensuring-container-uptime-with-restart-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 12 Ensuring Container Uptime With Restart Policies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-13-adding-docker-metadata-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 13 Adding Docker Metadata &amp; Labels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-14-load-balancing-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 14 Load Balancing Containers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-15-orchestration-using-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 15 Orchestration using Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-16-see-container-metrics-with-docker-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 16 See Container Metrics With Docker Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-17-creating-optimised-docker-images-using-multi-stage-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 17 Creating Optimised Docker Images using Multi-Stage Builds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-18-formatting-ps-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 18 Formatting PS Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-19-learn-docker-swarm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 19 Learn Docker Swarm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gitlab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jenkins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../longhorn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Longhorn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../minikube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Minikube
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../molecule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Molecule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nexus3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nexus3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../traefik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traefik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Os
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Os
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/mint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/wsl2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wsl2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wsl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/atom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/msys2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Msys2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/reveal.js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reveal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/vagrant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vagrant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/virtualbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtualbox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vscode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-des-outils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version des outils
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avant-propos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avant propos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-dinstallation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procédure d'installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-de-post-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procédure de post-installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutoriels-dockers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tutoriels Dockers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutoriels Dockers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker : Get Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker : Get Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1 Orientation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 Containers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-4-swarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4 Swarms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-5-stacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 5 Stacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-6-deploy-your-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 6 Deploy your app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annexe-sur-docker-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annexe sur docker-machine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#katacoda-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Katacoda : Get Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Katacoda : Get Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-deploying-your-first-docker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 1 Deploying Your First Docker Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-deploy-static-html-site-as-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 2 Deploy Static HTML site as Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-building-container-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 3 Building Container Images
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-dockerizing-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 4 Dockerizing Node.js
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-5-optimise-builds-with-docker-onbuild" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 5 Optimise Builds With Docker OnBuild
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-6-ignoring-files-during-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 6 Ignoring Files During Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-7-create-data-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 7 Create Data Containers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-8-creating-networks-between-containers-using-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 8 Creating Networks Between Containers using Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-9-creating-networks-between-containers-using-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 9 Creating Networks Between Containers using Networks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-10-persisting-data-using-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 10 Persisting Data Using Volumes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-11-manage-container-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 11 Manage Container Log Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-12-ensuring-container-uptime-with-restart-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 12 Ensuring Container Uptime With Restart Policies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-13-adding-docker-metadata-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 13 Adding Docker Metadata &amp; Labels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-14-load-balancing-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 14 Load Balancing Containers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-15-orchestration-using-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 15 Orchestration using Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-16-see-container-metrics-with-docker-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 16 See Container Metrics With Docker Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-17-creating-optimised-docker-images-using-multi-stage-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 17 Creating Optimised Docker Images using Multi-Stage Builds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-18-formatting-ps-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 18 Formatting PS Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-19-learn-docker-swarm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 19 Learn Docker Swarm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="docker-installation-et-configuration">Docker : Installation et Configuration</h1>
+<h2 id="version-des-outils">Version des outils</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Os / Tool</th>
+<th style="text-align: center;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">CentOs</td>
+<td style="text-align: center;">7.4.1708</td>
+</tr>
+<tr>
+<td style="text-align: center;">Docker Ce</td>
+<td style="text-align: center;">17.12.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="avant-propos">Avant propos</h2>
+<p>Docker is available in two editions: Community Edition (CE) and Enterprise Edition (EE).<br />
+Docker Community Edition (CE) is ideal for developers and small teams looking to get started with Docker and experimenting with container-based apps. Docker CE has two update channels, stable and edge:</p>
+<ul>
+<li>Stable gives you reliable updates every quarter</li>
+<li>Edge gives you new features every month</li>
+</ul>
+<h2 id="procedure-dinstallation">Procédure d'installation</h2>
+<p>La procédure d'installation de <em>Docker</em> sur <em>CentOs 7</em> se déroule de la façon suivante :
+Installez les prérequis.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>yum-utils<span class="w"> </span>device-mapper-persistent-data<span class="w"> </span>lvm2
+</code></pre></div>
+<p>Assurez-vous qu'ils n'existent aucune autres versions de <em>Docker</em> sur la machine.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>remove<span class="w"> </span>docker<span class="w"> </span>docker-common<span class="w"> </span>docker-selinux<span class="w"> </span>docker-engine
+</code></pre></div>
+<p>Assurez-vous que le repository <em>extras</em> est bien activé.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>yum-config-manager<span class="w"> </span>--enable<span class="w"> </span>extras
+</code></pre></div>
+<p>Ajoutez le repository <em>Docker</em>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>yum-config-manager<span class="w"> </span>--add-repo<span class="w"> </span>https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre></div>
+<p>Installez et vérifiez que <em>Docker</em> fonctionne correctement.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>docker-ce
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>docker
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div>
+<h2 id="procedure-de-post-installation">Procédure de post-installation</h2>
+<p>Vérifiez les versions de <em>Docker</em> disponible et celle installée.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>yum<span class="w"> </span>list<span class="w"> </span>docker-ce<span class="w"> </span>--showduplicates<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-r
+</code></pre></div>
+<p>Ajouter un utilisateur non <em>sudoers</em> qui aura les privilège d'utiliser <em>Docker</em>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+</code></pre></div>
+<p>Activer <em>Docker</em> au démarrage de Linux.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker
+</code></pre></div>
+<h2 id="docker-concepts">Docker concepts</h2>
+<p>A container runs natively on Linux and shares the kernel of the host machine with other containers. It runs a discrete process, taking no more memory than any other executable, making it lightweight.<br />
+By contrast, a virtual machine (VM) runs a full-blown “guest” operating system with virtual access to host resources through a hypervisor. In general, VMs provide an environment with more resources than most applications need.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Container</th>
+<th style="text-align: center;">Vms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="Container" src="../../img/dck-001.png" /></td>
+<td style="text-align: center;"><img alt="Vms" src="../../img/dck-002.png" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tutoriels-dockers">Tutoriels Dockers</h2>
+<h3 id="docker-get-started">Docker : Get Started</h3>
+<h4 id="part-1-orientation">Part 1 Orientation</h4>
+<p><strong>Ce qu'il faut retenir :</strong><br />
+Un simple <code>docker run nom-de-l'image</code> permet de "tirer" une image depuis un repository et de "démarrer" un container.<br />
+Un container est l'instanciation d'une image.<br />
+Pour manager les containers on utilise la commande <code>docker container</code>.<br />
+Pour manager les images on utilise la commande <code>docker image</code> manage les images.  </p>
+<p><strong>Cheat sheet :</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span><span class="c1">## List Docker CLI commands</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>docker
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>--help
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="c1">## Display Docker version and info</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span>docker<span class="w"> </span>--version
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span>docker<span class="w"> </span>version
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span>docker<span class="w"> </span>info
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="c1">## Excecute Docker image</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="c1">## List Docker images</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span>docker<span class="w"> </span>image<span class="w"> </span>ls
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="c1">## List Docker containers (running, all, all in quiet mode)</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>ls
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>ls<span class="w"> </span>--all
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>ls<span class="w"> </span>-a<span class="w"> </span>-q
+</code></pre></div>
+<h4 id="part-2-containers">Part 2 Containers</h4>
+<p><strong>Ce qu'il faut retenir :</strong><br />
+Pour créer un container on doit le builder depuis fichier nommé <em>Dockerfile</em>.<br />
+Pour construire une image on utilise la commande <code>docker build</code>.<br />
+Une image construite en local est disponible via la commande <code>docker image ls</code><br />
+Pour partager une image on commence par la taguer via <code>docker tag image username/repository:tag</code><br />
+On la push ensuite sur un repository via <code>docker push username/repository:tag</code>  </p>
+<p><strong>Cheat sheet :</strong>  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>friendlyhello<span class="w"> </span>.<span class="w">                  </span><span class="c1"># Create image using this directory&#39;s Dockerfile</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">4000</span>:80<span class="w"> </span>friendlyhello<span class="w">              </span><span class="c1"># Run &quot;friendlyname&quot; mapping port 4000 to 80</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">4000</span>:80<span class="w"> </span>friendlyhello<span class="w">           </span><span class="c1"># Same thing, but in detached mode</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>ls<span class="w">                              </span><span class="c1"># List all running containers</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>ls<span class="w"> </span>-a<span class="w">                           </span><span class="c1"># List all containers, even those not running</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>stop<span class="w"> </span>&lt;hash&gt;<span class="w">                     </span><span class="c1"># Gracefully stop the specified container</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>&lt;hash&gt;<span class="w">                     </span><span class="c1"># Force shutdown of the specified container</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>rm<span class="w"> </span>&lt;hash&gt;<span class="w">                       </span><span class="c1"># Remove specified container from this machine</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>rm<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>container<span class="w"> </span>ls<span class="w"> </span>-a<span class="w"> </span>-q<span class="k">)</span><span class="w"> </span><span class="c1"># Remove all containers</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span>docker<span class="w"> </span>image<span class="w"> </span>ls<span class="w"> </span>-a<span class="w">                               </span><span class="c1"># List all images on this machine</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span>docker<span class="w"> </span>image<span class="w"> </span>rm<span class="w"> </span>&lt;image<span class="w"> </span>id&gt;<span class="w">                       </span><span class="c1"># Remove specified image from this machine</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span>docker<span class="w"> </span>image<span class="w"> </span>rm<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>image<span class="w"> </span>ls<span class="w"> </span>-a<span class="w"> </span>-q<span class="k">)</span><span class="w">         </span><span class="c1"># Remove all images from this machine</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span>docker<span class="w"> </span>login<span class="w">                                     </span><span class="c1"># Log in this CLI session using your Docker credentials</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span>docker<span class="w"> </span>tag<span class="w"> </span>&lt;image&gt;<span class="w"> </span>username/repository:tag<span class="w">       </span><span class="c1"># Tag &lt;image&gt; for upload to registry</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span>docker<span class="w"> </span>push<span class="w"> </span>username/repository:tag<span class="w">              </span><span class="c1"># Upload tagged image to registry</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>username/repository:tag<span class="w">               </span><span class="c1"># Run image from a registry</span>
+</code></pre></div>
+<h4 id="part-3-services">Part 3 Services</h4>
+<p><strong>Ce qu'il faut retenir :</strong><br />
+Un service est un container codifié par un fichier <em>docker-compose.yml</em> qui définit comment il doit être instancié.<br />
+Un fichier <em>docker-compose.yml</em> se déploie via la commande <code>docker stack deploy -c docker-compose.yml nom_de_service</code>.<br />
+Pour pouvoir déployer une <em>stack</em> il faut instancier un cluster <em>Swarm</em> (Minimun un node).
+On instancie un cluster <em>Swarm</em> avec la commande <code>docker swarm init</code>.<br />
+Pour manager les services on utilise la commande  <code>docker service</code>.  </p>
+<p><strong>Cheat sheet :</strong>  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span>docker<span class="w"> </span>stack<span class="w"> </span>ls<span class="w">                                  </span><span class="c1"># List stacks or apps</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span>docker<span class="w"> </span>stack<span class="w"> </span>deploy<span class="w"> </span>-c<span class="w"> </span>&lt;composefile&gt;<span class="w"> </span>&lt;appname&gt;<span class="w">   </span><span class="c1"># Run the specified Compose file</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span>docker<span class="w"> </span>service<span class="w"> </span>ls<span class="w">                                </span><span class="c1"># List running services associated with an app</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span>docker<span class="w"> </span>service<span class="w"> </span>ps<span class="w"> </span>&lt;service&gt;<span class="w">                      </span><span class="c1"># List tasks associated with an app</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span>docker<span class="w"> </span>inspect<span class="w"> </span>&lt;task<span class="w"> </span>or<span class="w"> </span>container&gt;<span class="w">               </span><span class="c1"># Inspect task or container</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span>docker<span class="w"> </span>container<span class="w"> </span>ls<span class="w"> </span>-q<span class="w">                           </span><span class="c1"># List container IDs</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span>docker<span class="w"> </span>stack<span class="w"> </span>rm<span class="w"> </span>&lt;appname&gt;<span class="w">                        </span><span class="c1"># Tear down an application</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span>docker<span class="w"> </span>swarm<span class="w"> </span>leave<span class="w"> </span>--force<span class="w">                       </span><span class="c1"># Take down a single node swarm from the manager</span>
+</code></pre></div>
+<h4 id="part-4-swarms">Part 4 Swarms</h4>
+<p><strong>Ce qu'il faut retenir :</strong><br />
+Un <em>Swarm</em> est un ensemble de machine qui forment un cluster docker.<br />
+On initialise un <em>Swarm</em> avec la commande <code>docker swarm init</code><br />
+Celle ci retourne un ID qui permet aux autres instances de rejoindre le cluster <em>Swarm</em> via la commande <code>docker swarm join --token SWMTKN-1-sha256 @ip_du_master:2377</code><br />
+<em>Swarm</em> embarque tout un tas de service natif comme un load balanceur, simplifiant la scalabilité et la configuration d'application en mode distribué.</p>
+<p><strong>Cheat sheet :</strong>  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span>docker-machine<span class="w"> </span>create<span class="w"> </span>--driver<span class="w"> </span>virtualbox<span class="w"> </span>myvm1<span class="w">                                                     </span><span class="c1"># Create a VM (Mac, Win7, Linux)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span>docker-machine<span class="w"> </span>create<span class="w"> </span>-d<span class="w"> </span>hyperv<span class="w"> </span>--hyperv-virtual-switch<span class="w"> </span><span class="s2">&quot;myswitch&quot;</span><span class="w"> </span>myvm1<span class="w">                            </span><span class="c1"># Win10</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span>docker-machine<span class="w"> </span>env<span class="w"> </span>myvm1<span class="w">                                                                            </span><span class="c1"># View basic information about your node</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span>docker-machine<span class="w"> </span>ssh<span class="w"> </span>myvm1<span class="w"> </span><span class="s2">&quot;docker node ls&quot;</span><span class="w">                                                           </span><span class="c1"># List the nodes in your swarm</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span>docker-machine<span class="w"> </span>ssh<span class="w"> </span>myvm1<span class="w"> </span><span class="s2">&quot;docker node inspect &lt;node ID&gt;&quot;</span><span class="w">                                            </span><span class="c1"># Inspect a node</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span>docker-machine<span class="w"> </span>ssh<span class="w"> </span>myvm1<span class="w"> </span><span class="s2">&quot;docker swarm join-token -q worker&quot;</span><span class="w">                                        </span><span class="c1"># View join token</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span>docker-machine<span class="w"> </span>ssh<span class="w"> </span>myvm1<span class="w">                                                                            </span><span class="c1"># Open an SSH session with the VM; type &quot;exit&quot; to end</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span>docker<span class="w"> </span>node<span class="w"> </span>ls<span class="w">                                                                                      </span><span class="c1"># View nodes in swarm (while logged on to manager)</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span>docker-machine<span class="w"> </span>ssh<span class="w"> </span>myvm2<span class="w"> </span><span class="s2">&quot;docker swarm leave&quot;</span><span class="w">                                                       </span><span class="c1"># Make the worker leave the swarm</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span>docker-machine<span class="w"> </span>ssh<span class="w"> </span>myvm1<span class="w"> </span><span class="s2">&quot;docker swarm leave -f&quot;</span><span class="w">                                                    </span><span class="c1"># Make master leave, kill swarm</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span>docker-machine<span class="w"> </span>ls<span class="w">                                                                                   </span><span class="c1"># list VMs, asterisk shows which VM this shell is talking to</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span>docker-machine<span class="w"> </span>start<span class="w"> </span>myvm1<span class="w">                                                                          </span><span class="c1"># Start a VM that is currently not running</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span>docker-machine<span class="w"> </span>env<span class="w"> </span>myvm1<span class="w">                                                                            </span><span class="c1"># show environment variables and command for myvm1</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>docker-machine<span class="w"> </span>env<span class="w"> </span>myvm1<span class="k">)</span><span class="w">                                                                    </span><span class="c1"># Mac command to connect shell to myvm1</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">    </span><span class="p">&amp;</span><span class="w"> </span><span class="s2">&quot;C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe&quot;</span><span class="w"> </span>env<span class="w"> </span>myvm1<span class="w"> </span><span class="p">|</span><span class="w"> </span>Invoke-Expression<span class="w">   </span><span class="c1"># Windows command to connect shell to myvm1</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">    </span>docker<span class="w"> </span>stack<span class="w"> </span>deploy<span class="w"> </span>-c<span class="w"> </span>&lt;file&gt;<span class="w"> </span>&lt;app&gt;<span class="w">                                                                 </span><span class="c1"># Deploy an app; command shell must be set to talk to manager (myvm1), uses local Compose file</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">    </span>docker-machine<span class="w"> </span>scp<span class="w"> </span>docker-compose.yml<span class="w"> </span>myvm1:~<span class="w">                                                       </span><span class="c1"># Copy file to node&#39;s home dir (only required if you use ssh to connect to manager and deploy the app)</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">    </span>docker-machine<span class="w"> </span>ssh<span class="w"> </span>myvm1<span class="w"> </span><span class="s2">&quot;docker stack deploy -c &lt;file&gt; &lt;app&gt;&quot;</span><span class="w">                                      </span><span class="c1"># Deploy an app using ssh (you must have first copied the Compose file to myvm1)</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>docker-machine<span class="w"> </span>env<span class="w"> </span>-u<span class="k">)</span><span class="w">                                                                       </span><span class="c1"># Disconnect shell from VMs, use native docker</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">    </span>docker-machine<span class="w"> </span>stop<span class="w"> </span><span class="k">$(</span>docker-machine<span class="w"> </span>ls<span class="w"> </span>-q<span class="k">)</span><span class="w">                                                         </span><span class="c1"># Stop all running VMs</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">    </span>docker-machine<span class="w"> </span>rm<span class="w"> </span><span class="k">$(</span>docker-machine<span class="w"> </span>ls<span class="w"> </span>-q<span class="k">)</span><span class="w">                                                           </span><span class="c1"># Delete all VMs and their disk images</span>
+</code></pre></div>
+<h4 id="part-5-stacks">Part 5 Stacks</h4>
+<p><strong>Ce qu'il faut retenir :</strong><br />
+Une <em>Stack</em> est définit comme suit : A stack is a group of interrelated services that share dependencies, and can be orchestrated and scaled together. A single stack is capable of defining and coordinating the functionality of an entire application (though very complex applications may want to use multiple stacks).<br />
+Ajouter un <em>service</em> dans une <em>Stack</em> revient à ajouter un payload dans la partie services du fichier <em>docker-compose.yml</em>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="c1"># replace username/repo:tag with your name and image details</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">username/repo:tag</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">      </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">      </span><span class="nt">restart_policy</span><span class="p">:</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on-failure</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">        </span><span class="nt">limits</span><span class="p">:</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0.1&quot;</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50M</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webnet</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">  </span><span class="nt">visualizer</span><span class="p">:</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dockersamples/visualizer:stable</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8080:8080&quot;</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;/var/run/docker.sock:/var/run/docker.sock&quot;</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">      </span><span class="nt">placement</span><span class="p">:</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">        </span><span class="nt">constraints</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">node.role == manager</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webnet</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">  </span><span class="nt">redis</span><span class="p">:</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;6379:6379&quot;</span>
+<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;/home/docker/data:/data&quot;</span>
+<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
+<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a><span class="w">      </span><span class="nt">placement</span><span class="p">:</span>
+<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="w">        </span><span class="nt">constraints</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">node.role == manager</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis-server --appendonly yes</span>
+<a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webnet</span>
+<a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a><span class="w">  </span><span class="nt">webnet</span><span class="p">:</span>
+</code></pre></div>
+<p>Pour manager les stacks on utilise la commande <code>docker stack</code>.<br />
+Pour persister les données d'un container on utilise les volumes. Il est nécéssaire de connaitre la manière dont ont été buildés les images qu'on utilise pour persister les données et exposer les services.</p>
+<h4 id="part-6-deploy-your-app">Part 6 Deploy your app</h4>
+<p><strong>Ce qu'il faut retenir :</strong><br />
+Rien de plus que ce qui est présenté en part 3/4/5. Il faut s'assurer que l'ensemble des machines est accès à un registry.</p>
+<p><strong>Cheat sheet :</strong>  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">    </span>docker<span class="w"> </span>stack<span class="w"> </span>deploy<span class="w"> </span>-c<span class="w"> </span>docker-compose.yml<span class="w"> </span>getstartedlab
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span>Creating<span class="w"> </span>network<span class="w"> </span>getstartedlab_webnet
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span>Creating<span class="w"> </span>service<span class="w"> </span>getstartedlab_web
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span>Creating<span class="w"> </span>service<span class="w"> </span>getstartedlab_visualizer
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span>Creating<span class="w"> </span>service<span class="w"> </span>getstartedlab_redis
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="o">[</span>getstartedlab<span class="o">]</span><span class="w"> </span>~<span class="w"> </span>$<span class="w"> </span>docker<span class="w"> </span>node<span class="w"> </span>ls
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span>ID<span class="w">                            </span>HOSTNAME<span class="w">                                      </span>STATUS<span class="w">              </span>AVAILABILITY<span class="w">        </span>MANAGER<span class="w"> </span>STATUS
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span>9442yi1zie2l34lj01frj3lsn<span class="w">     </span>ip-172-31-5-208.us-west-1.compute.internal<span class="w">    </span>Ready<span class="w">               </span>Active<span class="w">              </span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span>jr02vg153pfx6jr0j66624e8a<span class="w">     </span>ip-172-31-6-237.us-west-1.compute.internal<span class="w">    </span>Ready<span class="w">               </span>Active<span class="w">              </span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">    </span>thpgwmoz3qefdvfzp7d9wzfvi<span class="w">     </span>ip-172-31-18-121.us-west-1.compute.internal<span class="w">   </span>Ready<span class="w">               </span>Active<span class="w">              </span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">    </span>n2bsny0r2b8fey6013kwnom3m<span class="w"> </span>*<span class="w">   </span>ip-172-31-20-217.us-west-1.compute.internal<span class="w">   </span>Ready<span class="w">               </span>Active<span class="w">              </span>Leader<span class="w">   </span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="o">[</span>getstartedlab<span class="o">]</span><span class="w"> </span>~/sandbox/getstart<span class="w"> </span>$<span class="w"> </span>docker<span class="w"> </span>service<span class="w"> </span>ls
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">    </span>ID<span class="w">                  </span>NAME<span class="w">                       </span>MODE<span class="w">                </span>REPLICAS<span class="w">            </span>IMAGE<span class="w">                             </span>PORTS
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">    </span>x3jyx6uukog9<span class="w">        </span>dockercloud-server-proxy<span class="w">   </span>global<span class="w">              </span><span class="m">1</span>/1<span class="w">                 </span>dockercloud/server-proxy<span class="w">          </span>*:2376-&gt;2376/tcp
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">    </span>ioipby1vcxzm<span class="w">        </span>getstartedlab_redis<span class="w">        </span>replicated<span class="w">          </span><span class="m">0</span>/1<span class="w">                 </span>redis:latest<span class="w">                      </span>*:6379-&gt;6379/tcp
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span>u5cxv7ppv5o0<span class="w">        </span>getstartedlab_visualizer<span class="w">   </span>replicated<span class="w">          </span><span class="m">0</span>/1<span class="w">                 </span>dockersamples/visualizer:stable<span class="w">   </span>*:8080-&gt;8080/tcp
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">    </span>vy7n2piyqrtr<span class="w">        </span>getstartedlab_web<span class="w">          </span>replicated<span class="w">          </span><span class="m">5</span>/5<span class="w">                 </span>sam/getstarted:part6<span class="w">    </span>*:80-&gt;80/tcp
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">    </span><span class="o">[</span>getstartedlab<span class="o">]</span><span class="w"> </span>~/sandbox/getstart<span class="w"> </span>$<span class="w"> </span>docker<span class="w"> </span>service<span class="w"> </span>ps<span class="w"> </span>vy7n2piyqrtr
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">    </span>ID<span class="w">                  </span>NAME<span class="w">                  </span>IMAGE<span class="w">                            </span>NODE<span class="w">                                          </span>DESIRED<span class="w"> </span>STATE<span class="w">       </span>CURRENT<span class="w"> </span>STATE<span class="w">            </span>ERROR<span class="w">               </span>PORTS
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">    </span>qrcd4a9lvjel<span class="w">        </span>getstartedlab_web.1<span class="w">   </span>sam/getstarted:part6<span class="w">   </span>ip-172-31-5-208.us-west-1.compute.internal<span class="w">    </span>Running<span class="w">             </span>Running<span class="w"> </span><span class="m">20</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">                       </span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">    </span>sknya8t4m51u<span class="w">        </span>getstartedlab_web.2<span class="w">   </span>sam/getstarted:part6<span class="w">   </span>ip-172-31-6-237.us-west-1.compute.internal<span class="w">    </span>Running<span class="w">             </span>Running<span class="w"> </span><span class="m">17</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">                       </span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">    </span>ia730lfnrslg<span class="w">        </span>getstartedlab_web.3<span class="w">   </span>sam/getstarted:part6<span class="w">   </span>ip-172-31-20-217.us-west-1.compute.internal<span class="w">   </span>Running<span class="w">             </span>Running<span class="w"> </span><span class="m">21</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">                       </span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">    </span>1edaa97h9u4k<span class="w">        </span>getstartedlab_web.4<span class="w">   </span>sam/getstarted:part6<span class="w">   </span>ip-172-31-18-121.us-west-1.compute.internal<span class="w">   </span>Running<span class="w">             </span>Running<span class="w"> </span><span class="m">21</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">                       </span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">    </span>uh64ez6ahuew<span class="w">        </span>getstartedlab_web.5<span class="w">   </span>sam/getstarted:part6<span class="w">   </span>ip-172-31-18-121.us-west-1.compute.internal<span class="w">   </span>Running<span class="w">             </span>Running<span class="w"> </span><span class="m">22</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">        </span>
+</code></pre></div>
+<h4 id="annexe-sur-docker-machine">Annexe sur docker-machine</h4>
+<p>Docker Machine is a tool that lets you install Docker Engine on virtual hosts, and manage the hosts with docker-machine commands. You can use Machine to create Docker hosts on your local Mac or Windows box, on your company network, in your data center, or on cloud providers like Azure, AWS, or Digital Ocean.</p>
+<p>Using docker-machine commands, you can start, inspect, stop, and restart a managed host, upgrade the Docker client and daemon, and configure a Docker client to talk to your host.</p>
+<h3 id="katacoda-get-started">Katacoda : Get Started</h3>
+<h4 id="scenario-1-deploying-your-first-docker-container">Scénario 1 Deploying Your First Docker Container</h4>
+<p><strong>Ce qu'il faut retenir :</strong><br />
+Pour chercher une image sur un registry on utilise la commande <code>docker search</code>.<br />
+Un simple <code>docker run -d nom-de-l'image</code> permet de "tirer" une image depuis un repository et de "démarrer" un container en mode démon.<br />
+<code>docker inspect &lt;friendly-name|container-id&gt;</code> donne les détails du container.<br />
+<code>docker logs &lt;friendly-name|container-id&gt;</code> donne les logs du container.<br />
+<code>docker run -d --name &lt;friendly-name&gt; -p &lt;host-port&gt;:&lt;container-port&gt; &lt;image&gt;:&lt;tag&gt;</code> "tire" l'image depuis un repository "démarre" un container en mode démon via un mapping de port entre l'host et le container. On peut manager le container via le friendly-name.<br />
+<code>docker run -d --name &lt;friendly-name&gt; -p &lt;container-port&gt; &lt;image&gt;:&lt;tag&gt;</code> "tire" l'image depuis un repository "démarre" un container en mode démon via un mapping de port dynamique. On peut manager le container via le friendly-name.<br />
+<code>docker port &lt;friendly-name&gt; &lt;container-port&gt;</code> permet de connaitre le port dynamique utilisé.<br />
+<code>docker run -d --name redisMapped -v /opt/docker/data/redis:/data redis</code> permet de persister les données de redis dans <em>/opt/docker/data/redis</em>.<br />
+<code>docker run ubuntu ps</code> éxécute le container ubuntu et effectue la commande ps dans celui-ci.<br />
+<code>docker run -it ubuntu bash</code> éxécute le container ubuntu et ouvre un shell.  </p>
+<h4 id="scenario-2-deploy-static-html-site-as-container">Scénario 2 Deploy Static HTML site as Container</h4>
+<p>Créer une "image" pour l'instancier comme un "container" cela revient à partir d'une image éxistante et à l'enrichir.<br />
+Pour cela on va créer un fichier <em>Dockerfile</em> qu'on va "builder".<br />
+Pour builder "l'image" on va utiliser la comamnde <code>docker build -t &lt;friendly-name&gt;:&lt;tag&gt; path_to_Dockerfile</code>.<br />
+On peut voir "l'image" précédemment créé via la commande <code>docker images</code>.<br />
+Pour instancier "l'image" en "container" on utilise la commande <code>docker run -d -p &lt;host-port&gt;:&lt;container-port&gt; &lt;friendly-name&gt;:&lt;tag&gt;</code>.  </p>
+<h4 id="scenario-3-building-container-images">Scénario 3 Building Container Images</h4>
+<p>Tout  <em>Dockerfile</em> doit démarrer depuis la commande <code>FROM &lt;image-name&gt;:&lt;tag&gt;</code> qu'on appel une "base image".<br />
+On peut utiliser les commandes <em>RUN ou COPY</em> au sein de notre  <em>Dockerfile</em>.<br />
+<em>RUN</em> permet d'éxécuter une qqcnq commande. Par exemple on peut installer qqch ou compiler qqch.<br />
+<em>COPY</em> permet de copier des fichiers du repertoire où se situe le  <em>Dockerfile</em> dans le container.<br />
+La commande <em>EXPOSE</em> permet de définir le/les port(s) d'exposition du container.<br />
+La commande <em>CMD</em> définit ce que fait le container au démarrage. On l'utilise de de la manière suivante <code>CMD ["nginx","-g","daemon off;"]</code>.<br />
+On peut aussi utiliser la commande <em>ENTRYPOINT</em> à la place de  <em>CMD</em>. Là où <em>CMD</em> peux être surchargé au démarrage du container, <em>ENTRYPOINT</em> définit une commande qui à des arguments qu'on peux passer en ligne de commande.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c"># This is your Editor pane. Write the Dockerfile here and</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c"># use the command line to execute commands</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c"># use the command line to execute commands</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">FROM</span><span class="w"> </span><span class="s">nginx:1.11-alpine</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">COPY</span><span class="w"> </span>./index.html<span class="w"> </span>/usr/share/nginx/html
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;nginx&quot;</span><span class="p">,</span><span class="s2">&quot;-g&quot;</span><span class="p">,</span><span class="s2">&quot;daemon off;&quot;</span><span class="p">]</span>
+</code></pre></div>
+<h4 id="scenario-4-dockerizing-nodejs">Scénario 4 Dockerizing Node.js</h4>
+<p>En cas de rebuild d'une image, Docker garde en cache tout ce qu'il s'est passé.<br />
+Si une modification survient dans les fichiers contenus dans le <em>Dockerfile</em> alors il ne rebuildera que ce qui précède la ligne du <em>Dockerfile</em> en question.<br />
+Cela nécessité d'orchestrer son <em>Dockerfile</em> correctement.  </p>
+<blockquote>
+<p>With NPM we only want to re-run npm install if something within our package.json file has changed. If nothing has changed then we can use the cache version to speed up deployment. By using <code>COPY package.json &lt;dest&gt;</code> we can cause the RUN npm install command to be invalidated if the package.json file has changed. If the file has not changed, then the cache will not be invalided, and the cached results of the npm install command will be used.  </p>
+</blockquote>
+<p>On peux s'affranchir du cache via l'option suivante de la commande build : <code>-no-cache=true</code>.  </p>
+<h4 id="scenario-5-optimise-builds-with-docker-onbuild">Scénario 5 Optimise Builds With Docker OnBuild</h4>
+<p>La commande "ONBUILD" permet de définir des actions à éxécuter plus tard. Cette instruction est pratique dès qu'on souhaite builder une image qui sera utilisé comme "base image".</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">    </span>FROM<span class="w"> </span>node:7
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span>RUN<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/usr/src/app
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span>WORKDIR<span class="w"> </span>/usr/src/app
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span>ONBUILD<span class="w"> </span>COPY<span class="w"> </span>package.json<span class="w"> </span>/usr/src/app/
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span>ONBUILD<span class="w"> </span>RUN<span class="w"> </span>npm<span class="w"> </span>install
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span>ONBUILD<span class="w"> </span>COPY<span class="w"> </span>.<span class="w"> </span>/usr/src/app
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span>CMD<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;npm&quot;</span>,<span class="w"> </span><span class="s2">&quot;start&quot;</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span>FROM<span class="w"> </span>node:7-onbuild
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">    </span>EXPOSE<span class="w"> </span><span class="m">3000</span>
+</code></pre></div>
+<h4 id="scenario-6-ignoring-files-during-build">Scénario 6 Ignoring Files During Build</h4>
+<p>Pour ignorer des fichiers au cours du build il suffit d'ajouter à la racine du répertoire un fichier <em>.dockerignore</em>. Ce fichier est similaire au fichier <em>.gitignore</em>.<br />
+Au passage on peux éxécuter une commande dans le container via le passage de celle-ci après la commande run comme ceci <code>docker run nopassword ls /app</code>.<br />
+Une bonne pratique consiste à ignorer le dossier <code>.git</code>.  </p>
+<h4 id="scenario-7-create-data-containers">Scénario 7 Create Data Containers</h4>
+<p>On peux créer des container de données qu'on appel des <em>data containers</em>.<br />
+Pour créer un <em>data containers</em>, on utilise la commande <code>docker create -v /config --name dataContainer busybox</code>.<br />
+L'option -v permet de connaitre le répertoire "rw".<br />
+Pour copier des donner dans le container on utilise la commande <code>docker cp config.conf dataContainer:/config/</code>.<br />
+Pour éxécuter un autre container qui "map" le <em>data container</em> on utilise la commande <code>docker run --volumes-from dataContainer ubuntu ls /config</code>.<br />
+Pour exporter le <em>data container</em> on utilise la commande <code>docker export dataContainer &gt; dataContainer.tar</code>.  </p>
+<h4 id="scenario-8-creating-networks-between-containers-using-links">Scénario 8 Creating Networks Between Containers using Links</h4>
+<p>On peut créer des liens entre les containers pour faire communiquer deux service par exemple.<br />
+On commence par éxécuter un container cible par exemple <code>docker run -d --name redis-server redis</code>.<br />
+Pour créer un lien on utilise la commande suivante : <code>docker run --link &lt;container-cible|id&gt;:&lt;alias&gt; &lt;container-source&gt;</code>.<br />
+On peux via la commande précédante connecter une interface client à son serveur.<br />
+Dans le cas de Redis <code>docker run -it --link redis-server:redis redis redis-cli -h redis</code>.<br />
+Ce qui est important dans tous ça c'est de comprendre ce qu'il se passe quand docker créé un lien.<br />
+Tout d'abbord il maj les variables d'environment de la machine source avec un certain nombre d'informations de la machine cible. Deuxiemement il met à jour le fichier /etc/hosts de la machine source avec les informations de la machine cible.  </p>
+<h4 id="scenario-9-creating-networks-between-containers-using-networks">Scénario 9 Creating Networks Between Containers using Networks</h4>
+<p>A la différence des liens un <em>docker network</em> s'apparente à un "réseau virtuel" entre les containers.<br />
+Pour créer un <em>docker network</em> on utilise la commande <code>docker network create backend-network</code>.<br />
+Pour attacher un container à ce <em>docker network</em> on utilise l'option <code>--net &lt;nom_du_rez&gt;</code> ex : <code>docker run -d --name=redis --net=backend-network redis</code>.<br />
+Quand on attache des containers à un <em>docker network</em> ceux-ci vont automatiquement partager leurs informations via le DNS embarqué dans docker. On peux voir ce DNS via la commande suivante <code>docker run --net=backend-network alpine cat /etc/resolv.conf</code>.<br />
+On peux attacher un container à un nouveau <em>docker network</em> via la commande <code>docker network connect frontend-network redis</code>.<br />
+On peux voir les <em>docker network</em> via la commande <code>docker network ls</code>.<br />
+Pour savoir quel container est rattaché à quel <em>docker network</em> on utilise la commande <code>docker network inspect frontend-network</code>.<br />
+On peux déconnecter les containers connecté au <em>docker network</em> via la commande <code>docker network disconnect frontend-network redis</code>.  </p>
+<h4 id="scenario-10-persisting-data-using-volumes">Scénario 10 Persisting Data Using Volumes</h4>
+<p>Pour qu'un container persiste ses donner il faut les exporter dans un volume non-volatile (en dehors d'un qqcnq container).<br />
+On utilise l'option "-v" de <code>docker run</code> pour spécifier le volume "mapper" qui va contenir les données persistées.<br />
+Par exemple : <code>docker run  -v /docker/redis-data:/data --name r1 -d redis redis-server --appendonly yes</code>.<br />
+On peut "pipe" les données dans le container via la commande suivant : <code>cat data | docker exec -i r1 redis-cli --pipe</code>.<br />
+On peut aussi "mapper" le volume d'un container A avec celui d'un container via l'option <code>--volume-from</code>.<br />
+Par ex : <code>docker run --volumes-from r1 -it ubuntu ls /data</code>.<br />
+On peut monter un volume avec des options comme dans l'exemple suivant : <code>docker run -v /docker/redis-data:/data:ro -it ubuntu rm -rf /data</code>.  </p>
+<h4 id="scenario-11-manage-container-log-files">Scénario 11 Manage Container Log Files</h4>
+<p>Les logs d'un container sont accessibles via la commande <code>docker logs &lt;container-name|id&gt;</code>.<br />
+Au démarrage d'un container on peut choisir son "log-driver" via l'option <code>--log-driver=</code>.<br />
+Par ex : <code>docker run -d --name redis-syslog --log-driver=syslog redis</code>.<br />
+On peut désactiver les logs d'un container via l'option <code>--log-driver=none</code>.<br />
+Par ex : <code>docker run -d --name redis-none --log-driver=none redis</code>.<br />
+Pour connaitre la configuration des logs on utilise la comamnde suivante : <code>docker inspect --format '{{ .HostConfig.LogConfig }}' redis-server</code>.  </p>
+<h4 id="scenario-12-ensuring-container-uptime-with-restart-policies">Scénario 12 Ensuring Container Uptime With Restart Policies</h4>
+<p>Un container peut comme n'importe quel process "planter". Docker via l'option <code>--restart</code> spécifer le nombre de redémarrage avant un véritable crash.<br />
+Par exemple pour redémarrer 3 fois le container on utilise la commande : <code>docker run -d --name restart-3 --restart=on-failure:3 scrapbook/docker-restart-example</code>.<br />
+Pour redémarrer le container quoi qu'il arrive on utilisera la commande suivante : <code>docker run -d --name restart-always --restart=always scrapbook/docker-restart-example</code>.  </p>
+<h4 id="scenario-13-adding-docker-metadata-labels">Scénario 13 Adding Docker Metadata &amp; Labels</h4>
+<p>On peut ajouter un certain nombre de metadata dans des containers ou des images.<br />
+Les metadata sont gérées via ce qu'on appel des labels.<br />
+Pour ajouter un label au démarrage d'un container on utilise l'option <code>-l=&lt;value&gt;</code> de la commande <code>docker run</code>. Par exemple : <code>docker run -l user=12345 -d redis</code>.<br />
+On peut ajouter un fichier entier contenant des lables via  <code>docker run --label-file=labels -d redis</code>.<br />
+On peut créer des labels dans une image directement via le <em>Dockerfile</em> via la commande <code>LABEL</code>.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">  </span>LABEL<span class="w"> </span><span class="nv">vendor</span><span class="o">=</span>Katacoda<span class="w">  </span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span>LABEL<span class="w"> </span><span class="nv">vendor</span><span class="o">=</span>Katacoda<span class="w"> </span><span class="se">\ </span>com.katacoda.version<span class="o">=</span><span class="m">0</span>.0.5<span class="w"> </span><span class="se">\ </span>com.katacoda.build-date<span class="o">=</span><span class="m">2016</span>-07-01T10:47:29Z<span class="w"> </span><span class="se">\ </span>com.katacoda.course<span class="o">=</span>Docker<span class="w">  </span>
+</code></pre></div>
+<p>Pour connaitre les labels d'une image ou d'un container on utilise la commande <code>docker inspect rd</code>.<br />
+On peut alors "filtrer" les containers ou les images sur des labels via l'option <code>--filter</code>. Par exemple <code>docker ps --filter "label=user=scrapbook"</code> ou encore <code>docker images --filter "label=vendor=Katacoda"</code>.<br />
+Pour ajouter des labels directement dans le démon Unix :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">    </span>docker<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span>-H<span class="w"> </span>unix:///var/run/docker.sock<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span>--label<span class="w"> </span>com.katacoda.environment<span class="o">=</span><span class="s2">&quot;production&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span>--label<span class="w"> </span>com.katacoda.storage<span class="o">=</span><span class="s2">&quot;ssd&quot;</span>
+</code></pre></div>
+<h4 id="scenario-14-load-balancing-containers">Scénario 14 Load Balancing Containers</h4>
+<p>Ce scénario utilise un container spécifique "nginx_proxy" pour proxyfier et load-balancer des containers web. Le seul intérêt de ce tuto est qu'il aborde la notion de "Service Discovery" via les "Docker's API.".  </p>
+<h4 id="scenario-15-orchestration-using-docker-compose">Scénario 15 Orchestration using Docker Compose</h4>
+<p>Docker Compose permet d'orchestrer des applications mutli-containers.<br />
+Docker Compose est basé sur un fichier YAML <em>docker-compose.yml</em> qui à la forme suivante.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nt">container_name</span><span class="p">:</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">- or options</span>
+</code></pre></div>
+<p>Pour démarrer l'application on utilise la commande <code>docker-compose up -d</code>.<br />
+Pour voir les containers démarré on utilise la commande <code>docker-compose ps</code>.<br />
+Pour accéder au log <code>docker-compose log</code>.<br />
+Pour scaler un service précis on utilise la commande suivante : <code>docker-compose scale web=3</code>.<br />
+Pour arréter une application on utilisera <code>docker-compose stop</code>.<br />
+Pour supprimer tous les containers <code>docker-compose rm</code>.<br />
+Attention docker-compose n'est pas la meme chose que docker stack (voir le lien suivant <a href="https://nickjanetakis.com/blog/docker-tip-23-docker-compose-vs-docker-stack">https://nickjanetakis.com/blog/docker-tip-23-docker-compose-vs-docker-stack</a> )</p>
+<h4 id="scenario-16-see-container-metrics-with-docker-stats">Scénario 16 See Container Metrics With Docker Stats</h4>
+<p>Pour connaitre les métrics d'un container on utilise la commande <code>docker stats nginx</code>.<br />
+Pour connaitre les métrics de plusieurs containers on utilise la commande <code>docker ps -q | xargs docker stats</code>.  </p>
+<h4 id="scenario-17-creating-optimised-docker-images-using-multi-stage-builds">Scénario 17 Creating Optimised Docker Images using Multi-Stage Builds</h4>
+<blockquote>
+<p>The Multi-Stage feature allows a single Dockerfile to contain multiple stages in order to produce the desired, optimised, Docker Image.<br />
+Previously, the problem would have been solved with two Dockerfiles. One file would have the steps to build the binary and artifacts using a development container, the second would be optimised for production and not include the development tools.<br />
+By removing development tooling in the production image, you reproduce the attack surface and improve the deployment time.  </p>
+</blockquote>
+<p>Un exemple de fichier Multi-Stage.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c"># First Stage</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">golang:1.6-alpine</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>/app
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">ADD</span><span class="w"> </span>.<span class="w"> </span>/app/
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="k">RUN</span><span class="w"> </span><span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">GOOS</span><span class="o">=</span>linux<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>-a<span class="w"> </span>-installsuffix<span class="w"> </span>cgo<span class="w"> </span>-o<span class="w"> </span>main<span class="w"> </span>.
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="c"># Second Stage</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="k">FROM</span><span class="w"> </span><span class="s">alpine</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;/app&quot;</span><span class="p">]</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="c"># Copy from first stage</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span><span class="m">0</span><span class="w"> </span>/app/main<span class="w"> </span>/app
+</code></pre></div>
+<p>Pour Builder l'image on utilise la commande suivant <code>docker build -f Dockerfile.multi -t golang-app .</code></p>
+<h4 id="scenario-18-formatting-ps-output">Scénario 18 Formatting PS Output</h4>
+<p>On peux formatter la sortie de <code>docker ps</code> via l'option <code>--format</code>.<br />
+<code>docker ps --format '{{.Names}} container is using {{.Image}} image'</code>.<br />
+<code>docker ps --format 'table {{.Names}}\t{{.Image}}'</code>.<br />
+<code>docker ps -q | xargs docker inspect --format '{{ .Id }} - {{ .Name }} - {{ .NetworkSettings.IPAddress }}'</code>.  </p>
+<h4 id="scenario-19-learn-docker-swarm">Scénario 19 Learn Docker Swarm</h4>
+<p>On peux "clusteriser" docker avec le mode <em>Swarm</em>.<br />
+On démarre un cluster <em>Swarm</em> avec la commande <code>docker swarm init</code>.<br />
+Le premier cluster devient un cluster "manager" il renseigne un token qu'il faut garder dans un endroit sécurisé. Ce token permet aux autres "node" de s'enregistrer au cluster.<br />
+Depuis un "node" externe au cluster, on peut utiliser la commande suivante pour récupérer le token :
+<code>token=$(docker -H 172.17.0.33:2345 swarm join-token -q worker) &amp;&amp; echo $token</code>.<br />
+on rejoit alors le cluster avec la commande suivante :
+<code>docker swarm join 172.17.0.33:2377 --token $token</code>.<br />
+Pour connaitre la liste des "nodes" qui composent le cluster on utilise la commande <code>docker node ls</code> depuis le "master".</p>
+<p>Le mode <em>Swarm</em> déploie un model de réseau nouveau et plus robuste, permettant le dialogue et la scalabilité entre chaque "node" du cluste.<br />
+Pour créer un reseau "overlay" dans le cluster swarm on utilise la commande : <code>docker network create -d overlay skynet</code> depuis le "master".  </p>
+<p>Le mode <em>Swarm</em> ajoute la notion de "service" qui est "au dessus" du container. Celle-ci permet de défnir un ou plusieurs container composant un "service" avec des règles de deploiement de réplication de scalabilité ...<br />
+Dans cet exemple on va créer un service qui contient deux serveur http. Ceux-ci sont automatiquement répliqué et load balancé sur l'ensemble du cluster swarm. <code>docker service create --name http --network skynet --replicas 2 -p 80:80 katacoda/docker-http-server</code>.<br />
+Pour connaitre les services en cours on utilise la commande <code>docker service ls</code> depuis le "master".<br />
+Pour connaitre l'état d'un service en particulier <code>docker service ps &lt;service_name&gt;</code>.<br />
+Pour inspecter un service en particulier <code>docker service inspect --pretty &lt;service_name&gt;</code>.<br />
+Pour connaitre les containers du "node" <code>docker node ps self</code>.<br />
+Depuis le master pour connaitre les containers d'un "node" <code>docker node ps $(docker node ls -q | head -n1)</code>.<br />
+Pour scaler le nombre d'instance d'un service en cli : <code>docker service scale &lt;service_name&gt;=&lt;nombre_d'instance&gt;</code> ex : <code>docker service scale http=5</code></p>
+<h2 id="source">Source</h2>
+<p><a href="https://docs.docker.com/install/">Get Docker</a><br />
+<a href="https://docs.docker.com/install/linux/docker-ce/centos/">Get Docker CE for CentOS</a><br />
+<a href="https://docs.docker.com/install/linux/linux-postinstall/">Post-installation steps for Linux</a><br />
+<a href="https://docs.docker.com/get-started/">Get Started</a><br />
+<a href="https://docs.docker.com/machine/overview/">Docker Machine</a>
+<a href="https://www.katacoda.com/courses/docker">Katacoda Docker</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

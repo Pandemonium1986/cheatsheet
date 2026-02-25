@@ -1,0 +1,4004 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My awesome cheatsheet, because they're awesomes">
+      
+      
+        <meta name="author" content="Michael Maffait">
+      
+      
+        <link rel="canonical" href="https://cheatsheet.pdm.ovh/cloud/azure/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../azure-devops/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Azure - Michael M. Cheat sheet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#azure-overview-for-az-900" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Michael M. Cheat sheet" class="md-header__button md-logo" aria-label="Michael M. Cheat sheet" data-md-component="logo">
+      
+  <img src="../../../img/cheatsheet.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Michael M. Cheat sheet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Azure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Pandemonium1986/cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cheat sheet
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Michael M. Cheat sheet" class="md-nav__button md-logo" aria-label="Michael M. Cheat sheet" data-md-component="logo">
+      
+  <img src="../../../img/cheatsheet.png" alt="logo">
+
+    </a>
+    Michael M. Cheat sheet
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Pandemonium1986/cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cheat sheet
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cloud
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-des-outils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version des outils
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure fundamentals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-concepts-principles-of-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Concepts - Principles of cloud computing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Concepts - Principles of cloud computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is cloud computing?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefits of cloud computing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-terms-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance terms and requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#economies-of-scale-capital-expenditure-capex-versus-operational-expenditure-opex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Economies of scale Capital expenditure (CapEx) versus operational expenditure (OpEx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-deployment-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud deployment models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud deployment models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hybrid cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-cloud-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of cloud services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-introduction-to-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Introduction to Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Introduction to Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Azure?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tour-of-azure-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tour of Azure services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-azure-architecture-and-service-guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Azure architecture and service guarantees
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Azure architecture and service guarantees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understand-datacenters-and-regions-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Datacenters and Regions in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-geographies-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Geographies in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-availability-zones-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Availability Zones in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-region-pairs-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Region Pairs in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-service-level-agreements-for-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Service-Level Agreements for Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compose-slas-across-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compose SLAs across services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-up-for-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sign up for Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sign up for Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understand-azure-billing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Azure billing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-support-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure support options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-manage-services-with-the-azure-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Manage services with the Azure portal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Manage services with the Azure portal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-management-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure management options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-portal-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Portal dashboards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-public-and-private-preview-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access public and private preview features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-azure-compute-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Azure compute options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Azure compute options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-azure-compute-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essential Azure compute concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-azure-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore Azure Virtual Machines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-containers-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore Containers in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-azure-app-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore Azure App Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-serverless-computing-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore Serverless computing in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-azure-data-storage-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Azure data storage options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Azure data storage options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-using-azure-to-store-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefits of using Azure to store data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-azure-data-storage-can-meet-your-business-storage-needs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Azure data storage can meet your business storage needs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-between-azure-data-storage-and-on-premises-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison between Azure data storage and on-premises storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-azure-networking-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Azure networking options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Azure networking options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-your-site-to-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy your site to Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-with-azure-load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale with Azure Load Balancer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce-latency-with-azure-traffic-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reduce latency with Azure Traffic Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-responsibility-and-trust-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security, responsibility, and trust in Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security, responsibility, and trust in Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloud-security-is-a-shared-responsibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud security is a shared responsibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-tips-from-azure-security-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get tips from Azure Security Center
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity and access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encryption
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-azure-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of Azure certificates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protect-your-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protect your network
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protect-your-shared-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protect your shared documents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-advanced-threat-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Advanced Threat Protection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-and-monitor-infrastructure-standards-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apply and monitor infrastructure standards with Azure Policy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Apply and monitor infrastructure standards with Azure Policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-it-compliance-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define IT compliance with Azure Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organize-policy-with-initiatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organize policy with initiatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterprise-governance-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enterprise governance management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-standard-resources-with-azure-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define standard resources with Azure Blueprints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-your-service-compliance-with-compliance-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore your service compliance with Compliance Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitor-your-service-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitor your service health
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-and-organize-azure-resources-with-azure-resource-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control and organize Azure resources with Azure Resource Manager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Control and organize Azure resources with Azure Resource Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principles-of-resource-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principles of resource groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-tagging-to-organize-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use tagging to organize resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-resource-locks-to-protect-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use resource locks to protect resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predict-costs-and-optimize-spending-for-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predict costs and optimize spending for Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Predict costs and optimize spending for Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purchase-azure-products-and-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purchase Azure products and services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-affecting-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factors affecting costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimate-costs-with-the-azure-pricing-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estimate costs with the Azure pricing calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predict-and-optimize-with-cost-management-and-azure-advisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predict and optimize with Cost Management and Azure Advisor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimate-the-total-cost-of-ownership-with-the-azure-tco-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estimate the Total Cost of Ownership with the Azure TCO calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-on-infrastructure-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save on infrastructure costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-ressources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure ressources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure ressources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organiser-vos-ressources-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organiser vos ressources Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerer-vos-couts-avec-azure-cost-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gérer vos coûts avec Azure Cost Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gouvernance-securite-et-conformite-dans-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gouvernance, sécurité et conformité dans Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervision-et-creation-de-rapports-dans-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supervision et création de rapports dans Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability in Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Availability in Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure-devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ovh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ovh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/jhipster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jhipster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DevOps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/commit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/docker-compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gitlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gitlab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jenkins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/longhorn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Longhorn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/minikube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Minikube
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/molecule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Molecule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/nexus3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nexus3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/portainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/traefik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traefik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Os
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Os
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/mint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/wsl2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wsl2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wsl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/atom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/msys2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Msys2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/reveal.js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reveal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/vagrant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vagrant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/virtualbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtualbox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vscode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-des-outils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version des outils
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure fundamentals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-concepts-principles-of-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Concepts - Principles of cloud computing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Concepts - Principles of cloud computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is cloud computing?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefits of cloud computing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-terms-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance terms and requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#economies-of-scale-capital-expenditure-capex-versus-operational-expenditure-opex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Economies of scale Capital expenditure (CapEx) versus operational expenditure (OpEx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-deployment-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud deployment models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud deployment models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hybrid cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-cloud-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of cloud services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-introduction-to-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Introduction to Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Introduction to Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Azure?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tour-of-azure-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tour of Azure services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-azure-architecture-and-service-guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Azure architecture and service guarantees
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Azure architecture and service guarantees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understand-datacenters-and-regions-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Datacenters and Regions in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-geographies-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Geographies in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-availability-zones-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Availability Zones in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-region-pairs-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Region Pairs in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-service-level-agreements-for-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Service-Level Agreements for Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compose-slas-across-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compose SLAs across services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-up-for-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sign up for Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sign up for Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understand-azure-billing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand Azure billing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-support-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure support options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-manage-services-with-the-azure-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Manage services with the Azure portal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Manage services with the Azure portal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-management-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure management options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-portal-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Portal dashboards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-public-and-private-preview-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access public and private preview features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-azure-compute-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Azure compute options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Azure compute options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-azure-compute-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essential Azure compute concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-azure-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore Azure Virtual Machines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-containers-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore Containers in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-azure-app-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore Azure App Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-serverless-computing-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore Serverless computing in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-azure-data-storage-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Azure data storage options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Azure data storage options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-using-azure-to-store-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefits of using Azure to store data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-azure-data-storage-can-meet-your-business-storage-needs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Azure data storage can meet your business storage needs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-between-azure-data-storage-and-on-premises-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison between Azure data storage and on-premises storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-cloud-services-azure-networking-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Cloud Services - Azure networking options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Cloud Services - Azure networking options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-your-site-to-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy your site to Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-with-azure-load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale with Azure Load Balancer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce-latency-with-azure-traffic-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reduce latency with Azure Traffic Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-responsibility-and-trust-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security, responsibility, and trust in Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security, responsibility, and trust in Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloud-security-is-a-shared-responsibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud security is a shared responsibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-tips-from-azure-security-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get tips from Azure Security Center
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity and access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encryption
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-azure-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of Azure certificates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protect-your-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protect your network
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protect-your-shared-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protect your shared documents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-advanced-threat-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Advanced Threat Protection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-and-monitor-infrastructure-standards-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apply and monitor infrastructure standards with Azure Policy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Apply and monitor infrastructure standards with Azure Policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-it-compliance-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define IT compliance with Azure Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organize-policy-with-initiatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organize policy with initiatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterprise-governance-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enterprise governance management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-standard-resources-with-azure-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define standard resources with Azure Blueprints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-your-service-compliance-with-compliance-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore your service compliance with Compliance Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitor-your-service-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitor your service health
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-and-organize-azure-resources-with-azure-resource-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control and organize Azure resources with Azure Resource Manager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Control and organize Azure resources with Azure Resource Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principles-of-resource-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principles of resource groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-tagging-to-organize-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use tagging to organize resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-resource-locks-to-protect-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use resource locks to protect resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predict-costs-and-optimize-spending-for-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predict costs and optimize spending for Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Predict costs and optimize spending for Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purchase-azure-products-and-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purchase Azure products and services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-affecting-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factors affecting costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimate-costs-with-the-azure-pricing-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estimate costs with the Azure pricing calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predict-and-optimize-with-cost-management-and-azure-advisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predict and optimize with Cost Management and Azure Advisor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimate-the-total-cost-of-ownership-with-the-azure-tco-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estimate the Total Cost of Ownership with the Azure TCO calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-on-infrastructure-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save on infrastructure costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-ressources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure ressources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure ressources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organiser-vos-ressources-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organiser vos ressources Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerer-vos-couts-avec-azure-cost-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gérer vos coûts avec Azure Cost Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gouvernance-securite-et-conformite-dans-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gouvernance, sécurité et conformité dans Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervision-et-creation-de-rapports-dans-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supervision et création de rapports dans Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability in Azure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Availability in Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!-- markdownlint-disable MD001 MD013 MD025 MD036 -->
+
+<h1 id="azure-overview-for-az-900">Azure : Overview for AZ-900</h1>
+<h3 id="version-des-outils">Version des outils</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Os / Tool</th>
+<th style="text-align: center;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Azure</td>
+<td style="text-align: center;">X.X.X</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="azure-fundamentals">Azure fundamentals</h2>
+<h2 id="cloud-concepts-principles-of-cloud-computing">Cloud Concepts - Principles of cloud computing</h2>
+<h4 id="what-is-cloud-computing">What is cloud computing?</h4>
+<ul>
+<li>Compute power - such as Linux servers or web applications.</li>
+<li>Storage - such as files and databases.</li>
+<li>Networking - such as secure connections between the cloud provider and your company.</li>
+<li>Analytics - such as visualizing telemetry and performance data.</li>
+</ul>
+<p><img alt="Vm/Container/Serverless" src="../../img/az-002.png" /></p>
+<h4 id="benefits-of-cloud-computing">Benefits of cloud computing</h4>
+<p><strong>It's cost-effective</strong></p>
+<ul>
+<li>Pay-as-you-go.</li>
+<li>Consumption-based.</li>
+</ul>
+<p><strong>It's scalable</strong></p>
+<ul>
+<li>Vertical scaling.</li>
+<li>Horizontal scaling.</li>
+</ul>
+<p><strong>It's elastic</strong></p>
+<ul>
+<li>Compensate automatically adding or removing resources.</li>
+</ul>
+<p><strong>It's current</strong></p>
+<ul>
+<li>Focus on what matters: building and deploying applications.</li>
+<li>Eliminates the burdens of maintaining software patches, hardware setup, upgrades.</li>
+</ul>
+<p><strong>It's reliable</strong></p>
+<ul>
+<li>Data backup</li>
+<li>Disaster recovery.</li>
+<li>Data replication.</li>
+</ul>
+<p><strong>It's global</strong></p>
+<ul>
+<li>Fully redundant datacenters located in various regions all over the globe.</li>
+</ul>
+<p><strong>It's secure</strong></p>
+<ul>
+<li>Physical security.</li>
+<li>Digital security.</li>
+</ul>
+<h4 id="compliance-terms-and-requirements">Compliance terms and requirements</h4>
+<ul>
+<li>How compliant is the cloud provider when it comes to handling sensitive data ?</li>
+<li>How compliant are the services offered by the cloud provider ?</li>
+<li>How can I deploy my own cloud-based solutions to scenarios that have accreditation or compliance requirements ?</li>
+<li>What terms are part of the privacy statement for the provider ?</li>
+</ul>
+<h4 id="economies-of-scale-capital-expenditure-capex-versus-operational-expenditure-opex">Economies of scale Capital expenditure (CapEx) versus operational expenditure (OpEx)</h4>
+<p><strong>CapEx</strong></p>
+<ul>
+<li>Server costs.</li>
+<li>Storage costs.</li>
+<li>Network costs.</li>
+<li>Backup and archive costs.</li>
+<li>Organization continuity and disaster recovery costs.</li>
+<li>Datacenter infrastructure costs.</li>
+<li>Technical personnel.</li>
+</ul>
+<p><strong>Benefits of CapEx</strong></p>
+<p>With capital expenditures, you plan your expenses at the start of a project or budget period. Your costs are fixed, meaning you know exactly how much is being spent. This is appealing when you need to predict the expenses before a project starts due to a limited budget.</p>
+<p><strong>OpEx</strong></p>
+<ul>
+<li>Leasing software and customized features.</li>
+<li>Scaling charges based on usage/demand instead of fixed hardware or capacity.</li>
+<li>Billing at the user or organization level.</li>
+</ul>
+<p><strong>Benefits of OpEx</strong></p>
+<p>With the OpEx model, companies wanting to try a new product or service don't need to invest in equipment. Instead, they pay as much or as little for the infrastructure as required.</p>
+<h4 id="cloud-deployment-models">Cloud deployment models</h4>
+<h5 id="public-cloud">Public cloud</h5>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>High scalability/agility – you don't have to buy a new server in order to scale.</li>
+<li>Pay-as-you-go pricing – you pay only for what you use, no CapEx costs.</li>
+<li>You're not responsible for maintenance or updates of the hardware.</li>
+<li>Minimal technical knowledge to set up and use - you can leverage the skills and expertise of the cloud provider to ensure workloads are secure, safe, and highly available.</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>There may be specific security requirements that cannot be met by using public cloud.</li>
+<li>There may be government policies, industry standards, or legal requirements which public clouds cannot meet.</li>
+<li>You don't own the hardware or services and cannot manage them as you may want to.</li>
+<li>Unique business requirements, such as having to maintain a legacy application might be hard to meet.</li>
+</ul>
+<h5 id="private-cloud">Private cloud</h5>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>You can ensure the configuration can support any scenario or legacy application.</li>
+<li>You have control (and responsibility) over security.</li>
+<li>Private clouds can meet strict security, compliance, or legal requirements.</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>You have some initial CapEx costs and must purchase the hardware for startup and maintenance.</li>
+<li>Owning the equipment limits the agility - to scale you must buy, install, and setup new hardware.</li>
+<li>Private clouds require IT skills and expertise that's hard to come by.</li>
+</ul>
+<h5 id="hybrid-cloud">Hybrid cloud</h5>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>You can keep any systems running and accessible that use out-of-date hardware or an out-of-date operating system.</li>
+<li>You have flexibility with what you run locally versus in the cloud.</li>
+<li>You can take advantage of economies of scale from public cloud providers for services and resources where it's cheaper, and then supplement with your own equipment when it's not.</li>
+<li>You can use your own equipment to meet security, compliance, or legacy scenarios where you need to completely control the environment.</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>It can be more expensive than selecting one deployment model since it involves some CapEx cost up front.</li>
+<li>It can be more complicated to set up and manage.</li>
+</ul>
+<h4 id="types-of-cloud-services">Types of cloud services</h4>
+<p><strong>Infrastructure as a service (IaaS)</strong></p>
+<p>Infrastructure as a Service is the most flexible category of cloud services. It aims to give you complete control over the hardware that runs your application (IT infrastructure servers and virtual machines (VMs), storage, networks, and operating systems). Instead of buying hardware, with IaaS, you rent it. It's an instant computing infrastructure, provisioned and managed over the internet.</p>
+<p><strong>Platform as a service (PaaS)</strong></p>
+<p>PaaS provides an environment for building, testing, and deploying software applications. The goal of PaaS is to help you create an application quickly without managing the underlying infrastructure. For example, when deploying a web application using PaaS, you don't have to install an operating system, web server, or even system updates.</p>
+<p><strong>Software as a service (SaaS)</strong></p>
+<p>SaaS is software that is centrally hosted and managed for the end customer. It is usually based on an architecture where one version of the application is used for all customers, and licensed through a monthly or annual subscription. Office 365, Skype, and Dynamics CRM Online are perfect examples of SaaS software.</p>
+<p><strong>Management responsibilities</strong></p>
+<p><img alt="scope-levels" src="../../img/az-003.png" /></p>
+<h2 id="core-cloud-services-introduction-to-azure">Core Cloud Services - Introduction to Azure</h2>
+<h4 id="what-is-azure">What is Azure?</h4>
+<p>Azure is Microsoft's cloud computing platform. Azure is a continually expanding set of cloud services that help your organization meet your current and future business challenges. Azure gives you the freedom to build, manage, and deploy applications on a massive global network using your favorite tools and frameworks.</p>
+<h4 id="tour-of-azure-services">Tour of Azure services</h4>
+<p><img alt="azure-services" src="../../img/az-004.png" /></p>
+<h2 id="core-cloud-services-azure-architecture-and-service-guarantees">Core Cloud Services - Azure architecture and service guarantees</h2>
+<h4 id="understand-datacenters-and-regions-in-azure">Understand Datacenters and Regions in Azure</h4>
+<p><img alt="azure-regions" src="../../img/az-005.png" /></p>
+<p>A region is a geographical area on the planet containing at least one, but potentially multiple datacenters that are nearby and networked together with a low-latency network. Azure intelligently assigns and controls the resources within each region to ensure workloads are appropriately balanced.</p>
+<h4 id="understand-geographies-in-azure">Understand Geographies in Azure</h4>
+<p>Azure divides the world into geographies that are defined by geopolitical boundaries or country borders. An Azure geography is a discrete market typically containing two or more regions that preserve data residency and compliance boundaries</p>
+<p>Geographies are broken up into the following areas:</p>
+<ul>
+<li>Americas.</li>
+<li>Europe.</li>
+<li>Asia Pacific.</li>
+<li>Middle East and Africa.</li>
+</ul>
+<h4 id="understand-availability-zones-in-azure">Understand Availability Zones in Azure</h4>
+<p>Availability Zones are physically separate datacenters within an Azure region.</p>
+<p><img alt="azure-regions" src="../../img/az-006.png" /></p>
+<h4 id="understand-region-pairs-in-azure">Understand Region Pairs in Azure</h4>
+<p>Each Azure region is always paired with another region within the same geography (such as US, Europe, or Asia) at least 300 miles away. This approach allows for the replication of resources (such as virtual machine storage) across a geography that helps reduce the likelihood of interruptions due to events such as natural disasters, civil unrest, power outages, or physical network outages affecting both regions at once.</p>
+<h4 id="understand-service-level-agreements-for-azure">Understand Service-Level Agreements for Azure</h4>
+<p>There are three key characteristics of SLAs for Azure products and services:</p>
+<ul>
+<li>Performance Targets.</li>
+<li>Uptime and Connectivity Guarantees.</li>
+<li>Service credits.</li>
+</ul>
+<h4 id="compose-slas-across-services">Compose SLAs across services</h4>
+<p>When combining SLAs across different service offerings, the resultant SLA is called a Composite SLA. The resulting composite SLA can provide higher or lower uptime values, depending on your application architecture.</p>
+<h2 id="sign-up-for-azure">Sign up for Azure</h2>
+<h4 id="understand-azure-billing">Understand Azure billing</h4>
+<p><strong>Azure subscription</strong></p>
+<p>When you sign up, an Azure subscription is created by default. An Azure subscription is a logical container used to provision resources in Azure.</p>
+<p><strong>Create additional Azure subscriptions</strong></p>
+<ul>
+<li>Environments.</li>
+<li>Organizational structures.</li>
+<li>Billing: You might.</li>
+</ul>
+<p><img alt="azure-billing" src="../../img/az-007.png" /></p>
+<h4 id="azure-support-options">Azure support options</h4>
+<p><strong>Azure free support resources</strong></p>
+<p>You have 24/7 access to the online documentation, community support, and new Azure capabilities demo videos on YouTube channel.</p>
+<p><strong>Azure support plans</strong></p>
+<ul>
+<li>Developer.</li>
+<li>Standard.</li>
+<li>Professional Direct.</li>
+</ul>
+<h2 id="core-cloud-services-manage-services-with-the-azure-portal">Core Cloud Services - Manage services with the Azure portal</h2>
+<h4 id="azure-management-options">Azure management options</h4>
+<ul>
+<li>Azure portal for interacting with Azure via a Graphical User Interface (GUI).</li>
+<li>Azure PowerShell and Azure Command-Line Interface (CLI) for command-line and automation-based interactions with Azure.</li>
+<li>Azure Cloud Shell for a web-based command-line interface.</li>
+<li>Azure mobile app for monitoring and managing your resources from your mobile device.</li>
+</ul>
+<h4 id="azure-portal-dashboards">Azure Portal dashboards</h4>
+<p>A dashboard is a customizable collection of UI tiles displayed in the Azure portal. You add, remove, and position tiles to create the exact view you want, and then save that view as a dashboard. Multiple dashboards are supported, and you can switch between them as needed. You can even share your dashboards with other team members.</p>
+<h4 id="access-public-and-private-preview-features">Access public and private preview features</h4>
+<ul>
+<li>Private Preview. An Azure feature marked "private preview" is available to specific Azure customers for evaluation purposes. This is typically by invite only and issued directly by the product team responsible for the feature or service.</li>
+<li>Public Preview. An Azure feature marked "public preview" is available to all Azure customers for evaluation purposes. These previews can be turned on through the preview features page as detailed below.</li>
+</ul>
+<h2 id="core-cloud-services-azure-compute-options">Core Cloud Services - Azure compute options</h2>
+<h4 id="essential-azure-compute-concepts">Essential Azure compute concepts</h4>
+<p><strong>What is Azure compute?</strong></p>
+<p>Azure compute is an on-demand computing service for running cloud-based applications. It provides computing resources like multi-core processors and supercomputers via virtual machines and containers. It also provides serverless computing to run apps without requiring infrastructure setup or configuration. The resources are available on-demand and can typically be created in minutes or even seconds. You pay only for the resources you use and only for as long as you're using them.</p>
+<ul>
+<li>Virtual machines.</li>
+<li>Containers.</li>
+<li>Azure App Service.</li>
+<li>Serverless computing.</li>
+</ul>
+<h4 id="explore-azure-virtual-machines">Explore Azure Virtual Machines</h4>
+<p>Azure Virtual Machines (VMs) let you create and use virtual machines in the cloud. They provide infrastructure as a service (IaaS) in the form of a virtualized server and can be used in many ways. Just like a physical computer, you can customize all of the software running on the VM. VMs are an ideal choice when you need:</p>
+<ul>
+<li>Total control over the operating system (OS).</li>
+<li>The ability to run custom software.</li>
+<li>To use custom hosting configurations.</li>
+</ul>
+<p><strong>Scaling VMs in Azure</strong></p>
+<p>You can run single VMs for testing, development, or minor tasks; or you can group VMs together to provide high availability, scalability, and redundancy. Azure has several features such that, no matter what your uptime requirements are, Azure can meet them. These features include:</p>
+<ul>
+<li>Availability sets :
+    An availability set is a logical grouping of two or more VMs that help keep your application available during planned or unplanned maintenance.</li>
+<li>Virtual Machine Scale Sets :
+    Azure Virtual Machine Scale Sets let you create and manage a group of identical, load balanced VMs</li>
+<li>Azure Batch :
+    Azure Batch enables large-scale job scheduling and compute management with the ability to scale to tens, hundreds, or thousands of VMs.</li>
+</ul>
+<p><img alt="scope-levels" src="../../img/az-008.png" /></p>
+<h4 id="explore-containers-in-azure">Explore Containers in Azure</h4>
+<p>Azure supports Docker containers (a standardized container model), and there are several ways to manage containers in Azure.</p>
+<ul>
+<li>Azure Container Instances (ACI) :
+    Azure Container Instances (ACI) offers the fastest and simplest way to run a container in Azure. You don't have to manage any virtual machines or configure any additional services. It is a PaaS offering that allows you to upload your containers and execute them directly with automatic elastic scale.</li>
+<li>Azure Kubernetes Service (AKS) :
+    The task of automating, managing, and interacting with a large number of containers is known as orchestration. Azure Kubernetes Service (AKS) is a complete orchestration service for containers with distributed architectures with multiple containers.</li>
+</ul>
+<h4 id="explore-azure-app-service">Explore Azure App Service</h4>
+<p>Azure App Service enables you to build and host web apps, background jobs, mobile backends, and RESTful APIs in the programming language of your choice without managing infrastructure. It offers automatic scaling and high availability.</p>
+<p>With Azure App Service, you can host most common web app styles including:</p>
+<ul>
+<li>Web Apps.</li>
+<li>API Apps.</li>
+<li>WebJobs.</li>
+<li>Mobile Apps.</li>
+</ul>
+<h4 id="explore-serverless-computing-in-azure">Explore Serverless computing in Azure</h4>
+<p>Serverless computing is the abstraction of servers, infrastructure, and OSs. With serverless computing, Azure takes care of managing the server infrastructure and allocation/deallocation of resources based on demand. Infrastructure isn't your responsibility. Scaling and performance are handled automatically, and you are billed only for the exact resources you use. There's no need to even reserve capacity.</p>
+<p>Serverless computing encompasses three ideas:</p>
+<ul>
+<li>Abstraction of servers.</li>
+<li>Event-driven scale.</li>
+<li>Micro-billing.</li>
+</ul>
+<p>Azure has two implementations of serverless compute:</p>
+<ul>
+<li>Azure Functions.</li>
+<li>Azure Logic Apps.</li>
+</ul>
+<h2 id="core-cloud-services-azure-data-storage-options">Core Cloud Services - Azure data storage options</h2>
+<h4 id="benefits-of-using-azure-to-store-data">Benefits of using Azure to store data</h4>
+<p><strong>Benefits</strong></p>
+<ul>
+<li>Automated backup and recovery.</li>
+<li>Replication across the globe.</li>
+<li>Support for data analytics.</li>
+<li>Encryption capabilities.</li>
+<li>Multiple data types.</li>
+<li>Data storage in virtual disks.</li>
+<li>Storage tiers.</li>
+</ul>
+<p><strong>Types of data</strong></p>
+<ul>
+<li>Structured data.</li>
+<li>Semi-structured data.</li>
+<li>Unstructured data.</li>
+</ul>
+<h4 id="how-azure-data-storage-can-meet-your-business-storage-needs">How Azure data storage can meet your business storage needs</h4>
+<p><strong>Azure SQL Database</strong></p>
+<p>Azure SQL Database is a relational database as a service (DaaS) based on the latest stable version of the Microsoft SQL Server database engine.</p>
+<p><strong>Azure Cosmos DB</strong></p>
+<p>Azure Cosmos DB is a globally distributed database service. It supports schema-less data that lets you build highly responsive and Always On applications to support constantly changing data.</p>
+<p><strong>Azure Blob storage</strong></p>
+<p>Azure Blob Storage is unstructured, meaning that there are no restrictions on the kinds of data it can hold.</p>
+<p><strong>Azure Data Lake Storage</strong></p>
+<p>The Data Lake feature allows you to perform analytics on your data usage and prepare reports. Data Lake is a large repository that stores both structured and unstructured data.</p>
+<p><strong>Azure Files</strong></p>
+<p>Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol.</p>
+<p><strong>Azure Queue</strong></p>
+<p>Azure Queue storage is a service for storing large numbers of messages that can be accessed from anywhere in the world.</p>
+<p><strong>Disk Storage</strong></p>
+<p>Disk storage provides disks for virtual machines, applications, and other services to access and use as they need, similar to how they would in on-premises scenarios</p>
+<p><strong>Storage tiers</strong></p>
+<p>Azure offers three storage tiers for blob object storage:</p>
+<ul>
+<li>Hot storage tier: optimized for storing data that is accessed frequently.</li>
+<li>Cool storage tier: optimized for data that are infrequently accessed and stored for at least 30 days.</li>
+<li>Archive storage tier: for data that are rarely accessed and stored for at least 180 days with flexible latency requirements.</li>
+</ul>
+<p><strong>Encryption and replication</strong></p>
+<p>Azure provides security and high availability to your data through encryption and replication features.</p>
+<ul>
+<li>Azure Storage Service Encryption (SSE) for data at rest helps you secure your data to meet the organization's security and regulatory compliance. It encrypts the data before storing it and decrypts the data before retrieving it. The Encryption and decryption are transparent to the user.</li>
+<li>Client-side encryption is where the data is already encrypted by the client libraries. Azure stores the data in the encrypted state at rest, which is then decrypted during retrieval.</li>
+</ul>
+<h4 id="comparison-between-azure-data-storage-and-on-premises-storage">Comparison between Azure data storage and on-premises storage</h4>
+<ul>
+<li>Cost effectiveness.</li>
+<li>Reliability.</li>
+<li>Storage types.</li>
+<li>Agility.</li>
+</ul>
+<p><img alt="scope-levels" src="../../img/az-009.png" /></p>
+<h2 id="core-cloud-services-azure-networking-options">Core Cloud Services - Azure networking options</h2>
+<h4 id="deploy-your-site-to-azure">Deploy your site to Azure</h4>
+<p><strong>Using an N-tier architecture</strong></p>
+<p>An N-tier architecture divides an application into two or more logical tiers. Architecturally, a higher tier can access services from a lower tier, but a lower tier should never access a higher tier.</p>
+<ul>
+<li>The web tier provides the web interface to your users through a browser.</li>
+<li>The application tier runs business logic.</li>
+<li>The data tier includes databases and other storage that hold product information and customer orders.</li>
+</ul>
+<p><img alt="n-tiers" src="../../img/az-010.png" /></p>
+<p><strong>What's an Azure region?</strong></p>
+<p>A region is one or more Azure data centers within a specific geographic location. East US, West US, and North Europe are examples of regions. In this instance, you see that the application is running in the East US region.</p>
+<p><strong>What's a virtual network?</strong></p>
+<p>A virtual network allows Azure resources to securely communicate with each other, the internet, and on-premises networks. A virtual network is scoped to a single region; however, multiple virtual networks from different regions can be connected together using virtual network peering.</p>
+<p><strong>What's a network security group?</strong></p>
+<p>A network security group, or NSG, allows or denies inbound network traffic to your Azure resources. Think of a network security group as a cloud-level firewall for your network.</p>
+<h4 id="scale-with-azure-load-balancer">Scale with Azure Load Balancer</h4>
+<p><strong>What are availability and high availability?</strong></p>
+<p>Availability refers to how long your service is up and running without interruption. High availability, or highly available, refers to a service that's up and running for a long period of time.</p>
+<p><strong>What is resiliency?</strong></p>
+<p>Resiliency refers to a system's ability to stay operational during abnormal conditions.</p>
+<ul>
+<li>Natural disasters.</li>
+<li>System maintenance, both planned and unplanned, including software updates and security patches.</li>
+<li>Spikes in traffic to your site.</li>
+<li>Threats made by malicious parties, such as distributed denial of service, or DDoS, attacks.</li>
+</ul>
+<p><strong>What is a load balancer?</strong></p>
+<p>A load balancer distributes traffic evenly among each system in a pool. A load balancer can help you achieve both high availability and resiliency.</p>
+<p><strong>What is Azure Load Balancer?</strong></p>
+<p>Azure Load Balancer is a load balancer service that Microsoft provides that helps take care of the maintenance for you. Load Balancer supports inbound and outbound scenarios, provides low latency and high throughput, and scales up to millions of flows for all Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) applications.</p>
+<p><img alt="azure-lb" src="../../img/az-011.png" /></p>
+<p><strong>Azure Application Gateway</strong></p>
+<p>Application Gateway is a load balancer designed for web applications. It uses Azure Load Balancer at the transport level (TCP) and applies sophisticated URL-based routing rules to support several advanced scenarios.</p>
+<p>Here are some of the benefits of using Azure Application Gateway over a simple load balancer:</p>
+<ul>
+<li>Cookie affinity.</li>
+<li>SSL termination.</li>
+<li>Web application firewall.</li>
+<li>URL rule-based routes.</li>
+<li>Rewrite HTTP headers.</li>
+</ul>
+<p><strong>What is a Content Delivery Network?</strong></p>
+<p>A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. It is a way to get content to users in their local region to minimize latency.</p>
+<p><strong>What about DNS?</strong></p>
+<p>DNS, or Domain Name System, is a way to map user-friendly names to their IP addresses. You can think of DNS as the phonebook of the internet.</p>
+<h4 id="reduce-latency-with-azure-traffic-manager">Reduce latency with Azure Traffic Manager</h4>
+<p><strong>What is network latency?</strong></p>
+<p>Latency refers to the time it takes for data to travel over the network. Latency is typically measured in milliseconds.</p>
+<p>Compare latency to bandwidth. Bandwidth refers to the amount of data that can fit on the connection. Latency refers to the time it takes for that data to reach its destination.</p>
+<p><strong>Scale out to different regions</strong></p>
+<p>One way to reduce latency is to provide exact copies of your service in more than one region. The following illustration shows an example of global deployment.</p>
+<p><img alt="scale-region" src="../../img/az-012.png" /></p>
+<p><strong>Use Traffic Manager to route users to the closest endpoint</strong></p>
+<p>One answer is Azure Traffic Manager. Traffic Manager uses the DNS server that's closest to the user to direct user traffic to a globally distributed endpoint.</p>
+<p><img alt="scale-region" src="../../img/az-013.png" /></p>
+<h2 id="security-responsibility-and-trust-in-azure">Security, responsibility, and trust in Azure</h2>
+<h4 id="cloud-security-is-a-shared-responsibility">Cloud security is a shared responsibility</h4>
+<p><img alt="shared-responsibility" src="../../img/az-014.png" /></p>
+<p><strong>A layered approach to security</strong></p>
+<p><img alt="layered-approach" src="../../img/az-015.png" /></p>
+<ul>
+<li>Data :
+    It's the responsibility of those storing and controlling access to data to ensure that it's properly secured.</li>
+<li>Application :
+    Integrating security into the application development lifecycle will help reduce the number of vulnerabilities introduced in code.</li>
+<li>Compute :
+    Malware, unpatched systems, and improperly secured systems open your environment to attacks.</li>
+<li>Networking :
+    At this layer, the focus is on limiting the network connectivity across all your resources to allow only what is required. By limiting this communication, you reduce the risk of lateral movement throughout your network.</li>
+<li>Perimeter :
+    At the network perimeter, it's about protecting from network-based attacks against your resources.</li>
+<li>Identity and access :
+    The identity and access layer is all about ensuring identities are secure, access granted is only what is needed, and changes are logged.</li>
+<li>Physical security :
+    With physical security, the intent is to provide physical safeguards against access to assets. These safeguards ensure that other layers can't be bypassed, and loss or theft is handled appropriately.</li>
+</ul>
+<h4 id="get-tips-from-azure-security-center">Get tips from Azure Security Center</h4>
+<p>A great place to start when examining the security of your Azure-based solutions is Azure Security Center. Security Center is a monitoring service that provides threat protection across all of your services both in Azure, and on-premises. Security Center can:</p>
+<p><strong>Available tiers</strong></p>
+<ul>
+<li>Free :
+    Available as part of your Azure subscription, this tier is limited to assessments and recommendations of Azure resources only.</li>
+<li>Standard :
+    This tier provides a full suite of security-related services including continuous monitoring, threat detection, just-in-time access control for ports, and more.</li>
+</ul>
+<h4 id="identity-and-access">Identity and access</h4>
+<p><strong>Authentication and authorization</strong></p>
+<ul>
+<li>Authentication is the process of establishing the identity of a person or service looking to access a resource. It involves the act of challenging a party for legitimate credentials, and provides the basis for creating a security principal for identity and access control use. It establishes if they are who they say they are.</li>
+<li>Authorization is the process of establishing what level of access an authenticated person or service has. It specifies what data they're allowed to access and what they can do with it.</li>
+</ul>
+<p><strong>What is Azure Active Directory?</strong></p>
+<p>Azure AD is a cloud-based identity service. It has built-in support for synchronizing with your existing on-premises Active Directory or can be used stand-alone.</p>
+<p>Azure AD provides services such as:</p>
+<ul>
+<li>Authentication.</li>
+<li>Single-Sign-On (SSO).</li>
+<li>Business to business (B2B) identity services.</li>
+<li>Device Management.</li>
+</ul>
+<p><strong>Single sign-on</strong></p>
+<p><strong>Multi-factor authentication</strong></p>
+<ul>
+<li>Something you know : password.</li>
+<li>Something you possess : mobile app.</li>
+<li>Something you are : biometric property.</li>
+</ul>
+<p><strong>Providing identities to services</strong></p>
+<p>It's usually valuable for services to have identities. Often, and against best practices, credential information is embedded in configuration files. With no security around these configuration files, anyone with access to the systems or repositories can access these credentials and risk exposure.</p>
+<ul>
+<li>Service principals :
+    An identity is just a thing that can be authenticated.
+    A principal is an identity acting with certain roles or claims. Usually, it is not useful to consider identity and principal separately, but think of using 'sudo' on a Bash prompt in Linux or on Windows using "run as Administrator."</li>
+<li>Managed identities for Azure services :
+    The creation of service principals can be a tedious process, and there are a lot of touch points that can make maintaining them difficult. Managed identities for Azure services are much easier and will do most of the work for you.</li>
+</ul>
+<p><strong>Role-based access control</strong></p>
+<p>Roles are sets of permissions, like "Read-only" or "Contributor", that users can be granted to access an Azure service instance.</p>
+<p>Identities are mapped to roles directly or through group membership. Separating security principals, access permissions, and resources provides simple access management and fine-grained control. Administrators are able to ensure the minimum necessary permissions are granted.</p>
+<p><img alt="rbac" src="../../img/az-016.png" /></p>
+<h4 id="encryption">Encryption</h4>
+<p><strong>What is encryption?</strong></p>
+<ul>
+<li>Symmetric encryption uses the same key to encrypt and decrypt the data.</li>
+<li>Asymmetric encryption uses a public key and private key pair.</li>
+</ul>
+<p><strong>Encryption at rest</strong></p>
+<p><img alt="encryption-rest" src="../../img/az-017.png" /></p>
+<p><strong>Encryption in transit</strong></p>
+<p><img alt="encryption-rest" src="../../img/az-018.png" /></p>
+<p><strong>Encryption on Azure</strong></p>
+<ul>
+<li>Encrypt raw storage : Azure Storage Service Encryption.</li>
+<li>Encrypt virtual machine disks : Azure Disk Encryption.</li>
+<li>Encrypt databases : Transparent data encryption (TDE).</li>
+<li>Encrypt secrets : Azure Key Vault.</li>
+</ul>
+<h4 id="overview-of-azure-certificates">Overview of Azure certificates</h4>
+<p>Certificates used in Azure are x.509 v3 can be signed by a trusted certificate authority, or they can be self-signed.</p>
+<p><strong>Types of certificates</strong></p>
+<ul>
+<li>Service certificates are used for cloud services.</li>
+<li>Management certificates are used for authenticating with the management API.</li>
+</ul>
+<p><strong>Using Azure Key Vault with certificates</strong></p>
+<p>You can store your certificates in Azure Key Vault - much like any other secret. However, Key Vault provides additional features above and beyond the typical certificate management.</p>
+<h4 id="protect-your-network">Protect your network</h4>
+<ul>
+<li>Azure Firewall is a managed, cloud-based, network security service that protects your Azure Virtual Network.</li>
+<li>Azure Application Gateway is a load balancer that includes a Web Application Firewall (WAF) that provides protection from common, known vulnerabilities in sites.</li>
+<li>Network virtual appliances (NVAs)are ideal options for non-HTTP services or advanced configurations, and are similar to hardware firewall appliances.</li>
+</ul>
+<p><img alt="azure-ddos" src="../../img/az-019.png" /></p>
+<h4 id="protect-your-shared-documents">Protect your shared documents</h4>
+<p>Microsoft Azure Information Protection (sometimes referred to as AIP) is a cloud-based solution that helps organizations classify and optionally protect documents and emails by applying labels.</p>
+<h4 id="azure-advanced-threat-protection">Azure Advanced Threat Protection</h4>
+<p>Azure Advanced Threat Protection (Azure ATP) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.</p>
+<h2 id="apply-and-monitor-infrastructure-standards-with-azure-policy">Apply and monitor infrastructure standards with Azure Policy</h2>
+<h4 id="define-it-compliance-with-azure-policy">Define IT compliance with Azure Policy</h4>
+<p>Planning out a consistent cloud infrastructure starts with setting up policy. Your policies will enforce your rules for created resources, so your infrastructure stays compliant with your corporate standards, cost requirements, and service-level agreements (SLAs) you have with your customers.  </p>
+<p>Azure Policy is an Azure service you use to create, assign and, manage policies. These policies enforce different rules and effects over your resources so that those resources stay compliant with your corporate standards and service level agreements.</p>
+<p><strong>Creating a policy</strong></p>
+<ul>
+<li>Create a policy definition.</li>
+<li>Assign a definition to a scope of resources.</li>
+<li>View policy evaluation results.</li>
+</ul>
+<h4 id="organize-policy-with-initiatives">Organize policy with initiatives</h4>
+<p>Managing a few policy definitions is easy, but once you have more than a few, you will want to organize them. That's where initiatives come in.</p>
+<p>Initiatives work alongside policies in Azure Policy. An initiative definition is a set or group of policy definitions to help track your compliance state for a larger goal. Even if you have a single policy, we recommend using initiatives if you anticipate increasing the number of policies over time.</p>
+<h4 id="enterprise-governance-management">Enterprise governance management</h4>
+<p>Access management occurs at the Azure subscription level. This allows an organization to configure each division of the company in a specific fashion based on their responsibilities and requirements. Planning and keeping rules consistent across subscriptions can be challenging without a little help.</p>
+<p>Azure Management Groups are containers for managing access, policies, and compliance across multiple Azure subscriptions.</p>
+<p><img alt="azure-management-groups" src="../../img/az-020.png" /></p>
+<h4 id="define-standard-resources-with-azure-blueprints">Define standard resources with Azure Blueprints</h4>
+<p>Adhering to security or compliance requirements, whether government or industry requirements, can be difficult and time-consuming. To help you with auditing, traceability, and compliance with your deployments, use Azure Blueprint artifacts and tools.</p>
+<h4 id="explore-your-service-compliance-with-compliance-manager">Explore your service compliance with Compliance Manager</h4>
+<p>Governing your own resources and how they are used is only part of the solution when using a cloud provider. You also have to understand how the provider manages the underlying resources you are building on.</p>
+<p>Microsoft takes this management very seriously and provides full transparency with four sources:</p>
+<ul>
+<li>Microsoft Privacy Statement.</li>
+<li>Microsoft Trust Center.</li>
+<li>Service Trust Portal.</li>
+<li>Compliance Manager.</li>
+</ul>
+<h4 id="monitor-your-service-health">Monitor your service health</h4>
+<p>Defining policy and access provides fine-grained control over resources in your cloud IT infrastructure. Once those resources are deployed, you will want to know about any issues or performance problems they might encounter.</p>
+<p>Azure provides two primary services to monitor the health of your apps and resources.</p>
+<ul>
+<li>Azure Monitor.</li>
+<li>Azure Service Health.</li>
+</ul>
+<p><strong>Azure Monitor</strong></p>
+<p>Azure Monitor maximizes the availability and performance of your applications by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments.</p>
+<p><strong>Azure Service Health</strong></p>
+<p>Azure Service Health is a suite of experiences that provide personalized guidance and support when issues with Azure services affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue is resolved. Azure Service Health can also help you prepare for planned maintenance and changes that could affect the availability of your resources.</p>
+<h2 id="control-and-organize-azure-resources-with-azure-resource-manager">Control and organize Azure resources with Azure Resource Manager</h2>
+<h4 id="principles-of-resource-groups">Principles of resource groups</h4>
+<p><strong>What are resource groups?</strong></p>
+<p>Resource groups are a fundamental element of the Azure platform. A resource group is a logical container for resources deployed on Azure. These resources are anything you create in an Azure subscription like virtual machines, Application Gateways, and CosmosDB instances. All resources must be in a resource group and a resource can only be a member of a single resource group. Many resources can be moved between resource groups with some services having specific limitations or requirements to move. Resource groups can't be nested. Before any resource can be provisioned, you need a resource group for it to be placed in.</p>
+<p><em>Lifecycle</em><br />
+If you delete a resource group, all resources contained within are also deleted. Organizing resources by lifecycle can be useful in non-production environments, where you might try an experiment, but then dispose of it when done. Resource groups make it easy to remove a set of resources at once.</p>
+<p><em>Authorization</em><br />
+Resource groups are also a scope for applying role-based access control (RBAC) permissions. By applying RBAC permissions to a resource group, you can ease administration and limit access to allow only what is needed.</p>
+<p><strong>Organizing principles</strong></p>
+<p>Core infrastructure :<br />
+<img alt="rg-infrastructure" src="../../img/az-021.png" /></p>
+<p>Environments :<br />
+<img alt="rg-environments" src="../../img/az-022.png" /></p>
+<p>Departments :<br />
+<img alt="core-departments" src="../../img/az-023.png" /></p>
+<p>Combinaison :<br />
+<img alt="core-combinaison" src="../../img/az-024.png" /></p>
+<h4 id="use-tagging-to-organize-resources">Use tagging to organize resources</h4>
+<p><strong>What are tags?</strong></p>
+<p>Tags are name/value pairs of text data that you can apply to resources and resource groups. Tags allow you to associate custom details about your resource, in addition to the standard Azure properties a resource has:</p>
+<ul>
+<li>Department (like finance, marketing, and more).</li>
+<li>Environment (prod, test, dev).</li>
+<li>Cost center.</li>
+<li>Lifecycle and automation (like shutdown and startup of virtual machines).</li>
+</ul>
+<h4 id="use-resource-locks-to-protect-resources">Use resource locks to protect resources</h4>
+<p><strong>What are resource locks?</strong></p>
+<p>Resource locks are a setting that can be applied to any resource to block modification or deletion. Resource locks can set to either Delete or Read-only. Delete will allow all operations against the resource but block the ability to delete it. Read-only will only allow read activities to be performed against it, blocking any modification or deletion of the resource. Resource locks can be applied to subscriptions, resource groups, and to individual resources, and are inherited when applied at higher levels.</p>
+<h2 id="predict-costs-and-optimize-spending-for-azure">Predict costs and optimize spending for Azure</h2>
+<h4 id="purchase-azure-products-and-services">Purchase Azure products and services</h4>
+<p><strong>Usage meters</strong>
+When you provision an Azure resource, Azure creates one or more meter instances for that resource. The meters track the resources' usage, and generate a usage record that is used to calculate your bill.</p>
+<p>For example, a single virtual machine that you provision in Azure might have the following meters tracking its usage:</p>
+<ul>
+<li>Compute Hours.</li>
+<li>IP Address Hours.</li>
+<li>Data Transfer In.</li>
+<li>Data Transfer Out.</li>
+<li>Standard Managed Disk.</li>
+<li>Standard Managed Disk Operations.</li>
+<li>Standard IO-Disk.</li>
+<li>Standard IO-Block Blob Read.</li>
+<li>Standard IO-Block Blob Write.</li>
+<li>Standard IO-Block Blob Delete.</li>
+</ul>
+<p>The meters and pricing vary per product and often have different pricing tiers based on the size or capacity of the resource. Check the documentation for specific details on what each service area costs.</p>
+<h4 id="factors-affecting-costs">Factors affecting costs</h4>
+<p>Just like your on-premises equipment costs, there are several elements that will affect your monthly costs when using Azure services. Let's look at a few of the primary factors including resource type, services, the user's location, and the billing zone.</p>
+<p><strong>Resource type</strong></p>
+<p>Costs are resource-specific, so the usage that a meter tracks and the number of meters associated with a resource depend on the resource type.</p>
+<p><strong>Services</strong></p>
+<p>Azure usage rates and billing periods can differ between Enterprise, Web Direct, and Cloud Solution Provider (CSP) customers. Some subscription types also include usage allowances, which affect costs.</p>
+<p><strong>Location</strong></p>
+<p>Azure has datacenters all over the world. Usage costs vary between locations that offer particular Azure products, services, and resources based on popularity, demand, and local infrastructure costs</p>
+<p><strong>Azure billing zones</strong></p>
+<p>Bandwidth refers to data moving in and out of Azure datacenters. Most of the time inbound data transfers (data going into Azure datacenters) are free. For outbound data transfers (data going out of Azure datacenters), the data transfer pricing is based on Billing Zones.</p>
+<h4 id="estimate-costs-with-the-azure-pricing-calculator">Estimate costs with the Azure pricing calculator</h4>
+<p><strong>Introducing the Azure pricing calculator</strong></p>
+<p>To make estimates easy for customers to create, Microsoft developed the Azure pricing calculator. The Azure pricing calculator is a free web-based tool that allows you to input Azure services and modify properties and options of the services. It outputs the costs per service and total cost for the full estimate.</p>
+<p>The options that you can configure in the pricing calculator vary between products, but basic configuration options include:</p>
+<ul>
+<li>Region.</li>
+<li>Tier.</li>
+<li>Billing Options.</li>
+<li>Support Options.</li>
+<li>Programs and Offers.</li>
+<li>Azure Dev/Test Pricing.</li>
+</ul>
+<h4 id="predict-and-optimize-with-cost-management-and-azure-advisor">Predict and optimize with Cost Management and Azure Advisor</h4>
+<p><strong>What is Azure Advisor?</strong></p>
+<p>Azure Advisor is a free service built-into Azure that provides recommendations on high availability, security, performance, and cost. Advisor analyzes your deployed services and looks for ways to improve your environment across those four areas. We'll focus on the cost recommendations, but you'll want to take some time to review the other recommendations as well.</p>
+<p>Advisor makes cost recommendations in the following areas:</p>
+<ul>
+<li>Reduce costs by eliminating unprovisioned Azure ExpressRoute circuits.</li>
+<li>Buy reserved instances to save money over pay-as-you-go.</li>
+<li>Right-size or shutdown underutilized virtual machines.</li>
+</ul>
+<h4 id="estimate-the-total-cost-of-ownership-with-the-azure-tco-calculator">Estimate the Total Cost of Ownership with the Azure TCO calculator</h4>
+<p>The pricing calculator and cost management advisor can help you predict and analyze your spend for new or existing services.</p>
+<p>If you are starting to migrate to the cloud, a useful tool you can use to predict your cost savings is the Total Cost of Ownership (TCO) calculator. To use the TCO calculator, you need to complete four steps.</p>
+<h4 id="save-on-infrastructure-costs">Save on infrastructure costs</h4>
+<ul>
+<li>Use Azure credits.</li>
+<li>Use spending limits.</li>
+<li>Use reserved instances.</li>
+<li>Choose low-cost locations and regions.</li>
+<li>Research available cost-saving offers.</li>
+<li>Right-size underutilized virtual machines.</li>
+<li>Deallocate virtual machines in off hours.</li>
+<li>Delete unused virtual machines.</li>
+<li>Migrate to PaaS or SaaS services.</li>
+</ul>
+<hr />
+<h2 id="azure-ressources">Azure ressources</h2>
+<h3 id="organiser-vos-ressources-azure">Organiser vos ressources Azure</h3>
+<p><img alt="scope-levels" src="../../img/az-001.png" /></p>
+<ul>
+<li><strong>Groupes d’administration</strong> : Ces groupes sont des conteneurs qui vous permettent de gérer plus facilement l’accès, la stratégie et la conformité pour plusieurs abonnements. Tous les abonnements dans un groupe d’administration héritent automatiquement des conditions appliquées à ce groupe d’administration.</li>
+<li><strong>Abonnements</strong> : Un abonnement regroupe les comptes d’utilisateur et les ressources qui ont été créées par ces derniers. Chaque abonnement a des limites ou quotas sur la quantité de ressources que vous pouvez créer et utiliser. Les organisations peuvent utiliser des abonnements pour gérer les coûts et les ressources qui sont créées par les utilisateurs, les équipes ou les projets.</li>
+<li><strong>Groupes de ressources</strong> : Un groupe de ressources est un conteneur logique dans lequel les ressources Azure comme les applications web, les bases de données et les comptes de stockage sont déployées et gérées.</li>
+<li><strong>Ressources</strong> : les ressources sont des instances de services que vous créez, telles que des machines virtuelles, un stockage ou des bases de données SQL.</li>
+</ul>
+<h3 id="gerer-vos-couts-avec-azure-cost-management">Gérer vos coûts avec Azure Cost Management</h3>
+<p>Azure Cost Management fournit quelques fonctionnalités utiles pour prévoir et gérer les coûts :</p>
+<ul>
+<li><strong>Analyser les coûts du cloud</strong> vous aide à examiner et à analyser tous vos coûts. Vous pouvez afficher le coût agrégé pour votre compte ou tous les coûts cumulés au fil du temps.</li>
+<li><strong>Superviser avec les budgets</strong> vous permet de créer un budget et de configurer des alertes qui vous avertissent quand vous êtes sur le point de le dépasser.</li>
+<li><strong>Optimiser avec des recommandations</strong> vous aide à identifier les ressources inutilisées et sous-exploitées afin de réduire le gaspillage.</li>
+<li><strong>Gérer les factures et les paiements</strong> vous donne une visibilité de vos investissements dans le cloud.</li>
+</ul>
+<h3 id="gouvernance-securite-et-conformite-dans-azure">Gouvernance, sécurité et conformité dans Azure</h3>
+<p><strong>Azure Blueprints</strong><br />
+Azure Blueprints permet aux architectes cloud et aux groupes centraux responsables des technologies de l’information de définir un ensemble reproductible de ressources Azure qui implémentent et respectent les normes, modèles et exigences d’une organisation. Azure Blueprints permet aux équipes de développement de créer et mettre en place rapidement de nouveaux environnements et d’avoir confiance en leur conformité aux exigences de l’organisation à l’aide d’un ensemble de composants intégrés, comme la mise en réseau, visant à accélérer le développement et la livraison.</p>
+<p><strong>Azure Policy</strong><br />
+Azure Policy est un service utilisé pour créer, attribuer et gérer des stratégies. Ces stratégies appliquent des règles à vos ressources afin qu’elles restent conformes aux standards et aux contrats de niveau de service de l’entreprise. Azure Policy analyse vos ressources pour identifier celles qui ne sont pas conformes aux stratégies que vous implémentez. Par exemple, vous pouvez disposer d’une stratégie qui n’autorise que les machines virtuelles d’une certaine taille à s’exécuter dans votre environnement. Une fois implémentée, cette stratégie évalue les machines virtuelles existantes dans votre environnement ainsi que toutes les nouvelles machines virtuelles qui y sont déployées. L’évaluation de la stratégie génère des événements de conformité que vous pouvez utiliser à des fins de supervision et de création de rapports.</p>
+<p><strong>Centre de sécurité Azure</strong><br />
+Azure Security Center joue un rôle important dans votre stratégie de gouvernance. Il vous aide à assurer un haut niveau de sécurité, car il :</p>
+<ul>
+<li>Fournit une vue unifiée de la sécurité sur l’ensemble de vos charges de travail.</li>
+<li>Collecte, explore et analyse les données de sécurité à partir d’un large éventail de sources, dont les pare-feu et d’autres solutions partenaires.</li>
+<li>Fournit des recommandations de sécurité actionnables pour corriger les problèmes avant qu’ils ne soient exploités de façon malveillante.</li>
+<li>Peut être utilisé pour appliquer des stratégies de sécurité sur l’ensemble de vos charges de travail cloud hybrides pour garantir la conformité aux normes de sécurité.</li>
+</ul>
+<p>La plupart des fonctionnalités de sécurité, telles que la stratégie de sécurité et les recommandations, sont disponibles gratuitement. Certaines des fonctionnalités plus avancées, telles que l’accès aux machines virtuelles juste-à-temps et la prise en charge des charges de travail hybrides, sont disponibles au niveau standard de Security Center. L’accès aux machines virtuelles juste-à-temps peut aider à réduire la surface d’attaque du réseau en contrôlant l’accès aux ports de gestion sur les machines virtuelles Azure</p>
+<h3 id="supervision-et-creation-de-rapports-dans-azure">Supervision et création de rapports dans Azure</h3>
+<p><strong>Azure Monitor</strong>
+Azure Monitor fournit un seul hub unifié pour toutes les données de supervision et de diagnostic dans Azure. Vous pouvez l’utiliser pour obtenir une visibilité sur l’ensemble de vos ressources. Grâce à Azure Monitor, vous pouvez rechercher et résoudre les problèmes et optimiser le niveau de performance. Vous pouvez également comprendre le comportement des clients.</p>
+<p><strong>Azure Service Health</strong>
+Azure Service Health fournit un affichage personnalisé de l’intégrité des services et régions Azure que vous utilisez. Service Health publie des informations sur les problèmes actuels qui sont utiles pour comprendre l’impact sur vos ressources. Des mises à jour régulières vous tiennent informé de la résolution des problèmes.</p>
+<p><strong>Azure Advisor</strong>
+Azure Advisor est un conseiller personnalisé gratuit basé dans le cloud qui vous aide à suivre et à implémenter de bonnes pratiques pour les déploiements Azure. Il analyse la configuration de vos ressources et les données de télémétrie d’utilisation et suggère des solutions qui peuvent vous aider à optimiser votre environnement. Les recommandations sont divisées en quatre catégories :</p>
+<ul>
+<li><strong>Haute disponibilité</strong> : vous aide à améliorer la continuité de vos applications stratégiques. Les recommandations peuvent inclure l’ajout de machines virtuelles à un groupe à haute disponibilité ou l’ajout de points de terminaison géoredondants.</li>
+<li><strong>Sécurité</strong> : permet de détecter les menaces et vulnérabilités pouvant conduire à des failles de sécurité. Les recommandations peuvent inclure l’application du chiffrement des disques ou l’activation de groupes de sécurité réseau.</li>
+<li><strong>Performances</strong> : pour améliorer la vitesse de vos applications. Les recommandations peuvent inclure l’amélioration des niveaux de performance des requêtes SQL en créant des index ou en reconfigurant vos paramètres de gestion du trafic.</li>
+<li><strong>Coût</strong> : pour optimiser et réduire vos dépenses Azure globales. Les recommandations peuvent concerner le redimensionnement ou l’arrêt des machines virtuelles sous-exploitées ou encore le transfert vers des réservations Azure pour diminuer le coût total de possession.</li>
+</ul>
+<p><strong>Centre de sécurité Azure</strong>
+Azure Security Center joue également un rôle important dans votre stratégie de supervision. Il peut vous aider à superviser la sécurité de vos machines, réseaux, systèmes de stockage, services de données et applications. Security Center fournit la détection avancée des menaces en utilisant l’apprentissage automatique et l’analytique comportementale pour aider à identifier les menaces actives ciblant vos ressources Azure. Il met également à disposition une protection contre les menaces qui bloque les programmes malveillants ou autres codes indésirables et réduit la surface d’exposition aux attaques par force brute et autres attaques réseau.</p>
+<hr />
+<h2 id="availability-in-azure">Availability in Azure</h2>
+<p><strong>Availability sets</strong><br />
+An availability set is a logical grouping of VMs within a datacenter that allows Azure to understand how your application is built to provide for redundancy and availability.</p>
+<p><strong>Fault domains</strong>
+A fault domain is a logical group of underlying hardware that share a common power source and network switch, similar to a rack within an on-premises datacenter. As you create VMs within an availability set, the Azure platform automatically distributes your VMs across these fault domains. This approach limits the impact of potential physical hardware failures, network outages, or power interruptions.</p>
+<p><strong>Update domains</strong>
+An update domain is a logical group of underlying hardware that can undergo maintenance or be rebooted at the same time. As you create VMs within an availability set, the Azure platform automatically distributes your VMs across these update domains. This approach ensures that at least one instance of your application always remains running as the Azure platform undergoes periodic maintenance. The order of update domains being rebooted may not proceed sequentially during planned maintenance, but only one update domain is rebooted at a time.</p>
+<h3 id="source">Source</h3>
+<p><a href="https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/">Azure fundamentals</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
