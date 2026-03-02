@@ -14,7 +14,7 @@ run = "mkdocs serve --strict"
 [tasks."mkdocs:build"]
 alias = "bld"
 description = "Build the {{ vars.project_name }} static site."
-run = "mkdocs build --strict"
+run = "mkdocs build --strict --watch"
 
 [tasks."mkdocs:clean"]
 alias = "cln"
