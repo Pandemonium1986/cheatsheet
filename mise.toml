@@ -1,0 +1,22 @@
+[tools]
+python = "3.11"
+"pipx:mkdocs-material" = { version = "latest", uvx = "false", pipx_args = "--include-deps" }
+
+[vars]
+project_name = "{{ cwd | basename }}"
+site_dir = "site"
+
+[tasks."mkdocs:serve"]
+alias = "srv"
+description = "Start the mkdocs development server for {{ vars.project_name }}."
+run = "mkdocs serve --strict"
+
+[tasks."mkdocs:build"]
+alias = "bld"
+description = "Build the {{ vars.project_name }} static site."
+run = "mkdocs build --strict"
+
+[tasks."mkdocs:clean"]
+alias = "cln"
+description = "Remove the {{ vars.site_dir }} build directory for {{ vars.project_name }}."
+run = "rm -rf {{ vars.site_dir }} && echo '{{ vars.site_dir }} directory removed'"
