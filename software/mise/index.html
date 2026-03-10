@@ -1,0 +1,2835 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My awesome cheatsheet, because they're awesomes">
+      
+      
+        <meta name="author" content="Michael Maffait">
+      
+      
+        <link rel="canonical" href="https://cheatsheet.pdm.ovh/software/mise/">
+      
+      
+        <link rel="prev" href="../msys2/">
+      
+      
+        <link rel="next" href="../reveal.js/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Mise - Michael M. Cheat sheet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mise-mise-en-place" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Michael M. Cheat sheet" class="md-header__button md-logo" aria-label="Michael M. Cheat sheet" data-md-component="logo">
+      
+  <img src="../../../img/cheatsheet.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Michael M. Cheat sheet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mise
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Pandemonium1986/cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cheat sheet
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Michael M. Cheat sheet" class="md-nav__button md-logo" aria-label="Michael M. Cheat sheet" data-md-component="logo">
+      
+  <img src="../../../img/cheatsheet.png" alt="logo">
+
+    </a>
+    Michael M. Cheat sheet
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Pandemonium1986/cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cheat sheet
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cloud
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud/azure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud/azure-devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud/ovh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ovh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/jhipster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jhipster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DevOps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/commit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/docker-compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gitlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gitlab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jenkins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/longhorn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Longhorn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/minikube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Minikube
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/molecule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Molecule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/nexus3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nexus3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/portainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/traefik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traefik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Os
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Os
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/mint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/wsl2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wsl2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-system/wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wsl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msys2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Msys2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TL;DR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TL;DR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools versions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Todo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zypper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zypper
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mise-exec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise exec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mise-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mise-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise run
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mise-set-env-vars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise set env vars
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-file-for-write-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target File for Write Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dev-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dev Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dev Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backends" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backends
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-resolution-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Resolution Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-specific-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OS-Specific Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shims
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tasks-in-misetoml-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks in mise.toml files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks-in-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks in file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks-advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks advanced features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secret
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secret">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-age-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct age Encryption
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lockfile-miselock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lockfile mise.lock
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reveal.js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reveal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vagrant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vagrant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtualbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtualbox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vscode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TL;DR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TL;DR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools versions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Todo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zypper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zypper
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mise-exec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise exec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mise-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mise-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise run
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mise-set-env-vars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise set env vars
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-file-for-write-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target File for Write Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dev-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dev Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dev Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backends" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backends
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-resolution-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Resolution Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-specific-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OS-Specific Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shims
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tasks-in-misetoml-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks in mise.toml files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks-in-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks in file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks-advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks advanced features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secret
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secret">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-age-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct age Encryption
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lockfile-miselock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lockfile mise.lock
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mise-mise-en-place">Mise (Mise en place)</h1>
+<h2 id="tldr">TL;DR</h2>
+<h3 id="about">About</h3>
+<blockquote>
+<p><code>mise</code> (pronounced "meez") or "mise-en-place" is a development environment setup tool. The name refers to a French culinary phrase that roughly translates to "setup" or "put in place". The idea is that before one begins cooking, they should have all their utensils and ingredients ready to go in their place.</p>
+<p><code>mise</code> does the same for your projects. Using its <code>mise.toml</code> config file, you'll have a consistent way to setup and interact with your projects no matter what language they're written in.<br />
+Its functionality is grouped into 3 categories described below.</p>
+<p><code>mise</code> installs and manages dev tools/runtimes like node, python, or terraform both simplifying installing these tools and allowing you to specify which version of these tools to use in different projects. <code>mise</code> supports <em>hundreds</em> of dev tools.</p>
+<p><code>mise</code> manages environment variables letting you specify configuration like <code>AWS_ACCESS_KEY_ID</code> that may differ between projects. It can also be used to automatically activate a <em>Python virtualenv</em> when entering projects too.</p>
+<p><code>mise</code> is a task runner that can be used to share common tasks within a project among developers and make things like running tasks on file changes easy.</p>
+</blockquote>
+<h3 id="tools-versions">Tools versions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Os / Tool</th>
+<th style="text-align: center;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Sles</td>
+<td style="text-align: center;">15sp7</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mise</td>
+<td style="text-align: center;">2026.2.19</td>
+</tr>
+</tbody>
+</table>
+<h3 id="todo">Todo</h3>
+<ul>
+<li>N/A</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="curl">Curl</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>https://mise.run<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nv">MISE_INSTALL_PATH</span><span class="o">=</span>/usr/local/bin/mise<span class="w"> </span>sh
+</code></pre></div>
+<h3 id="zypper">Zypper</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>zypper<span class="w"> </span>addrepo<span class="w"> </span>--repo<span class="w"> </span>https://mise.jdx.dev/rpm/mise.repo<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>zypper<span class="w"> </span>--gpg-auto-import-keys<span class="w"> </span>--non-interactive<span class="w"> </span>refresh<span class="w"> </span>--repo<span class="w"> </span>mise-repo
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>zypper<span class="w"> </span>--non-interactive<span class="w"> </span>install<span class="w"> </span>--no-recommends<span class="w"> </span>mise
+</code></pre></div>
+<h2 id="getting-start">Getting start</h2>
+<h3 id="mise-exec">Mise exec</h3>
+<p>The most essential feature <code>mise</code> provides is the ability to run tools with specific versions. A simple way to run a shell command with a given tool is to use <code>mise x|exec</code>. For example, here is how you can start a Python 3 interactive shell (REPL):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mise<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>python@3<span class="w"> </span>--<span class="w"> </span>python
+</code></pre></div>
+<h3 id="mise-use">Mise use</h3>
+<p>Backends are ecosystems or package managers that mise uses to install tools. With <code>mise use</code>, you can install multiple tools from each backend.</p>
+<p>For example, install <code>ansible</code> with the pipx backend:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mise<span class="w"> </span>use<span class="w"> </span>--global<span class="w"> </span>pipx:ansible
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ansible<span class="w"> </span>--version
+</code></pre></div>
+<h3 id="mise-run">Mise run</h3>
+<p>Another useful command is <code>mise r|run</code> which allows you to run a <code>mise</code> task or a script with the <code>mise</code> context.</p>
+<p>You can define simple tasks in <code>mise.toml</code> and run them with <code>mise run</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">[tasks]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;echo hello from mise&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mise<span class="w"> </span>run<span class="w"> </span>hello
+</code></pre></div>
+<h3 id="mise-set-env-vars">Mise set env vars</h3>
+<p>You can set environment variables in <code>mise.toml</code> which will be set if mise is activated or if <code>mise x|exec</code> is used in a directory:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">[env]</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">NODE_ENV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;production&quot;</span>
+</code></pre></div>
+<p>Then you can access <code>NODE_ENV</code> in your shell or scripts:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mise<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--<span class="w"> </span>node<span class="w"> </span>--eval<span class="w"> </span><span class="s1">&#39;console.log(process.env.NODE_ENV)&#39;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># or if mise is activated in your shell</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;node env: </span><span class="nv">$NODE_ENV</span><span class="s2">&quot;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1"># node env: production</span>
+</code></pre></div>
+<p>You can also set environment variables directly with the CLI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>mise<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">MY_VAR</span><span class="o">=</span><span class="m">123</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>mise<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$MY_VAR</span>
+</code></pre></div>
+<h2 id="usage">Usage</h2>
+<h3 id="common-commands">Common Commands</h3>
+<p>Since there are a lot of commands available in mise, here are what I consider the most important:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>mise completion</code></td>
+<td style="text-align: left;">Set up completions for your shell.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise config</code></td>
+<td style="text-align: left;">A bunch of commands for working with mise.toml files via the CLI.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise exec</code></td>
+<td style="text-align: left;">Execute a command in the mise environment without activating mise.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise generate</code></td>
+<td style="text-align: left;">Generates things like Git hooks, task documentation, GitHub Actions, and more for your project.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise install</code></td>
+<td style="text-align: left;">Install tools.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise link</code></td>
+<td style="text-align: left;">Symlink a tool installed by some other means into the mise.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise ls-remote</code></td>
+<td style="text-align: left;">List all available versions of a tool.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise ls</code></td>
+<td style="text-align: left;">Lists information about installed/active tools.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise outdated</code></td>
+<td style="text-align: left;">Informs you of any tools with newer versions available.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise plugin</code></td>
+<td style="text-align: left;">Plugins can extend mise with new functionality like extra tools or environment variable management. Commonly, these are simply asdf plugins or modern plugins.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise run</code></td>
+<td style="text-align: left;">Run a task defined in mise.toml or mise-tasks.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise self-update</code></td>
+<td style="text-align: left;">Update mise to the latest version. Don't use this if you installed mise via a package manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise settings</code></td>
+<td style="text-align: left;">CLI access to get/set configuration settings.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise uninstall</code></td>
+<td style="text-align: left;">Uninstall a tool.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise upgrade</code></td>
+<td style="text-align: left;">Upgrade tool versions.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise use</code></td>
+<td style="text-align: left;">Install and activate tools.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mise watch</code></td>
+<td style="text-align: left;">Watch for changes in a project and run tasks when they occur.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cheat-sheet">Cheat sheet</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Open an interactive editor for your configuration</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>mise<span class="w"> </span>edit
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># See the configuration files currently used by `mise`.</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>mise<span class="w"> </span>config<span class="w"> </span>ls
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1"># Ensures project dependencies are ready by checking if lockfiles are newer than installed outputs (experimental).</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>mise<span class="w"> </span>prepare
+</code></pre></div>
+<h2 id="concepts">Concepts</h2>
+<h3 id="configuration">Configuration</h3>
+<p><code>mise.toml</code> is the config file for <code>mise</code>. They can be at any of the following file paths (in order of precedence, top overrides configuration of lower paths):</p>
+<ul>
+<li><code>mise.local.toml</code> - used for local config, this should not be committed to source control</li>
+<li><code>mise.toml</code></li>
+<li><code>mise/config.toml</code></li>
+<li><code>.mise/config.toml</code></li>
+<li><code>.config/mise.toml</code> - use this in order to group config files into a common directory</li>
+<li><code>.config/mise/config.toml</code></li>
+<li><code>.config/mise/conf.d/*.toml</code> - all files in this directory will be loaded in alphabetical order</li>
+</ul>
+<h4 id="target-file-for-write-operations">Target File for Write Operations</h4>
+<p>When commands like <code>mise use</code>, <code>mise set</code>, or <code>mise unuse</code> need to write to a config file, they use the lowest precedence file in the highest precedence directory.</p>
+<h4 id="sections">Sections</h4>
+<ul>
+<li>[tools] - Dev tools</li>
+<li>[env] - Arbitrary Environment Variables</li>
+<li>[tasks.*] - Run files or shell scripts</li>
+<li>[settings] - Mise Settings</li>
+<li>[plugins] - Specify Custom Plugin Repository URLs</li>
+<li>[tool_alias] - Tool version aliases</li>
+<li>[shell_alias] - Shell aliases</li>
+</ul>
+<h4 id="environments">Environments</h4>
+<blockquote>
+<p>Normally environment variables in mise are used to set settings so most environment variables are in that doc. The following are environment variables that are not settings.<br />
+A setting in mise is generally something that can be configured either as an environment variable or set in a config file.</p>
+</blockquote>
+<ul>
+<li>MISE_DATA_DIR</li>
+<li>MISE_CACHE_DIR</li>
+<li>MISE_TMP_DIR</li>
+<li>MISE_SYSTEM_DIR</li>
+<li>MISE_GLOBAL_CONFIG_FILE</li>
+<li>MISE_GLOBAL_CONFIG_ROOT</li>
+<li>MISE_ENV_FILE</li>
+<li>MISE_${PLUGIN}_VERSION</li>
+<li>MISE_TRUSTED_CONFIG_PATHS</li>
+<li>MISE_CEILING_PATHS</li>
+<li>MISE_LOG_LEVEL=trace|debug|info|warn|error</li>
+<li>MISE_LOG_FILE=~/mise.log</li>
+<li>MISE_LOG_FILE_LEVEL=trace|debug|info|warn|error</li>
+<li>MISE_LOG_HTTP=1</li>
+<li>MISE_QUIET=1</li>
+<li>MISE_HTTP_TIMEOUT</li>
+<li>MISE_RAW=1</li>
+<li>MISE_FISH_AUTO_ACTIVATE</li>
+</ul>
+<h3 id="settings">Settings</h3>
+<p>Numerous settings are available. See the <a href="https://mise.jdx.dev/configuration/settings.html">settings</a> page for a complete list.</p>
+<p>Some interresting settings :</p>
+<ul>
+<li>cache_prune_age</li>
+<li>ceiling_paths</li>
+<li>color</li>
+<li>color_theme</li>
+<li>experimental</li>
+<li>github_attestations</li>
+<li>gpg_verify</li>
+<li>locked</li>
+<li>lockfile</li>
+<li>netrc</li>
+<li>netrc_file</li>
+<li>offline</li>
+<li>os</li>
+<li>paranoid</li>
+<li>terminal_progress</li>
+<li>trusted_config_paths</li>
+<li>use_versions_host_track</li>
+<li>verbose</li>
+<li>yes</li>
+</ul>
+<h3 id="environment-variables">Environment Variables</h3>
+<p><code>mise</code> can also be used to set environment variables for your project. You can set environment variables with the CLI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>mise<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">MY_VAR</span><span class="o">=</span><span class="m">123</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$MY_VAR</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1"># 123</span>
+</code></pre></div>
+<h3 id="dev-tools">Dev Tools</h3>
+<h4 id="installing">Installing</h4>
+<p>The main command for working with tools in mise is <code>mise u|use</code>. This does 2 main things:</p>
+<ul>
+<li>Installs tools (if not already installed)</li>
+<li>Adds the tool to the <code>mise.toml</code> configuration file—in mise I say the tool is "active" if it's in <code>mise.toml</code></li>
+</ul>
+<h4 id="backends">Backends</h4>
+<p>Tools are installed with a variety of backends like <code>asdf</code>, <code>github</code>, or <code>vfox</code>. See registry for the full list of shorthands like <code>node</code> you can use.<br />
+You can also use other backends like <code>npm</code> or <code>cargo</code> which can install any package from their respective registries:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>mise<span class="w"> </span>use<span class="w"> </span>npm:@antfu/ni
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>mise<span class="w"> </span>use<span class="w"> </span>cargo:starship
+</code></pre></div>
+<h4 id="tool-resolution-flow">Tool Resolution Flow</h4>
+<p>When you enter a directory or run a command, mise follows this process:</p>
+<ul>
+<li>Configuration Discovery: mise walks up the directory tree looking for configuration files (mise.toml, .tool-versions, etc.) and merges them hierarchically</li>
+<li>Tool Resolution: mise resolves version specifications (like node@latest or python@3) to specific versions using registries and version lists</li>
+<li>Backend Selection: mise chooses the appropriate backend to handle each tool (core, asdf, aqua, etc.)</li>
+<li>Installation Check: mise verifies if the required tool versions are installed, automatically installing missing ones</li>
+<li>Environment Setup: mise configures your PATH and environment variables to use the resolved tool versions</li>
+</ul>
+<h4 id="environment-integration">Environment Integration</h4>
+<p><code>mise</code> provides several ways to integrate with your development environment:</p>
+<ul>
+<li>Automatic Activation with <code>mise activate</code>.</li>
+<li>On-Demand Execution with <code>mise exec</code>.</li>
+<li>Shims: <code>mise</code> can create lightweight wrapper scripts that automatically use the correct tool.</li>
+</ul>
+<h4 id="os-specific-tools">OS-Specific Tools</h4>
+<p>You can restrict tools to specific operating systems using the <code>os</code> field</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">[tools]</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">ripgrep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">&quot;latest&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;linux&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;macos&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="shims">Shims</h3>
+<p>When using shims, <code>mise</code> places small executables (<code>shims</code>) in a directory that is included in your <code>PATH</code>. You can think of <code>shims</code> as symlinks to the mise binary that intercept commands and load the appropriate context.</p>
+<h3 id="tasks">Tasks</h3>
+<blockquote>
+<p>Like <code>make</code> it manages tasks used to build and test projects.</p>
+</blockquote>
+<p>You can define tasks in <code>mise.toml</code> files or as standalone shell scripts. These are useful for things like running linters, tests, builders, servers, and other tasks that are specific to a project. Of course, tasks launched with mise will include the mise environment—your tools and env vars defined in <code>mise.toml</code>.</p>
+<h4 id="tasks-in-misetoml-files">Tasks in mise.toml files</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">[tasks.build]</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Build the CLI&quot;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">run</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;cargo build&quot;</span>
+</code></pre></div>
+<h4 id="tasks-in-file">Tasks in file</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>vim<span class="w"> </span>mise-tasks/build
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="ch">#!/usr/bin/env bash</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1">#MISE description=&quot;Build the CLI&quot;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>cargo<span class="w"> </span>build
+</code></pre></div>
+<h4 id="tasks-dependencies">Tasks dependencies</h4>
+<p><code>mise</code> supports three types of task dependencies:</p>
+<ul>
+<li>depends - Prerequisites - Tasks that must complete successfully before this task runs.</li>
+<li>depends_post - Cleanup Tasks - Tasks that run after this task completes (whether successful or failed).</li>
+<li>wait_for - Soft Dependencies - Tasks that should run first if they're in the current execution, but don't fail if they're not available.</li>
+</ul>
+<h4 id="tasks-advanced-features">Tasks advanced features</h4>
+<ul>
+<li>Conditional Dependencies.</li>
+<li>Dynamic Dependencies.</li>
+<li>Cross-Project Dependencies.</li>
+<li>Source and Output Tracking.</li>
+<li>Incremental Execution.</li>
+<li>Parallel File Watching.</li>
+</ul>
+<h3 id="secret">Secret</h3>
+<p>Use mise to manage sensitive environment variables securely. There are multiple supported approaches:</p>
+<ul>
+<li><code>fnox</code> recommended — Full-featured secret manager with remote secret storage (e.g.: 1Password, AWS Secrets Manager) and remote encryption (e.g.: AWS KMS). This is a separate project by @jdx that works well alongside mise. There's no direct integration with mise and fnox, you set it up separately.</li>
+<li><code>sops</code> experimental — Encrypt entire files and load them via <code>env._.file</code></li>
+<li><code>Direct age encryption</code> experimental — Encrypt individual env vars inline in <code>mise.toml</code></li>
+</ul>
+<h4 id="direct-age-encryption">Direct age Encryption</h4>
+<p>Encrypt individual environment variable values directly in <code>mise.toml</code> using <code>age</code> encryption. The <code>age</code> tool is not required—mise has support built-in.</p>
+<p>This is a simple method of storing encrypted environment variables directly in <code>mise.toml</code>. You can use it simply by running <code>mise set --age-encrypt &lt;key&gt;=&lt;value&gt;</code>. By default, mise will use your SSH key (<code>~/.ssh/id_ed25519</code> or <code>~/.ssh/id_rsa</code>) if it exists.</p>
+<ul>
+<li>Inline storage: values live alongside other env vars in mise.toml</li>
+<li>Multiple recipients: x25519 age keys and SSH recipients</li>
+<li>Automatic decryption: at runtime when identities are available</li>
+</ul>
+<h3 id="hooks">Hooks</h3>
+<p>You can have mise automatically execute scripts during a <code>mise activate</code> session. You cannot use these without the <code>mise activate</code> shell hook installed in your shell—except the <code>preinstall</code> and <code>postinstall</code> hooks. The configuration goes into <code>mise.toml</code>.</p>
+<p>Here is the list of available hooks:</p>
+<ul>
+<li>CD hook</li>
+<li>Enter hook</li>
+<li>Leave hook</li>
+<li>Preinstall/postinstall hook</li>
+<li>Tool-level postinstall</li>
+<li>Task hooks</li>
+<li>Watch files hook</li>
+<li>Hook execution</li>
+<li>Shell hooks</li>
+<li>Multiple hooks syntax</li>
+</ul>
+<h3 id="lockfile-miselock">Lockfile mise.lock</h3>
+<p><code>mise.lock</code> is a lockfile that pins exact versions and checksums of tools for reproducible environments. When enabled, mise will automatically maintain this file to ensure consistent tool versions across different machines and deployments.</p>
+<h2 id="source">Source</h2>
+<p><a href="https://mise.jdx.dev/">Mise</a><br />
+<a href="https://mise-versions.jdx.dev/">Mise-version</a>
+<a href="https://mise.jdx.dev/dev-tools/backend_architecture.html#when-to-use-each-backend">When to Use Each Backend</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
