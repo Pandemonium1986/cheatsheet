@@ -9,12 +9,12 @@ site_dir = "site"
 [tasks."mkdocs:serve"]
 alias = "srv"
 description = "Start the mkdocs development server for {{ vars.project_name }}."
-run = "mkdocs serve --strict"
+run = "mkdocs serve --strict --watch {{ cwd }}/docs"
 
 [tasks."mkdocs:build"]
 alias = "bld"
 description = "Build the {{ vars.project_name }} static site."
-run = "mkdocs build --strict --watch"
+run = "mkdocs build --strict"
 
 [tasks."mkdocs:clean"]
 alias = "cln"
