@@ -33,12 +33,14 @@ nav:
       - "Wsl2": "operating-system/wsl2.md"
       - "Wsl": "operating-system/wsl.md"
   - "Software":
-    - "Atom": "software/atom.md"
-    - "Msys2": "software/msys2.md"
-    - "Reveal": "software/reveal.js.md"
-    - "Vagrant": "software/vagrant.md"
-    - "Virtualbox": "software/virtualbox.md"
-    - "Vscode": "software/vscode.md"
+      - "Atom": "software/atom.md"
+      - "Msys2": "software/msys2.md"
+      - "Mise": "software/mise.md"
+      - "Reveal": "software/reveal.js.md"
+      - "Vagrant": "software/vagrant.md"
+      - "Virtualbox": "software/virtualbox.md"
+      - "Vscode": "software/vscode.md"
+  - "Template": "template.md"
 theme:
   name: material
   # font:

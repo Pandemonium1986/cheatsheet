@@ -1,7 +1,7 @@
 # Pandemonium's cheat sheet
 
 ![GitHub release](https://img.shields.io/github/release/pandemonium1986/cheatsheet.svg?logo=github)
-![Github license](https://img.shields.io/github/license/pandemonium1986/cheatsheet.svg?logo=github)
+![Github license](https://img.shields.io/github/license/pandemonium1986/cheatsheet?logo=github)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 My awesome cheat sheet, because they're awesomes.  
@@ -25,7 +25,7 @@ cd  ~/git/pandemonium1986
 git clone https://github.com/pandemonium1986/cheatsheet.git
 ```
 
-To run Pandemonium1986/cheatsheet with mkdocs
+To run Pandemonium1986 cheat sheet with mkdocs
 
 ```sh
 cd  ~/git/pandemonium1986/cheatsheet

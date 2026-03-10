@@ -1,0 +1,370 @@
+# Mise (Mise en place)
+
+## TL;DR
+
+### About
+
+> `mise` (pronounced "meez") or "mise-en-place" is a development environment setup tool. The name refers to a French culinary phrase that roughly translates to "setup" or "put in place". The idea is that before one begins cooking, they should have all their utensils and ingredients ready to go in their place.
+>
+> `mise` does the same for your projects. Using its `mise.toml` config file, you'll have a consistent way to setup and interact with your projects no matter what language they're written in.  
+> Its functionality is grouped into 3 categories described below.
+>
+> `mise` installs and manages dev tools/runtimes like node, python, or terraform both simplifying installing these tools and allowing you to specify which version of these tools to use in different projects. `mise` supports _hundreds_ of dev tools.
+>
+> `mise` manages environment variables letting you specify configuration like `AWS_ACCESS_KEY_ID` that may differ between projects. It can also be used to automatically activate a _Python virtualenv_ when entering projects too.
+>
+> `mise` is a task runner that can be used to share common tasks within a project among developers and make things like running tasks on file changes easy.
+
+### Tools versions
+
+| Os / Tool |  Version  |
+| :-------- | :-------: |
+| Sles      |   15sp7   |
+| Mise      | 2026.2.19 |
+
+### Todo
+
+- N/A
+
+## Installation
+
+### Curl
+
+```sh
+curl https://mise.run | MISE_INSTALL_PATH=/usr/local/bin/mise sh
+```
+
+### Zypper
+
+```sh
+zypper addrepo --repo https://mise.jdx.dev/rpm/mise.repo && \
+zypper --gpg-auto-import-keys --non-interactive refresh --repo mise-repo
+zypper --non-interactive install --no-recommends mise
+```
+
+## Getting start
+
+### Mise exec
+
+The most essential feature `mise` provides is the ability to run tools with specific versions. A simple way to run a shell command with a given tool is to use `mise x|exec`. For example, here is how you can start a Python 3 interactive shell (REPL):
+
+```sh
+mise exec python@3 -- python
+```
+
+### Mise use
+
+Backends are ecosystems or package managers that mise uses to install tools. With `mise use`, you can install multiple tools from each backend.
+
+For example, install `ansible` with the pipx backend:
+
+```sh
+mise use --global pipx:ansible
+ansible --version
+```
+
+### Mise run
+
+Another useful command is `mise r|run` which allows you to run a `mise` task or a script with the `mise` context.
+
+You can define simple tasks in `mise.toml` and run them with `mise run`:
+
+```toml
+[tasks]
+hello = "echo hello from mise"
+```
+
+```sh
+mise run hello
+```
+
+### Mise set env vars
+
+You can set environment variables in `mise.toml` which will be set if mise is activated or if `mise x|exec` is used in a directory:
+
+```toml
+[env]
+NODE_ENV = "production"
+```
+
+Then you can access `NODE_ENV` in your shell or scripts:
+
+```sh
+mise exec -- node --eval 'console.log(process.env.NODE_ENV)'
+
+# or if mise is activated in your shell
+echo "node env: $NODE_ENV"
+# node env: production
+```
+
+You can also set environment variables directly with the CLI:
+
+```sh
+mise set MY_VAR=123
+mise exec -- echo $MY_VAR
+```
+
+## Usage
+
+### Common Commands
+
+Since there are a lot of commands available in mise, here are what I consider the most important:
+
+| Command            | Description                                                                                                                                                    |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mise completion`  | Set up completions for your shell.                                                                                                                             |
+| `mise config`      | A bunch of commands for working with mise.toml files via the CLI.                                                                                              |
+| `mise exec`        | Execute a command in the mise environment without activating mise.                                                                                             |
+| `mise generate`    | Generates things like Git hooks, task documentation, GitHub Actions, and more for your project.                                                                |
+| `mise install`     | Install tools.                                                                                                                                                 |
+| `mise link`        | Symlink a tool installed by some other means into the mise.                                                                                                    |
+| `mise ls-remote`   | List all available versions of a tool.                                                                                                                         |
+| `mise ls`          | Lists information about installed/active tools.                                                                                                                |
+| `mise outdated`    | Informs you of any tools with newer versions available.                                                                                                        |
+| `mise plugin`      | Plugins can extend mise with new functionality like extra tools or environment variable management. Commonly, these are simply asdf plugins or modern plugins. |
+| `mise run`         | Run a task defined in mise.toml or mise-tasks.                                                                                                                 |
+| `mise self-update` | Update mise to the latest version. Don't use this if you installed mise via a package manager.                                                                 |
+| `mise settings`    | CLI access to get/set configuration settings.                                                                                                                  |
+| `mise uninstall`   | Uninstall a tool.                                                                                                                                              |
+| `mise upgrade`     | Upgrade tool versions.                                                                                                                                         |
+| `mise use`         | Install and activate tools.                                                                                                                                    |
+| `mise watch`       | Watch for changes in a project and run tasks when they occur.                                                                                                  |
+
+### Cheat sheet
+
+```sh
+# Open an interactive editor for your configuration
+mise edit
+
+# See the configuration files currently used by `mise`.
+mise config ls
+
+# Ensures project dependencies are ready by checking if lockfiles are newer than installed outputs (experimental).
+mise prepare
+```
+
+## Concepts
+
+### Configuration
+
+`mise.toml` is the config file for `mise`. They can be at any of the following file paths (in order of precedence, top overrides configuration of lower paths):
+
+- `mise.local.toml` - used for local config, this should not be committed to source control
+- `mise.toml`
+- `mise/config.toml`
+- `.mise/config.toml`
+- `.config/mise.toml` - use this in order to group config files into a common directory
+- `.config/mise/config.toml`
+- `.config/mise/conf.d/*.toml` - all files in this directory will be loaded in alphabetical order
+
+#### Target File for Write Operations
+
+When commands like `mise use`, `mise set`, or `mise unuse` need to write to a config file, they use the lowest precedence file in the highest precedence directory.
+
+#### Sections
+
+- [tools] - Dev tools
+- [env] - Arbitrary Environment Variables
+- [tasks.*] - Run files or shell scripts
+- [settings] - Mise Settings
+- [plugins] - Specify Custom Plugin Repository URLs
+- [tool_alias] - Tool version aliases
+- [shell_alias] - Shell aliases
+
+#### Environments
+
+> Normally environment variables in mise are used to set settings so most environment variables are in that doc. The following are environment variables that are not settings.  
+> A setting in mise is generally something that can be configured either as an environment variable or set in a config file.
+
+- MISE_DATA_DIR
+- MISE_CACHE_DIR
+- MISE_TMP_DIR
+- MISE_SYSTEM_DIR
+- MISE_GLOBAL_CONFIG_FILE
+- MISE_GLOBAL_CONFIG_ROOT
+- MISE_ENV_FILE
+- MISE\_${PLUGIN}\_VERSION
+- MISE_TRUSTED_CONFIG_PATHS
+- MISE_CEILING_PATHS
+- MISE_LOG_LEVEL=trace|debug|info|warn|error
+- MISE_LOG_FILE=~/mise.log
+- MISE_LOG_FILE_LEVEL=trace|debug|info|warn|error
+- MISE_LOG_HTTP=1
+- MISE_QUIET=1
+- MISE_HTTP_TIMEOUT
+- MISE_RAW=1
+- MISE_FISH_AUTO_ACTIVATE
+
+### Settings
+
+Numerous settings are available. See the [settings](https://mise.jdx.dev/configuration/settings.html) page for a complete list.
+
+Some interresting settings :
+
+- cache_prune_age
+- ceiling_paths
+- color
+- color_theme
+- experimental
+- github_attestations
+- gpg_verify
+- locked
+- lockfile
+- netrc
+- netrc_file
+- offline
+- os
+- paranoid
+- terminal_progress
+- trusted_config_paths
+- use_versions_host_track
+- verbose
+- yes
+
+### Environment Variables
+
+`mise` can also be used to set environment variables for your project. You can set environment variables with the CLI:
+
+```sh
+mise set MY_VAR=123
+echo $MY_VAR
+# 123
+```
+
+### Dev Tools
+
+#### Installing
+
+The main command for working with tools in mise is `mise u|use`. This does 2 main things:
+
+- Installs tools (if not already installed)
+- Adds the tool to the `mise.toml` configuration file—in mise I say the tool is "active" if it's in `mise.toml`
+
+#### Backends
+
+Tools are installed with a variety of backends like `asdf`, `github`, or `vfox`. See registry for the full list of shorthands like `node` you can use.  
+You can also use other backends like `npm` or `cargo` which can install any package from their respective registries:
+
+```sh
+mise use npm:@antfu/ni
+mise use cargo:starship
+```
+
+#### Tool Resolution Flow
+
+When you enter a directory or run a command, mise follows this process:
+
+- Configuration Discovery: mise walks up the directory tree looking for configuration files (mise.toml, .tool-versions, etc.) and merges them hierarchically
+- Tool Resolution: mise resolves version specifications (like node@latest or python@3) to specific versions using registries and version lists
+- Backend Selection: mise chooses the appropriate backend to handle each tool (core, asdf, aqua, etc.)
+- Installation Check: mise verifies if the required tool versions are installed, automatically installing missing ones
+- Environment Setup: mise configures your PATH and environment variables to use the resolved tool versions
+
+#### Environment Integration
+
+`mise` provides several ways to integrate with your development environment:
+
+- Automatic Activation with `mise activate`.
+- On-Demand Execution with `mise exec`.
+- Shims: `mise` can create lightweight wrapper scripts that automatically use the correct tool.
+
+#### OS-Specific Tools
+
+You can restrict tools to specific operating systems using the `os` field
+
+```toml
+[tools]
+ripgrep = { version = "latest", os = ["linux", "macos"] }
+```
+
+### Shims
+
+When using shims, `mise` places small executables (`shims`) in a directory that is included in your `PATH`. You can think of `shims` as symlinks to the mise binary that intercept commands and load the appropriate context.
+
+### Tasks
+
+> Like `make` it manages tasks used to build and test projects.
+
+You can define tasks in `mise.toml` files or as standalone shell scripts. These are useful for things like running linters, tests, builders, servers, and other tasks that are specific to a project. Of course, tasks launched with mise will include the mise environment—your tools and env vars defined in `mise.toml`.
+
+#### Tasks in mise.toml files
+
+```toml
+[tasks.build]
+description = "Build the CLI"
+run = "cargo build"
+```
+
+#### Tasks in file
+
+```sh
+vim mise-tasks/build
+```
+
+```sh
+#!/usr/bin/env bash
+#MISE description="Build the CLI"
+cargo build
+```
+
+#### Tasks dependencies
+
+`mise` supports three types of task dependencies:
+
+- depends - Prerequisites - Tasks that must complete successfully before this task runs.
+- depends_post - Cleanup Tasks - Tasks that run after this task completes (whether successful or failed).
+- wait_for - Soft Dependencies - Tasks that should run first if they're in the current execution, but don't fail if they're not available.
+
+#### Tasks advanced features
+
+- Conditional Dependencies.
+- Dynamic Dependencies.
+- Cross-Project Dependencies.
+- Source and Output Tracking.
+- Incremental Execution.
+- Parallel File Watching.
+
+### Secret
+
+Use mise to manage sensitive environment variables securely. There are multiple supported approaches:
+
+- `fnox` recommended — Full-featured secret manager with remote secret storage (e.g.: 1Password, AWS Secrets Manager) and remote encryption (e.g.: AWS KMS). This is a separate project by @jdx that works well alongside mise. There's no direct integration with mise and fnox, you set it up separately.
+- `sops` experimental — Encrypt entire files and load them via `env._.file`
+- `Direct age encryption` experimental — Encrypt individual env vars inline in `mise.toml`
+
+#### Direct age Encryption
+
+Encrypt individual environment variable values directly in `mise.toml` using `age` encryption. The `age` tool is not required—mise has support built-in.
+
+This is a simple method of storing encrypted environment variables directly in `mise.toml`. You can use it simply by running `mise set --age-encrypt <key>=<value>`. By default, mise will use your SSH key (`~/.ssh/id_ed25519` or `~/.ssh/id_rsa`) if it exists.
+
+- Inline storage: values live alongside other env vars in mise.toml
+- Multiple recipients: x25519 age keys and SSH recipients
+- Automatic decryption: at runtime when identities are available
+
+### Hooks
+
+You can have mise automatically execute scripts during a `mise activate` session. You cannot use these without the `mise activate` shell hook installed in your shell—except the `preinstall` and `postinstall` hooks. The configuration goes into `mise.toml`.
+
+Here is the list of available hooks:
+
+- CD hook
+- Enter hook
+- Leave hook
+- Preinstall/postinstall hook
+- Tool-level postinstall
+- Task hooks
+- Watch files hook
+- Hook execution
+- Shell hooks
+- Multiple hooks syntax
+
+### Lockfile mise.lock
+
+`mise.lock` is a lockfile that pins exact versions and checksums of tools for reproducible environments. When enabled, mise will automatically maintain this file to ensure consistent tool versions across different machines and deployments.
+
+## Source
+
+[Mise](https://mise.jdx.dev/)  
+[Mise-version](https://mise-versions.jdx.dev/)
+[When to Use Each Backend](https://mise.jdx.dev/dev-tools/backend_architecture.html#when-to-use-each-backend)
