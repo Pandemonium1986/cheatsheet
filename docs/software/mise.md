@@ -1,19 +1,6 @@
 # Mise (Mise en place)
 
-## Versions
-
-| Os / Tool |  Version  |
-| :-------- | :-------: |
-| Sles      |   15sp7   |
-| Mise      | 2026.2.19 |
-
-## Todo
-
-- N/A
-
-## Bulk Note
-
-- N/A
+## TL;DR
 
 ## About
 
@@ -25,7 +12,18 @@
 > `mise` manages environment variables letting you specify configuration like AWS_ACCESS_KEY_ID that may differ between projects. It can also be used to automatically activate a Python virtualenv when entering projects too.
 > `mise` is a task runner that can be used to share common tasks within a project among developers and make things like running tasks on file changes easy.
 
-## Installation procedure
+## Tools versions
+
+| Os / Tool |  Version  |
+| :-------- | :-------: |
+| Sles      |   15sp7   |
+| Mise      | 2026.2.19 |
+
+## Todo
+
+- N/A
+
+## Installation
 
 ### Curl
 
