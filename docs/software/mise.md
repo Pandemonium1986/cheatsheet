@@ -46,17 +46,56 @@ zypper --non-interactive install --no-recommends mise
 
 ### Mise exec
 
-Once `mise` is installed, you can immediately start using it. `mise` can be used to install and run tools, launch tasks, and manage environment variables.
-
 The most essential feature `mise` provides is the ability to run tools with specific versions. A simple way to run a shell command with a given tool is to use `mise x|exec`. For example, here is how you can start a Python 3 interactive shell (REPL):
 
 ```sh
 mise exec python@3 -- python
 ```
 
+### Mise use
+
+Backends are ecosystems or package managers that mise uses to install tools. With `mise use`, you can install multiple tools from each backend.
+
+For example, install `ansible` with the pipx backend:
+
+```sh
+mise use --global pipx:ansible
+ansible --version
+```
+
 ### Mise run
 
 Another useful command is `mise r|run` which allows you to run a `mise` task or a script with the `mise` context.
+
+You can define simple tasks in `mise.toml` and run them with `mise run`:
+
+```toml
+[tasks]
+hello = "echo hello from mise"
+```
+
+```sh
+mise run hello
+```
+
+### Mise set env vars
+
+You can set environment variables in `mise.toml` which will be set if mise is activated or if `mise x|exec` is used in a directory:
+
+```toml
+[env]
+NODE_ENV = "production"
+```
+
+Then you can access `NODE_ENV` in your shell or scripts:
+
+```sh
+mise exec -- node --eval 'console.log(process.env.NODE_ENV)'
+
+# or if mise is activated in your shell
+echo "node env: $NODE_ENV"
+# node env: production
+```
 
 ## Walkthrough
 
