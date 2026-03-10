@@ -4,12 +4,15 @@
 
 ## About
 
-> The front-end to your dev env
 > `mise` (pronounced "meez") or "mise-en-place" is a development environment setup tool. The name refers to a French culinary phrase that roughly translates to "setup" or "put in place". The idea is that before one begins cooking, they should have all their utensils and ingredients ready to go in their place.
-> `mise` does the same for your projects. Using its `mise.toml` config file, you'll have a consistent way to setup and interact with your projects no matter what language they're written in.
+>
+> `mise` does the same for your projects. Using its `mise.toml` config file, you'll have a consistent way to setup and interact with your projects no matter what language they're written in.  
 > Its functionality is grouped into 3 categories described below.
-> `mise` installs and manages dev tools/runtimes like node, python, or terraform both simplifying installing these tools and allowing you to specify which version of these tools to use in different projects. `mise` supports hundreds of dev tools.
-> `mise` manages environment variables letting you specify configuration like AWS_ACCESS_KEY_ID that may differ between projects. It can also be used to automatically activate a Python virtualenv when entering projects too.
+>
+> `mise` installs and manages dev tools/runtimes like node, python, or terraform both simplifying installing these tools and allowing you to specify which version of these tools to use in different projects. `mise` supports _hundreds_ of dev tools.
+>
+> `mise` manages environment variables letting you specify configuration like `AWS_ACCESS_KEY_ID` that may differ between projects. It can also be used to automatically activate a _Python virtualenv_ when entering projects too.
+>
 > `mise` is a task runner that can be used to share common tasks within a project among developers and make things like running tasks on file changes easy.
 
 ## Tools versions
@@ -291,7 +294,7 @@ Use mise to manage sensitive environment variables securely. There are multiple 
 
 Encrypt individual environment variable values directly in `mise.toml` using `age` encryption. The `age` tool is not required—mise has support built-in.
 
-This is a simple method of storing encrypted environment variables directly in `mise.toml`. You can use it simply by running `mise set --age-encrypt <key>=<value>`. By default, mise will use your ssh key (`~/.ssh/id_ed25519` or `~/.ssh/id_rsa`) if it exists.
+This is a simple method of storing encrypted environment variables directly in `mise.toml`. You can use it simply by running `mise set --age-encrypt <key>=<value>`. By default, mise will use your SSH key (`~/.ssh/id_ed25519` or `~/.ssh/id_rsa`) if it exists.
 
 - Inline storage: values live alongside other env vars in mise.toml
 - Multiple recipients: x25519 age keys and SSH recipients
