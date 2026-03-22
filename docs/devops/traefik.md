@@ -4,8 +4,8 @@
 
 | Os / Tool | Version |
 | :-------: | :-----: |
-|   Gitlab  |  1.7.X  |
-|   Docker  | 18.09.6 |
+|  Gitlab   |  1.7.X  |
+|  Docker   | 18.09.6 |
 
 ## Todo
 
@@ -15,21 +15,21 @@ N/A
 
 ## Avant propos
 
-> Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. Pointing Traefik at your orchestrator should be the only configuration step you need.  .
+> Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. Pointing Traefik at your orchestrator should be the only configuration step you need. .
 
 ## Getting Started
 
-Exécuter simplement le docker-compose suivant :  
+Exécuter simplement le docker-compose suivant :
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
   reverse-proxy:
     image: traefik # The official Traefik docker image
     command: --api --docker # Enables the web UI and tells Traefik to listen to docker
     ports:
-      - "80:80"     # The HTTP port
+      - "80:80" # The HTTP port
       - "8080:8080" # The Web UI (enabled by --api)
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
@@ -160,7 +160,7 @@ exposedByDefault = true
 # Use the IP address from the binded port instead of the inner network one.
 #
 # In case no IP address is attached to the binded port (or in case
-# there is no bind), the inner network one will be used as a fallback.     
+# there is no bind), the inner network one will be used as a fallback.
 #
 # Optional
 # Default: false
@@ -183,19 +183,23 @@ swarmModeRefreshSeconds = 15
 ```
 
 ### On container
+
 <!-- textlint-disable -->
-| Label                      | Description                                                                                                                                                  |
-| :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| traefik.docker.network     | Overrides the default docker network to use for connections to the container.                                                                                |
-| traefik.domain             | Sets the default base domain for the frontend rules. For more information, check the Container Labels section's of the user guide "Let's Encrypt &  Docker". |
-| traefik.enable=false       | Disables this container in Traefik.                                                                                                                          |
-| traefik.port=80            | Registers this port. Useful when the container exposes multiples ports.                                                                                      |
-| traefik.tags=foo,bar,myTag | Adds Traefik tags to the Docker container/service to be used in constraints.                                                                                 |
-| traefik.protocol=https     | Overrides the default http protocol.                                                                                                                         |
-| traefik.weight=10          | Assigns this weight to the container.                                                                                                                        |
-| traefik.backend=foo        | Overrides the container name by foo in the generated name of the backend.                                                                                    |
-| traefik.frontend.rule=EXPR | Overrides the default frontend rule. Default: Host:{containerName}.{domain} or Host:{service}.{project_name}.{domain} if you are using docker-compose.       |
+
+| Label                      | Description                                                                                                                                                 |
+| :------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| traefik.docker.network     | Overrides the default docker network to use for connections to the container.                                                                               |
+| traefik.domain             | Sets the default base domain for the frontend rules. For more information, check the Container Labels section's of the user guide "Let's Encrypt & Docker". |
+| traefik.enable=false       | Disables this container in Traefik.                                                                                                                         |
+| traefik.port=80            | Registers this port. Useful when the container exposes multiples ports.                                                                                     |
+| traefik.tags=foo,bar,myTag | Adds Traefik tags to the Docker container/service to be used in constraints.                                                                                |
+| traefik.protocol=https     | Overrides the default http protocol.                                                                                                                        |
+| traefik.weight=10          | Assigns this weight to the container.                                                                                                                       |
+| traefik.backend=foo        | Overrides the container name by foo in the generated name of the backend.                                                                                   |
+| traefik.frontend.rule=EXPR | Overrides the default frontend rule. Default: Host:{containerName}.{domain} or Host:{service}.{project_name}.{domain} if you are using docker-compose.      |
+
 <!-- textlint-enable -->
+
 ### On containers with Multiple Ports (segment labels)
 
 | Label                                       | Description                   |
@@ -212,4 +216,4 @@ swarmModeRefreshSeconds = 15
 [Traefik](https://traefik.io/)  
 [Traefik Documentation](https://docs.traefik.io/v2.0/)  
 [Traefik Docker](https://hub.docker.com/_/traefik)  
-[Traefik Security Challenge with the Docker Socket](https://docs.traefik.io/configuration/backends/docker/#security-challenge-with-the-docker-socket)  
+[Traefik Security Challenge with the Docker Socket](https://docs.traefik.io/configuration/backends/docker/#security-challenge-with-the-docker-socket)

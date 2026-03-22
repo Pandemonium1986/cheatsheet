@@ -1,13 +1,14 @@
 <!-- markdownlint-disable MD024 -->
+
 # Commit Best Practice
 
 ## Tools versions
 
-|  Os / Tool | Version |
+| Os / Tool  | Version |
 | :--------: | :-----: |
-| Linux Mint |   19.3  |
+| Linux Mint |  19.3   |
 | pre-commit |  2.8.2  |
-|   gitlint  |  0.14.0 |
+|  gitlint   | 0.14.0  |
 
 ## Todo
 
@@ -65,9 +66,9 @@ How does it work
 pre-commit is configured via the .pre-commit-config.yaml file.  
 The configuration file is divided into three levels :
 
-- Top level (see [here](https://pre-commit.com/#pre-commit-configyaml---top-level)).
-  - repos (see [here](https://pre-commit.com/#pre-commit-configyaml---repos)).
-    - hooks(see [here](https://pre-commit.com/#pre-commit-configyaml---hooks)).
+- [Top-level](https://pre-commit.com/#pre-commit-configyaml---top-level).
+  - [Repos](https://pre-commit.com/#pre-commit-configyaml---repos).
+    - [Hooks](https://pre-commit.com/#pre-commit-configyaml---hooks).
 
 Repos should be a Git URL to clone.  
 Hooks represent the "action" to perfom.  

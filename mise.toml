@@ -1,6 +1,7 @@
 [tools]
 python = "3.11"
 "pipx:mkdocs-material" = { version = "latest", uvx = "false", pipx_args = "--include-deps" }
+zizmor = "latest"
 
 [vars]
 project_name = "{{ cwd | basename }}"
